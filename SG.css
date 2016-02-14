@@ -48,5 +48,13 @@ body {
     border-radius: 0px;
     height: 700px;
     color: white;
+    box-shadow: 1px 0px 25px 5px #0073ff;
+
 }
 
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #006aeb;
+}
