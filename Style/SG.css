@@ -57,6 +57,7 @@ body {
 }
 
 .jumbotron {
+    padding-top: 7px;
     margin-top: 30px;
     background-color: black;
     border-radius: 0px;
@@ -104,11 +105,11 @@ body {
 
 .btn-default:focus,
 .btn-default.focus {
-    color: #333;
+    color: white;
     background-color: #006aeb;
 }
 .btn-default:hover {
-    color: #333;
+    color: white;
     background-color: #006aeb;
 }
 

@@ -57,6 +57,7 @@ body {
 }
 
 .jumbotron {
+    padding-top: 7px;
     margin-top: 30px;
     background-color: rgb(254, 254, 254);
     border-radius: 0px;

@@ -1,7 +1,7 @@
 body {
     padding-top: 54px;
     font-family: 'Open Sans', sans-serif;
-    background-color: #333333;
+    background-color: #1a1a00;
     margin:0;
     height: 100%;
 
@@ -26,25 +26,25 @@ body {
     font-size: 28px;
     /*font-family: 'Black Ops One', cursive;*/
     font-family: 'Press Start 2P', cursive;
-    box-shadow: 0px 0px 20px 5px #006aeb;
+    box-shadow: 0px 0px 20px 5px #800000;
     margin-right: 6px;
     margin-bottom: 4px;
 
 }
 
 .container-fluid {
-    background-color:#006aeb;
+    background-color:#800000;
     height: 5px;
 }
 
 .navbar-toggle {
-    background-color: #006aeb;
+    background-color: #800000;
     border: 1px solid silver;
 }
 
 
 .navbar-inverse .navbar-brand {
-    color: #006aeb;
+    color: #800000;
 }
 
 .dropdown-menu {
@@ -53,16 +53,17 @@ body {
 
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
-    color: #0073ff;
+    color: #b30000;
 }
 
 .jumbotron {
+    padding-top: 7px;
     margin-top: 30px;
     background-color: black;
     border-radius: 0px;
     height: 100%;
     color: white;
-    box-shadow: 1px 0px 25px 5px #0073ff;
+    box-shadow: 1px 0px 25px 5px #b30000;
     position: relative;
     margin-bottom: 140px;
 
@@ -72,7 +73,7 @@ body {
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
     color: #fff;
-    background-color: #006aeb;
+    background-color: #800000;
 }
 
 .footer {
@@ -104,15 +105,16 @@ body {
 
 .btn-default:focus,
 .btn-default.focus {
-    color: #333;
-    background-color: #006aeb;
+    color: white;
+    background-color: #800000;
+
 }
 .btn-default:hover {
-    color: #333;
-    background-color: #006aeb;
+    color: white;
+    background-color: #800000;
 }
 
 .form-control:focus {
     border-color: black;
-    box-shadow: 1px 1px 10px 10px #006aeb
+    box-shadow: 1px 1px 10px 10px #800000
 }
