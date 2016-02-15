@@ -100,6 +100,19 @@ body {
 .col-md-4 a {
     color: silver;
     text-decoration: none;
-
 }
 
+.btn-default:focus,
+.btn-default.focus {
+    color: #333;
+    background-color: #006aeb;
+}
+.btn-default:hover {
+    color: #333;
+    background-color: #006aeb;
+}
+
+.form-control:focus {
+    border-color: #0073ff;
+    box-shadow: 1px 1px 35px 10px #006aeb
+}
