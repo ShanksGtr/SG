@@ -113,6 +113,6 @@ body {
 }
 
 .form-control:focus {
-    border-color: #0073ff;
-    box-shadow: 1px 1px 35px 10px #006aeb
+    border-color: black;
+    box-shadow: 1px 1px 10px 10px #006aeb
 }
