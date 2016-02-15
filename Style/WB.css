@@ -1,5 +1,5 @@
 body {
-    padding-top: 50px;
+    padding-top: 54px;
     font-family: 'Open Sans', sans-serif;
     background-color: #333333;
     margin:0;
@@ -19,19 +19,22 @@ body {
     border-radius: 0px;
     background-color: black;
     font-family: 'Press Start 2P', cursive;
+
 }
 
 .navbar-brand {
     font-size: 28px;
-   /*font-family: 'Black Ops One', cursive;*/
+    /*font-family: 'Black Ops One', cursive;*/
     font-family: 'Press Start 2P', cursive;
-    box-shadow: 0px 0px 10px 5px #006aeb;
+    box-shadow: 0px 0px 20px 5px #006aeb;
     margin-right: 6px;
+    margin-bottom: 4px;
+
 }
 
 .container-fluid {
     background-color:#006aeb;
-    height:5px;
+    height: 5px;
 }
 
 .navbar-toggle {
@@ -61,7 +64,7 @@ body {
     color: white;
     box-shadow: 1px 0px 25px 5px #0073ff;
     position: relative;
-    margin-bottom: 150px;
+    margin-bottom: 140px;
 
 }
 
@@ -83,7 +86,7 @@ body {
 }
 
 .col-md-4 {
-    font-size: 20px;
+    margin-top: 5px;
     text-align: right;
     color: silver;
 }
@@ -97,4 +100,19 @@ body {
 .col-md-4 a {
     color: silver;
     text-decoration: none;
+}
+
+.btn-default:focus,
+.btn-default.focus {
+    color: #333;
+    background-color: #006aeb;
+}
+.btn-default:hover {
+    color: #333;
+    background-color: #006aeb;
+}
+
+.form-control:focus {
+    border-color: #0073ff;
+    box-shadow: 1px 1px 35px 10px #006aeb
 }
