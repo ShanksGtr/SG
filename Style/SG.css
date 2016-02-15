@@ -34,7 +34,7 @@ body {
 
 .container-fluid {
     background-color:#006aeb;
-    height:5px;
+    height: 5px;
 }
 
 .navbar-toggle {
@@ -64,7 +64,7 @@ body {
     color: white;
     box-shadow: 1px 0px 25px 5px #0073ff;
     position: relative;
-    margin-bottom: 150px;
+    margin-bottom: 140px;
 
 }
 
@@ -86,7 +86,7 @@ body {
 }
 
 .col-md-4 {
-    font-size: 20px;
+    margin-top: 5px;
     text-align: right;
     color: silver;
 }
@@ -100,5 +100,6 @@ body {
 .col-md-4 a {
     color: silver;
     text-decoration: none;
+
 }
 
