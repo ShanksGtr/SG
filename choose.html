@@ -55,55 +55,59 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="login.html">Sign In</a></li>
-                <li class="active"><a href="register.html">Sign Up</a></li>
+                <li><a href="register.html">Sign Up</a></li>
             </ul>
+
         </div>
     </div>
     <div class="container-fluid"></div>
 </nav>
+    <script type="text/javascript">
+        function swapStyleSheet() {
+            var now = new Date();
+            var expires = new Date(now.setTime(now.getTime() + 60 * 60 * 1000)); //Expire in one hour
+            document.cookie = 'n=1;path=/;expires='+expires.toGMTString()+';';
+    }
+    </script>
 <div class="container">
     <div class="jumbotron">
         <div class="page-header">
-            <h1>Registration: </h1>
+            <h1>Welcome to SGamers</h1>
         </div>
-        <div>
-            <form class="form-horizontal">
-                <div class="form-group">
-                    <label for="inputUsername" class="col-sm-2 control-label">Username</label>
-                    <div class="col-sm-5">
-                        <input type="email" class="form-control" id="inputUsername" placeholder="Username">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-                    <div class="col-sm-5">
-                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-                    <div class="col-sm-5">
-                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-default">Sign in</button>
-                    </div>
-                </div>
-            </form>
+        <h2>Choose your Theme!</h2>
+        <div class="container">
+            <div class="col-md-3">
+                <h2>Dark Blue</h2><br>
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="col-md-3">
+                <h2>Dark Red</h2><br>
+                <button type="button" class="btn btn-danger">Submit</button>
+            </div>
+            <div class="col-md-3">
+                <h2>Dark Green</h2><br>
+                <button type="button" class="btn btn-success">Submit</button>
+            </div>
+            <div class="col-md-3">
+                <h2>Light Blue</h2><br>
+                <form action="index.html">
+                    <button type="button" class="btn btn-info" onclick="swapStyleSheet('Style/WB.css');">Submit</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
+
 <div class="footer">
     <div class="container-fluid" style="height: 2px"></div>
     <div class=container>
         <div class="col-md-4">
-            <p>Choose your Theme!</p>
+            <!--<p>Choose your Theme!</p>
             <button onclick="swapStyleSheet('Style/SG.css')">Dark Blue</button>
             <button onclick="swapStyleSheet('Style/BR.css')">Dark Red</button>
             <button onclick="swapStyleSheet('Style/BG.css')">Dark Green</button>
             <button onclick="swapStyleSheet('Style/WB.css')">White Blue</button>
+            -->
         </div>
         <div class="col-md-4"></div>
         <div class="col-md-4"><a href="about.html">About</a></div>
