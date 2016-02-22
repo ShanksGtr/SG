@@ -110,6 +110,11 @@ $newrecord = "You're successfully registered";
                         <button type="submit" name="submit" class="btn btn-default">Sign in</button>
                     </div>
                 </div>
+                <div>
+                    <?php
+                        echo $newrecord;
+                    ?>
+                </div>
             </form>
         </div>
     </div>
