@@ -129,6 +129,7 @@ body {
     border-color: black;
     background-color: white;
     text-align: center;
+    text-shadow: 2px 2px #00a3cc;
     font-size: 40px;
     box-shadow: 1px 0px 10px 5px #00a3cc;
 }
