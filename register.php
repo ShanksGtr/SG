@@ -106,7 +106,7 @@
                                 if(document.getElementById('CaptchaEnter').value == document.getElementById('randomfield').value){
                                     document.write="Captcha is true";
                                 } else {
-                                    alert('Please re-check the captcha'); location.reload();
+                                    throw new Error('Please re-check the captcha');
                                 }
                             }
                     </script>
