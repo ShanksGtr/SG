@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
     <title>SGamers</title>
     <!-- Bootstrap CSS,JQ&JS Libraries-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link id="pagesstyle" rel="stylesheet" type="text/css" href="Style/SG.css">;
+    <link id="pagesstyle" rel="stylesheet" type="text/css" href="Style/WB.css">;
     <script type="text/javascript">
         function swapStyleSheet(sheet){
             document.getElementById('pagesstyle').setAttribute('href', sheet);
