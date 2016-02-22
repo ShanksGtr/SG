@@ -6,7 +6,7 @@ if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $reg_date = time();
+    $reg_date = date('Y-m-d G:i:s');
     $password = md5($password);
 
     $sqlinsert = "INSERT INTO users (user_name, email, password, reg_date) VALUES
