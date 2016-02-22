@@ -118,3 +118,12 @@ body {
     border-color: black;
     box-shadow: 1px 1px 10px 10px #006aeb
 }
+
+#randomfield {
+    width: 200px;
+    color: black;
+    border-color: black;
+    background-color: white;
+    text-align: center;
+    font-size: 40px;
+}
