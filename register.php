@@ -74,7 +74,7 @@ $newrecord = "You're successfully registered";
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="login.html">Sign In</a></li>
-                <li class="active"><a href="register.html">Sign Up</a></li>
+                <li class="active"><a href="register.php">Sign Up</a></li>
             </ul>
         </div>
     </div>
