@@ -108,6 +108,7 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Captcha</label>
+                    <div class="col-sm-5">
                     <input type="text" id="randomfield" disabled>
                     <script>
                         function Captcha() {
@@ -127,7 +128,8 @@ if (isset($_POST['submit'])) {
                                     alert('Please re-check the captcha');
                                 }
                             }
-                    </script><br>
+                    </script>
+                    </div>
                     <div class="col-sm-3">
                     <input id="CaptchaEnter" class="form-control" placeholder="Captcha">
                     </div>
