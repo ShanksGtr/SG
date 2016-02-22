@@ -62,13 +62,7 @@
     </div>
     <div class="container-fluid"></div>
 </nav>
-    <script type="text/javascript">
-        function swapStyleSheet() {
-            var now = new Date();
-            var expires = new Date(now.setTime(now.getTime() + 60 * 60 * 1000)); //Expire in one hour
-            document.cookie = 'n=1;path=/;expires='+expires.toGMTString()+';';
-    }
-    </script>
+
 <div class="container">
     <div class="jumbotron">
         <div class="page-header">
@@ -91,7 +85,7 @@
             <div class="col-md-3">
                 <h2>Light Blue</h2><br>
                 <form action="index.html">
-                    <button type="button" class="btn btn-info" onclick="swapStyleSheet('Style/WB.css');">Submit</button>
+                    <button type="button" class="btn btn-info" onclick="colcookies('Style/WB.css');">Submit</button>
                 </form>
             </div>
         </div>
@@ -113,5 +107,12 @@
         <div class="col-md-4"><a href="about.html">About</a></div>
     </div>
 </div>
+<script type="text/javascript">
+    function colcookies() {
+        var now = new Date();
+        var expires = new Date(now.setTime(now.getTime() + 60 * 60 * 1000)); //Expire in one hour
+        document.cookie = 'n=1;path=/;expires='+expires.toGMTString()+';';
+    }
+</script>
 </body>
 </html>
