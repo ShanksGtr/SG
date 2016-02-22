@@ -1,5 +1,5 @@
 <?php
-    require('config.php');
+    require('PHP/config.php');
 
     if (isset($_POST['submit'])) {
         include('$db');
