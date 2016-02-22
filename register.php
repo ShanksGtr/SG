@@ -104,9 +104,28 @@
                         }
                             function check() {
                                 if(document.getElementById('CaptchaEnter').value == document.getElementById('randomfield').value){
-                                    document.write="Captcha is true";
+                                    <?php
+                                        require('PHP/config.php');
+
+                                        if (isset($_POST['submit'])) {
+                                            if ('check()' == false )
+                                            include('$db');
+                                            $username = $_POST['username'];
+                                            $email = $_POST['email'];
+                                            $password = $_POST['password'];
+                                            $reg_date = date('Y-m-d G:i:s');
+                                            $password = md5($password);
+
+                                            $sqlinsert = "INSERT INTO users (user_name, email, password, reg_date) VALUES
+                                                    ('$username', '$email', '$password', '$reg_date')";
+                                            if (!mysqli_query($db, $sqlinsert)) {
+                                                echo "<script>alert('Username or Email has been used already'); location.href='Register.php';</script>";
+                                            }
+                                            $newrecord = "You're successfully registered";
+                                        }
+                                     ?>
                                 } else {
-                                    alert('Please re-check the captcha'); window.location.href = "register.php";
+                                    alert('Please re-check the captcha'); ;
                                 }
                             }
                     </script>
@@ -145,22 +164,3 @@
     </div>
 </div>
 </body>
-<?php
-require('PHP/config.php');
-
-if (isset($_POST['submit'])) {
-    include('$db');
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $reg_date = date('Y-m-d G:i:s');
-    $password = md5($password);
-
-    $sqlinsert = "INSERT INTO users (user_name, email, password, reg_date) VALUES
-            ('$username', '$email', '$password', '$reg_date')";
-    if (!mysqli_query($db, $sqlinsert)) {
-        echo "<script>alert('Username or Email has been used already'); location.href='Register.php';</script>";
-    }
-    $newrecord = "You're successfully registered";
-}
-?>
