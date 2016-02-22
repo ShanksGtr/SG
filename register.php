@@ -107,8 +107,31 @@ if (isset($_POST['submit'])) {
                     </div>
                 </div>
                 <div class="form-group">
+                    <input type="text" id="randomfield" disabled>
+                    <script>
+                        function Captcha() {
+                            var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+                            var string_length = '4';
+                            var Captcha = '';
+                                for (var i=0; i<string_length; i++) {
+                                    var rnum= Math.floor(Math.random() * chars.length);
+                                    Captcha += chars.substring(rnum,rnum+1);
+                                }
+                            document.getElementById('randomfield').value = Captcha;
+                        }
+                            function check() {
+                                if(document.getElementById('CaptchaEnter').value == document.getElementById('randomfield').value){
+                                    document.write="Captcha is true";
+                                } else {
+                                    alert('Please re-check the captcha');
+                                }
+                            }
+                    </script>
+                    <input id="CaptchaEnter" size="20" maxlength="4">
+                </div>
+                <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" name="submit" class="btn btn-default">Sign in</button>
+                        <button type="submit" name="submit" onclick="check()" class="btn btn-default">Sign in</button>
                         <?php
                             echo "<style=color: lawngreen; font-size: 20px> . $newrecord";
                         ?>
