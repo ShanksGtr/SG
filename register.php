@@ -1,3 +1,27 @@
+<?php
+require('PHP/config.php');
+
+if (isset($_POST['submit'])) {
+    include('$db');
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $reg_date = date('Y-m-d G:i:s');
+    $password = md5($password);
+    $captcha = $_POST ['captcha'];
+
+    if ($captcha = false) {
+        echo "<script>alert('Please re-check the captcha');</script>";
+    } elseif ($captcha = true) {
+
+    $sqlinsert = "INSERT INTO users (user_name, email, password, reg_date) VALUES
+            ('$username', '$email', '$password', '$reg_date')";
+    if (!mysqli_query($db, $sqlinsert)) {
+        echo "<script>alert('Username or Email has been used already'); location.href='Register.php';</script>";
+    }
+    $newrecord = "You're successfully registered";
+}}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -104,9 +128,9 @@
                         }
                             function check() {
                                 if(document.getElementById('CaptchaEnter').value == document.getElementById('randomfield').value){
-                                    <?php $php_func = true ?>
+                                    <?php $captcha = true  ?>
                                 } else {
-                                    <?php $php_func = false ?>
+                                    <?php $captcha = false ?>
                                 }
                             }
                     </script>
@@ -115,7 +139,7 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label"></label>
                     <div class="col-sm-3">
-                        <input id="CaptchaEnter" class="form-control" placeholder="Captcha">
+                        <input id="CaptchaEnter" name="captcha" class="form-control" placeholder="Captcha">
                     </div>
                 </div>
                 <div class="form-group">
@@ -145,25 +169,3 @@
     </div>
 </div>
 </body>
-<?php
-require('PHP/config.php');
-
-if (isset($_POST['submit'])) {
-    if ($php_func = false) {
-        echo "<script>alert('Please re-check the captcha');</script>";
-    } elseif ($php_func = true){
-    include('$db');
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $reg_date = date('Y-m-d G:i:s');
-    $password = md5($password);
-
-    $sqlinsert = "INSERT INTO users (user_name, email, password, reg_date) VALUES
-            ('$username', '$email', '$password', '$reg_date')";
-    if (!mysqli_query($db, $sqlinsert)) {
-        echo "<script>alert('Username or Email has been used already'); location.href='Register.php';</script>";
-    }
-    $newrecord = "You're successfully registered";
-}}
-?>
