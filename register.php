@@ -9,7 +9,7 @@ if (isset($_POST['submit'])) {
     $reg_date = getdate();
     $password = md5($password);
 
-    $sqlinsert = "INSERT INTO users (user_name, email, password) VALUES
+    $sqlinsert = "INSERT INTO users (user_name, email, password, reg_date) VALUES
             ('$username', '$email', '$password', '$reg_date')";
     if (!mysqli_query($db, $sqlinsert)) {
         echo "<script>alert('Username or Email has been used already'); location.href='Register.php';</script>";
