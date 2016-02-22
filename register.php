@@ -1,3 +1,22 @@
+<?php
+    require('config.php');
+
+    if (isset($_POST['submit'])) {
+        include('$db');
+        $username = $_POST['username'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $password = md5($password);
+
+        $sqlinsert = "INSERT INTO users (user_name, email, password) VALUES
+            ('$username', '$email', '$password')";
+        if (!mysqli_query($db, $sqlinsert)) {
+            echo "<script>alert('Username or Email has been used already'); location.href='Register.php';</script>";
+}
+$newrecord = "You're successfully registered";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,7 +86,7 @@
             <h1>Registration: </h1>
         </div>
         <div>
-            <form class="form-horizontal" action="PHP/registering.php" method="post">
+            <form class="form-horizontal" action="register.php" method="post">
                 <div class="form-group">
                     <label for="inputUsername" class="col-sm-2 control-label">Username</label>
                     <div class="col-sm-5">
