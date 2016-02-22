@@ -129,8 +129,8 @@ if (isset($_POST['submit'])) {
                                 }
                             }
                     </script>
-                        <label class="col-sm-2 control-label"></label>
                     </div>
+                    <label class="col-sm-2 control-label"></label>
                     <div class="col-sm-3">
                         <input id="CaptchaEnter" class="form-control" placeholder="Captcha">
                     </div>
