@@ -138,7 +138,7 @@ if (isset($_POST['submit'])) {
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="col-sm-offset-3 col-sm-10">
+                    <div class="col-sm-offset-2 col-sm-5">
                         <button type="submit" name="submit" onclick="check()" class="btn btn-default">Sign in</button>
                         <?php
                             echo "<style=color: lawngreen; font-size: 20px> $newrecord";
