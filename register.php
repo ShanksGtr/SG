@@ -6,10 +6,11 @@ if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $reg_date = getdate();
     $password = md5($password);
 
     $sqlinsert = "INSERT INTO users (user_name, email, password) VALUES
-            ('$username', '$email', '$password')";
+            ('$username', '$email', '$password', '$reg_date')";
     if (!mysqli_query($db, $sqlinsert)) {
         echo "<script>alert('Username or Email has been used already'); location.href='Register.php';</script>";
     }
@@ -108,13 +109,12 @@ if (isset($_POST['submit'])) {
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                         <button type="submit" name="submit" class="btn btn-default">Sign in</button>
+                        <?php
+                            echo $newrecord;
+                        ?>
                     </div>
                 </div>
-                <div>
-                    <?php
-                    echo $newrecord;
-                    ?>
-                </div>
+
             </form>
         </div>
     </div>
