@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
     $sqlinsert = "INSERT INTO users (user_name, email, password, reg_date) VALUES
             ('$username', '$email', '$password', '$reg_date')";
     if (!mysqli_query($db, $sqlinsert)) {
-        echo "<script>alert('Username or Email has been used already'); location.href='Register.php';</script>";
+        echo "<script>alert('Username or Email has been used already');</script>";
     }
     $newrecord = "You're successfully registered";
 }
@@ -129,9 +129,10 @@ if (isset($_POST['submit'])) {
                                 }
                             }
                     </script>
+                        <label class="col-sm-2 control-label"></label>
                     </div>
                     <div class="col-sm-3">
-                    <input id="CaptchaEnter" class="form-control" placeholder="Captcha">
+                        <input id="CaptchaEnter" class="form-control" placeholder="Captcha">
                     </div>
                 </div>
                 <div class="form-group">
