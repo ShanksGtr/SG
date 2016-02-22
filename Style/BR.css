@@ -130,6 +130,7 @@ body {
     border-color: black;
     background-color: white;
     text-align: center;
+    text-shadow: 2px 2px black;
     font-size: 40px;
-    box-shadow: 1px 0px 100px 3px #b30000;
+    box-shadow: 1px 0px 10px 3px #b30000;
 }
