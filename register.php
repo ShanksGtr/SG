@@ -125,7 +125,7 @@
                                         }
                                      ?>
                                 } else {
-                                    alert('Please re-check the captcha'); ;
+                                    alert('Please re-check the captcha');
                                 }
                             }
                     </script>
