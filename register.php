@@ -2,6 +2,7 @@
 require('PHP/config.php');
 
 if (isset($_POST['submit'])) {
+
     include('$db');
     $username = $_POST['username'];
     $email = $_POST['email'];
@@ -114,37 +115,54 @@ if (isset($_POST['submit'])) {
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Captcha</label>
                     <div class="col-sm-5">
-                    <input type="text" id="randomfield" disabled>
-                    <script>
-                        function Captcha() {
-                            var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-                            var string_length = '4';
-                            var Captcha = '';
-                                for (var i=0; i<string_length; i++) {
-                                    var rnum= Math.floor(Math.random() * chars.length);
-                                    Captcha += chars.substring(rnum,rnum+1);
+                        <form method="post" action="register.php" onsubmit="return checkForm(this);">
+                            <img src="/captcha.php" width="200" height="50" border="1">
+                            <input id="CaptchaEnter" type="text" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha">
+                        </form>
+                            <script type="text/javascript">
+
+                                function checkForm(form) {
+                                    if (!form.captcha.value.match(/^\d{5}$/)) {
+                                        alert('Please enter the CAPTCHA digits in the box provided');
+                                        form.captcha.focus();
+                                        return false;
+
+                                    } else {
+                                        return true;
+                                    }
                                 }
-                            document.getElementById('randomfield').value = Captcha;
-                        }
-                            function check() {
-                                if(document.getElementById('CaptchaEnter').value == document.getElementById('randomfield').value){
-                                    <?php $captcha = 0  ?>
-                                } else {
-                                    <?php $captcha = 1 ?>
-                                }
-                            }
-                    </script>
+                            </script>
+                            <!--<input type="text" id="randomfield" disabled>
+                            <script>
+                                function Captcha() {
+                                   var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+                                   var string_length = '4';
+                                   var Captcha = '';
+                                       for (var i=0; i<string_length; i++) {
+                                           var rnum= Math.floor(Math.random() * chars.length);
+                                           Captcha += chars.substring(rnum,rnum+1);
+                                       }
+                                   document.getElementById('randomfield').value = Captcha;
+                               }
+                                   function check() {
+                                       if(document.getElementById('CaptchaEnter').value == document.getElementById('randomfield').value){
+
+                                       } else {
+
+                                       }
+                                   }
+                           </script> -->
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-2 control-label"></label>
                     <div class="col-sm-3">
-                        <input id="CaptchaEnter" name="captcha" class="form-control" placeholder="Captcha">
+
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-5">
-                        <button type="submit" name="submit" onclick="check()" class="btn btn-default">Sign in</button>
+                        <button type="submit" name="submit" class="btn btn-default">Sign in</button>
                         <?php
                             echo "<style=color: lawngreen; font-size: 20px> $newrecord";
                         ?>
