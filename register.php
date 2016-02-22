@@ -104,9 +104,9 @@
                         }
                             function check() {
                                 if(document.getElementById('CaptchaEnter').value == document.getElementById('randomfield').value){
-                                    document.write="Captcha is true";
+                                    <?php $php_func = true ?>
                                 } else {
-                                    throw new Error('Please re-check the captcha');
+                                    <?php $php_func = false ?>
                                 }
                             }
                     </script>
@@ -149,6 +149,9 @@
 require('PHP/config.php');
 
 if (isset($_POST['submit'])) {
+    if ($php_func = false) {
+        echo "<script>alert('Please re-check the captcha');</script>";
+    } elseif ($php_func = true){
     include('$db');
     $username = $_POST['username'];
     $email = $_POST['email'];
@@ -162,5 +165,5 @@ if (isset($_POST['submit'])) {
         echo "<script>alert('Username or Email has been used already'); location.href='Register.php';</script>";
     }
     $newrecord = "You're successfully registered";
-}
+}}
 ?>
