@@ -107,7 +107,7 @@ if (isset($_POST['submit'])) {
                     </div>
                 </div>
                 <div class="form-group">
-                    <input id="CaptchaEnter" class="col-sm-2 control-label">
+                    <input id="CaptchaEnter" class="form-control">
                     <input type="text" id="randomfield" disabled>
                     <script>
                         function Captcha() {
@@ -133,7 +133,7 @@ if (isset($_POST['submit'])) {
                     <div class="col-sm-offset-2 col-sm-10">
                         <button type="submit" name="submit" onclick="check()" class="btn btn-default">Sign in</button>
                         <?php
-                            echo "<style=color: lawngreen; font-size: 20px> . $newrecord";
+                            echo "<style=color: lawngreen; font-size: 20px> $newrecord";
                         ?>
                         </div>
                     </div>
