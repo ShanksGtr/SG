@@ -162,7 +162,7 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-5">
-                        <button type="submit" name="submit" onclick="" class="btn btn-default">Sign in</button>
+                        <button type="submit" name="submit" onclick="checkForm(form)" class="btn btn-default">Sign in</button>
                         <?php
                             echo "<style=color: lawngreen; font-size: 20px> $newrecord";
                         ?>
