@@ -13,8 +13,6 @@ if (isset($_POST['submit'])) {
             ('$username', '$email', '$password', '$reg_date')";
     if (!mysqli_query($db, $sqlinsert)) {
         echo "<script>alert('Username or Email has been used already'); location.href='Register.php';</script>";
-    } elseif (mysqli_query($db, $sqlinsert) == '') {
-        echo "<script>alert('Please fill up the blanks')";
     }
     $newrecord = "You're successfully registered";
 }
