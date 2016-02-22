@@ -130,7 +130,7 @@ if (isset($_POST['submit'])) {
                             }
                     </script>
                     </div>
-                    <label class="col-sm-2 control-label">Captcha Entry</label>
+                    <label class="col-sm-4 control-label">Captcha Entry</label>
                     <div class="col-sm-3">
                         <input id="CaptchaEnter" class="form-control" placeholder="Captcha">
                     </div>
