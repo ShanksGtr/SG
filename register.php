@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -107,7 +106,7 @@
                                 if(document.getElementById('CaptchaEnter').value == document.getElementById('randomfield').value){
                                     document.write="Captcha is true";
                                 } else {
-                                    alert('Please re-check the captcha');
+                                    alert('Please re-check the captcha'); window.location.href = "register.php";
                                 }
                             }
                     </script>
