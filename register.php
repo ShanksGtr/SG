@@ -10,9 +10,9 @@ if (isset($_POST['submit'])) {
     $password = md5($password);
     $captcha = $_POST ['captcha'];
 
-    if ($captcha = false) {
+    if ($captcha = 0) {
         echo "<script>alert('Please re-check the captcha');</script>";
-    } elseif ($captcha = true) {
+    } elseif ($captcha = 1) {
 
     $sqlinsert = "INSERT INTO users (user_name, email, password, reg_date) VALUES
             ('$username', '$email', '$password', '$reg_date')";
@@ -128,9 +128,9 @@ if (isset($_POST['submit'])) {
                         }
                             function check() {
                                 if(document.getElementById('CaptchaEnter').value == document.getElementById('randomfield').value){
-                                    <?php $captcha = true  ?>
+                                    <?php $captcha = 0  ?>
                                 } else {
-                                    <?php $captcha = false ?>
+                                    <?php $captcha = 1 ?>
                                 }
                             }
                     </script>
