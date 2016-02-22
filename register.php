@@ -1,22 +1,4 @@
-<?php
-require('PHP/config.php');
 
-if (isset($_POST['submit'])) {
-    include('$db');
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $reg_date = date('Y-m-d G:i:s');
-    $password = md5($password);
-
-    $sqlinsert = "INSERT INTO users (user_name, email, password, reg_date) VALUES
-            ('$username', '$email', '$password', '$reg_date')";
-    if (!mysqli_query($db, $sqlinsert)) {
-        echo "<script>alert('Username or Email has been used already'); location.href='Register.php';</script>";
-    }
-    $newrecord = "You're successfully registered";
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -164,3 +146,22 @@ if (isset($_POST['submit'])) {
     </div>
 </div>
 </body>
+<?php
+require('PHP/config.php');
+
+if (isset($_POST['submit'])) {
+    include('$db');
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $reg_date = date('Y-m-d G:i:s');
+    $password = md5($password);
+
+    $sqlinsert = "INSERT INTO users (user_name, email, password, reg_date) VALUES
+            ('$username', '$email', '$password', '$reg_date')";
+    if (!mysqli_query($db, $sqlinsert)) {
+        echo "<script>alert('Username or Email has been used already'); location.href='Register.php';</script>";
+    }
+    $newrecord = "You're successfully registered";
+}
+?>
