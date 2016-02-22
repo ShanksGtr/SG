@@ -118,3 +118,17 @@ body {
     border-color: black;
     box-shadow: 1px 1px 10px 10px #008000
 }
+
+#randomfield {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 200px;
+    color: black;
+    border-color: black;
+    background-color: white;
+    text-align: center;
+    font-size: 40px;
+}
