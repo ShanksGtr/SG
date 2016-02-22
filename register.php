@@ -134,4 +134,3 @@ $newrecord = "You're successfully registered";
     </div>
 </div>
 </body>
-</html>
