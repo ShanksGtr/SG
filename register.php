@@ -2,6 +2,9 @@
 require('PHP/config.php');
 
 if (isset($_POST['submit'])) {
+    session_start();
+    if ($_POST['captcha'] != $_SESSION['digit']) die ("<script>alert('Please re-check the captcha');</script>");
+    session_destroy();
 
     include('$db');
     $username = $_POST['username'];
@@ -9,11 +12,6 @@ if (isset($_POST['submit'])) {
     $password = $_POST['password'];
     $reg_date = date('Y-m-d G:i:s');
     $password = md5($password);
-    $captcha = $_POST ['captcha'];
-
-    if ($captcha = 0) {
-        echo "<script>alert('Please re-check the captcha');</script>";
-    } elseif ($captcha = 1) {
 
     $sqlinsert = "INSERT INTO users (user_name, email, password, reg_date) VALUES
             ('$username', '$email', '$password', '$reg_date')";
@@ -21,7 +19,7 @@ if (isset($_POST['submit'])) {
         echo "<script>alert('Username or Email has been used already'); location.href='Register.php';</script>";
     }
     $newrecord = "You're successfully registered";
-}}
+}
 ?>
 
 <!DOCTYPE html>
@@ -116,7 +114,7 @@ if (isset($_POST['submit'])) {
                     <label class="col-sm-2 control-label">Captcha</label>
                     <div class="col-sm-5">
                         <form method="post" action="register.php" onsubmit="return checkForm(this);">
-                            <img src="/captcha.php" width="120" height="30" border="1" style="padding-bottom= 5px">
+                            <img src="captcha.php" width="160" height="45" border="1" style="font-size= 20px">
                             <input id="CaptchaEnter" type="text" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha">
                         </form>
                             <script type="text/javascript">
