@@ -102,13 +102,13 @@ if (isset($_POST['submit'])) {
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
                     <div class="col-sm-5">
-                        <input type="email" name="email" pattern=".{0,100}" maxlength="100" class="form-control" id="inputEmail3" placeholder="Email">
+                        <input type="email" name="email" pattern=".{1,100}" required="required" maxlength="100" class="form-control" id="inputEmail3" placeholder="Email">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
                     <div class="col-sm-5">
-                        <input type="password" pattern=".{8,32}" maxlength="32" name="password" class="form-control" id="inputPassword3" placeholder="Password" oninvalid="setCustomValidity('Must be between 8 to 32 characters ')" onchange="try{setCustomValidity('')}catch(e){}">
+                        <input type="password" pattern=".{8,32}" maxlength="32" required="required" name="password" class="form-control" id="inputPassword3" placeholder="Password" oninvalid="setCustomValidity('Must be between 8 to 32 characters ')" onchange="try{setCustomValidity('')}catch(e){}">
                     </div>
                 </div>
                 <div class="form-group">
@@ -116,7 +116,7 @@ if (isset($_POST['submit'])) {
                     <div class="col-sm-3">
                         <form method="post" action="register.php" onsubmit="return checkForm(this);">
                             <img src="captcha.php" width="232.5" height="70" border="1">
-                            <input id="CaptchaEnter" type="text" pattern=".{0,5}" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha" style="margin-top: 5px" oninvalid="setCustomValidity('Please enter the numbers from the Captcha ')" onchange="try{setCustomValidity('')}catch(e){}"><br>
+                            <input id="CaptchaEnter" type="text" required="required" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha" style="margin-top: 5px" oninvalid="setCustomValidity('Please enter the numbers from the Captcha ')" onchange="try{setCustomValidity('')}catch(e){}"><br>
                             <button type="submit" name="submit" class="btn btn-default">Sign up</button>
                             <?php
                                 echo $newrecord;
