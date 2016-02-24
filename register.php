@@ -158,6 +158,7 @@ if (isset($_POST['submit'])) {
                 </div>
             </div>
         </div>
+    </div>
     <div class="footer">
         <div class="container-fluid" style="height: 2px"></div>
         <div class=container>
