@@ -22,9 +22,11 @@
 
     // using a mixture of system and GDF fonts
     $fonts = array();
-    $fonts[] = "arial.ttf";
-    $fonts[] = "times.ttf";
-    $fonts[] = "comic.ttf";
+    $fonts[] = "ttf-dejavu/DejaVuSerif-Bold.ttf";
+    $fonts[] = "ttf-dejavu/DejaVuSans-Bold.ttf";
+    $fonts[] = "ttf-dejavu/DejaVuSansMono-Bold.ttf";
+
+
 
     // add random digits to canvas using random black/white colour
     $digit = '';
