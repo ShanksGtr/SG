@@ -3,7 +3,7 @@ require('PHP/config.php');
 
 if (isset($_POST['submit'])) {
     session_start();
-    if ($_POST['captcha'] != $_SESSION['digit']) die ("<script>alert('Please re-check the captcha');</script>");
+    if ($_POST['captcha'] != $_SESSION['digit']) die ("<script>alert('Please re-check the captcha'); location.href='Register.php';</script>");
     session_destroy();
 
     include('$db');
@@ -114,7 +114,7 @@ if (isset($_POST['submit'])) {
                     <label class="col-sm-2 control-label">Captcha</label>
                     <div class="col-sm-5">
                         <form method="post" action="register.php" onsubmit="return checkForm(this);">
-                            <img src="captcha.php" width="160" height="45" border="1" style="font-size= 20px"><br>
+                            <img src="captcha.php" width="160" height="45" border="1" style="font-size= 50px"><br>
                             <input id="CaptchaEnter" type="text" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha"><br>
                             <button type="submit" name="submit" class="btn btn-default">Sign in</button>
                             <?php
@@ -154,26 +154,13 @@ if (isset($_POST['submit'])) {
                                        }
                                    }
                            </script> -->
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label"></label>
-                    <div class="col-sm-3">
 
-                    </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-5">
-
-                        </div>
-                    </div>
-            </form>
+            </div>
         </div>
-    </div>
-</div>
-<div class="footer">
-    <div class="container-fluid" style="height: 2px"></div>
-    <div class=container>
+    <div class="footer">
+        <div class="container-fluid" style="height: 2px"></div>
+        <div class=container>
         <div class="col-md-4">
             <p>Choose your Theme!</p>
             <button onclick="swapStyleSheet('Style/SG.css')">Dark Blue</button>
