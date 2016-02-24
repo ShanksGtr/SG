@@ -20,9 +20,9 @@
 
     // using a mixture of system and GDF fonts
     $fonts = array();
-    $fonts[] = imageloadfont("$fontdir/bmcorrode.gdf");
-    $fonts[] = imageloadfont("$fontdir/bmreceipt.gdf");
-    $fonts[] = imageloadfont("$fontdir/checkbook.gdf");
+    $fonts[] = "arial.ttf";
+    $fonts[] = "times.ttf";
+    $fonts[] = "comic.ttf";
 
 
     session_start();
