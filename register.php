@@ -44,7 +44,7 @@ if (isset($_POST['submit'])) {
     <link href='https://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
 </head>
-<body onload="Captcha()">
+<body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -114,7 +114,7 @@ if (isset($_POST['submit'])) {
                     <label class="col-sm-2 control-label">Captcha</label>
                     <div class="col-sm-2">
                         <form method="post" action="register.php" onsubmit="return checkForm(this);">
-                            <img src="captcha.php" width="160" height="45" border="1">
+                            <img src="captcha.php" width="145" height="45" border="1">
                             <input id="CaptchaEnter" type="text" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha" style="margin-top: 2px"><br>
                             <button type="submit" name="submit" class="btn btn-default">Sign up</button>
                             <?php
