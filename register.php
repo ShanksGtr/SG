@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
     if (!mysqli_query($db, $sqlinsert)) {
         echo "<script>alert('Username or Email has been used already'); location.href='Register.php';</script>";
     }
-    $newrecord = "You're successfully registered";
+    $newrecord = "<script>alert('You are successfully registered'); location.href='login.html';</script>";
 }
 ?>
 
@@ -118,7 +118,7 @@ if (isset($_POST['submit'])) {
                             <input id="CaptchaEnter" type="text" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha" style="margin-top: 2px"><br>
                             <button type="submit" name="submit" class="btn btn-default">Sign up</button>
                             <?php
-                                echo "<p style='color: lawngreen; font-size: 20px; text-shadow: 2px 2px black;'>" . $newrecord ."</p>";
+                                echo $newrecord;
                             ?>
                         </form>
                             <script type="text/javascript">
