@@ -33,7 +33,7 @@
     for($x = 10; $x <= 130; $x += 30) {
         $textcolor = (rand() % 2) ? $textcolor1 : $textcolor2;
         $digit .= ($num = rand(0, 9));
-        imagettftext($image, 20, rand(-30,30), $x, rand(20, 42), $textcolor, $fonts[array_rand($fonts)], $num);
+        imagettftext($image, 15, rand(-30,30), $x, rand(20, 42), $textcolor, $fonts[array_rand($fonts)], $num);
     }
 
     // record digits in session variable
