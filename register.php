@@ -79,7 +79,7 @@ if (isset($_POST['submit'])) {
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="login.html">Sign In</a></li>
-                <li class="active"><a href="register.php">Sign Up > </a></li>
+                <li class="active"><a href="register.php"><span class="glyphicon glyphicon-user">Sign Up</span></a></li>
             </ul>
         </div>
     </div>
