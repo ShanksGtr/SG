@@ -114,7 +114,7 @@ if (isset($_POST['submit'])) {
                     <label class="col-sm-2 control-label">Captcha</label>
                     <div class="col-sm-3">
                         <form method="post" action="register.php" onsubmit="return checkForm(this);">
-                            <img src="captcha.php" width="170" height="70" border="1">
+                            <img src="captcha.php" width="232.5" height="70" border="1">
                             <input id="CaptchaEnter" type="text" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha" style="margin-top: 5px"><br>
                             <button type="submit" name="submit" class="btn btn-default">Sign up</button>
                             <?php
