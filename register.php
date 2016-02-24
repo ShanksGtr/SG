@@ -101,13 +101,13 @@ if (isset($_POST['submit'])) {
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
                     <div class="col-sm-5">
-                        <input type="email" name="email" pattern=".{1,100}" class="form-control" id="inputEmail3" placeholder="Email" oninvalid="setCustomValidity('Please enter an email address ')">
+                        <input type="email" name="email" pattern=".{1,100}" class="form-control" id="inputEmail3" placeholder="Email">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
                     <div class="col-sm-5">
-                        <input type="password" pattern=".{8,32}"name="password" class="form-control" id="inputPassword3" placeholder="Password" oninvalid="setCustomValidity('Must be between 8 to 32 characters ')">
+                        <input type="password" pattern=".{8,32}"name="password" class="form-control" id="inputPassword3" placeholder="Password" oninvalid="setCustomValidity('Must be between 8 to 32 characters ')" onchange="try{setCustomValidity('')}catch(e){}">
                     </div>
                 </div>
                 <div class="form-group">
