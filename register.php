@@ -95,7 +95,7 @@ if (isset($_POST['submit'])) {
                 <div class="form-group">
                     <label for="inputUsername" class="col-sm-2 control-label">Username</label>
                     <div class="col-sm-5">
-                        <input type="text" name="username" class="form-control" id="inputUsername" placeholder="Username">
+                        <input type="text" pattern=".{4,32}" name="username" class="form-control" id="inputUsername" placeholder="Between 4 to 30 characters">
                     </div>
                 </div>
                 <div class="form-group">
@@ -107,7 +107,7 @@ if (isset($_POST['submit'])) {
                 <div class="form-group">
                     <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
                     <div class="col-sm-5">
-                        <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Password">
+                        <input type="password" pattern=".{8,32}"name="password" class="form-control" id="inputPassword3" placeholder="Between 8 to 32 characters">
                     </div>
                 </div>
                 <div class="form-group">
