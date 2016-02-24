@@ -2,6 +2,7 @@
 require('PHP/config.php');
 
 if (isset($_POST['submit'])) {
+
     session_start();
     if ($_POST['captcha'] != $_SESSION['digit']) die ("<script>alert('Please re-check the captcha'); location.href='Register.php';</script>");
     session_destroy();
@@ -95,19 +96,19 @@ if (isset($_POST['submit'])) {
                 <div class="form-group">
                     <label for="inputUsername" class="col-sm-2 control-label">Username</label>
                     <div class="col-sm-5">
-                        <input type="text" pattern=".{4,32}" name="username" class="form-control" id="inputUsername" placeholder="Username" oninvalid="setCustomValidity('Must be between 4 to 30 characters ')" onchange="try{setCustomValidity('')}catch(e){}">
+                        <input type="text" pattern=".{4,30}" maxlength="30" name="username" class="form-control" id="inputUsername" placeholder="Username" oninvalid="setCustomValidity('Must be between 4 to 30 characters ')" onchange="try{setCustomValidity('')}catch(e){}">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
                     <div class="col-sm-5">
-                        <input type="email" name="email" pattern=".{1,100}" class="form-control" id="inputEmail3" placeholder="Email">
+                        <input type="email" name="email" pattern=".{0,100}" maxlength="100" class="form-control" id="inputEmail3" placeholder="Email">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
                     <div class="col-sm-5">
-                        <input type="password" pattern=".{8,32}"name="password" class="form-control" id="inputPassword3" placeholder="Password" oninvalid="setCustomValidity('Must be between 8 to 32 characters ')" onchange="try{setCustomValidity('')}catch(e){}">
+                        <input type="password" pattern=".{8,32}" maxlength="32" name="password" class="form-control" id="inputPassword3" placeholder="Password" oninvalid="setCustomValidity('Must be between 8 to 32 characters ')" onchange="try{setCustomValidity('')}catch(e){}">
                     </div>
                 </div>
                 <div class="form-group">
@@ -115,7 +116,7 @@ if (isset($_POST['submit'])) {
                     <div class="col-sm-3">
                         <form method="post" action="register.php" onsubmit="return checkForm(this);">
                             <img src="captcha.php" width="232.5" height="70" border="1">
-                            <input id="CaptchaEnter" type="text" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha" style="margin-top: 5px"><br>
+                            <input id="CaptchaEnter" type="text" pattern=".{0,5}" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha" style="margin-top: 5px" oninvalid="setCustomValidity('Please enter the numbers from the Captcha ')" onchange="try{setCustomValidity('')}catch(e){}"><br>
                             <button type="submit" name="submit" class="btn btn-default">Sign up</button>
                             <?php
                                 echo $newrecord;
