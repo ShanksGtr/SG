@@ -18,14 +18,14 @@
         imageline($image, rand(0,160), 0, rand(0,160), 45 , $linecolor);
     }
 
-    // using a mixture of system and GDF fonts
-    $fonts = array(3,4,5);
-    $fonts[] = imageloadfont("$fontdir/bmcorrode.gdf");
-    $fonts[] = imageloadfont("$fontdir/bmreceipt.gdf");
-    $fonts[] = imageloadfont("$fontdir/checkbook.gdf");
-    shuffle($fonts);
-
     session_start();
+
+    // using a mixture of system and GDF fonts
+    $fonts = array();
+    $fonts[] = "ttf-dejavu/DejaVuSerif-Bold.ttf";
+    $fonts[] = "ttf-dejavu/DejaVuSans-Bold.ttf";
+    $fonts[] = "ttf-dejavu/DejaVuSansMono-Bold.ttf";
+
 
     // add random digits to canvas using random black/white colour
     $digit = '';
