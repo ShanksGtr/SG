@@ -113,12 +113,9 @@ if (isset($_POST['submit'])) {
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Captcha</label>
                     <div class="col-sm-5">
-                            <img src="captcha.php" width="160" height="45" border="1" style="font-size= 50px"><br>
+                            <img src="captcha.php" width="160" height="45" border="1" style="font-size= 50px"><br><hr>
                             <input id="CaptchaEnter" type="text" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha"><br>
-                            <button type="submit" name="submit" class="btn btn-default">Sign in</button>
-                            <?php
-                                echo "<style=color: lawngreen; font-size: 20px> $newrecord";
-                            ?>
+
                             <script type="text/javascript">
 
                                 function checkForm(form) {
@@ -154,6 +151,10 @@ if (isset($_POST['submit'])) {
                            </script> -->
                     </div>
                 </div>
+                <button type="submit" name="submit" class="btn btn-default">Sign in</button>
+                <?php
+                echo "<style=color: lawngreen; font-size: 20px> $newrecord";
+                ?>
             </form>
         </div>
     </div>
