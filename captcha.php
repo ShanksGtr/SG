@@ -18,14 +18,13 @@
         imageline($image, rand(0,160), 0, rand(0,160), 45 , $linecolor);
     }
 
+    session_start();
+
     // using a mixture of system and GDF fonts
     $fonts = array();
     $fonts[] = "arial.ttf";
     $fonts[] = "times.ttf";
     $fonts[] = "comic.ttf";
-
-
-    session_start();
 
     // add random digits to canvas using random black/white colour
     $digit = '';
