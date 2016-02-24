@@ -153,8 +153,9 @@ if (isset($_POST['submit'])) {
                                    }
                            </script> -->
                     </div>
-            </div>
-        </form>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
     <div class="footer">
