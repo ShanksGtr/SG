@@ -144,8 +144,8 @@ if (isset($_POST['submit'])) {
                                        }
                                    document.getElementById('randomfield').value = Captcha;
                                }
-                                   function check() {
-                                       if(document.getElementById('CaptchaEnter').value == document.getElementById('randomfield').value){
+                                       if(document.
+                                   function check() {getElementById('CaptchaEnter').value == document.getElementById('randomfield').value){
 
                                        } else {
 
