@@ -101,7 +101,7 @@ if (isset($_POST['submit'])) {
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
                     <div class="col-sm-5">
-                        <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        <input type="email" name="email" pattern=".{1,100}" class="form-control" id="inputEmail3" placeholder="Email" oninvalid="setCustomValidity('Please enter an email address ')">
                     </div>
                 </div>
                 <div class="form-group">
