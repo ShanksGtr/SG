@@ -118,7 +118,7 @@ if (isset($_POST['submit'])) {
                             <input id="CaptchaEnter" type="text" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha" style="margin-top: 2px"><br>
                             <button type="submit" name="submit" class="btn btn-default">Sign up</button>
                             <?php
-                                echo "<style=color: lawngreen; font-size: 20px> $newrecord";
+                                echo "<p style='color: lawngreen; font-size: 20px; text-shadow: 2px 2px black;'>" . $newrecord ."</p>";
                             ?>
                         </form>
                             <script type="text/javascript">
