@@ -116,12 +116,12 @@ if (isset($_POST['submit'])) {
                     <div class="col-sm-3">
                         <form method="post" action="register.php" onsubmit="return checkForm(this);">
                             <img imd="captcha" src="captcha.php" width="232.5" height="70" border="1">
-                            <h3><a href="#" onclick="
+                            <p><a href="#" onclick="
                               document.getElementById('captcha').src = 'captcha.php?' + Math.random();
                               document.getElementById('captcha_code').value = '';
                               return false;
-                               ">refresh</a></h3>
-                            <input id="captcha_code" type="text" required="required" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha" style="margin-top: 5px" oninvalid="setCustomValidity('Please enter the numbers from the Captcha ')" onchange="try{setCustomValidity('')}catch(e){}"><br>
+                               ">refresh</a></p>
+                            <input id="captcha_code" type="text" required="required" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha" style="margin-top: 5px" oninvalid="setCustomValidity('Please enter the numbers from the Captcha ')" onchange="try{setCustomValidity('')}catch(e){}" onkeyup="this.value = this.value.replace(/[^\d]+/g, '');"><br>
                             <button type="submit" name="submit" class="btn btn-default">Sign up</button>
                             <?php
                                 echo $newrecord;
