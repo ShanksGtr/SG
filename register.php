@@ -116,11 +116,11 @@ if (isset($_POST['submit'])) {
                     <div class="col-sm-3">
                         <form method="post" action="register.php" onsubmit="return checkForm(this);">
                             <img id="captcha" src="captcha.php" width="232.5" height="70" border="1">
-                            <p><a href="#" style="font-family: 'Black Ops One', cursive" onclick="
+                            <p><a href="#" style="font-family: 'Press Start 2P', cursive; font-size: 10px" onclick="
                               document.getElementById('captcha').src = 'captcha.php?' + Math.random();
                               document.getElementById('captcha_code').value = '';
                               return false;
-                               "><span class="glyphicon glyphicon-refresh"></span>Refresh</a></p>
+                               "><span class="glyphicon glyphicon-refresh"></span> Refresh</a></p>
                             <input id="captcha_code" type="text" required="required" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha" style="margin-top: 5px" oninvalid="setCustomValidity('Please enter the numbers from the Captcha ')" onchange="try{setCustomValidity('')}catch(e){}" onkeyup="this.value = this.value.replace(/[^\d]+/g, '');"><br>
                             <button type="submit" name="submit" class="btn btn-default">Sign up</button>
                             <?php
