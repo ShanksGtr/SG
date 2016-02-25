@@ -116,7 +116,7 @@ if (isset($_POST['submit'])) {
                         <div class="col-sm-3">
                             <form method="post" action="register.php" onsubmit="return checkForm(this);">
                                 <img id="captcha" src="captcha.php" width="232.5" height="70" border="1">
-                                <p><a href="#"  onclick="
+                                <p style="margin-bottom: 0"><a href="#"  onclick="
                                   document.getElementById('captcha').src = 'captcha.php?' + Math.random();
                                   document.getElementById('captcha_code').value = '';
                                   return false;
