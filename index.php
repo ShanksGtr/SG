@@ -107,6 +107,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 </div>
                 <div class="col-md-4"></div>
                 <div class="col-md-4"><a href="about.php">About</a></div>
+                <div class="col-md-4"><a href="terms.php">Terms</a></div>
             </div>
         </div>
 </body>
