@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,8 +69,14 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="login.html"><span class="glyphicon glyphicon-log-in" style="font-size:20px; margin-right: 3px"></span>SignIn</a></li>
-                <li><a href="register.php"><span class="glyphicon glyphicon-user" style="font-size:20px; margin-right: 2px"></span>SignUp</a></li>
+                <?php if ($_SESSION['username'] == true) { ?>
+                    <li><a href="PHP/logout.php"><span class="glyphicon glyphicon-log-out" style="font-size:20px; margin-right: 3px"></span>Logoff</a></li>
+                    <li><a href="profile.php"><span class="glyphicon glyphicon-user" style="font-size:20px; margin-right: 2px"></span>MyProfile</a></li>
+                <?php } else { ?>
+                    <li><a href="login.html"><span class="glyphicon glyphicon-log-in" style="font-size:20px; margin-right: 3px"></span>SignIn</a></li>
+                    <li><a href="register.php"><span class="glyphicon glyphicon-user" style="font-size:20px; margin-right: 2px"></span>SignUp</a></li>
+                <?php } ?>
+
             </ul>
 
         </div>
@@ -119,7 +132,7 @@
             <button onclick="swapStyleSheet('Style/WB.css')">White Blue</button>
         </div>
         <div class="col-md-4"></div>
-        <div class="col-md-4"><a href="about.html">About</a></div>
+        <div class="col-md-4"><a href="about.php">About</a></div>
     </div>
 </div>
 </body>

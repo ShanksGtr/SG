@@ -47,7 +47,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">SGamers</a>
+                    <a class="navbar-brand" href="index.php">SGamers</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -76,7 +76,6 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             <li><a href="login.html"><span class="glyphicon glyphicon-log-in" style="font-size:20px; margin-right: 3px"></span>SignIn</a></li>
                             <li><a href="register.php"><span class="glyphicon glyphicon-user" style="font-size:20px; margin-right: 2px"></span>SignUp</a></li>
                         <?php } ?>
-
                     </ul>
 
                 </div>
@@ -107,7 +106,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <button onclick="swapStyleSheet('Style/WB.css')">White Blue</button>
                 </div>
                 <div class="col-md-4"></div>
-                <div class="col-md-4"><a href="about.html">About</a></div>
+                <div class="col-md-4"><a href="about.php">About</a></div>
             </div>
         </div>
 </body>
