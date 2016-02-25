@@ -13,7 +13,7 @@
     $textcolor2 = imagecolorallocate($image, 0xFF, 0xFF, 0xFF);
 
     // draw random lines on canvas
-    for($i=0; $i < 8; $i++) {
+    for($i=0; $i < 16; $i++) {
         imagesetthickness($image, rand(1,3));
         imageline($image, rand(0,160), 0, rand(0,160), 45 , $linecolor);
     }
@@ -33,7 +33,7 @@
     for($x = 10; $x <= 130; $x += 30) {
         $textcolor = (rand() % 2) ? $textcolor1 : $textcolor2;
         $digit .= ($num = rand(0, 9));
-        imagettftext($image, 15, rand(-30,30), $x, rand(20, 42), $textcolor, $fonts[array_rand($fonts)], $num);
+        imagettftext($image, 10, rand(-30,30), $x, rand(20, 42), $textcolor, $fonts[array_rand($fonts)], $num);
     }
 
     // record digits in session variable
