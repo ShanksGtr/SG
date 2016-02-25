@@ -110,7 +110,7 @@ if (isset($_POST['submit'])) {
                     <div class="col-sm-5">
                         <input type="password" pattern=".{8,32}" maxlength="32" required="required" name="password" class="form-control" id="inputPassword3" placeholder="Password" oninvalid="setCustomValidity('Must be between 8 to 32 characters ')" onchange="try{setCustomValidity('')}catch(e){}">
                     </div>
-                </div>
+                </div><br>
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Captcha</label>
                         <div class="col-sm-3">
@@ -121,7 +121,7 @@ if (isset($_POST['submit'])) {
                                   document.getElementById('captcha_code').value = '';
                                   return false;
                                    "><span class="glyphicon glyphicon-refresh"></span></a></p>
-                                <input id="captcha_code" type="text" required="required" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha" style="margin-top: 5px" oninvalid="setCustomValidity('Please enter the numbers from the Captcha ')" onchange="try{setCustomValidity('')}catch(e){}" onkeyup="this.value = this.value.replace(/[^\d]+/g, '');">
+                                <input id="captcha_code" type="text" required="required" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha" style="margin-top: 1px" oninvalid="setCustomValidity('Please enter the numbers from the Captcha ')" onchange="try{setCustomValidity('')}catch(e){}" onkeyup="this.value = this.value.replace(/[^\d]+/g, '');">
                         </div>
                     </div>
                         <div class="form-group">
