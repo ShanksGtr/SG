@@ -121,7 +121,7 @@ if (isset($_POST['submit'])) {
                                   document.getElementById('captcha_code').value = '';
                                   return false;
                                    "><span class="glyphicon glyphicon-refresh"></span></a></p>
-                                <input id="captcha_code" type="text" required="required" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha" style="margin-top: 1px" oninvalid="setCustomValidity('Please enter the numbers from the Captcha ')" onchange="try{setCustomValidity('')}catch(e){}" onkeyup="this.value = this.value.replace(/[^\d]+/g, '');">
+                                <input id="captcha_code" type="text" required="required" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha" oninvalid="setCustomValidity('Please enter the numbers from the Captcha ')" onchange="try{setCustomValidity('')}catch(e){}" onkeyup="this.value = this.value.replace(/[^\d]+/g, '');">
                         </div>
                     </div>
                         <div class="form-group">
