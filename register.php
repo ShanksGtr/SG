@@ -124,9 +124,10 @@ if (isset($_POST['submit'])) {
                             <input id="captcha_code" type="text" required="required" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha" style="margin-top: 5px" oninvalid="setCustomValidity('Please enter the numbers from the Captcha ')" onchange="try{setCustomValidity('')}catch(e){}" onkeyup="this.value = this.value.replace(/[^\d]+/g, '');">
                             </div>
                         <div class="form-group">
+                            <label class="col-sm-2 control-label">Terms and conditions</label>
                             <div class="col-sm-4">
                                 <input type="checkbox" name="terms" id="terms"> <label for="terms">I agree on the <a href="terms.html">terms and conditions</a></label><br>
-                                <button id="agree" type="submit" name="submit" class="btn btn-default" value="send" disabled>Sign up</button>
+                                <button id="agree" type="submit" name="submit" class="btn btn-default" value="send">Sign up</button>
                                 <?php
                                 echo $newrecord;
                                 ?>
