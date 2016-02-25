@@ -10,7 +10,7 @@
         $password = mysqli_real_escape_string($db, $_POST['password']);
         $password = md5($password);
 
-        $sqlget = "SELECT * FROM users WHERE username ='$username'
+        $sqlget = "SELECT * FROM users WHERE user_name ='$username'
                                 AND password ='$password'";
         $run_user = mysqli_query($db, $sqlget);
         $check_user = mysqli_num_rows($run_user);
