@@ -62,6 +62,23 @@
         <div class="page-header">
             <h1>Login: </h1>
         </div>
+        <div>
+            <form action="PHP/logging.php" method="post">
+                <div class="form-group">
+                    <label for="inputUsername" class="col-sm-2 control-label">Username:</label>
+                    <div class="col-sm-5">
+                        <input type="text" pattern=".{4,30}" required="required" maxlength="30" name="username" class="form-control" id="inputUsername" placeholder="Username" oninvalid="setCustomValidity('Must be between 4 to 30 characters ')" onchange="try{setCustomValidity('')}catch(e){}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 control-label">Password:</label>
+                    <div class="col-sm-5">
+                        <input type="password" pattern=".{8,32}" maxlength="32" required="required" name="password" class="form-control" id="inputPassword3" placeholder="Password" oninvalid="setCustomValidity('Must be between 8 to 32 characters ')" onchange="try{setCustomValidity('')}catch(e){}">
+                        <button type="submit" name="submit" class="btn btn-default" style="margin-top: 10px">Sign In</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 <div class="footer">

@@ -94,25 +94,25 @@ if (isset($_POST['submit'])) {
         <div>
             <form class="form-horizontal" action="register.php" method="post">
                 <div class="form-group">
-                    <label for="inputUsername" class="col-sm-2 control-label">Username</label>
+                    <label for="inputUsername" class="col-sm-2 control-label">Username:</label>
                     <div class="col-sm-5">
                         <input type="text" pattern=".{4,30}" required="required" maxlength="30" name="username" class="form-control" id="inputUsername" placeholder="Username" oninvalid="setCustomValidity('Must be between 4 to 30 characters ')" onchange="try{setCustomValidity('')}catch(e){}">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                    <label for="inputEmail3" class="col-sm-2 control-label">Email:</label>
                     <div class="col-sm-5">
                         <input type="email" name="email" pattern=".{5,100}" required="required" maxlength="100" class="form-control" id="inputEmail3" placeholder="Email">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                    <label for="inputPassword3" class="col-sm-2 control-label">Password:</label>
                     <div class="col-sm-5">
                         <input type="password" pattern=".{8,32}" maxlength="32" required="required" name="password" class="form-control" id="inputPassword3" placeholder="Password" oninvalid="setCustomValidity('Must be between 8 to 32 characters ')" onchange="try{setCustomValidity('')}catch(e){}">
                     </div>
                 </div><br>
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">Captcha</label>
+                    <label class="col-sm-2 control-label">Captcha:</label>
                         <div class="col-sm-3">
                             <form method="post" action="register.php" onsubmit="return checkForm(this);">
                                 <img id="captcha" src="captcha.php" width="232.5" height="70" border="1">
@@ -125,7 +125,7 @@ if (isset($_POST['submit'])) {
                         </div>
                     </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Terms and conditions</label>
+                            <label class="col-sm-2 control-label">Terms and conditions:</label>
                             <div class="col-sm-4" style="padding-top: 7px">
                                 <input type="checkbox" name="terms" id="terms" onchange="document.getElementById('agree').disabled = !this.checked;"> <label for="terms">I agree on the <a href="terms.html">terms and conditions</a></label>
                                 <button id="agree" type="submit" name="submit" class="btn btn-default" value="send" style="margin-top: 10px" disabled>Sign up</button>
