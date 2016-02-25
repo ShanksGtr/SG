@@ -116,16 +116,25 @@ if (isset($_POST['submit'])) {
                     <div class="col-sm-3">
                         <form method="post" action="register.php" onsubmit="return checkForm(this);">
                             <img id="captcha" src="captcha.php" width="232.5" height="70" border="1">
-                            <p><a href="#" style="" onclick="
+                            <p><a href="#"  onclick="
                               document.getElementById('captcha').src = 'captcha.php?' + Math.random();
                               document.getElementById('captcha_code').value = '';
                               return false;
                                "><span class="glyphicon glyphicon-refresh"></span></a></p>
                             <input id="captcha_code" type="text" required="required" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha" style="margin-top: 5px" oninvalid="setCustomValidity('Please enter the numbers from the Captcha ')" onchange="try{setCustomValidity('')}catch(e){}" onkeyup="this.value = this.value.replace(/[^\d]+/g, '');"><br>
-                            <button type="submit" name="submit" class="btn btn-default">Sign up</button>
+                            <input type="checkbox" name="terms" id="terms"> <label for="terms"><a href="terms.html">I agree on the terms and conditions</a></label>
+                            <button type="submit" name="submit" class="btn btn-default" value="Do thing" disabled>Sign up</button>
                             <?php
                                 echo $newrecord;
                             ?>
+                            <script>
+                                var checkboxes = $("input[type='checkbox']"),
+                                    submitButt = $("input[type='submit']");
+
+                                checkboxes.click(function() {
+                                    submitButt.attr("disabled", !checkboxes.is(":checked"));
+                                });
+                            </script>
                         </form>
                             <script type="text/javascript">
 
