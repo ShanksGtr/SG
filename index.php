@@ -106,8 +106,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <button onclick="swapStyleSheet('Style/WB.css')">White Blue</button>
                 </div>
                 <div class="col-md-4"></div>
-                <div class="col-md-4">
-                    <a style="padding-bottom: 10px" href="about.php">About</a><br>
+                <div class="col-md-4" style="padding-bottom: 7px">
+                    <a href="about.php">About</a><br>
                     <a href="terms.php">Terms</a>
                 </div>
             </div>
