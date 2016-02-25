@@ -130,7 +130,7 @@ if (isset($_POST['submit'])) {
                                 <input type="checkbox" name="terms" id="terms" onchange="document.getElementById('agree').disabled = !this.checked;"> <label for="terms">I agree on the <a href="terms.html">terms and conditions</a></label>
                                 <button id="agree" type="submit" name="submit" class="btn btn-default" value="send" style="margin-top: 10px" disabled>Sign up</button>
                                 <?php
-                                echo $newrecord;
+                                    echo $newrecord;
                                 ?>
                             </div>
                             <script type="text/javascript">
