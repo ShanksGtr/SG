@@ -136,7 +136,7 @@ if (isset($_POST['submit'])) {
                                     var checker = document.getElementById('terms');
                                     var sendbtn = document.getElementById('agree');
                                     checker.onchange = function() {
-                                        sendbtn.disabled = !!this.checked;
+                                        sendbtn.disabled = true
                                     };
                                 </script>
                             </div>
