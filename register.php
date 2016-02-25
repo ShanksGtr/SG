@@ -120,7 +120,7 @@ if (isset($_POST['submit'])) {
                               document.getElementById('captcha').src = 'captcha.php?' + Math.random();
                               document.getElementById('captcha_code').value = '';
                               return false;
-                               ">refresh</a></small></p>
+                               ">refresh</a></small>
                             <input id="CaptchaEnter" type="text" required="required" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha" style="margin-top: 5px" oninvalid="setCustomValidity('Please enter the numbers from the Captcha ')" onchange="try{setCustomValidity('')}catch(e){}"><br>
                             <button type="submit" name="submit" class="btn btn-default">Sign up</button>
                             <?php
