@@ -121,22 +121,22 @@ if (isset($_POST['submit'])) {
                               document.getElementById('captcha_code').value = '';
                               return false;
                                "><span class="glyphicon glyphicon-refresh"></span></a></p>
-                            <input id="captcha_code" type="text" required="required" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha" style="margin-top: 5px" oninvalid="setCustomValidity('Please enter the numbers from the Captcha ')" onchange="try{setCustomValidity('')}catch(e){}" onkeyup="this.value = this.value.replace(/[^\d]+/g, '');"><br>
-                            <div>
-                                <input type="checkbox" name="terms" id="terms"> <label for="terms">I agree on the terms and conditions</label>
-                                    <script>
-                                        var checkboxes = $("input[type='checkbox']"),
-                                            submitButt = $("input[type='submit']");
-
-                                        checkboxes.click(function() {
-                                            submitButt.attr("disabled", !checkboxes.is(":checked"));
-                                        });
-                                    </script>
+                            <input id="captcha_code" type="text" required="required" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha" style="margin-top: 5px" oninvalid="setCustomValidity('Please enter the numbers from the Captcha ')" onchange="try{setCustomValidity('')}catch(e){}" onkeyup="this.value = this.value.replace(/[^\d]+/g, '');">
                             </div>
-                            <button type="submit" name="submit" class="btn btn-default" value="Do thing" disabled>Sign up</button>
-                            <?php
+                            <div class="col-md-4">
+                                <input type="checkbox" name="terms" id="terms"> <label for="terms">I agree on the <a href="terms.html">terms and conditions</a></label><br>
+                                <button id="agree" type="submit" name="submit" class="btn btn-default" value="send">Sign up</button>
+                                <?php
                                 echo $newrecord;
-                            ?>
+                                ?>
+                                <script>
+                                    var checker = document.getElementById('terms');
+                                    var sendbtn = document.getElementById('agree');
+                                    checker.onchange = function() {
+                                        sendbtn.disabled = !!this.checked;
+                                    };
+                                </script>
+                            </div>
                         </form>
                             <script type="text/javascript">
 
@@ -171,7 +171,7 @@ if (isset($_POST['submit'])) {
                                        }
                                    }
                            </script> -->
-                    </div>
+
                 </div>
             </form>
         </div>
@@ -191,5 +191,4 @@ if (isset($_POST['submit'])) {
         <div class="col-md-4"><a href="about.html">About</a></div>
     </div>
 </div>
-<script async src="//jsfiddle.net/chriscoyier/bphze/76/embed/"></script>
 </body>
