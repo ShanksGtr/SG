@@ -21,5 +21,6 @@
         } else {
             echo "<script>alert('Username or Password is incorrect'); location.href='/login.html';</script>";
         }
-
+        $run_user->close();
+        $db->close();
     }
