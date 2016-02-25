@@ -123,7 +123,7 @@ if (isset($_POST['submit'])) {
                                "><span class="glyphicon glyphicon-refresh"></span></a></p>
                             <input id="captcha_code" type="text" required="required" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha" style="margin-top: 5px" oninvalid="setCustomValidity('Please enter the numbers from the Captcha ')" onchange="try{setCustomValidity('')}catch(e){}" onkeyup="this.value = this.value.replace(/[^\d]+/g, '');"><br>
                             <div>
-                                <input type="checkbox" name="terms" id="terms"> <label for="terms"><a href="terms.html">I agree on the terms and conditions</a></label>
+                                <input type="checkbox" name="terms" id="terms"> <label for="terms">I agree on the terms and conditions</label>
                                     <script>
                                         var checkboxes = $("input[type='checkbox']"),
                                             submitButt = $("input[type='submit']");
