@@ -87,7 +87,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             <div class="jumbotron">
                 <div class="page-header">
                     <?php if ($_SESSION['username'] == true) {
-                        echo $_SESSION['username'] . "...";
+                        echo "Welcome " . $_SESSION['username'] . "...";
                     } else { ?>
                      <h1>Welcome to SGamers</h1> <?php } ?>
                 </div>
