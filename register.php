@@ -134,7 +134,7 @@ if (isset($_POST['submit'])) {
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Terms and conditions:</label>
                             <div class="col-sm-4" style="padding-top: 7px">
-                                <input type="checkbox" name="terms" id="terms" onchange="document.getElementById('agree').disabled = !this.checked;"> <label for="terms">I agree on the <a href="terms.php">terms and conditions</a></label>
+                                <input type="checkbox" name="terms" id="terms" onchange="document.getElementById('agree').disabled = !this.checked;"> <label for="terms">I agree on the <a href="terms.php" target="_blank">terms and conditions</a></label>
                                 <button id="agree" type="submit" name="submit" class="btn btn-default" value="send" style="margin-top: 10px" disabled>Sign up</button>
                                 <?php
                                     echo $newrecord;
