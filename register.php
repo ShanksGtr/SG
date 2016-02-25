@@ -122,19 +122,21 @@ if (isset($_POST['submit'])) {
                               return false;
                                "><span class="glyphicon glyphicon-refresh"></span></a></p>
                             <input id="captcha_code" type="text" required="required" size="6" maxlength="5" name="captcha" class="form-control" placeholder="Captcha" style="margin-top: 5px" oninvalid="setCustomValidity('Please enter the numbers from the Captcha ')" onchange="try{setCustomValidity('')}catch(e){}" onkeyup="this.value = this.value.replace(/[^\d]+/g, '');"><br>
-                            <input type="checkbox" name="terms" id="terms"> <label for="terms"><a href="terms.html">I agree on the terms and conditions</a></label>
+                            <div>
+                                <input type="checkbox" name="terms" id="terms"> <label for="terms"><a href="terms.html">I agree on the terms and conditions</a></label>
+                                    <script>
+                                        var checkboxes = $("input[type='checkbox']"),
+                                            submitButt = $("input[type='submit']");
+
+                                        checkboxes.click(function() {
+                                            submitButt.attr("disabled", !checkboxes.is(":checked"));
+                                        });
+                                    </script>
+                            </div>
                             <button type="submit" name="submit" class="btn btn-default" value="Do thing" disabled>Sign up</button>
                             <?php
                                 echo $newrecord;
                             ?>
-                            <script>
-                                var checkboxes = $("input[type='checkbox']"),
-                                    submitButt = $("input[type='submit']");
-
-                                checkboxes.click(function() {
-                                    submitButt.attr("disabled", !checkboxes.is(":checked"));
-                                });
-                            </script>
                         </form>
                             <script type="text/javascript">
 
@@ -189,4 +191,5 @@ if (isset($_POST['submit'])) {
         <div class="col-md-4"><a href="about.html">About</a></div>
     </div>
 </div>
+<script async src="//jsfiddle.net/chriscoyier/bphze/76/embed/"></script>
 </body>
