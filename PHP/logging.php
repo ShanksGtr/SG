@@ -19,7 +19,7 @@
             $_SESSION['username'] = $username;
             header('location:/index.php');
         } else {
-            echo "<script>alert('Username or Password is incorrect'); location.href='/login.html';</script>";
+            echo "<script>alert('Username or Password is incorrect'); location.href='/login.php';</script>";
         }
         $run_user->close();
         $db->close();

@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
+    header('location:/index.php');
+}
+
 require('PHP/config.php');
 
 if (isset($_POST['submit'])) {
@@ -19,7 +24,7 @@ if (isset($_POST['submit'])) {
     if (!mysqli_query($db, $sqlinsert)) {
         echo "<script>alert('Username or Email has been used already'); location.href='Register.php';</script>";
     }
-    $newrecord = "<script>alert('You are successfully registered'); location.href='login.html';</script>";
+    $newrecord = "<script>alert('You are successfully registered'); location.href='login.php';</script>";
 }
 ?>
 
@@ -79,7 +84,7 @@ if (isset($_POST['submit'])) {
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="login.html"><span class="glyphicon glyphicon-log-in" style="font-size:20px; margin-right: 3px"></span>SignIn</a></li>
+                <li><a href="login.php"><span class="glyphicon glyphicon-log-in" style="font-size:20px; margin-right: 3px"></span>SignIn</a></li>
                 <li class="active"><a href="register.php"><span class="glyphicon glyphicon-user" style="font-size:20px; margin-right: 2px"></span>SignUp</a></li>
             </ul>
         </div>
