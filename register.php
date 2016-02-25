@@ -182,7 +182,10 @@ if (isset($_POST['submit'])) {
             <button onclick="swapStyleSheet('Style/WB.css')">White Blue</button>
         </div>
         <div class="col-md-4"></div>
-        <div class="col-md-4"><a href="about.php">About</a></div>
+        <div class="col-md-4">
+            <a href="about.php">About</a><br>
+            <a href="terms.php">Terms</a>
+        </div>
     </div>
 </div>
 </body>
