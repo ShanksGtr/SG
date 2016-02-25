@@ -14,11 +14,12 @@
                                 AND password ='$password'";
         $run_user = mysqli_query($db, $sqlget);
         $check_user = mysqli_num_rows($run_user);
-        if ($check_user > 1) {
+        if ($check_user == 1) {
             session_start();
             $_SESSION['username'] = $username;
             header('location:/index.php');
         } else {
             echo "<script>alert('Username or Password is incorrect'); location.href='/login.html';</script>";
         }
+
     }
