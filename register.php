@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
     $sqlinsert = "INSERT INTO users (user_name, email, password, reg_date) VALUES
             ('$username', '$email', '$password', '$reg_date')";
     if (!mysqli_query($db, $sqlinsert)) {
-        echo ("<script>alert('Username or Email has been used already');</script>");
+        echo ("<script>alert('Username or Email has been used already'); location.href='Register.php';</script>");
     } else {
      echo "<script>alert('You are successfully registered'); location.href='login.php';</script>";
 }}
