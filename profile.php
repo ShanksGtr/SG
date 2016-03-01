@@ -104,7 +104,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 
         <div class="footer">
             <div class="container-fluid" style="height: 2px"></div>
-            <div class=container>
+            <div class=wrapper>
                 <div class="row">
                     <div class="col-md-4">
                         <p>Choose your Theme!</p>
