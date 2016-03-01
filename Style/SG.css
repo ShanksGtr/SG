@@ -135,8 +135,3 @@ body {
     font-size: 40px;
     box-shadow: 1px 0px 10px 5px #0073ff;
 }
-
-.row {
-    margin-left:  (@gutter / -2);
-    margin-right: (@gutter / -2);
-}
