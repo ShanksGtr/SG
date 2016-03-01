@@ -89,12 +89,14 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <?php } else { ?>
                         <h1>Welcome to SGamers</h1> <?php } ?>
                 </div>
-                <div class="row">
-                    <div class="col col-xs-8">
-                        <p>djafjdpoiajpfidjmpfijmapsdjmpifjmapsjmdpfjajsfapiajspoifjapisjfmpoiajmspofiajfpoijaijfpiajspimfjmsapifjpiajmspifjmpiajmspifjapisjmfpiajmspifjmapisjmfpisajmpifsaj</p>
-                    </div>
-                    <div class="col col-xs-4">
-                        <p>hello there</p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-xs-8">
+                            <p>djafjdpoiajpfidjmpfijmapsdjmpifjmapsjmdpfjajsfapiajspoifjapisjfmpoiajmspofiajfpoijaijfpiajspimfjmsapifjpiajmspifjmpiajmspifjapisjmfpiajmspifjmapisjmfpisajmpifsaj</p>
+                        </div>
+                        <div class="col col-xs-4">
+                            <p>hello there</p>
+                        </div>
                     </div>
                 </div>
             </div>
