@@ -77,7 +77,6 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             <li><a href="register.php"><span class="glyphicon glyphicon-user" style="font-size:20px; margin-right: 2px"></span>SignUp</a></li>
                         <?php } ?>
                     </ul>
-
                 </div>
             </div>
             <div class="container-fluid"></div>
@@ -89,6 +88,12 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         <h2>Welcome <?php echo $_SESSION['username']; ?>...</h2>
                     <?php } else { ?>
                         <h1>Welcome to SGamers</h1> <?php } ?>
+                </div>
+                <div class="col-md-3" style="border-right: 1px solid silver;">
+
+                </div>
+                <div class="col-md-9">
+
                 </div>
             </div>
         </div>
