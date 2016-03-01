@@ -115,8 +115,8 @@ if (isset($_POST['submit'])) {
                 <div class="form-group">
                     <label for="inputPassword3" class="col-sm-2 control-label">Password:</label>
                     <div class="col-sm-5">
-                        <input type="password" pattern=".{8,32}" maxlength="32" required="required" name="password" class="form-control" id="password" placeholder="Password" oninvalid="setCustomValidity('Must be between 8 to 32 characters ')" onchange="try{setCustomValidity('')}catch(e){}"><br>
-                        <input type="password" pattern=".{8,32}" maxlength="32" required="required" name="Rpassword" class="form-control" id="Rpassword" placeholder="Re-enter Password" oninvalid="setCustomValidity('Must be between 8 to 32 characters ')" onchange="try{setCustomValidity('')}catch(e){}">
+                        <input type="password" pattern=".{8,32}" maxlength="32" required="required" name="password" class="form-control" id="password" placeholder="Password" oninvalid="setCustomValidity('Must be between 8 to 32 characters ')" onchange="try{setCustomValidity('')}catch(e){}">
+                        <input type="password" pattern=".{8,32}" maxlength="32" required="required" name="Rpassword" class="form-control" id="Rpassword" placeholder="Re-enter Password" oninvalid="setCustomValidity('Must be between 8 to 32 characters ')" onchange="try{setCustomValidity('')}catch(e){}" style="margin-top: 10px;">
                             <script>
                                 function validate(){
 
