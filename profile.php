@@ -94,7 +94,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         <p>djafjdpoiajpfidjmpfijmapsdjmpifjmapsjmdpfjajsfapiajspoifjapisjfmpoiajmspofiajfpoijaijfpiajspimfjmsapifjpiajmspifjmpiajmspifjapisjmfpiajmspifjmapisjmfpisajmpifsaj</p>
                     </div>
                     <div class="col-md-9">
-
+                        <p>hello there</p>
                     </div>
                 </div>
             </div>
