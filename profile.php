@@ -90,10 +90,10 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         <h1>Welcome to SGamers</h1> <?php } ?>
                 </div>
                 <div class="row">
-                    <div class="col-sm-9" style="border-right: 1px solid silver;">
+                    <div class="col-md-9">
                         <p>djafjdpoiajpfidjmpfijmapsdjmpifjmapsjmdpfjajsfapiajspoifjapisjfmpoiajmspofiajfpoijaijfpiajspimfjmsapifjpiajmspifjmpiajmspifjapisjmfpiajmspifjmapisjmfpisajmpifsaj</p>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-md-3">
                         <p>hello there</p>
                     </div>
                 </div>
@@ -104,15 +104,15 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             <div class="container-fluid" style="height: 2px"></div>
             <div class=container>
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-md-4">
                         <p>Choose your Theme!</p>
                         <button onclick="swapStyleSheet('Style/SG.css')">Dark Blue</button>
                         <button onclick="swapStyleSheet('Style/BR.css')">Dark Red</button>
                         <button onclick="swapStyleSheet('Style/BG.css')">Dark Green</button>
                         <button onclick="swapStyleSheet('Style/WB.css')">White Blue</button>
                     </div>
-                    <div class="col-sm-4"></div>
-                    <div class="col-sm-4">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
                         <a href="about.php">About</a><br>
                         <a href="terms.php">Terms</a>
                     </div>
