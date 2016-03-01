@@ -90,10 +90,10 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         <h1>Welcome to SGamers</h1> <?php } ?>
                 </div>
                 <div class="row">
-                    <div class="col-md-3" style="border-right: 1px solid silver;">
+                    <div class="col-md-9" style="border-right: 1px solid silver;">
                         <p>djafjdpoiajpfidjmpfijmapsdjmpifjmapsjmdpfjajsfapiajspoifjapisjfmpoiajmspofiajfpoijaijfpiajspimfjmsapifjpiajmspifjmpiajmspifjapisjmfpiajmspifjmapisjmfpisajmpifsaj</p>
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-3">
                         <p>hello there</p>
                     </div>
                 </div>
