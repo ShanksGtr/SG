@@ -24,10 +24,10 @@ if (isset($_POST['submit'])) {
     $sqlinsert = "INSERT INTO users (user_name, email, password, reg_date) VALUES
             ('$username', '$email', '$password', '$reg_date')";
     if (!mysqli_query($db, $sqlinsert)) {
-        die ("<script>alert('Username or Email has been used already');</script>");
-    }
-    $newrecord = "<script>alert('You are successfully registered'); location.href='login.php';</script>";
-}
+        echo ("<script>alert('Username or Email has been used already');</script>");
+    } else {
+     echo "<script>alert('You are successfully registered'); location.href='login.php';</script>";
+}}
 ?>
 
 <!DOCTYPE html>
@@ -148,9 +148,6 @@ if (isset($_POST['submit'])) {
                             <div class="col-sm-4" style="padding-top: 7px">
                                 <input type="checkbox" name="terms" id="terms" onchange="document.getElementById('agree').disabled = !this.checked;"> <label for="terms">I agree on the <a href="terms.php" target="_blank">terms and conditions</a></label>
                                 <button id="agree" type="submit" name="submit" class="btn btn-default" value="send" style="margin-top: 10px" disabled>Sign up</button>
-                                <?php
-                                    echo $newrecord;
-                                ?>
                             </div>
                             <script type="text/javascript">
 
