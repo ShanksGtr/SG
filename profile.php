@@ -91,7 +91,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 </div>
                     <div class="row" style="word-wrap: break-word; border: 1px solid silver">
                         <div class="col col-md-9">
-                            <p>djafjdpoiajpfidjmpfijmapsdjmpifjmapsjmdpfjajsfapiajspoifjapisjfmpoiajmspofiajfpoijaijfpiajspimfjmsapifjpiajmspifjmpiajmspifjapisjmfpiajmspifjmapisjmfpisajmpifsaj</p>
+                            <p>I'm from whatver I'm from and I love to play all kinds of games because I like that hehehehe</p>
                         </div>
                         <div class="col col-md-3">
                             <p>hello there</p>
