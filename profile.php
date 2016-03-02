@@ -89,11 +89,11 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <?php } else { ?>
                         <h1>Welcome to SGamers</h1> <?php } ?>
                 </div>
-                    <div class="row" style="word-wrap: break-word">
-                        <div class="col col-xs-8">
+                    <div class="row" style="word-wrap: break-word; border: 1px solid silver">
+                        <div class="col col-md-9">
                             <p>djafjdpoiajpfidjmpfijmapsdjmpifjmapsjmdpfjajsfapiajspoifjapisjfmpoiajmspofiajfpoijaijfpiajspimfjmsapifjpiajmspifjmpiajmspifjapisjmfpiajmspifjmapisjmfpisajmpifsaj</p>
                         </div>
-                        <div class="col col-xs-4">
+                        <div class="col col-md-3">
                             <p>hello there</p>
                         </div>
                     </div>
@@ -103,7 +103,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         <div class="footer">
             <div class="container-fluid" style="height: 2px"></div>
             <div class=container>
-                <div class="row">
+                <div class="row" style="word-wrap: break-word">
                     <div class="col-md-4">
                         <p>Choose your Theme!</p>
                         <button onclick="swapStyleSheet('Style/SG.css')">Dark Blue</button>
