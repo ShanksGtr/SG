@@ -89,8 +89,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <?php } else { ?>
                         <h1>Welcome to SGamers</h1> <?php } ?>
                 </div>
-                <div class="wrapper">
-                    <div class="row">
+                    <div class="row" style="word-wrap: break-word">
                         <div class="col col-xs-8">
                             <p>djafjdpoiajpfidjmpfijmapsdjmpifjmapsjmdpfjajsfapiajspoifjapisjfmpoiajmspofiajfpoijaijfpiajspimfjmsapifjpiajmspifjmpiajmspifjapisjmfpiajmspifjmapisjmfpisajmpifsaj</p>
                         </div>
@@ -98,7 +97,6 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             <p>hello there</p>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
 
