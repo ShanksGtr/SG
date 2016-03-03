@@ -21,7 +21,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             <!-- Glyphicons from http://fortawesome.github.io/Font-Awesome/get-started/ && http://ionicons.com/ && http://zurb.com/playground/foundation-icon-fonts-3/-->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
             <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-            <link rel="stylesheet" href="Style/foundation-icons">
+            <link rel="stylesheet" href="Style/foundation-icons/foundation-icons.css">
 
             <!-- <script type="text/javascript">
                  if (document.cookie == false) {
