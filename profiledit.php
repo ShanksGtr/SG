@@ -87,7 +87,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
     <div class="jumbotron">
         <div class="page-header">
             <?php if ($_SESSION['username'] == true) { ?>
-                <h1><?php echo $_SESSION['username']; ?> ...</h1>
+                <h2>Editing <?php echo $_SESSION['username']; ?> ...</h2>
             <?php } else {} ?>
         </div>
         <div class="row" style="word-wrap: break-word ">
