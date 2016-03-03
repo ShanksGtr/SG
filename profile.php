@@ -89,13 +89,13 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <?php } else { ?>
                         <h1>Welcome to SGamers</h1> <?php } ?>
                 </div>
-                    <div class="row" style="word-wrap: break-word">
-                        <div class="col col-md-2">
+                    <div class="row" style="word-wrap: break-word ">
+                        <div class="col col-md-2" style="border-left: 1px solid silver">
                             <div>
                                 <img style="height: 150px; width: 150px;" src="Pictures/empty-user.jpg"><h3>Status:</h3>
                             </div>
                         </div>
-                        <div class="col col-md-10" style="border-left: 1px solid silver; word-wrap: break-word">
+                        <div class="col col-md-10" style="word-wrap: break-word">
                             <h5>Status:</h5>
                             <p>I'm feeling so alive!!</p>
                         </div>
