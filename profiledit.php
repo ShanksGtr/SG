@@ -95,26 +95,28 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 <div>
                     <img style="height: 200px; width: 240px;" src="Pictures/empty-user.jpg">
                     <div style="border-right: 1px groove silver;">
-                        <h3><span class="fa fa-birthday-cake"></span> Birthday:</h3>
-                        <p> </p>
-                        <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
-                        <p> </p>
-                        <h3><span class="fa fa-steam"></span> Steam:</h3>
-                        <p> </p>
-                        <h3><span class="ionicons ion-playstation"></span> PSN:</h3>
-                        <p> </p>
-                        <h3><span class="ion-xbox"></span> Xbox Live:</h3>
-                        <p> </p>
-                        <h3><span class="fa fa-skype"></span> Skype:</h3>
-                        <p> </p>
-                        <h3><span class="fa fa-at"></span> Email:</h3>
-                        <p> </p>
-                        <h3><span class="fa fa-instagram"></span> Instagram:</h3>
-                        <p> </p>
-                        <h3><span class="fa fa-youtube"></span> Youtube:</h3>
-                        <p> </p>
-                        <h3><span class="ion-social-twitch-outline"></span> Twitch:</h3>
-                        <p> </p>
+                        <form action="PHP/profiling.php">
+                            <h3><span class="fa fa-birthday-cake"></span> Birthday:</h3>
+                            <p><input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe"> </p>
+                            <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
+                            <p><input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe"> </p>
+                            <h3><span class="fa fa-steam"></span> Steam:</h3>
+                            <p><input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe"> </p>
+                            <h3><span class="ionicons ion-playstation"></span> PSN:</h3>
+                            <p><input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe"> </p>
+                            <h3><span class="ion-xbox"></span> Xbox Live:</h3>
+                            <p><input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe"> </p>
+                            <h3><span class="fa fa-skype"></span> Skype:</h3>
+                            <p><input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe"> </p>
+                            <h3><span class="fa fa-at"></span> Email:</h3>
+                            <p><input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe"> </p>
+                            <h3><span class="fa fa-instagram"></span> Instagram:</h3>
+                            <p><input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe"> </p>
+                            <h3><span class="fa fa-youtube"></span> Youtube:</h3>
+                            <p><input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe"> </p>
+                            <h3><span class="ion-social-twitch-outline"></span> Twitch:</h3>
+                            <p><input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe"> </p>
+                        </form>
                     </div>
                 </div>
             </div>
