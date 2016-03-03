@@ -109,6 +109,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 <p>blabla</p>
                                 <h3><span class="fa fa-youtube"></span> Youtube:</h3>
                                 <p>blabla</p>
+                                <h3><span class="ion-social-twitch-outline"></span> Twitch:</h3>
+                                <p>blabla</p>
                                 <h3><span class="fa fa-steam"></span> Steam:</h3>
                                 <p>blabla</p>
                                 <h3><span class="ionicons ion-playstation"></span> PSN:</h3>
