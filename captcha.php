@@ -22,9 +22,9 @@
 
     // using a mixture of system and GDF fonts
     $fonts = array();
-    $fonts[] = "ttf-dejavu/DejaVuSerif-Bold.ttf";
-    $fonts[] = "ttf-dejavu/DejaVuSans-Bold.ttf";
-    $fonts[] = "ttf-dejavu/DejaVuSansMono-Bold.ttf";
+    $fonts[] = "Style/ttf-dejavu/DejaVuSerif-Bold.ttf";
+    $fonts[] = "Style/ttf-dejavu/DejaVuSans-Bold.ttf";
+    $fonts[] = "Style/ttf-dejavu/DejaVuSansMono-Bold.ttf";
 
 
 
