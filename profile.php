@@ -92,7 +92,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <div class="row" style="word-wrap: break-word ">
                         <div class="col col-md-3" style="border-right: 1px solid silver">
                             <div>
-                                <img style="height: 200px; width: 200px;" src="Pictures/empty-user.jpg">
+                                <img style="height: 200px; width: 250px;" src="Pictures/empty-user.jpg">
                                 <h3>Skype:</h3>
                                 <p>blabla</p>
                             </div>
