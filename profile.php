@@ -98,31 +98,33 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         <div class="col col-md-3" >
                             <div>
                                 <img style="height: 200px; width: 240px;" src="Pictures/empty-user.jpg">
-                                <h3><span class="fa fa-birthday-cake"></span> Birthday:</h3>
-                                <p> </p>
-                                <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
-                                <p> </p>
-                                <h3><span class="fa fa-skype"></span> Skype:</h3>
-                                <p> masf;samf;lsam;lfmsa;lfm;lsamf;lsamf;lsamf;lsamf;lmsa;lfmsaf;msa</p>
-                                <h3><span class="fa fa-at"></span> Email:</h3>
-                                <p> </p>
-                                <h3><span class="fa fa-instagram"></span> Instagram:</h3>
-                                <p> </p>
-                                <h3><span class="fa fa-youtube"></span> Youtube:</h3>
-                                <p> </p>
-                                <h3><span class="ion-social-twitch-outline"></span> Twitch:</h3>
-                                <p> </p>
-                                <h3><span class="fa fa-steam"></span> Steam:</h3>
-                                <p> </p>
-                                <h3><span class="ionicons ion-playstation"></span> PSN:</h3>
-                                <p> </p>
-                                <h3><span class="ion-xbox"></span> Xbox Live:</h3>
-                                <p> </p>
+                                <div style="border-right: 1px groove silver">
+                                    <h3><span class="fa fa-birthday-cake"></span> Birthday:</h3>
+                                    <p> </p>
+                                    <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
+                                    <p> </p>
+                                    <h3><span class="fa fa-skype"></span> Skype:</h3>
+                                    <p> masf;samf;lsam;lfmsa;lfm;lsamf;lsamf;lsamf;lsamf;lmsa;lfmsaf;msa</p>
+                                    <h3><span class="fa fa-at"></span> Email:</h3>
+                                    <p> </p>
+                                    <h3><span class="fa fa-instagram"></span> Instagram:</h3>
+                                    <p> </p>
+                                    <h3><span class="fa fa-youtube"></span> Youtube:</h3>
+                                    <p> </p>
+                                    <h3><span class="ion-social-twitch-outline"></span> Twitch:</h3>
+                                    <p> </p>
+                                    <h3><span class="fa fa-steam"></span> Steam:</h3>
+                                    <p> </p>
+                                    <h3><span class="ionicons ion-playstation"></span> PSN:</h3>
+                                    <p> </p>
+                                    <h3><span class="ion-xbox"></span> Xbox Live:</h3>
+                                    <p> </p>
+                                </div>
                             </div>
                         </div>
                         <div class="col col-md-9" style="word-wrap: break-word">
                             <h2>Status:</h2>
-                            <p style="border-bottom:1px solid silver">I'm feeling so alive!!</p>
+                            <p>I'm feeling so alive!!</p>
                             <h2>About Me:</h2>
                             <p>I'm so sick!!!</p>
                             <h2>Favorite Games:</h2>
