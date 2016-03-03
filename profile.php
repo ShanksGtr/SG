@@ -95,7 +95,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         <h1>Welcome to SGamers</h1> <?php } ?>
                 </div>
                     <div class="row" style="word-wrap: break-word ">
-                        <div class="col col-md-3" style="border-right: 1px groove silver">
+                        <div class="col col-md-3" >
                             <div>
                                 <img style="height: 200px; width: 240px;" src="Pictures/empty-user.jpg">
                                 <h3><span class="fa fa-birthday-cake"></span> Birthday:</h3>
