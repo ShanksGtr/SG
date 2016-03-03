@@ -94,7 +94,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             <div class="col col-md-3" >
                 <div>
                     <img style="height: 200px; width: 240px;" src="Pictures/empty-user.jpg">
-                    <div style="border-right: 1px groove silver; margin-left: 3px;">
+                    <div style="border-right: 1px groove silver; padding-right: 11px;">
                         <form action="PHP/profiling.php">
                             <h3><span class="fa fa-birthday-cake"></span> Birthday:</h3>
                             <p><input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe"> </p>
