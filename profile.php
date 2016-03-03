@@ -90,7 +90,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         <h1>Welcome to SGamers</h1> <?php } ?>
                 </div>
                     <div class="row" style="word-wrap: break-word ">
-                        <div class="col col-md-3">
+                        <div class="col col-md-3" style="border-right: 2px solid silver; box-shadow: 10px 0px 2px #0093ff">
                             <div>
                                 <img style="height: 200px; width: 240px;" src="Pictures/empty-user.jpg">
                                 <h3>Skype:</h3>
@@ -120,7 +120,6 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <div class="col-md-4">
                         <a href="about.php">About</a><br>
                         <a href="terms.php">Terms</a>
-                        <p>maiksmfpasmfposampofmaposfmpoaspofposamfposampf</p>
                     </div>
                 </div>
             </div>
