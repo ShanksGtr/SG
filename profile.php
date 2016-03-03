@@ -18,8 +18,10 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             <!-- Bootstrap CSS,JQ&JS Libraries-->
             <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
             <link id="pagesstyle" rel="stylesheet" type="text/css" href="Style/SG.css">;
-            <!-- Glyphicons from http://fortawesome.github.io/Font-Awesome/get-started/ && some from http://glyphsearch.com/-->
+            <!-- Glyphicons from http://fortawesome.github.io/Font-Awesome/get-started/ && http://ionicons.com/ && some from http://glyphsearch.com/-->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
             <!-- <script type="text/javascript">
                  if (document.cookie == false) {
                      window.location.href ="choose.html";
@@ -111,7 +113,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 <p>blabla</p>
                                 <h3><span class="ionicons ion-playstation"></span> PSN:</h3>
                                 <p>blabla</p>
-                                <h3><span class="fa fa-steam"></span> Xbox Live:</h3>
+                                <h3><span class="ion-xbox"></span> Xbox Live:</h3>
                                 <p>blabla</p>
                             </div>
                         </div>
