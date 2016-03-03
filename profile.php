@@ -18,7 +18,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             <!-- Bootstrap CSS,JQ&JS Libraries-->
             <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
             <link id="pagesstyle" rel="stylesheet" type="text/css" href="Style/SG.css">;
-            <!-- Glyphicons from http://fortawesome.github.io/Font-Awesome/get-started/-->
+            <!-- Glyphicons from http://fortawesome.github.io/Font-Awesome/get-started/ && some from http://glyphsearch.com/-->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
             <!-- <script type="text/javascript">
                  if (document.cookie == false) {
@@ -95,7 +95,23 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         <div class="col col-md-3" style="border-right: 1px groove silver">
                             <div>
                                 <img style="height: 200px; width: 240px;" src="Pictures/empty-user.jpg">
+                                <h3><span class="fa fa-birthday-cake"></span> Birthday:</h3>
+                                <p>blabla</p>
+                                <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
+                                <p>blabla</p>
                                 <h3><span class="fa fa-skype"></span> Skype:</h3>
+                                <p>blabla</p>
+                                <h3><span class="fa-at"></span> Email:</h3>
+                                <p>blabla</p>
+                                <h3><span class="fa fa-instagram"></span> Instagram:</h3>
+                                <p>blabla</p>
+                                <h3><span class="fa fa-youtube"></span> Youtube:</h3>
+                                <p>blabla</p>
+                                <h3><span class="fa fa-"></span> Steam:</h3>
+                                <p>blabla</p>
+                                <h3><span class="ionicons ion-playstation"></span> PSN:</h3>
+                                <p>blabla</p>
+                                <h3><span class="fa fa-steam"></span> Xbox Live:</h3>
                                 <p>blabla</p>
                             </div>
                         </div>
