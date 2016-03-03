@@ -93,7 +93,10 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         <div class="row" style="word-wrap: break-word ">
             <div class="col col-md-3" >
                 <div>
-                    <img style="height: 200px; width: 240px;" src="Pictures/empty-user.jpg">
+                    <div>
+                        <form enctype="multipart/form-data" method="post" action="#">
+                            <input id="fileup" name="fileup" type="file">
+                    </div>
                     <div style="border-right: 1px groove silver; padding-right: 11px;">
                         <form action="PHP/profiling.php" method="post">
                             <h3><span class="fa fa-birthday-cake"></span> Birthday:</h3>
@@ -116,6 +119,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             <p><input type="text" class="form-control" placeholder="Youtube Channel"> </p>
                             <h3><span class="ion-social-twitch-outline"></span> Twitch:</h3>
                             <p><input type="text" class="form-control" placeholder="Twitch"> </p>
+                            <input class="btn btn-default" type="button" value="submit">
                         </form>
                     </div>
                 </div>
