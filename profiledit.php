@@ -95,7 +95,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 <div>
                     <div>
                         <form enctype="multipart/form-data" method="post" action="#">
-                            <input id="fileup" name="fileup" type="file" style="margin-bottom: 120px;">
+                            <input id="fileup" name="fileup" type="file" style="margin-bottom: 120px; font-size: 17px;  ">
                     </div>
                     <div style="border-right: 1px groove silver; padding-right: 11px;">
                         <form action="PHP/profiling.php" method="post">
