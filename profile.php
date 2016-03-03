@@ -90,7 +90,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         <h1>Welcome to SGamers</h1> <?php } ?>
                 </div>
                     <div class="row" style="word-wrap: break-word ">
-                        <div class="col col-md-2" style="border-left: 1px solid silver">
+                        <div class="col col-md-2" style="border-right: 1px solid silver">
                             <div>
                                 <img style="height: 200px; width: 200px;" src="Pictures/empty-user.jpg">
                                 <h4>Skype:</h4>
