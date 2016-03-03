@@ -18,6 +18,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             <!-- Bootstrap CSS,JQ&JS Libraries-->
             <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
             <link id="pagesstyle" rel="stylesheet" type="text/css" href="Style/SG.css">;
+            <!-- Glyphicons from http://fortawesome.github.io/Font-Awesome/get-started/-->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
             <!-- <script type="text/javascript">
                  if (document.cookie == false) {
                      window.location.href ="choose.html";
@@ -93,7 +95,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         <div class="col col-md-3" style="border-right: 1px groove silver">
                             <div>
                                 <img style="height: 200px; width: 240px;" src="Pictures/empty-user.jpg">
-                                <h3>Skype:</h3>
+                                <h3><span class="fa fa-skype"></span>Skype:</h3>
                                 <p>blabla</p>
                             </div>
                         </div>
