@@ -103,7 +103,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
                                 <p> </p>
                                 <h3><span class="fa fa-skype"></span> Skype:</h3>
-                                <p> </p>
+                                <p> masf;samf;lsam;lfmsa;lfm;lsamf;lsamf;lsamf;lsamf;lmsa;lfmsaf;msa</p>
                                 <h3><span class="fa fa-at"></span> Email:</h3>
                                 <p> </p>
                                 <h3><span class="fa fa-instagram"></span> Instagram:</h3>
@@ -126,7 +126,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             <h2>About Me:</h2>
                             <p>I'm so sick!!!</p>
                             <h2>Favorite Games:</h2>
-                            <p>LOTSA GAMEZ!!</p>
+                            <p>LOTSA GAMEZansasfpsakmnfpisanfpinsapifnpisanfiksanpnfsanfpsanpfnsapnfpsanpfnsamfpnsapfnsanfsamfapfiknsapmnfpsanfiksanfpsanpfnsamikfnsapfnsapnfpsaiknfpsaknfpsanfiksanfpsan!!</p>
                         </div>
                     </div>
             </div>
