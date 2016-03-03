@@ -98,25 +98,25 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             <div>
                                 <img style="height: 200px; width: 240px;" src="Pictures/empty-user.jpg">
                                 <h3><span class="fa fa-birthday-cake"></span> Birthday:</h3>
-                                <p>blabla</p>
+                                <p> asdsadsoajdpoijsaoidjoisajmndosaoijmndsandpoisamdos</p>
                                 <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
-                                <p>blabla</p>
+                                <p> </p>
                                 <h3><span class="fa fa-skype"></span> Skype:</h3>
-                                <p>blabla</p>
+                                <p> </p>
                                 <h3><span class="fa fa-at"></span> Email:</h3>
-                                <p>blabla</p>
+                                <p> </p>
                                 <h3><span class="fa fa-instagram"></span> Instagram:</h3>
-                                <p>blabla</p>
+                                <p> </p>
                                 <h3><span class="fa fa-youtube"></span> Youtube:</h3>
-                                <p>blabla</p>
+                                <p> </p>
                                 <h3><span class="ion-social-twitch-outline"></span> Twitch:</h3>
-                                <p>blabla</p>
+                                <p> </p>
                                 <h3><span class="fa fa-steam"></span> Steam:</h3>
-                                <p>blabla</p>
+                                <p> </p>
                                 <h3><span class="ionicons ion-playstation"></span> PSN:</h3>
-                                <p>blabla</p>
+                                <p> </p>
                                 <h3><span class="ion-xbox"></span> Xbox Live:</h3>
-                                <p>blabla</p>
+                                <p> </p>
                             </div>
                         </div>
                         <div class="col col-md-9" style="word-wrap: break-word">
