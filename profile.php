@@ -123,12 +123,14 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             </div>
                         </div>
                         <div class="col col-md-9" style="word-wrap: break-word">
-                            <h2>Status:</h2>
-                            <p>I'm feeling so alive!!</p>
-                            <h2>About Me:</h2>
-                            <p>I'm so sick!!!</p>
-                            <h2>Favorite Games:</h2>
-                            <p> </p>
+                            <div>
+                                <h2>Status:</h2><button class="btn btn-default" style="float: right; margin: 0px;" type="submit">Button</button>
+                                <p>I'm feeling so alive!!</p>
+                                <h2>About Me:</h2>
+                                <p>I'm so sick!!!</p>
+                                <h2>Favorite Games:</h2>
+                                <p> </p>
+                            </div>
                         </div>
                     </div>
             </div>
