@@ -124,7 +124,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         </div>
                         <div class="col col-md-9" style="word-wrap: break-word">
                             <div>
-                                <h2>Status:</h2><button class="btn btn-default" style="float: right; margin: 0px;" type="submit">Button</button>
+                                <h2>Status:</h2><button class="btn btn-default" style="float: right;" type="submit">Button</button>
                                 <p>I'm feeling so alive!!</p>
                                 <h2>About Me:</h2>
                                 <p>I'm so sick!!!</p>
