@@ -101,13 +101,13 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 <p>blabla</p>
                                 <h3><span class="fa fa-skype"></span> Skype:</h3>
                                 <p>blabla</p>
-                                <h3><span class="fa-at"></span> Email:</h3>
+                                <h3><span class="fa fa-at"></span> Email:</h3>
                                 <p>blabla</p>
                                 <h3><span class="fa fa-instagram"></span> Instagram:</h3>
                                 <p>blabla</p>
                                 <h3><span class="fa fa-youtube"></span> Youtube:</h3>
                                 <p>blabla</p>
-                                <h3><span class="fa fa-"></span> Steam:</h3>
+                                <h3><span class="fa fa-steam"></span> Steam:</h3>
                                 <p>blabla</p>
                                 <h3><span class="ionicons ion-playstation"></span> PSN:</h3>
                                 <p>blabla</p>
