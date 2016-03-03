@@ -125,7 +125,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         <div class="col col-md-9" style="word-wrap: break-word">
                             <div>
                                 <?php if ($_SESSION['username'] == true) { ?>
-                                <button class="btn btn-default btn-lg" style="float: right; margin-top: -25px; font-family: 'Press Start 2P', cursive;" type="submit">Edit</button>
+                                <a class="btn btn-default btn-lg" style="float: right; margin-top: -25px; font-family: 'Press Start 2P', cursive;" href="profile.php?edit" type="submit">Edit</a>
                                 <?php } else {
                                 }?>
                                 <h2>Status:</h2>
