@@ -129,9 +129,9 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 <?php } else {
                                 }?>
                                 <h2>Status:</h2>
-                                <p>I'm feeling so alive!!</p>
+                                <p> </p>
                                 <h2>About Me:</h2>
-                                <p>I'm so sick!!!</p>
+                                <p> </p>
                                 <h2>Favorite Games:</h2>
                                 <p> </p>
                             </div>
