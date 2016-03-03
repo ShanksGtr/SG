@@ -98,7 +98,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         <div class="col col-md-3" >
                             <div>
                                 <img style="height: 200px; width: 240px;" src="Pictures/empty-user.jpg">
-                                <div style="border-right: 1px groove silver font-family: 'Press Start 2P', cursive;">
+                                <div style="border-right: 1px groove silver; font-family: 'Press Start 2P', cursive;">
                                     <h3><span class="fa fa-birthday-cake"></span> Birthday:</h3>
                                     <p> </p>
                                     <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
