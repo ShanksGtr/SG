@@ -94,7 +94,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <?php } else { ?>
                         <h1>Welcome to SGamers</h1> <?php } ?>
                     <?php if ($_SESSION['username'] == true) { ?>
-                        <a class="btn btn-default btn-lg hidden-xs" style="float: right; margin-top: -67px; font-family: 'Press Start 2P', cursive;" href="profiledit.php" type="submit">Edit</a>
+                        <a class="btn btn-default btn-lg hidden-xs" style="float: right; margin-top: -48px; font-family: 'Press Start 2P', cursive;" href="profiledit.php" type="submit">Edit</a>
                         <a class="btn btn-default btn-sm visible-xs-block" style="float: right; margin-top: -80px; font-family: 'Press Start 2P', cursive;" href="profiledit.php" type="submit">Edit</a>
                     <?php } else {
                     }?>
@@ -102,7 +102,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <div class="row" style="word-wrap: break-word ">
                         <div class="col col-md-3" >
                             <div>
-                                <img style="height: 200px; width: 240px;" src="Pictures/empty-user.jpg">
+                                <img style="height: 200px; width: 240px; margin-left: -20px" src="Pictures/empty-user.jpg">
                                 <div style="border-right: 1px groove silver;">
                                     <h3><span class="fa fa-birthday-cake"></span> Birthday:</h3>
                                     <p> </p>
