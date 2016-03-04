@@ -102,8 +102,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <div class="row" style="word-wrap: break-word ">
                         <div class="col col-md-3" >
                             <div>
-                                <img class="img-circle" style="height: 200px; width: 240px; margin-left: -15px" src="Pictures/empty-user.jpg">
-                                <div style="border-right: 1px groove silver; margin-left: -10px;">
+                                <img class="img-circle" style="height: 200px; width: 240px; margin-left: -10px" src="Pictures/empty-user.jpg">
+                                <div style="border-right: 1px groove silver; margin-left: -5px;">
                                     <h3><span class="fa fa-birthday-cake"></span> Birthday:</h3>
                                     <p> </p>
                                     <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
