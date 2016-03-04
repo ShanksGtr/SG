@@ -102,7 +102,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <div class="row" style="word-wrap: break-word ">
                         <div class="col col-md-3" >
                             <div>
-                                <img style="height: 200px; width: 240px; margin-left: -25px" src="Pictures/empty-user.jpg">
+                                <img style="height: 200px; width: 240px; margin-left: -30px" src="Pictures/empty-user.jpg">
                                 <div style="border-right: 1px groove silver; margin-left: -15px">
                                     <h3><span class="fa fa-birthday-cake"></span> Birthday:</h3>
                                     <p> </p>
