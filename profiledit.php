@@ -131,7 +131,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         <h2>Status:</h2>
                         <textarea class="form-control" rows="5" id="status" placeholder="Status" maxlength="255"></textarea>
                         <h2>About Me:</h2>
-                        <textarea class="form-control" rows="10"  id="aboutme" placeholder="About You" maxlength="2000" style="display:inline-block;"></textarea>
+                        <textarea class="form-control" rows="10"  id="aboutme" placeholder="About You" maxlength="2000"></textarea>
                         <h2>Favorite Games:</h2>
                         <textarea class="form-control" rows="10" id="fg" placeholder="Favorite games using hashtags form! seperated by a comma (e.g. #MyFavoriteGame, #is)" maxlength="2000"></textarea><br>
                             <script>
