@@ -133,7 +133,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         <h2>About Me:</h2>
                         <textarea class="form-control" rows="5" id="aboutme" placeholder="About You"></textarea>
                         <h2>Favorite Games:</h2>
-                        <textarea class="form-control" rows="5" id="fg" placeholder="Favorite games using hashtags form! seperated by a comma (e.g. #MyFavoriteGame, #is)"></textarea>
+                        <textarea class="form-control" rows="5" id="fg" placeholder="Favorite games using hashtags form! seperated by a comma (e.g. #MyFavoriteGame, #is)"></textarea><br>
                             <script>
                                 submitprofile = function() {
                                     document.getElementById("form1").submit();
