@@ -93,6 +93,10 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         <h2>Welcome <?php echo $_SESSION['username']; ?>...</h2>
                     <?php } else { ?>
                         <h1>Welcome to SGamers</h1> <?php } ?>
+                    <?php if ($_SESSION['username'] == true) { ?>
+                        <a class="btn btn-default btn-lg" style="float: right; font-family: 'Press Start 2P', cursive;" href="profiledit.php" type="submit">Edit</a>
+                    <?php } else {
+                    }?>
                 </div>
                     <div class="row" style="word-wrap: break-word ">
                         <div class="col col-md-3" >
@@ -124,10 +128,6 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         </div>
                         <div class="col col-md-9" style="word-wrap: break-word">
                             <div>
-                                <?php if ($_SESSION['username'] == true) { ?>
-                                <a class="btn btn-default btn-lg" style="float: right; margin-top: -25px; font-family: 'Press Start 2P', cursive;" href="profiledit.php" type="submit">Edit</a>
-                                <?php } else {
-                                }?>
                                 <h2>Status:</h2>
                                 <p> </p>
                                 <h2>About Me:</h2>
