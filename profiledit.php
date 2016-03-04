@@ -129,28 +129,16 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 <div>
                     <form id="form2" action="PHP/profiling.php" method="post">
                         <h2>Status:</h2>
-                        <textarea class="form-control" rows="3" id="status" placeholder="Status"></textarea>
+                        <textarea class="form-control" rows="3" id="status" placeholder="Status" maxlength="255"></textarea>
                         <h2>About Me:</h2>
-                        <textarea class="form-control" rows="5" id="aboutme" placeholder="About You"></textarea>
+                        <textarea class="form-control" rows="5" id="aboutme" placeholder="About You" maxlength="2000"></textarea>
                         <h2>Favorite Games:</h2>
-                        <textarea class="form-control" rows="5" id="fg" placeholder="Favorite games using hashtags form! seperated by a comma (e.g. #MyFavoriteGame, #is)"></textarea><br>
+                        <textarea class="form-control" rows="5" id="fg" placeholder="Favorite games using hashtags form! seperated by a comma (e.g. #MyFavoriteGame, #is)" maxlength="2000"></textarea><br>
                             <script>
                                 submitprofile = function() {
                                     document.getElementById("form1").submit();
                                     document.getElementById("form2").submit();
                                 };
-
-                                $(document).statusC(function() {
-                                    var text_max = 255;
-                                    $('#status_feedback').html(text_max + ' characters remaining');
-
-                                    $('#status').keyup(function() {
-                                        var text_length = $('#status').val().length;
-                                        var text_remaining = text_max - text_length;
-
-                                        $('#status_feedback').html(text_remaining + ' characters remaining');
-                                    });
-                                });
                             </script>
                         <input class="btn btn-default btn-lg" type="button" value="submit" onclick="submitprofile()">
                     </form>
