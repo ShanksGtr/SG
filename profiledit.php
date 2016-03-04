@@ -130,11 +130,11 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 <div>
                     <form id="form2" action="PHP/profiling.php" method="post">
                         <h2>Status:</h2>
-
+                        <textarea class="form-control" rows="5" id="status"></textarea>
                         <h2>About Me:</h2>
-                        <p> </p>
+                        <textarea class="form-control" rows="5" id="aboutme"></textarea>
                         <h2>Favorite Games:</h2>
-                        <p> </p>
+                        <textarea class="form-control" rows="5" id="fg"></textarea>
                     </form>
                 </div>
             </div>
