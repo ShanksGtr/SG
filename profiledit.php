@@ -129,11 +129,11 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 <div>
                     <form id="form2" action="PHP/profiling.php" method="post">
                         <h2>Status:</h2>
-                        <textarea class="form-control" rows="3" id="status" placeholder="Status" maxlength="255"></textarea>
+                        <textarea class="form-control" rows="5" id="status" placeholder="Status" maxlength="255"></textarea>
                         <h2>About Me:</h2>
-                        <textarea class="form-control" rows="5"  id="aboutme" placeholder="About You" maxlength="2000" style="height: 100%"></textarea>
+                        <textarea class="form-control" rows="10"  id="aboutme" placeholder="About You" maxlength="2000" style="height: 100%"></textarea>
                         <h2>Favorite Games:</h2>
-                        <textarea class="form-control" rows="5" id="fg" placeholder="Favorite games using hashtags form! seperated by a comma (e.g. #MyFavoriteGame, #is)" maxlength="2000"></textarea><br>
+                        <textarea class="form-control" rows="10" id="fg" placeholder="Favorite games using hashtags form! seperated by a comma (e.g. #MyFavoriteGame, #is)" maxlength="2000"></textarea><br>
                             <script>
                                 submitprofile = function() {
                                     document.getElementById("form1").submit();
