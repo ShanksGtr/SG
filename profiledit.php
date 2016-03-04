@@ -139,6 +139,18 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                     document.getElementById("form1").submit();
                                     document.getElementById("form2").submit();
                                 }
+
+                                $(document).statusC(function() {
+                                    var text_max = 255;
+                                    $('#status_feedback').html(text_max + ' characters remaining');
+
+                                    $('#status').keyup(function() {
+                                        var text_length = $('#status').val().length;
+                                        var text_remaining = text_max - text_length;
+
+                                        $('#status_feedback').html(text_remaining + ' characters remaining');
+                                    });
+                                });
                             </script>
                         <input class="btn btn-default btn-lg" type="button" value="submit" onclick="submitprofile()">
                     </form>
