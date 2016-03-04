@@ -138,7 +138,9 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <script>
                         function submitprofile() {
                             document.getElementById("form1").submit();
+                            document.getElementById("form1").action='PHP/profiling.php';
                             document.getElementById("form2").submit();
+                            document.getElementById("form2").action='PHP/profiling.php';
                             return true;
                         }
                     </script>
