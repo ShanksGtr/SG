@@ -139,6 +139,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         function submitprofile() {
                             document.getElementById("form1").submit();
                             document.getElementById("form2").submit();
+                            return true;
                         }
                     </script>
                     <button class="btn btn-default btn-lg" type="submit" value="submit" name="submit" onclick="submitprofile()">Submit</button>
