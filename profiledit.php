@@ -91,62 +91,59 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             <?php } else {} ?>
         </div>
         <div class="row" style="word-wrap: break-word ">
-            <div class="col col-md-3" >
-                <div>
+            <form action="PHP/profiling.php" method="post" enctype="multipart/form-data">
+                <div class="col col-md-3" >
                     <div>
-                        <h3>Avatar Upload:</h3>
-                        <form enctype="multipart/form-data" method="post" action="#">
-                            <input id="fileup" name="fileup" type="file" style="margin-bottom: 120px; font-size: 17px;  ">
-                    </div>
-                    <div style="border-right: 1px groove silver; padding-right: 11px;">
-                        <form id="form1" action="PHP/profiling.php" method="post">
-                            <h3><span class="fa fa-birthday-cake"></span> Birthday:</h3>
-                            <p><input type="date" class="form-control" placeholder="Birthday"> </p>
-                            <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
-                            <h3><input type="radio" name="gender" value="male"> Male
-                            <input type="radio" name="gender" value="female"> Female</h3>
-                            <h3><span class="fa fa-steam"></span> Steam:</h3>
-                            <p><input type="text" class="form-control" placeholder="Steam"> </p>
-                            <h3><span class="ionicons ion-playstation"></span> PSN:</h3>
-                            <p><input type="text" class="form-control" placeholder="Playstation Network"> </p>
-                            <h3><span class="ion-xbox"></span> Xbox Live:</h3>
-                            <p><input type="text" class="form-control" placeholder="Xbox Live"> </p>
-                            <h3><span class="fa fa-skype"></span> Skype:</h3>
-                            <p><input type="text" class="form-control" placeholder="Skype"> </p>
-                            <h3><span class="fa fa-at"></span> Email:</h3>
-                            <p><input type="text" class="form-control" placeholder="Email address"> </p>
-                            <h3><span class="fa fa-instagram"></span> Instagram:</h3>
-                            <p><input type="text" class="form-control" placeholder="Instagram"> </p>
-                            <h3><span class="fa fa-youtube"></span> Youtube:</h3>
-                            <p><input type="text" class="form-control" placeholder="Youtube Channel"> </p>
-                            <h3><span class="ion-social-twitch-outline"></span> Twitch:</h3>
-                            <p><input type="text" class="form-control" placeholder="Twitch"> </p>
-                        </form>
+                        <div>
+                            <h3>Avatar Upload:</h3>
+                                <input id="fileup" name="fileup" type="file" style="margin-bottom: 120px; font-size: 17px;  ">
+                        </div>
+                        <div style="border-right: 1px groove silver; padding-right: 11px;">
+                                <h3><span class="fa fa-birthday-cake"></span> Birthday:</h3>
+                                <p><input type="date" class="form-control" placeholder="Birthday"> </p>
+                                <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
+                                <h3><input type="radio" name="gender" value="male"> Male
+                                <input type="radio" name="gender" value="female"> Female</h3>
+                                <h3><span class="fa fa-steam"></span> Steam:</h3>
+                                <p><input type="text" class="form-control" placeholder="Steam"> </p>
+                                <h3><span class="ionicons ion-playstation"></span> PSN:</h3>
+                                <p><input type="text" class="form-control" placeholder="Playstation Network"> </p>
+                                <h3><span class="ion-xbox"></span> Xbox Live:</h3>
+                                <p><input type="text" class="form-control" placeholder="Xbox Live"> </p>
+                                <h3><span class="fa fa-skype"></span> Skype:</h3>
+                                <p><input type="text" class="form-control" placeholder="Skype"> </p>
+                                <h3><span class="fa fa-at"></span> Email:</h3>
+                                <p><input type="text" class="form-control" placeholder="Email address"> </p>
+                                <h3><span class="fa fa-instagram"></span> Instagram:</h3>
+                                <p><input type="text" class="form-control" placeholder="Instagram"> </p>
+                                <h3><span class="fa fa-youtube"></span> Youtube:</h3>
+                                <p><input type="text" class="form-control" placeholder="Youtube Channel"> </p>
+                                <h3><span class="ion-social-twitch-outline"></span> Twitch:</h3>
+                                <p><input type="text" class="form-control" placeholder="Twitch"> </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col col-md-9" style="word-wrap: break-word">
-                <div>
-                    <form id="form2" action="PHP/profiling.php" method="post">
-                        <h2>Status:</h2>
-                        <textarea class="form-control" rows="5" id="status" placeholder="Status" maxlength="255"></textarea>
-                        <h2>About Me:</h2>
-                        <textarea class="form-control" rows="10"  id="aboutme" placeholder="About You" maxlength="2000"></textarea>
-                        <h2>Favorite Games:</h2>
-                        <textarea class="form-control" rows="10" id="fg" placeholder="Favorite games using hashtags form! seperated by a comma (e.g. #MyFavoriteGame, #is)" maxlength="2000"></textarea><br>
-                    </form>
-                    <script>
-                         submitprofile = function() {
-                            document.getElementById("form1").submit();
-                            document.getElementById("form1").action='PHP/profiling.php';
-                            document.getElementById("form2").submit();
-                            document.getElementById("form2").action='PHP/profiling.php';
-                            return true;
-                        }
-                    </script>
-                    <button class="btn btn-default btn-lg" type="submit" value="submit" name="submit" onclick="submitprofile()">Submit</button>
+                <div class="col col-md-9" style="word-wrap: break-word">
+                    <div>
+                            <h2>Status:</h2>
+                            <textarea class="form-control" rows="5" id="status" placeholder="Status" maxlength="255"></textarea>
+                            <h2>About Me:</h2>
+                            <textarea class="form-control" rows="10"  id="aboutme" placeholder="About You" maxlength="2000"></textarea>
+                            <h2>Favorite Games:</h2>
+                            <textarea class="form-control" rows="10" id="fg" placeholder="Favorite games using hashtags form! seperated by a comma (e.g. #MyFavoriteGame, #is)" maxlength="2000"></textarea><br>
+                        <!-- <script>
+                             submitprofile = function() {
+                                document.getElementById("form1").submit();
+                                document.getElementById("form1").action='PHP/profiling.php';
+                                document.getElementById("form2").submit();
+                                document.getElementById("form2").action='PHP/profiling.php';
+                                return true;
+                            }
+                        </script> -->
+                        <button class="btn btn-default btn-lg" type="submit" value="submit" name="submit" onclick="submitprofile()">Submit</button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>
