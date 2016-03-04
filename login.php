@@ -57,7 +57,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="login.html"><span class="glyphicon glyphicon-log-in" style="font-size:20px; margin-right: 3px"></span>SignIn</a></li>
+                <li class="active"><a href="login.php"><span class="glyphicon glyphicon-log-in" style="font-size:20px; margin-right: 3px"></span>SignIn</a></li>
                 <li><a href="register.php"><span class="glyphicon glyphicon-user" style="font-size:20px; margin-right: 2px"></span>SignUp</a></li>
             </ul>
 
@@ -82,7 +82,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <label for="inputPassword3" class="col-sm-2 control-label">Password:</label>
                     <div class="col-sm-5">
                         <input type="password" pattern=".{8,32}" maxlength="32" required="required" name="password" class="form-control" id="inputPassword3" placeholder="Password" oninvalid="setCustomValidity('Must be between 8 to 32 characters ')" onchange="try{setCustomValidity('')}catch(e){}">
-                        <button type="submit" name="submit" class="btn btn-default" style="margin-top: 15px">Sign In</button>
+                        <button type="submit" name="submit" class="btn btn-default btn-lg" style="margin-top: 15px">Sign In</button>
                     </div>
                 </div>
             </form>

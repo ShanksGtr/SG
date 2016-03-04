@@ -140,7 +140,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                     document.getElementById("form2").submit();
                                 };
                             </script>
-                        <input class="btn btn-default btn-lg" type="button" value="submit" onclick="submitprofile()">
+                        <input class="btn btn-default btn-lg" type="button" value="submit" onclick="submitprofile()"/>
                     </form>
                 </div>
             </div>
