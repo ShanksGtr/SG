@@ -129,7 +129,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 <div>
                     <form id="form2" action="PHP/profiling.php" method="post">
                         <h2>Status:</h2>
-                        <textarea class="form-control" rows="3" id="status" placeholder="Status"> <span id="status_feedback" style="float: right;"></span></textarea>
+                        <textarea class="form-control" rows="3" id="status" placeholder="Status"></textarea>
                         <h2>About Me:</h2>
                         <textarea class="form-control" rows="5" id="aboutme" placeholder="About You"></textarea>
                         <h2>Favorite Games:</h2>
@@ -138,7 +138,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 submitprofile = function() {
                                     document.getElementById("form1").submit();
                                     document.getElementById("form2").submit();
-                                }
+                                };
 
                                 $(document).statusC(function() {
                                     var text_max = 255;
