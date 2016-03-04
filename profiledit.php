@@ -99,7 +99,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             <input id="fileup" name="fileup" type="file" style="margin-bottom: 120px; font-size: 17px;  ">
                     </div>
                     <div style="border-right: 1px groove silver; padding-right: 11px;">
-                        <form action="PHP/profiling.php" method="post">
+                        <form id="form1" action="PHP/profiling.php" method="post">
                             <h3><span class="fa fa-birthday-cake"></span> Birthday:</h3>
                             <p><input type="date" class="form-control" placeholder="Birthday"> </p>
                             <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
@@ -128,12 +128,14 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             </div>
             <div class="col col-md-9" style="word-wrap: break-word">
                 <div>
-                    <h2>Status:</h2>
-                    <p> </p>
-                    <h2>About Me:</h2>
-                    <p> </p>
-                    <h2>Favorite Games:</h2>
-                    <p> </p>
+                    <form id="form2" action="PHP/profiling.php" method="post">
+                        <h2>Status:</h2>
+
+                        <h2>About Me:</h2>
+                        <p> </p>
+                        <h2>Favorite Games:</h2>
+                        <p> </p>
+                    </form>
                 </div>
             </div>
         </div>
