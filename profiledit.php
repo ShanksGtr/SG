@@ -94,6 +94,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             <div class="col col-md-3" >
                 <div>
                     <div>
+                        <h3>Avatar Upload:</h3>
                         <form enctype="multipart/form-data" method="post" action="#">
                             <input id="fileup" name="fileup" type="file" style="margin-bottom: 120px; font-size: 17px;  ">
                     </div>
