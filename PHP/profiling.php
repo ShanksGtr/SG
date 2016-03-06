@@ -9,6 +9,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
     require('config.php');
 
     if (isset($_POST['submit'])) {
+
+
         $list_query = "SELECT * FROM profiles WHERE user_name ='{$_SESSION['username']}'";
         $run_query = $db->query($list_query);
         $check_user = mysqli_num_rows($run_query);
