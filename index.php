@@ -6,7 +6,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
     $getid = "SELECT 'user_id' FROM users WHERE user_name = '{$_SESSION['username']}'";
     $result = mysqli_query($db, $getid);
     $row = mysqli_fetch_assoc($result);
-    $_SESSION['userid'] = $row['user_id'];
+    $userid = $row['user_id'];
 
 ?>
 <!DOCTYPE html>
@@ -90,7 +90,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             <div class="jumbotron">
                 <div class="page-header">
                     <?php if ($_SESSION['username'] == true) { ?>
-                        <h2>Welcome <?php echo $_SESSION['username'] .  $_SESSION['userid']; ?> ...</h2>
+                        <h2>Welcome <?php echo $_SESSION['username'] .  $userid; ?> ...</h2>
                      <?php } else { ?>
                      <h1>Welcome to SGamers</h1> <?php } ?>
                 </div>
