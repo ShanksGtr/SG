@@ -8,7 +8,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
     error_reporting(E_ALL);
     require('config.php');
 
-if (!isset($_POST['submit'])) {
+if (!empty($_POST['submit'])) {
     echo "<script>alert('Please enter any value'); location.href='PHP/profiling.php';</script>";
 }
 
@@ -23,7 +23,7 @@ if (!isset($_POST['submit'])) {
             echo $gender;
 
         }
-        $gender = $_POST['gender'];
+        //$gender = $_POST['gender'];
 
         $fav_games = $_POST['fav_games'];
         $skype = $_POST['skype'];
