@@ -5,8 +5,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 }
     $getid = "SELECT 'user_id' FROM users WHERE user_name = '{$_SESSION['username']}'";
     $result = mysqli_query($db, $getid);
-    $value = mysqli_fetch_field($result);
-    $_SESSION['userid'] = $value;
+    $row = mysqli_fetch_assoc($result);
+    $_SESSION['userid'] = $row['user_id'];
 
 ?>
 <!DOCTYPE html>
