@@ -18,7 +18,7 @@
 
             session_start();
             $_SESSION['username'] = $username;
-            $username= $_SESSION['username'];
+
             $getid = "SELECT user_id FROM users WHERE user_name = '$username' limit 1";
             $result = mysqli_query($db, $getid);
             $row = mysqli_fetch_object($result);
