@@ -91,7 +91,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             <?php } else {} ?>
         </div>
         <div class="row" style="word-wrap: break-word ">
-            <form action="PHP/profiling.php" method="post" enctype="multipart/form-data">
+            <form action="PHP/profiling.php" method="post" >
                 <div class="col col-md-3" >
                     <div>
                         <div>
