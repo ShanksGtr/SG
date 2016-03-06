@@ -103,7 +103,9 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 <p><input type="date" class="form-control" placeholder="Birthday" name="birthday"> </p>
                                 <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
                                 <h3><input type="radio" name="gender" value="Male"> Male
-                                <input type="radio" name="gender" value="Female"> Female</h3>
+                                    <input type="radio" name="gender" value="Female"> Female
+                                    <input required type="radio" name="gender" value="Not saying"> Not saying
+                                </h3>
                                 <h3><span class="fa fa-steam"></span> Steam:</h3>
                                 <p><input type="text" class="form-control"  placeholder="Steam" name="steam"> </p>
                                 <h3><span class="ionicons ion-playstation"></span> PSN:</h3>
