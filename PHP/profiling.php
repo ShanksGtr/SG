@@ -9,7 +9,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
     require('config.php');
 
 if (!isset($_POST['submit'])) {
-    echo "<script>alert('Please enter values'); location.href='PHP/profiling.php';</script>";
+    echo "<script>alert('Please enter any value'); location.href='PHP/profiling.php';</script>";
 }
 
     if (isset($_POST['submit'])) {
