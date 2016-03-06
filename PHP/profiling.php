@@ -36,7 +36,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         $run_query = $db->query($list_query);
         $check_user = mysqli_num_rows($run_query);
             if ($check_user == 1) {
-                $list_query = "UPDATE profiles SET  WHERE user_name ='{$_SESSION['userid']}'";
+                //$list_query = "UPDATE profiles SET  WHERE user_name ='{$_SESSION['userid']}'";
                 echo "<script>alert('COOL'); location.href='/profile.php';</script>";
 
             } elseif ($check_user == 0) {
