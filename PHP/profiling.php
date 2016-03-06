@@ -15,11 +15,11 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         //$avatar = $_FILES['avatar'];
         if(!empty($_POST['gender'])) {
 
-            $gender=$_POST['gender'];
+            $gender= $_POST['gender'];
             echo $gender;
 
         }
-        $gender = @$_POST['gender'];
+        $gender = $_POST['gender'];
 
         $fav_games = $_POST['fav_games'];
         $skype = $_POST['skype'];
