@@ -15,16 +15,13 @@
         $run_user = mysqli_query($db, $sqlget);
         $check_user = mysqli_num_rows($run_user);
         if ($check_user == 1) {
+            $row = mysqli_fetch_array($run_user);
+            $_SESSION['userid'] = trim($row['user_id']);
 
             session_start();
             $_SESSION['username'] = $username;
-            $getid = "SELECT * FROM users WHERE user_name='{$_SESSION['username']}'";
-            $run_getid = $db->query($getid);
-            WHILE($row = $run_getid->fetch_array()) {
-                $row['user_id'];
-            }
-            $_SESSION['userid'] = $row['user_id'];
             header('location:/index.php');
+
         } else {
             echo "<script>alert('Username or Password is incorrect'); location.href='/login.php';</script>";
         }
