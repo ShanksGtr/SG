@@ -31,8 +31,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         $xbox = $_POST['xbox'];
         $user_id = $_SESSION['userid'];
         /*echo $status, $about_me, $birthday, $gender, $fav_games, $skype, $msn, $instagram, $youtube, $steam, $twitch, $psn, $xbox, $user_id;*/
-        echo $gender;
-        $list_query = "SELECT * FROM profiles WHERE user_id ='{$_SESSION['userid']}'";
+
+        $list_query = "SELECT * FROM profiles WHERE user_id ='$user_id'";
         $run_query = $db->query($list_query);
         $check_user = mysqli_num_rows($run_query);
             if ($check_user == 1) {
