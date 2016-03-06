@@ -95,42 +95,42 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 <div class="col col-md-3" >
                     <div>
                         <div>
-                            <h3>Avatar Upload:</h3>
-                                <input id="fileup" name="fileup" type="file" style="margin-bottom: 120px; font-size: 17px;  ">
+                            <h3>Avatar Upload:(not working yet)</h3>
+                                <input id="fileup" name="avatar" type="file" style="margin-bottom: 120px; font-size: 17px;  ">
                         </div>
                         <div style="border-right: 1px groove silver; padding-right: 11px;">
                                 <h3><span class="fa fa-birthday-cake"></span> Birthday:</h3>
-                                <p><input type="date" class="form-control" placeholder="Birthday"> </p>
+                                <p><input type="date" class="form-control" placeholder="Birthday" name="birthday"> </p>
                                 <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
                                 <h3><input type="radio" name="gender" value="male"> Male
                                 <input type="radio" name="gender" value="female"> Female</h3>
                                 <h3><span class="fa fa-steam"></span> Steam:</h3>
-                                <p><input type="text" class="form-control" placeholder="Steam"> </p>
+                                <p><input type="text" class="form-control"  placeholder="Steam" name="steam"> </p>
                                 <h3><span class="ionicons ion-playstation"></span> PSN:</h3>
-                                <p><input type="text" class="form-control" placeholder="Playstation Network"> </p>
+                                <p><input type="text" class="form-control" placeholder="Playstation Network" name="psn"> </p>
                                 <h3><span class="ion-xbox"></span> Xbox Live:</h3>
-                                <p><input type="text" class="form-control" placeholder="Xbox Live"> </p>
+                                <p><input type="text" class="form-control" placeholder="Xbox Live" name="xbox"> </p>
                                 <h3><span class="fa fa-skype"></span> Skype:</h3>
-                                <p><input type="text" class="form-control" placeholder="Skype"> </p>
+                                <p><input type="text" class="form-control" placeholder="Skype" name="skype"> </p>
                                 <h3><span class="fa fa-at"></span> Email:</h3>
-                                <p><input type="text" class="form-control" placeholder="Email address"> </p>
+                                <p><input type="text" class="form-control" placeholder="Email address" name="msn"> </p>
                                 <h3><span class="fa fa-instagram"></span> Instagram:</h3>
-                                <p><input type="text" class="form-control" placeholder="Instagram"> </p>
+                                <p><input type="text" class="form-control" placeholder="Instagram" name="instagram"> </p>
                                 <h3><span class="fa fa-youtube"></span> Youtube:</h3>
-                                <p><input type="text" class="form-control" placeholder="Youtube Channel"> </p>
+                                <p><input type="text" class="form-control" placeholder="Youtube Channel" name="youtube"> </p>
                                 <h3><span class="ion-social-twitch-outline"></span> Twitch:</h3>
-                                <p><input type="text" class="form-control" placeholder="Twitch"> </p>
+                                <p><input type="text" class="form-control" placeholder="Twitch" name="twitch"> </p>
                         </div>
                     </div>
                 </div>
                 <div class="col col-md-9" style="word-wrap: break-word">
                     <div>
                             <h2>Status:</h2>
-                            <textarea class="form-control" rows="5" id="status" placeholder="Status" maxlength="255"></textarea>
+                            <textarea class="form-control" rows="3" id="status" placeholder="Status" maxlength="255" name="status"></textarea>
                             <h2>About Me:</h2>
-                            <textarea class="form-control" rows="10"  id="aboutme" placeholder="About You" maxlength="2000"></textarea>
+                            <textarea class="form-control" rows="10"  id="aboutme" placeholder="About You" maxlength="2000" name="about_me"></textarea>
                             <h2>Favorite Games:</h2>
-                            <textarea class="form-control" rows="10" id="fg" placeholder="Favorite games using hashtags form! seperated by a comma (e.g. #MyFavoriteGame, #is)" maxlength="2000"></textarea><br>
+                            <textarea class="form-control" rows="10" id="fg" placeholder="Favorite games using hashtags form! seperated by a comma (e.g. #MyFavoriteGame, #is)" maxlength="2000" name="fav_games"></textarea><br>
                         <!-- <script>
                              submitprofile = function() {
                                 document.getElementById("form1").submit();
