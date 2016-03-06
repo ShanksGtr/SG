@@ -3,6 +3,7 @@ session_start();
 if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 
 }
+    require('PHP/config.php');
     $username= $_SESSION['username'];
     $getid = "SELECT user_id FROM users WHERE user_name = '$username' limit 1";
     $result = mysqli_query($db, $getid);
