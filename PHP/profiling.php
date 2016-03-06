@@ -26,7 +26,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         $psn = $_POST['psn'];
         $xbox = $_POST['xbox'];
         $user_id = $_SESSION['userid'];
-        echo array($status, $about_me, $birthday, $gender, $fav_games, $skype, $msn, $instagram, $youtube, $steam, $twitch, $psn, $xbox, $user_id);
+        echo $status, $about_me, $birthday, $gender, $fav_games, $skype, $msn, $instagram, $youtube, $steam, $twitch, $psn, $xbox, $user_id;
 
         $list_query = "SELECT * FROM profiles WHERE user_id ='{$_SESSION['userid']}'";
         $run_query = $db->query($list_query);
