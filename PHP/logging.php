@@ -16,6 +16,7 @@
         $check_user = mysqli_num_rows($run_user);
         if ($check_user == 1) {
             $row = mysqli_fetch_array($run_user);
+            $row['user_id'];
 
             session_start();
             $_SESSION['username'] = $username;
