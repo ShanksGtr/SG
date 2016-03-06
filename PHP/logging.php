@@ -17,6 +17,7 @@
         if ($check_user == 1) {
             session_start();
             $_SESSION['username'] = $username;
+            $_SESSION['userid'] = $run_user['user_id'];
             header('location:/index.php');
         } else {
             echo "<script>alert('Username or Password is incorrect'); location.href='/login.php';</script>";
