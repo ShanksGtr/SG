@@ -3,6 +3,10 @@ session_start();
 if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 
 }
+    $getid = "SELECT user_id FROM users WHERE user_name = '{$_SESSION['username']}'";
+    $result = mysqli_query($db, $getid);
+    $value = mysqli_fetch_object($result);
+    $_SESSION['userid'] = $value->user_id;
 
 ?>
 <!DOCTYPE html>
