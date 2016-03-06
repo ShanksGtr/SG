@@ -40,8 +40,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 echo "<script>alert('COOL'); location.href='/profile.php';</script>";
 
             } elseif ($check_user == 0) {
-                $listU_query = "INSERT INTO profiles (status, about_me, birthday, /*avatar*/ gender, fav_games, skype, msn, instagram, youtube, steam, twitch, psn, xbox, user_id)
-                                          VALUES ('$status', '$about_me', '$birthday', /*'avatar'*/ '$gender', '$fav_games', '$skype', '$msn', '$instagram', '$youtube',
+                $listU_query = "INSERT INTO profiles (status, about_me, birthday, gender, fav_games, skype, msn, instagram, youtube, steam, twitch, psn, xbox, user_id)
+                                          VALUES ('$status', '$about_me', '$birthday', '$gender', '$fav_games', '$skype', '$msn', '$instagram', '$youtube',
                                            '$steam', '$twitch', '$psn', '$xbox', '$user_id') ";
                 echo $listU_query;
                 if (mysqli_query($db, $listU_query)) {
