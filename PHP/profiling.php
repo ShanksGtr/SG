@@ -8,6 +8,10 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
     error_reporting(E_ALL);
     require('config.php');
 
+    if(empty($_POST['submit'])) {
+        echo "<script>alert('Please Login'); location.href='/profiledit.php';</script>";
+    }
+
     if (isset($_POST['submit'])) {
         $status = $_POST['status'];
         $about_me = $_POST['about_me'];
