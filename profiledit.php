@@ -172,9 +172,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             }
                         </script> -->
                         <button class="btn btn-default btn-lg" type="submit" value="submit" name="submit">Submit</button>
-                    </div>
+                    </div><?php } ?>
                 </div>
-                <?php } ?>
             </form>
         </div>
     </div>
