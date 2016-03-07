@@ -171,8 +171,9 @@ error_reporting(E_ALL);
                             }
                         </script> -->
                         <button class="btn btn-default btn-lg" type="submit" value="submit" name="submit">Submit</button>
-                    </div> <?php } ?>
+                    </div>
                 </div>
+                <?php } ?>
             </form>
         </div>
     </div>
