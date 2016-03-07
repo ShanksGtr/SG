@@ -107,13 +107,10 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 <input id="fileup" name="avatar" type="file" style="margin-bottom: 120px; font-size: 17px;  ">
                         </div>
                         <div style="border-right: 1px groove silver; padding-right: 11px;">
-                            <?php
-
-                            while($row = $result->fetch_assoc()) {
-
-                                ?>
                                 <h3><span class="glyphicon glyphicon-road"></span> Age:</h3>
-                                <?php if (!$row['age'] == 'empty') { ?>
+                                <?php
+                                while($row = $result->fetch_assoc()) {
+                                if (!$row['age'] == 'empty') { ?>
                                 <p><input required="required" type="number" max="150" class="form-control" placeholder="Your age" name="age"> </p>
                                 <?php } else { ?>
                                 <p><input required="required" type="number" max="150" class="form-control" placeholder="Your age" name="age" value="<?= $row['age']; ?>"> </p>
