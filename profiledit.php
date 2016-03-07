@@ -113,8 +113,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                  ?>
 
                                 <p><input required="required" type="number" max="150" class="form-control" placeholder="Your age" name="age"
-                                          value="<?php if ($row['age'] == NULL) {
-                                          } else { $row['age'];  ?>"/> </p> <?php }} ?>
+                                          value="<?php if ($row['age'] == NULL) { echo "enter";
+                                          } else { htmlspecialchars($row['age']);  ?>"/> </p> <?php }} ?>
                                 <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
                                 <h3><input type="radio" name="gender" value="Male"> Male
                                     <input type="radio" name="gender" value="Female"> Female <br>
