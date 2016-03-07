@@ -126,7 +126,7 @@ error_reporting(E_ALL);
                         </div>
                         <div style="border-right: 1px groove silver; padding-right: 11px;">
                                 <h3><span class="glyphicon glyphicon-road"></span> Age:</h3>
-                                <p><input required="required" type="number" max="150" class="form-control" placeholder="Your age" name="age" value="<?php echo $age; ?>"> </p>
+                                <p><input required="required" type="number" max="150" class="form-control" placeholder="Your age" name="age" value="age"> </p>
                                 <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
                                 <h3><input type="radio" name="gender" value="Male"> Male
                                     <input type="radio" name="gender" value="Female"> Female <br>
@@ -147,7 +147,7 @@ error_reporting(E_ALL);
                                 <h3><span class="fa fa-youtube"></span> Youtube:</h3>
                                 <p><input type="text" class="form-control" placeholder="Youtube Channel" name="youtube"> </p>
                                 <h3><span class="ion-social-twitch-outline"></span> Twitch:</h3>
-                                <p><input type="text" class="form-control" placeholder="Twitch" name="twitch" value="<?php echo $twitch; } ?>"> </p>
+                                <p><input type="text" class="form-control" placeholder="Twitch" name="twitch" value="twitch"> </p>
 
                         </div>
                     </div>
