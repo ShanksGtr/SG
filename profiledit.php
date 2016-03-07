@@ -110,7 +110,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 <h3><span class="glyphicon glyphicon-road"></span> Age:</h3>
                                 <?php
                                 while($row = $result->fetch_assoc()) {
-                                if (!$row['age'] == 'empty') { ?>
+                                if ($row['age'] == 'empty') { ?>
                                 <p><input required="required" type="number" max="150" class="form-control" placeholder="Your age" name="age"> </p>
                                 <?php } else { ?>
                                 <p><input required="required" type="number" max="150" class="form-control" placeholder="Your age" name="age" value="<?= $row['age']; ?>"> </p>
