@@ -128,28 +128,28 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         </div>
                         <div style="border-right: 1px groove silver; padding-right: 11px;">
                                 <h3><span class="glyphicon glyphicon-road"></span> Age:</h3>
-                                <p><input required="required" type="number" max="150" class="form-control" placeholder="Your age" name="age" value="<?= htmlspecialchars($age); ?>"> </p>
+                                <p><input required="required" type="number" max="150" class="form-control" placeholder="Your age" name="age" value="<?= $age; ?>"> </p>
                                 <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
                                 <h3><input type="radio" name="gender" value="Male"> Male
                                     <input type="radio" name="gender" value="Female"> Female <br>
                                     <input type="radio" name="gender" value="Not saying" checked/> Not saying
                                 </h3>
                                 <h3><span class="fa fa-steam"></span> Steam:</h3>
-                                <p><input type="text" class="form-control"  placeholder="Steam" name="steam" value="<?= htmlspecialchars($steam); ?>"> </p>
+                                <p><input type="text" class="form-control"  placeholder="Steam" name="steam" value="<?= $steam; ?>"> </p>
                                 <h3><span class="ionicons ion-playstation"></span> PSN:</h3>
-                                <p><input type="text" class="form-control" placeholder="Playstation Network" name="psn" value="<?= htmlspecialchars($psn); ?>"> </p>
+                                <p><input type="text" class="form-control" placeholder="Playstation Network" name="psn" value="<?= $psn; ?>"> </p>
                                 <h3><span class="ion-xbox"></span> Xbox Live:</h3>
-                                <p><input type="text" class="form-control" placeholder="Xbox Live" name="xbox" value="<?= htmlspecialchars($xbox); ?>"> </p>
+                                <p><input type="text" class="form-control" placeholder="Xbox Live" name="xbox" value="<?= $xbox; ?>"> </p>
                                 <h3><span class="fa fa-skype"></span> Skype:</h3>
-                                <p><input type="text" class="form-control" placeholder="Skype" name="skype" value="<?= htmlspecialchars($skype); ?>"> </p>
+                                <p><input type="text" class="form-control" placeholder="Skype" name="skype" value="<?= $skype; ?>"> </p>
                                 <h3><span class="fa fa-at"></span> Email:</h3>
-                                <p><input type="text" class="form-control" placeholder="Email address" name="msn" value="<?= htmlspecialchars($msn); ?>"> </p>
+                                <p><input type="text" class="form-control" placeholder="Email address" name="msn" value="<?= $msn; ?>"> </p>
                                 <h3><span class="fa fa-instagram"></span> Instagram:</h3>
-                                <p><input type="text" class="form-control" placeholder="Instagram" name="instagram" value="<?= htmlspecialchars($instagram); ?>"> </p>
+                                <p><input type="text" class="form-control" placeholder="Instagram" name="instagram" value="<?= $instagram; ?>"> </p>
                                 <h3><span class="fa fa-youtube"></span> Youtube:</h3>
-                                <p><input type="text" class="form-control" placeholder="Youtube Channel" name="youtube" value="<?= htmlspecialchars($youtube); ?>"> </p>
+                                <p><input type="text" class="form-control" placeholder="Youtube Channel" name="youtube" value="<?= $youtube; ?>"> </p>
                                 <h3><span class="ion-social-twitch-outline"></span> Twitch:</h3>
-                                <p><input type="text" class="form-control" placeholder="Twitch" name="twitch" value="<?= htmlspecialchars($twitch); ?>"> </p>
+                                <p><input type="text" class="form-control" placeholder="Twitch" name="twitch" value="<?= $twitch; ?>"> </p>
 
                         </div>
                     </div>
@@ -157,11 +157,11 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 <div class="col col-md-9" style="word-wrap: break-word">
                     <div>
                             <h2>Status:</h2>
-                            <textarea class="form-control" rows="3" id="status" placeholder="Status" maxlength="255" name="status" ><?= htmlspecialchars($status); ?></textarea>
+                            <textarea class="form-control" rows="3" id="status" placeholder="Status" maxlength="255" name="status" ><?= $status; ?></textarea>
                             <h2>About Me:</h2>
-                            <textarea class="form-control" rows="10"  id="aboutme" placeholder="About You" maxlength="2000" name="about_me"><?= htmlspecialchars($about_me); ?></textarea>
+                            <textarea class="form-control" rows="10"  id="aboutme" placeholder="About You" maxlength="2000" name="about_me"><?= $about_me; ?></textarea>
                             <h2>Favorite Games:</h2>
-                            <textarea class="form-control" rows="10" id="fg" placeholder="Favorite games using hashtags form! seperated by a comma (e.g. #MyFavoriteGame, #is)" maxlength="2000" name="fav_games"><?= htmlspecialchars($fav_games); ?></textarea><br>
+                            <textarea class="form-control" rows="10" id="fg" placeholder="Favorite games using hashtags form! seperated by a comma (e.g. #MyFavoriteGame, #is)" maxlength="2000" name="fav_games"><?= $fav_games; ?></textarea><br>
                         <!-- <script>
                              submitprofile = function() {
                                 document.getElementById("form1").submit();
