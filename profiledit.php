@@ -136,6 +136,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 <p><input type="text" class="form-control" placeholder="Youtube Channel" name="youtube" value="<?= $row['youtube']; ?>"> </p>
                                 <h3><span class="ion-social-twitch-outline"></span> Twitch:</h3>
                                 <p><input type="text" class="form-control" placeholder="Twitch" name="twitch" value="<?= $row['twitch']; ?>"> </p>
+                                <details>This is detail test</details>
                         </div>
                     </div>
                 </div>
