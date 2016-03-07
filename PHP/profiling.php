@@ -8,10 +8,6 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
     error_reporting(E_ALL);
     require('config.php');
 
-/*if (!empty($_POST['submit'])) {
-    echo "<script>alert('Please enter any value'); location.href='/profiledit.php';</script>";
-}*/
-
     if (isset($_POST['submit'])) {
         $status = $_POST['status'];
         $about_me = $_POST['about_me'];
@@ -40,11 +36,12 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 echo "<script>alert('COOL'); location.href='/profile.php';</script>";
 
             } elseif ($check_user == 0) {
-                $listU_query = "INSERT INTO profiles (status, about_me, birthday, gender, fav_games, skype, msn, instagram, youtube, steam, twitch, psn, xbox, user_id)
+                $listI_query = "INSERT INTO profiles (status, about_me, birthday, gender, fav_games, skype, msn, instagram, youtube, steam, twitch, psn, xbox, user_id)
                                           VALUES ('$status', '$about_me', '$birthday', '$gender', '$fav_games', '$skype', '$msn', '$instagram', '$youtube',
                                            '$steam', '$twitch', '$psn', '$xbox', '$user_id') ";
 
-                if (mysqli_query($db, $listU_query)) {
+                $run_queryI = $db->query($listI_query);
+                if ($run_queryI == true) {
                     echo "<script>alert('Profile updated!'); location.href='/profile.php';</script>";
                 }
 
