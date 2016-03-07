@@ -3,7 +3,11 @@ session_start();
 if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
     echo "<script>alert('Please Login'); location.href='login.php';</script>";
 }
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
+    require('PHP/config.php');
     $list_query = "SELECT * FROM profiles WHERE user_id='{$_SESSION['userid']}'";
     $run_query = $db->query($list_query);
     while($row = $run_query->fetch_array()) {
