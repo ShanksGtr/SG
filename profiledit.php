@@ -91,35 +91,35 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             <?php } else {} ?>
         </div>
         <div class="row" style="word-wrap: break-word ">
+            <?php
+            ini_set('display_errors', 1);
+            ini_set('display_startup_errors', 1);
+            error_reporting(E_ALL);
+
+            require('PHP/config.php');
+            $list_query = "SELECT * FROM profiles WHERE user_id='{$_SESSION['userid']}'";
+            $result = mysqli_query($db, $list_query) or die;
+            while($row = mysqli_fetch_array($result)) {
+            $status = $row['status'];
+            $about_me = $row['about_me'];
+            $age = $row['age'];
+            //$avatar = $_FILES['avatar'];
+            $gender = $row['gender'];
+
+            $fav_games = $row['fav_games'];
+            $skype = $row['skype'];
+            $msn = $row['msn'];
+            $instagram = $row['instagram'];
+            $youtube = $row['youtube'];
+
+            $steam = $row['steam'];
+            $twitch = $row['twitch'];
+            $psn = $row['psn'];
+            $xbox = $row['xbox'];
+            $user_id = $row['userid'];
+
+            ?>
             <form action="PHP/profiling.php" method="post" >
-                <?php
-                    ini_set('display_errors', 1);
-                    ini_set('display_startup_errors', 1);
-                    error_reporting(E_ALL);
-
-                    require('PHP/config.php');
-                    $list_query = "SELECT * FROM profiles WHERE user_id='{$_SESSION['userid']}'";
-                    $result = mysqli_query($db, $list_query) or die;
-                         while($row = mysqli_fetch_array($result)) {
-                            $status = $row['status'];
-                            $about_me = $row['about_me'];
-                            $age = $row['age'];
-                            //$avatar = $_FILES['avatar'];
-                            $gender = $row['gender'];
-
-                            $fav_games = $row['fav_games'];
-                            $skype = $row['skype'];
-                            $msn = $row['msn'];
-                            $instagram = $row['instagram'];
-                            $youtube = $row['youtube'];
-
-                            $steam = $row['steam'];
-                            $twitch = $row['twitch'];
-                            $psn = $row['psn'];
-                            $xbox = $row['xbox'];
-                            $user_id = $row['userid'];
-
-                ?>
                 <div class="col col-md-3" >
                     <div>
                         <div>
@@ -172,9 +172,10 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             }
                         </script> -->
                         <button class="btn btn-default btn-lg" type="submit" value="submit" name="submit">Submit</button>
-                    </div><?php } ?>
+                    </div>
                 </div>
             </form>
+            <?php } ?>
         </div>
     </div>
 </div>
