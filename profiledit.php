@@ -111,10 +111,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 <?php
                                 while($row = mysqli_fetch_array($result)) {
                                  ?>
-
-                                <p><input required="required" type="number" max="150" class="form-control" placeholder="Your age" name="age"
-                                          value="<?php if ($row['age'] == NULL) { echo "enter";
-                                          } else { htmlspecialchars($row['age']);  ?>"/> </p> <?php }} ?>
+                                <p><input required="required" type="number" max="150" class="form-control" placeholder="Your age" name="age" value="<?=$row['age']; ?>"/> </p>
                                 <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
                                 <h3><input type="radio" name="gender" value="Male"> Male
                                     <input type="radio" name="gender" value="Female"> Female <br>
@@ -136,6 +133,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 <p><input type="text" class="form-control" placeholder="Youtube Channel" name="youtube" value="<?= $row['youtube']; ?>"> </p>
                                 <h3><span class="ion-social-twitch-outline"></span> Twitch:</h3>
                                 <p><input type="text" class="form-control" placeholder="Twitch" name="twitch" value="<?= $row['twitch']; ?>"> </p>
+                                <?php } ?>
                         </div>
                     </div>
                 </div>

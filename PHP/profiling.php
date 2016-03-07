@@ -13,6 +13,9 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         $status = $_POST['status'];
         $about_me = $_POST['about_me'];
         $age = $_POST['age'];
+        if ($age = '') {
+            true;
+        }
         //$avatar = $_FILES['avatar'];
         $gender = $_POST['gender'];
 
