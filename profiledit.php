@@ -9,7 +9,7 @@ error_reporting(E_ALL);
 
     require('PHP/config.php');
     $list_query = "SELECT * FROM profiles WHERE user_id='{$_SESSION['userid']}'";
-    $run_query = $db->query($list_query);
+    $result = mysqli_query($db, $list_query) or die;
 
 ?>
 <!DOCTYPE html>
@@ -99,7 +99,7 @@ error_reporting(E_ALL);
         </div>
         <div class="row" style="word-wrap: break-word ">
             <form action="PHP/profiling.php" method="post" >
-                <?php while($row = $run_query->fetch_array()) {
+                <?php while($row = mysqli_fetch_array($result)) {
                     $status = $row['status'];
                     $about_me = $row['about_me'];
                     $age = $row['age'];
