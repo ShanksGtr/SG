@@ -100,7 +100,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         </div>
                         <div style="border-right: 1px groove silver; padding-right: 11px;">
                                 <h3><span class="fa fa-birthday-cake"></span> Birthday:</h3>
-                                <p><input type="number" max="150" class="form-control" placeholder="You age" name="age"> </p>
+                                <p><input type="number" max="150" class="form-control" placeholder="Your age" name="age"> </p>
                                 <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
                                 <h3><input type="radio" name="gender" value="Male"> Male
                                     <input type="radio" name="gender" value="Female"> Female <br>
