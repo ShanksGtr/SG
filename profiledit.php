@@ -110,11 +110,11 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 <h3><span class="glyphicon glyphicon-road"></span> Age:</h3>
                                 <?php
                                 while($row = mysqli_fetch_array($result)) {
-                                if ($row['age'] == NULL) {
-                                echo "<p>" . "<input required=required type=number max=150 class=form-control placeholder=YourAge name=age " . "</p>";
-                                 } else { ?>
-                                <p><input required="required" type="number" max="150" class="form-control" placeholder="Your age" name="age" value="<?= $row['age']; ?>"> </p>
-                                <?php }} ?>
+                                 ?>
+
+                                <p><input required="required" type="number" max="150" class="form-control" placeholder="Your age" name="age"
+                                          value="<?php if ($row['age'] == NULL) {
+                                          } else { $row['age'];} } ?>"> </p>
                                 <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
                                 <h3><input type="radio" name="gender" value="Male"> Male
                                     <input type="radio" name="gender" value="Female"> Female <br>
