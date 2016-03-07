@@ -94,8 +94,10 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <?php } else { ?>
                         <h1>Welcome to SGamers</h1> <?php } ?>
                     <?php if ($_SESSION['username'] == true) { ?>
-                        <a class="btn btn-default btn-lg hidden-xs" style="float: right; margin-top: -48px; font-family: 'Press Start 2P', cursive;" href="profiledit.php" type="submit">Edit</a>
-                        <a class="btn btn-default btn-sm visible-xs-block" style="float: right; margin-top: -80px; font-family: 'Press Start 2P', cursive;" href="profiledit.php" type="submit">Edit</a>
+                        <form action="profiledit.php" method="post">
+                            <a class="btn btn-default btn-lg hidden-xs" style="float: right; margin-top: -48px; font-family: 'Press Start 2P', cursive;" href="profiledit.php"  type="submit">Edit</a>
+                            <a class="btn btn-default btn-sm visible-xs-block" style="float: right; margin-top: -80px; font-family: 'Press Start 2P', cursive;" href="profiledit.php" type="submit">Edit</a>
+                        </form
                     <?php } else {
                     }?>
                 </div>
