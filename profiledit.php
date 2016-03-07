@@ -147,9 +147,9 @@ error_reporting(E_ALL);
                                 <h3><span class="fa fa-youtube"></span> Youtube:</h3>
                                 <p><input type="text" class="form-control" placeholder="Youtube Channel" name="youtube"> </p>
                                 <h3><span class="ion-social-twitch-outline"></span> Twitch:</h3>
-                                <p><input type="text" class="form-control" placeholder="Twitch" name="twitch" value="test"> </p>
+                                <p><input type="text" class="form-control" placeholder="Twitch" name="twitch" value="<?php echo $twitch; } ?>"> </p>
+
                         </div>
-                        <?php } ?>
                     </div>
                 </div>
                 <div class="col col-md-9" style="word-wrap: break-word">
