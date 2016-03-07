@@ -160,7 +160,7 @@ error_reporting(E_ALL);
                             <h2>About Me:</h2>
                             <textarea class="form-control" rows="10"  id="aboutme" placeholder="About You" maxlength="2000" name="about_me"><?php echo htmlspecialchars($about_me); ?></textarea>
                             <h2>Favorite Games:</h2>
-                            <textarea class="form-control" rows="10" id="fg" placeholder="Favorite games using hashtags form! seperated by a comma (e.g. #MyFavoriteGame, #is)" maxlength="2000" name="fav_games"><?php echo htmlspecialchars($fav_games);} ?></textarea><br>
+                            <textarea class="form-control" rows="10" id="fg" placeholder="Favorite games using hashtags form! seperated by a comma (e.g. #MyFavoriteGame, #is)" maxlength="2000" name="fav_games"><?php echo htmlspecialchars($fav_games); ?></textarea><br>
                         <!-- <script>
                              submitprofile = function() {
                                 document.getElementById("form1").submit();
@@ -171,7 +171,7 @@ error_reporting(E_ALL);
                             }
                         </script> -->
                         <button class="btn btn-default btn-lg" type="submit" value="submit" name="submit">Submit</button>
-                    </div>
+                    </div> <?php } ?>
                 </div>
             </form>
         </div>
