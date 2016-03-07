@@ -11,7 +11,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
     if (isset($_POST['submit'])) {
         $status = $_POST['status'];
         $about_me = $_POST['about_me'];
-        $birthday = $_POST['birthday'];
+        $age = $_POST['age'];
         //$avatar = $_FILES['avatar'];
         $gender = $_POST['gender'];
 
@@ -36,8 +36,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 echo "<script>alert('COOL'); location.href='/profile.php';</script>";
 
             } elseif ($check_user == 0) {
-                $listI_query = "INSERT INTO profiles (status, about_me, birthday, gender, fav_games, skype, msn, instagram, youtube, steam, twitch, psn, xbox, user_id)
-                                          VALUES ('$status', '$about_me', '$birthday', '$gender', '$fav_games', '$skype', '$msn', '$instagram', '$youtube',
+                $listI_query = "INSERT INTO profiles (status, about_me, age, gender, fav_games, skype, msn, instagram, youtube, steam, twitch, psn, xbox, user_id)
+                                          VALUES ('$status', '$about_me', '$age', '$gender', '$fav_games', '$skype', '$msn', '$instagram', '$youtube',
                                            '$steam', '$twitch', '$psn', '$xbox', '$user_id') ";
 
                 $run_queryI = $db->query($listI_query);
