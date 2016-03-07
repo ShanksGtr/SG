@@ -98,7 +98,6 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 
             require('PHP/config.php');
 
-            if (isset($_POST['submit'])) {
             $list_query = "SELECT * FROM profiles WHERE user_id='{$_SESSION['userid']}'";
             $result = mysqli_query($db, $list_query) or die;
             while($row = mysqli_fetch_array($result)) {
@@ -177,7 +176,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     </div>
                 </div>
             </form>
-            <?php }} ?>
+            <?php } ?>
         </div>
     </div>
 </div>
