@@ -4,6 +4,28 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
     echo "<script>alert('Please Login'); location.href='login.php';</script>";
 }
 
+    $list_query = "SELECT * FROM profiles WHERE user_id='{$_SESSION['userid']}'";
+    $run_query = $db->query($list_query);
+    while($row = $run_query->fetch_array()) {
+        $status = $row['status'];
+        $about_me = $row['about_me'];
+        $age = $row['age'];
+        //$avatar = $_FILES['avatar'];
+        $gender = $row['gender'];
+
+        $fav_games = $row['fav_games'];
+        $skype = $row['skype'];
+        $msn = $row['msn'];
+        $instagram = $row['instagram'];
+        $youtube = $row['youtube'];
+
+        $steam = $row['steam'];
+        $twitch = $row['twitch'];
+        $psn = $row['psn'];
+        $xbox = $row['xbox'];
+        $user_id = $row['userid'];
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -99,8 +121,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 <input id="fileup" name="avatar" type="file" style="margin-bottom: 120px; font-size: 17px;  ">
                         </div>
                         <div style="border-right: 1px groove silver; padding-right: 11px;">
-                                <h3><span class="fa fa-birthday-cake"></span> Birthday:</h3>
-                                <p><input required="required" type="number" max="150" class="form-control" placeholder="Your age" name="age"> </p>
+                                <h3><span class="glyphicon glyphicon-road"></span> Age:</h3>
+                                <p><input required="required" type="number" max="150" class="form-control" placeholder="Your age" name="age" value="<?php echo $age ?>"> </p>
                                 <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
                                 <h3><input type="radio" name="gender" value="Male"> Male
                                     <input type="radio" name="gender" value="Female"> Female <br>
@@ -123,6 +145,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 <h3><span class="ion-social-twitch-outline"></span> Twitch:</h3>
                                 <p><input type="text" class="form-control" placeholder="Twitch" name="twitch" value="test"> </p>
                         </div>
+                        <?php } ?>
                     </div>
                 </div>
                 <div class="col col-md-9" style="word-wrap: break-word">
