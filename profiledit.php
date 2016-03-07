@@ -10,25 +10,6 @@ error_reporting(E_ALL);
     require('PHP/config.php');
     $list_query = "SELECT * FROM profiles WHERE user_id='{$_SESSION['userid']}'";
     $run_query = $db->query($list_query);
-    while($row = $run_query->fetch_array()) {
-        $status = $row['status'];
-        $about_me = $row['about_me'];
-        $age = $row['age'];
-        //$avatar = $_FILES['avatar'];
-        $gender = $row['gender'];
-
-        $fav_games = $row['fav_games'];
-        $skype = $row['skype'];
-        $msn = $row['msn'];
-        $instagram = $row['instagram'];
-        $youtube = $row['youtube'];
-
-        $steam = $row['steam'];
-        $twitch = $row['twitch'];
-        $psn = $row['psn'];
-        $xbox = $row['xbox'];
-        $user_id = $row['userid'];
-
 
 ?>
 <!DOCTYPE html>
@@ -118,6 +99,25 @@ error_reporting(E_ALL);
         </div>
         <div class="row" style="word-wrap: break-word ">
             <form action="PHP/profiling.php" method="post" >
+                <?php while($row = $run_query->fetch_array()) {
+                                $status = $row['status'];
+                                $about_me = $row['about_me'];
+                                $age = $row['age'];
+                                //$avatar = $_FILES['avatar'];
+                                $gender = $row['gender'];
+
+                                $fav_games = $row['fav_games'];
+                                $skype = $row['skype'];
+                                $msn = $row['msn'];
+                                $instagram = $row['instagram'];
+                                $youtube = $row['youtube'];
+
+                                $steam = $row['steam'];
+                                $twitch = $row['twitch'];
+                                $psn = $row['psn'];
+                                $xbox = $row['xbox'];
+                                $user_id = $row['userid'];
+                ?>
                 <div class="col col-md-3" >
                     <div>
                         <div>
