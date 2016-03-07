@@ -100,11 +100,6 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         </div>
         <div class="row" style="word-wrap: break-word ">
             <form action="PHP/profiling.php" method="post" >
-                <?php
-
-                while($row = $result->fetch_assoc()) {
-
-                ?>
                 <div class="col col-md-3" >
                     <div>
                         <div>
@@ -112,6 +107,11 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 <input id="fileup" name="avatar" type="file" style="margin-bottom: 120px; font-size: 17px;  ">
                         </div>
                         <div style="border-right: 1px groove silver; padding-right: 11px;">
+                            <?php
+
+                            while($row = $result->fetch_assoc()) {
+
+                                ?>
                                 <h3><span class="glyphicon glyphicon-road"></span> Age:</h3>
                                 <p><input required="required" type="number" max="150" class="form-control" placeholder="Your age" name="age" value="<?= $row['age']; ?>"> </p>
                                 <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
@@ -135,7 +135,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 <p><input type="text" class="form-control" placeholder="Youtube Channel" name="youtube" value="<?= $row['youtube']; ?>"> </p>
                                 <h3><span class="ion-social-twitch-outline"></span> Twitch:</h3>
                                 <p><input type="text" class="form-control" placeholder="Twitch" name="twitch" value="<?= $row['twitch']; ?>"> </p>
-
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -158,7 +158,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         </script> -->
                         <button class="btn btn-default btn-lg" type="submit" value="submit" name="submit">Submit</button>
                     </div>
-                </div><?php } ?>
+                </div>
             </form>
         </div>
     </div>
