@@ -100,23 +100,24 @@ error_reporting(E_ALL);
         <div class="row" style="word-wrap: break-word ">
             <form action="PHP/profiling.php" method="post" >
                 <?php while($row = $run_query->fetch_array()) {
-                                $status = $row['status'];
-                                $about_me = $row['about_me'];
-                                $age = $row['age'];
-                                //$avatar = $_FILES['avatar'];
-                                $gender = $row['gender'];
+                    $status = $row['status'];
+                    $about_me = $row['about_me'];
+                    $age = $row['age'];
+                    //$avatar = $_FILES['avatar'];
+                    $gender = $row['gender'];
 
-                                $fav_games = $row['fav_games'];
-                                $skype = $row['skype'];
-                                $msn = $row['msn'];
-                                $instagram = $row['instagram'];
-                                $youtube = $row['youtube'];
+                    $fav_games = $row['fav_games'];
+                    $skype = $row['skype'];
+                    $msn = $row['msn'];
+                    $instagram = $row['instagram'];
+                    $youtube = $row['youtube'];
 
-                                $steam = $row['steam'];
-                                $twitch = $row['twitch'];
-                                $psn = $row['psn'];
-                                $xbox = $row['xbox'];
-                                $user_id = $row['userid'];
+                    $steam = $row['steam'];
+                    $twitch = $row['twitch'];
+                    $psn = $row['psn'];
+                    $xbox = $row['xbox'];
+                    $user_id = $row['userid'];
+                }
                 ?>
                 <div class="col col-md-3" >
                     <div>
@@ -198,4 +199,3 @@ error_reporting(E_ALL);
 </div>
 </body>
 </html>
-
