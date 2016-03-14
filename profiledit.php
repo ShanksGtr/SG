@@ -98,8 +98,12 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 <h2>Editing <?php echo $_SESSION['username']; ?> ...</h2>
             <?php } else {} ?>
         </div>
+        <!-- Got the way to do it from: http://stackoverflow.com/questions/17463641/how-to-remember-text-input-in-php-forms -->
         <div class="row" style="word-wrap: break-word ">
             <form action="PHP/profiling.php" method="post" >
+                <?php
+                while($row = mysqli_fetch_array($result)) {
+                ?>
                 <div class="col col-md-3" >
                     <div>
                         <div>
@@ -108,14 +112,12 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         </div>
                         <div style="border-right: 1px groove silver; padding-right: 11px;">
                                 <h3><span class="glyphicon glyphicon-road"></span> Age:</h3>
-                                <?php
-                                while($row = mysqli_fetch_array($result)) {
-                                 ?>
-                                <p><input required="required" type="number" max="150" class="form-control" placeholder="Your age" name="age" value="<?=$row['age']; ?>"/> </p>
+                                <p><input type="number" max="150" class="form-control" placeholder="Your age" name="age" value="<?=$row['age']; ?>"/> </p>
                                 <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
-                                <h3><input type="radio" name="gender" value="Male"> Male
-                                    <input type="radio" name="gender" value="Female"> Female <br>
-                                    <input type="radio" name="gender" value="Not saying" checked/> Not saying
+                                <!-- The way to do it was from: http://stackoverflow.com/questions/8443827/save-radio-button-status-php -->
+                                <h3><input type="radio" name="gender" value="Male" <?php if ($row['gender'] == 'Male') echo 'checked'; ?>> Male
+                                    <input type="radio" name="gender" value="Female" <?php if ($row['gender'] == 'Female') echo 'checked'; ?>> Female <br>
+                                    <input type="radio" name="gender" value="Not saying" <?php if ($row['gender'] == 'Not saying') echo 'checked'; ?>> Not saying
                                 </h3>
                                 <h3><span class="fa fa-steam"></span> Steam:</h3>
                                 <p><input type="text" class="form-control"  placeholder="Steam" name="steam" value="<?= $row['steam']; ?>"> </p>
@@ -133,7 +135,6 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 <p><input type="text" class="form-control" placeholder="Youtube Channel" name="youtube" value="<?= $row['youtube']; ?>"> </p>
                                 <h3><span class="ion-social-twitch-outline"></span> Twitch:</h3>
                                 <p><input type="text" class="form-control" placeholder="Twitch" name="twitch" value="<?= $row['twitch']; ?>"> </p>
-                                <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -145,6 +146,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             <textarea class="form-control" rows="10"  id="aboutme" placeholder="About You" maxlength="2000" name="about_me"><?= $row['about_me']; ?></textarea>
                             <h2>Favorite Games:</h2>
                             <textarea class="form-control" rows="10" id="fg" placeholder="Favorite games using hashtags form! seperated by a comma (e.g. #MyFavoriteGame, #is)" maxlength="2000" name="fav_games"><?= $row['fav_games']; ?></textarea><br>
+                            <?php } ?>
                         <!-- <script>
                              submitprofile = function() {
                                 document.getElementById("form1").submit();

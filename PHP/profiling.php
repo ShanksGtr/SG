@@ -34,17 +34,16 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         $check_user = mysqli_num_rows($run_query);
             if ($check_user == 1) {
                 //$list_query = "UPDATE profiles SET  WHERE user_name ='{$_SESSION['userid']}'";
-                echo "<script>alert('COOL'); location.href='/profile.php';</script>";
-
-            } elseif ($check_user == 0) {
-                $listI_query = "INSERT INTO profiles (status, about_me, age, gender, fav_games, skype, msn, instagram, youtube, steam, twitch, psn, xbox, user_id)
-                                          VALUES ('$status', '$about_me', '$age', '$gender', '$fav_games', '$skype', '$msn', '$instagram', '$youtube',
-                                           '$steam', '$twitch', '$psn', '$xbox', '$user_id') ";
+                $listI_query = "UPDATE profiles SET status='$status', about_me='$about_me', age='$age', gender='$gender', fav_games='$fav_games', skype='$skype', msn='$msn',
+                instagram='$instagram', youtube='$youtube', steam=$steam, twitch='$twitch', psn='$psn', xbox='$xbox', user_id='$user_id' WHERE user_id='$user_id'";
 
                 $run_queryI = $db->query($listI_query);
                 if ($run_queryI == true) {
                     echo "<script>alert('Profile updated!'); location.href='/profile.php';</script>";
                 }
 
+            } elseif ($check_user == 0) {
+
+                echo "<script>alert('Somthing went wrong'); location.href='/profile.php';</script>";
             }
     }
