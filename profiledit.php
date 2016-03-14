@@ -112,12 +112,12 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         </div>
                         <div style="border-right: 1px groove silver; padding-right: 11px;">
                                 <h3><span class="glyphicon glyphicon-road"></span> Age:</h3>
-                                <p><input type="number" max="150" class="form-control" placeholder="Your age" name="age" value="<?=$row['age']; ?>"/> </p>
+                                <p><input type="number" max="150" class="form-control" placeholder="Your age" name="age" required="required" value="<?=$row['age']; ?>"/> </p>
                                 <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
                                 <!-- The way to do it was from: http://stackoverflow.com/questions/8443827/save-radio-button-status-php -->
                                 <h3><input type="radio" name="gender" value="Male" <?php if ($row['gender'] == 'Male') echo 'checked'; ?>> Male
                                     <input type="radio" name="gender" value="Female" <?php if ($row['gender'] == 'Female') echo 'checked'; ?>> Female <br>
-                                    <input type="radio" name="gender" value="Not saying" checked> Not saying
+                                    <input required="required" type="radio" name="gender" value="Not saying" <?php if ($row['gender'] == 'Not saying') echo 'checked'; ?>> Not saying
                                 </h3>
                                 <h3><span class="fa fa-steam"></span> Steam:</h3>
                                 <p><input type="text" class="form-control"  placeholder="Steam" name="steam" value="<?= $row['steam']; ?>"> </p>
