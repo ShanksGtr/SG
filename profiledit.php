@@ -117,7 +117,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 <!-- The way to do it was from: http://stackoverflow.com/questions/8443827/save-radio-button-status-php -->
                                 <h3><input type="radio" name="gender" value="Male" <?php if ($row['gender'] == 'Male') echo 'checked'; ?>> Male
                                     <input type="radio" name="gender" value="Female" <?php if ($row['gender'] == 'Female') echo 'checked'; ?>> Female <br>
-                                    <input type="radio" name="gender" value="Not saying" <?php if ($row['gender'] == 'Not saying') echo 'checked'; ?>> Not saying
+                                    <input type="radio" name="gender" value="Not saying" checked> Not saying
                                 </h3>
                                 <h3><span class="fa fa-steam"></span> Steam:</h3>
                                 <p><input type="text" class="form-control"  placeholder="Steam" name="steam" value="<?= $row['steam']; ?>"> </p>
