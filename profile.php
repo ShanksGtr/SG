@@ -121,7 +121,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         $twitch = $row['twitch'];
                         $psn = $row['psn'];
                         $xbox = $row['xbox'];
-
+                            echo $userid;
                         ?>
                         <div class="col col-md-3" >
                             <div>
