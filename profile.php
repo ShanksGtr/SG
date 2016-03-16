@@ -102,42 +102,65 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <div class="row" style="word-wrap: break-word ">
                         <div class="col col-md-3" >
                             <div>
+                                <?php
+                                    $userid = $_SESSION['userid'];
+                                    $query = "SELECT * FROM profiles WHERE user_id='$userid'";
+                                    $run_query = $db->query($query);
+                                    while($row = $run_query->fetch_array()){
+                                        $status = $row['status'];
+                                        $about_me = $row['about_me'];
+                                        $age = $row['age'];
+                                        //$avatar = $_FILES['avatar'];
+                                        $gender = $row['gender'];
+
+                                        $fav_games = $row['fav_games'];
+                                        $skype = $row['skype'];
+                                        $msn = $row['msn'];
+                                        $instagram = $row['instagram'];
+                                        $youtube = $row['youtube'];
+
+                                        $steam = $row['steam'];
+                                        $twitch = $row['twitch'];
+                                        $psn = $row['psn'];
+                                        $xbox = $row['xbox'];
+
+                                ?>
                                 <img class="img-circle" style="height: 200px; width: 240px; margin-left: -10px" src="Pictures/empty-user.jpg">
                                 <div style="border-right: 1px groove silver; margin-left: -5px;">
                                     <h3><span class="glyphicon glyphicon-road"></span> Age:</h3>
-                                    <p> </p>
+                                    <p><?php echo $age?></p>
                                     <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
-                                    <p> </p>
+                                    <p><?php echo $gender?></p>
                                     <h3><span class="fa fa-steam"></span> Steam:</h3>
-                                    <p> </p>
+                                    <p><?php echo $steam?></p>
                                     <h3><span class="ionicons ion-playstation"></span> PSN:</h3>
-                                    <p> </p>
+                                    <p><?php echo $psn?></p>
                                     <h3><span class="ion-xbox"></span> Xbox Live:</h3>
-                                    <p> </p>
+                                    <p><?php echo $xbox?></p>
                                     <h3><span class="fa fa-skype"></span> Skype:</h3>
-                                    <p> </p>
+                                    <p><?php echo $skype?></p>
                                     <h3><span class="fa fa-at"></span> Email:</h3>
-                                    <p> </p>
+                                    <p><?php echo $msn?></p>
                                     <h3><span class="fa fa-instagram"></span> Instagram:</h3>
-                                    <p> </p>
+                                    <p><?php echo $instagram?></p>
                                     <h3><span class="fa fa-youtube"></span> Youtube:</h3>
-                                    <p> </p>
+                                    <p><?php echo $youtube?></p>
                                     <h3><span class="ion-social-twitch-outline"></span> Twitch:</h3>
-                                    <p> </p>
+                                    <p><?php echo $twitch?></p>
                                 </div>
                             </div>
                         </div>
                         <div class="col col-md-9" style="word-wrap: break-word; padding-left: 35px;">
                             <div>
                                 <h2>Status:</h2>
-                                <p> </p>
+                                <p><?php echo $status?></p>
                                 <h2>About Me:</h2>
-                                <p> </p>
+                                <p><?php echo $about_me?></p>
                                 <h2>Favorite Games:</h2>
-                                <p> </p>
+                                <p><?php echo $fav_games?></p>
                             </div>
                         </div>
-                    </div>
+                    </div><?php } ?>
             </div>
         </div>
 
