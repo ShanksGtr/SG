@@ -101,10 +101,15 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 </div>
                     <div class="row" style="word-wrap: break-word ">
                         <?php
-                        $userid = $_SESSION['userid'];
-                        $query = "SELECT * FROM profiles WHERE user_id='$userid'";
-                        $run_query = $db->query($query);
-                        while($row = $run_query->fetch_array()){
+                        ini_set('display_errors', 1);
+                        ini_set('display_startup_errors', 1);
+                        error_reporting(E_ALL);
+
+                        require('PHP/config.php');
+
+                        $query = "SELECT * FROM profiles WHERE user_id='{$_SESSION['userid']}'";
+                        $result = mysqli_query($db, $query) or die;
+                        while($row = mysqli_fetch_array($result)) {
                         $status = $row['status'];
                         $about_me = $row['about_me'];
                         $age = $row['age'];
@@ -121,7 +126,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         $twitch = $row['twitch'];
                         $psn = $row['psn'];
                         $xbox = $row['xbox'];
-                            echo $userid;
+
                         ?>
                         <div class="col col-md-3" >
                             <div>
