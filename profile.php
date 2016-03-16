@@ -100,31 +100,31 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     }?>
                 </div>
                     <div class="row" style="word-wrap: break-word ">
+                        <?php
+                        $userid = $_SESSION['userid'];
+                        $query = "SELECT * FROM profiles WHERE user_id='$userid'";
+                        $run_query = $db->query($query);
+                        while($row = $run_query->fetch_array()){
+                        $status = $row['status'];
+                        $about_me = $row['about_me'];
+                        $age = $row['age'];
+                        //$avatar = $_FILES['avatar'];
+                        $gender = $row['gender'];
+
+                        $fav_games = $row['fav_games'];
+                        $skype = $row['skype'];
+                        $msn = $row['msn'];
+                        $instagram = $row['instagram'];
+                        $youtube = $row['youtube'];
+
+                        $steam = $row['steam'];
+                        $twitch = $row['twitch'];
+                        $psn = $row['psn'];
+                        $xbox = $row['xbox'];
+
+                        ?>
                         <div class="col col-md-3" >
                             <div>
-                                <?php
-                                    $userid = $_SESSION['userid'];
-                                    $query = "SELECT * FROM profiles WHERE user_id='$userid'";
-                                    $run_query = $db->query($query);
-                                    while($row = $run_query->fetch_array()){
-                                        $status = $row['status'];
-                                        $about_me = $row['about_me'];
-                                        $age = $row['age'];
-                                        //$avatar = $_FILES['avatar'];
-                                        $gender = $row['gender'];
-
-                                        $fav_games = $row['fav_games'];
-                                        $skype = $row['skype'];
-                                        $msn = $row['msn'];
-                                        $instagram = $row['instagram'];
-                                        $youtube = $row['youtube'];
-
-                                        $steam = $row['steam'];
-                                        $twitch = $row['twitch'];
-                                        $psn = $row['psn'];
-                                        $xbox = $row['xbox'];
-
-                                ?>
                                 <img class="img-circle" style="height: 200px; width: 240px; margin-left: -10px" src="Pictures/empty-user.jpg">
                                 <div style="border-right: 1px groove silver; margin-left: -5px;">
                                     <h3><span class="glyphicon glyphicon-road"></span> Age:</h3>
