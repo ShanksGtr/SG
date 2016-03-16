@@ -128,36 +128,36 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 <img class="img-circle" style="height: 200px; width: 240px; margin-left: -10px" src="Pictures/empty-user.jpg">
                                 <div style="border-right: 1px groove silver; margin-left: -5px;">
                                     <h3><span class="glyphicon glyphicon-road"></span> Age:</h3>
-                                    <p><?php echo $age?></p>
+                                    <p><?php echo $age;?></p>
                                     <h3><span class="fi-torsos-male-female"></span> Gender:</h3>
-                                    <p><?php echo $gender?></p>
+                                    <p><?php echo $gender;?></p>
                                     <h3><span class="fa fa-steam"></span> Steam:</h3>
-                                    <p><?php echo $steam?></p>
+                                    <p><?php echo $steam;?></p>
                                     <h3><span class="ionicons ion-playstation"></span> PSN:</h3>
-                                    <p><?php echo $psn?></p>
+                                    <p><?php echo $psn;?></p>
                                     <h3><span class="ion-xbox"></span> Xbox Live:</h3>
-                                    <p><?php echo $xbox?></p>
+                                    <p><?php echo $xbox;?></p>
                                     <h3><span class="fa fa-skype"></span> Skype:</h3>
-                                    <p><?php echo $skype?></p>
+                                    <p><?php echo $skype;?></p>
                                     <h3><span class="fa fa-at"></span> Email:</h3>
-                                    <p><?php echo $msn?></p>
+                                    <p><?php echo $msn;?></p>
                                     <h3><span class="fa fa-instagram"></span> Instagram:</h3>
-                                    <p><?php echo $instagram?></p>
+                                    <p><?php echo $instagram;?></p>
                                     <h3><span class="fa fa-youtube"></span> Youtube:</h3>
-                                    <p><?php echo $youtube?></p>
+                                    <p><?php echo $youtube;?></p>
                                     <h3><span class="ion-social-twitch-outline"></span> Twitch:</h3>
-                                    <p><?php echo $twitch?></p>
+                                    <p><?php echo $twitch;?></p>
                                 </div>
                             </div>
                         </div>
                         <div class="col col-md-9" style="word-wrap: break-word; padding-left: 35px;">
                             <div>
                                 <h2>Status:</h2>
-                                <p><?php echo $status?></p>
+                                <p><?php echo $status;?></p>
                                 <h2>About Me:</h2>
-                                <p><?php echo $about_me?></p>
+                                <p><?php echo $about_me;?></p>
                                 <h2>Favorite Games:</h2>
-                                <p><?php echo $fav_games?></p>
+                                <p><?php echo $fav_games;?></p>
                             </div>
                         </div>
                     </div><?php } ?>
