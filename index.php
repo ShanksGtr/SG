@@ -115,7 +115,6 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     </div>
                     <div class="col col-md-6">
                         <?php
-                        include('simple_html_dom.php');
                         $html = file_get_html('http://www.videogamecountdown.com/coming-soon/PlayStation-4');
                         $games = $html->find('div[class=inner]');
 
