@@ -101,15 +101,16 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             foreach ($games as $game) {
 
 
-                            $titles = $game->find('h3 a', 0)->plaintext;
-                            $images = $game->find('div[class=gridimg] img',0)->attr['src'];
-                            $info = $game->find('div[class=gridimg] a',0)->attr['href'];
-                            $date = $game->find('div[class=date] span', 0)->outertext;
-                            //$titles = $game->find('h3', 0);
+                                $titles = $game->find('h3 a', 0)->plaintext;
+                                $images = $game->find('div[class=gridimg] img', 0)->attr['src'];
+                                $info = $game->find('div[class=gridimg] a', 0)->attr['href'];
+                                $date = $game->find('div[class=date] span', 0)->outertext;
+                                //$titles = $game->find('h3', 0);
 
-                            echo "<h2>".$titles."</h2>" . "<br>" .  '<img src="'.$images.'"/>' . "<br>" .
-                                '<a href="http://www.videogamecountdown.com/'.$info.'"> ->For more information</a>' . "<br>"
-                                . $date;
+                                echo "<h2>" . $titles . "</h2>" . "<br>" . '<img src="' . $images . '"/>' . "<br>" .
+                                    '<a href="http://www.videogamecountdown.com/' . $info . '"> ->For more information</a>' . "<br>"
+                                    . $date;
+                            }
                         ?>
                     </div>
                     <div class="col col-md-6">
