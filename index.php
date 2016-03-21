@@ -139,11 +139,13 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 </div>
             </div>
         </div>
-        <?php
-        include('simple_html_dom.php');
-        $html = file_get_html('http://www.videogamecountdown.com/');
-        foreach($html->find('body') as $body)
-            echo "<div hidden>" . $body->innertext . "</div>";
-        ?>
+        <div hidden>
+            <?php
+            include('simple_html_dom.php');
+            $html = file_get_html('http://www.videogamecountdown.com/');
+            foreach($html->find('body') as $body)
+                echo $body->innertext;
+            ?>
+        </div>
 </body>
 </html>
