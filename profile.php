@@ -128,7 +128,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         $xbox = $row['xbox'];
 
                         ?>
-                        <div class="col col-md-3" >
+                        <div class="col col-md-3">
                             <div>
                                 <img class="img-circle" style="height: 200px; width: 240px; margin-left: -10px" src="Pictures/empty-user.jpg">
                                 <div style="border-right: 1px groove silver; margin-left: -5px;">

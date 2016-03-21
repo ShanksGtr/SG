@@ -90,8 +90,34 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                      <?php } else { ?>
                      <h1>Welcome to SGamers</h1> <?php } ?>
                 </div>
-                <p> Alright this is a dummy text text text text text chunk! </p>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, </p>
+                <div style="word-wrap: break-word">
+                    <div class="col col-md-6">
+                        <?php
+                            include('simple_html_dom.php');
+                            $html = file_get_html('http://www.videogamecountdown.com/');
+                            $games = $html->find('div[class=inner]');
+
+                            $games= array($games[0], $games[1], $games[3], $games[4], $games[5]);
+                            foreach ($games as $game) {
+
+
+                            $titles = $game->find('h3 a', 0)->plaintext;
+                            $images = $game->find('div[class=gridimg] img',0)->attr['src'];
+                            $info = $game->find('div[class=gridimg] a',0)->attr['href'];
+                            $date = $game->find('div[class=date] span', 0)->outertext;
+                            //$titles = $game->find('h3', 0);
+
+                            echo "<h2>".$titles."</h2>" . "<br>" .  '<img src="'.$images.'"/>' . "<br>" .
+                                '<a href="http://www.videogamecountdown.com/'.$info.'"> ->For more information</a>' . "<br>"
+                                . $date;
+                        ?>
+                    </div>
+                    <div class="col col-md-6">
+
+                    </div>
+
+                </div>
+
             </div>
         </div>
 
