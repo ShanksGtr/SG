@@ -93,7 +93,6 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 <div style="word-wrap: break-word">
                     <div class="col col-md-8">
                         <?php
-                            echo "<div>";
                             include('simple_html_dom.php');
                             $html = file_get_html('http://www.videogamecountdown.com/');
                             $games = $html->find('div[class=inner]');
@@ -108,11 +107,10 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 $date = $game->find('div[class=date] span', 0)->outertext;
                                 //$titles = $game->find('h3', 0);
 
-                                echo  "<h2>" . $titles . "</h2>" . "<br>" . '<img src="' . $images . '"/>' . "<br>" .
+                                echo '<div class="games">' . "<h2>" . $titles . "</h2>" . "<br>" . '<img src="' . $images . '"/>' . "<br>" .
                                     '<a href="http://www.videogamecountdown.com/' . $info . '"> ->For more information</a>' . "<br>"
-                                    . $date ;
+                                    . $date . '</div>' ;
                             }
-                        echo "</div>";
                         ?>
                     </div>
                     <div class="col col-md-4">
