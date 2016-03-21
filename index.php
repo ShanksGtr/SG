@@ -90,9 +90,10 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                      <?php } else { ?>
                      <h1>Welcome to SGamers</h1> <?php } ?>
                 </div>
-                <div class="col col-md-12" style="word-wrap: break-word">
+                <div style="word-wrap: break-word">
                     <div class="col col-md-6">
                         <?php
+                            echo "<div>";
                             include('simple_html_dom.php');
                             $html = file_get_html('http://www.videogamecountdown.com/');
                             $games = $html->find('div[class=inner]');
@@ -111,6 +112,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                     '<a href="http://www.videogamecountdown.com/' . $info . '"> ->For more information</a>' . "<br>"
                                     . $date . "</div>";
                             }
+                        echo "</div>";
                         ?>
                     </div>
                     <div class="col col-md-6">
