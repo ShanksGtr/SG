@@ -139,3 +139,10 @@ body {
 .games img {
     height: 300px;
 }
+
+@media all and (max-width: 699px) and (min-width: 520px), (min-width: 1151px) {
+    img {
+        width: 200px;
+        height: auto;
+    }
+}

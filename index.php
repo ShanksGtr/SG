@@ -92,6 +92,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 </div>
                 <div style="word-wrap: break-word; overflow: hidden">
                     <div class="col col-md-6">
+                        <h2>Upcoming games:</h2>
                         <?php
                             include('simple_html_dom.php');
                             $html = file_get_html('http://www.videogamecountdown.com/');
@@ -107,32 +108,13 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 $date = $game->find('div[class=date] span', 0)->outertext;
                                 //$titles = $game->find('h3', 0);
 
-                                echo '<div class="games">' . "<h2>" . $titles . "</h2>" . "<br>" . '<img src="' . $images . '"/>' . "<br>" .
-                                    '<a href="http://www.videogamecountdown.com/' . $info . '"> ->For more information</a>' . "<br>"
+                                echo '<div class="games">' . "<h3>" . $titles . "</h3>" . "<br>" . '<img src="' . $images . '"/>' . "<br>" .
+                                    '<a href="http://www.videogamecountdown.com/' . $info . '"> <span class="">For more information</span></a>' . "<br>"
                                     . $date . '</div>' ;
                             }
                         ?>
                     </div>
                     <div class="col col-md-6">
-                        <?php
-                        $html = file_get_html('http://www.videogamecountdown.com/coming-soon/PlayStation-4');
-                        $games = $html->find('div[class=inner]');
-
-                        $games= array($games[0], $games[1], $games[3], $games[4], $games[5]);
-                        foreach ($games as $game) {
-
-
-                            $titles = $game->find('h3 a', 0)->plaintext;
-                            $images = $game->find('div[class=gridimg] img', 0)->attr['src'];
-                            $info = $game->find('div[class=gridimg] a', 0)->attr['href'];
-                            $date = $game->find('div[class=date] span', 0)->outertext;
-                            //$titles = $game->find('h3', 0);
-
-                            echo '<div class="games">' . "<h2>" . $titles . "</h2>" . "<br>" . '<img src="' . $images . '"/>' . "<br>" .
-                                '<a href="http://www.videogamecountdown.com/' . $info . '"> ->For more information</a>' . "<br>"
-                                . $date . '</div>' ;
-                        }
-                        ?>
                     </div>
 
                 </div>
