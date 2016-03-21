@@ -91,7 +91,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                      <h1>Welcome to SGamers</h1> <?php } ?>
                 </div>
                 <div style="word-wrap: break-word">
-
+                    <div class="col-md-6">
                         <?php
                             include('simple_html_dom.php');
                             $html = file_get_html('http://www.videogamecountdown.com/');
@@ -112,7 +112,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                     . $date . "</div>";
                             }
                         ?>
-
+                    </div>
                     <div class="col col-md-6">
                         test
                     </div>
