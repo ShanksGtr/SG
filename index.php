@@ -91,6 +91,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                      <h1>Welcome to SGamers</h1> <?php } ?>
                 </div>
                 <div style="word-wrap: break-word">
+                    <div class="col col-md-6">
                         <?php
                             echo "<div>";
                             include('simple_html_dom.php');
