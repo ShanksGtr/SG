@@ -114,7 +114,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         ?>
                     </div>
                     <div class="col col-md-6">
-
+                        test
                     </div>
 
                 </div>
