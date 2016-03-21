@@ -91,7 +91,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                      <h1>Welcome to SGamers</h1> <?php } ?>
                 </div>
                 <div style="word-wrap: break-word">
-                    <div class="col col-md-8">
+                    <div class="col col-md-6">
                         <span>
                         <?php
                             include('simple_html_dom.php');
@@ -115,7 +115,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         ?>
                         </span>
                     </div>
-                    <div class="col col-md-4">
+                    <div class="col col-md-6">
                         test
                     </div>
 
