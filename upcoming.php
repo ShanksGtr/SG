@@ -193,16 +193,15 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             ?>
 
             </div>
-        <div hidden>
-            <?php
-
-            $html = file_get_html('http://www.videogamecountdown.com/');
-            foreach($html->find('body script') as $body)
-                echo $body->outertext;
-            ?>
         </div>
-        </div>
+    <div hidden>
+        <?php
 
+        $html = file_get_html('http://www.videogamecountdown.com/');
+        foreach($html->find('body script') as $body)
+            echo $body->outertext;
+        ?>
+    </div>
     </div>
 </div>
 
