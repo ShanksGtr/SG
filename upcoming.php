@@ -101,7 +101,6 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 ?>
             </div>
                 <?php
-                include('simple_html_dom.php');
                     if ($_GET['plat'] == "ps3") {
                     $html = file_get_html('http://www.videogamecountdown.com/coming-soon/PlayStation-3');
                     $games = $html->find('div[class=inner]');
