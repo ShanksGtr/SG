@@ -92,6 +92,14 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 <h1>Welcome to SGamers</h1> <?php } ?>
         </div>
         <div style="word-wrap: break-word">
+            <div hidden>
+                <?php
+                include('simple_html_dom.php');
+                $html = file_get_html('http://www.videogamecountdown.com/');
+                foreach($html->find('body script') as $body)
+                    echo $body->outertext;
+                ?>
+            </div>
                 <?php
                 include('simple_html_dom.php');
                     if ($_GET['plat'] == "ps3") {
@@ -191,14 +199,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 }
 
                             ?>
-            <div hidden>
-                <?php
-                include('simple_html_dom.php');
-                $html = file_get_html('http://www.videogamecountdown.com/');
-                foreach($html->find('body script') as $body)
-                    echo $body->outertext;
-                ?>
-            </div>
+
             </div>
         </div>
 
