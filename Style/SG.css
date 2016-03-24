@@ -159,3 +159,15 @@ body {
 .row img{
     max-width: 420px;
 }
+
+.row td a {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    color: black;
+
+}
+
+.row td, th {
+    padding-right: 30px;
+}
