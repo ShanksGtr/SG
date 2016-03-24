@@ -151,7 +151,7 @@ body {
     display: none;
 }
 
-.row:not(first-line) {
+.row:not(:first-line) {
     border-top: dashed 1px silver;
     margin-top: 23px;
 }
