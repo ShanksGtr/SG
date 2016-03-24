@@ -151,7 +151,7 @@ body {
     display: none;
 }
 
-.row div:not(:first-child) {
+.row div:not(:first-child) select {
     border-top: dashed 1px silver;
     margin-top: 23px;
 }
