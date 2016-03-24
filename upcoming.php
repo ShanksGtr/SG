@@ -186,7 +186,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                                 //$titles = $game->find('h3', 0);
 
-                                echo '<div class="row">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
+                                echo '<div class="row">' . '<div class="col col-md-6">' . "<h2>" . $titles.":" . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
                                     '<div class="col col-md-6">' . $desc . "<br>" . "<p>Coming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
 
                             }} else {
