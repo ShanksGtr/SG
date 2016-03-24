@@ -151,7 +151,7 @@ body {
     display: none;
 }
 
-.row.a >  {
+.row.a > .row {
     border-top: dashed 1px silver;
     margin-top: 23px;
 }
