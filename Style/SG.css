@@ -147,10 +147,7 @@ body {
     display: none;
 }
 
-.row {
-    border-bottom: dashed 1px silver;
-    padding-bottom: 25px;
-}
+
 
 .row img{
     max-width: 420px;
@@ -176,6 +173,11 @@ body {
 
 .row td, th {
     padding-right: 30px;
+}
+
+.textglow {
+    border-bottom: dashed 1px silver;
+    padding-bottom: 25px;
 }
 
 .textglow:last-child {
