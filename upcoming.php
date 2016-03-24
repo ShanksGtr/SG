@@ -109,8 +109,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                         //$titles = $game->find('h3', 0);
 
-                        echo '<div class="col col-md-6">' .  "<h2>".$titles."</h2>" . '<img src="'.$images.'"/>' . '</div>' .
-                            '<div class="col col-md-6">' . $desc ."<br>" . "<p>Upcoming in: ".$date."</p>" . "<br>" . $details . "<br>" . $amazon . '</div>';
+                        echo '<div class="row">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
+                            '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
                     }
 
                         } elseif ($_GET['plat'] == "ps4") {
@@ -148,8 +148,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                             //$titles = $game->find('h3', 0);
 
-                            echo '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
-                                '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>';
+                            echo '<div class="row">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
+                                '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
 
                         }} elseif ($_GET['plat'] == "wii") {
                             $html = file_get_html('http://www.videogamecountdown.com/coming-soon/Nintendo-Wii-U');
@@ -167,8 +167,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                                 //$titles = $game->find('h3', 0);
 
-                                echo '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
-                                    '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>';
+                                echo '<div class="row">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
+                                    '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
 
                             }} elseif ($_GET['plat'] == "pc") {
                             $html = file_get_html('http://www.videogamecountdown.com/coming-soon/Windows');
@@ -186,8 +186,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                                 //$titles = $game->find('h3', 0);
 
-                                echo '<div class="col col-md-6">' .  "<h2>".$titles."</h2>" . '<img src="'.$images.'"/>' . '</div>' .
-                                    '<div class="col col-md-6">' . $desc ."<br>" . "<p>Upcoming in: ".$date."</p>" . "<br>" . $details . "<br>" . $amazon . '</div>';
+                                echo '<div class="row">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
+                                    '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
 
                             }} else {
                                     header('location:/index.php');
