@@ -136,11 +136,10 @@ body {
     box-shadow: 1px 0px 10px 5px #0073ff;
 }
 
-@media all and (max-width: 699px) and (min-width: 520px), (min-width: 1151px) {
+@media all and (max-width: 699px) and (min-width: 200px), (min-width: 1151px) {
     img {
-        width: auto;
-        height: auto;
-        max-width: 200px;
+        width: 220px;
+        overflow: hidden;
     }
 }
 
