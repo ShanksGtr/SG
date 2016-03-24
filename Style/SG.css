@@ -151,6 +151,7 @@ body {
     display: none;
 }
 
-div.row > div {
-    border-top: dotted 1px silver;
+.row not:first-child {
+    border-top: dashed 1px silver;
+    margin-top: 23px;
 }
