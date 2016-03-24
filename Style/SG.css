@@ -156,9 +156,8 @@ body {
     margin-top: 23px;
 }
 
-.noborder {
+.row:first-child {
     border-top: none;
-    margin-top: 0;
 }
 
 .row img{
