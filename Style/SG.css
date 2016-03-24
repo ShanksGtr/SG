@@ -156,7 +156,7 @@ body {
     margin-top: 23px;
 }
 
-.row :first-of-type {
+.noborder {
     border-top: none;
     margin-top: 0;
 }
