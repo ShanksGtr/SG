@@ -107,7 +107,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 $date = $game->find('div[class=date] span', 0)->outertext;
                                 //$titles = $game->find('h3', 0);
 
-                                echo '<div class="games">' . "<h3>" . $titles . "</h3>" . "<br>" . '<img src="' . $images . '"/>' . "<br>" .
+                                echo '<div>' . "<h3>" . $titles . "</h3>" . "<br>" . '<img src="' . $images . '"/>' . "<br>" .
                                     '<a href="http://www.videogamecountdown.com/' . $info . '"> <span class="">For more information</span></a>' . "<br>"
                                     . $date . '</div>' ;
                             }
