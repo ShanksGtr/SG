@@ -164,6 +164,11 @@ body {
 
 }
 
+.row h2 {
+    font-weight: bold;
+    text-shadow: -1px 1px #FEFFDC;
+}
+
 .row td, th {
     padding-right: 30px;
 }
