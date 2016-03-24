@@ -136,10 +136,6 @@ body {
     box-shadow: 1px 0px 10px 5px #0073ff;
 }
 
-.games img {
-    height: 300px;
-}
-
 @media all and (max-width: 699px) and (min-width: 520px), (min-width: 1151px) {
     img {
         width: auto;
