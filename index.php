@@ -112,13 +112,6 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                     . $date . '</div>' ;
                             }
                         ?>
-
-                            <?php
-                            $html = file_get_html('http://www.videogamecountdown.com/');
-                            foreach($html->find('body script') as $body)
-                                echo $body->outertext;
-                            ?>
-
                     </div>
                     <div class="col col-md-6">
                     </div>
