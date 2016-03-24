@@ -67,6 +67,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             </ul>
                         </li>
                     </ul>
+                    <ul class="nav navbar-nav navbar-right">
                         <?php if ($_SESSION['username'] == true) { ?>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span><?php echo substr($_SESSION['username'], 0 , 9);?></a>
@@ -84,7 +85,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                     </ul>
                                 </li>
                             <?php } ?>
-
+                        </ul>
                 </div>
             </div>
             <div class="container-fluid"></div>
