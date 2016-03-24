@@ -12,7 +12,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 
     </script>
     <!-- For Mobiles -->
-     <meta name="viewport" content="width=device-width, initial-scale=0.8 maximum-scale=1, user-scalable=yes">
+     <meta name="viewport" content="width=device-width, initial-scale=0.5 maximum-scale=1, user-scalable=yes">
     <meta charset="UTF-8">
     <title>SGamers</title>
     <!-- Bootstrap CSS,JQ&JS Libraries-->
