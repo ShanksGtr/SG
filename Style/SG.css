@@ -150,3 +150,7 @@ body {
 #subscribeForm {
     display: none;
 }
+
+div.row > div {
+    border-top: dotted 1px silver;
+}
