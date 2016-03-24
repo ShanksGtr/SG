@@ -155,3 +155,7 @@ body {
     border-top: dashed 1px silver;
     margin-top: 23px;
 }
+
+.row img{
+    max-width: 420px;
+}
