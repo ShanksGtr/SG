@@ -118,7 +118,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             $games = $html->find('div[class=inner]');
                             $games = array($games[0], $games[1], $games[3], $games[4], $games[5]);
                             foreach ($games as $game) {
-                                echo '<div class="row">';
+
                                 $titles = $game->find('h3 a', 0)->plaintext;
                                 $images = $game->find('div[class=gridimg] img', 0)->attr['src'];
                                 $info = $game->find('div[class=gridimg] a', 0)->attr['href'];
@@ -129,9 +129,9 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                                 //$titles = $game->find('h3', 0);
 
-                                echo '<div class="col col-md-6 colum1">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
-                                    '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>';
-                            } echo '</div>';
+                                echo '<div class="row">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
+                                    '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
+                            }
                          } elseif ($_GET['plat'] == "xbox") {
                         $html = file_get_html('http://www.videogamecountdown.com/coming-soon/Xbox-One');
                         $games = $html->find('div[class=inner]');
@@ -148,7 +148,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                             //$titles = $game->find('h3', 0);
 
-                            echo '<div class="col col-md-6 colum1">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
+                            echo '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
                                 '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>';
 
                         }} elseif ($_GET['plat'] == "wii") {
@@ -167,7 +167,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                                 //$titles = $game->find('h3', 0);
 
-                                echo '<div class="col col-md-6 colum1">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
+                                echo '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
                                     '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>';
 
                             }} elseif ($_GET['plat'] == "pc") {
@@ -186,7 +186,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                                 //$titles = $game->find('h3', 0);
 
-                                echo '<div class="col col-md-6 colum1">' .  "<h2>".$titles."</h2>" . '<img src="'.$images.'"/>' . '</div>' .
+                                echo '<div class="col col-md-6">' .  "<h2>".$titles."</h2>" . '<img src="'.$images.'"/>' . '</div>' .
                                     '<div class="col col-md-6">' . $desc ."<br>" . "<p>Upcoming in: ".$date."</p>" . "<br>" . $details . "<br>" . $amazon . '</div>';
 
                             }} else {
