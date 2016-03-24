@@ -77,7 +77,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             </li>
                             <?php } else { ?>
                                 <li class="dropdown navbar-right">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-log-in">Sign In/Up</span></a>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-log-in"> Sign In/Up</span></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="login.php"><span class="glyphicon glyphicon-log-in" style="font-size:20px; margin-right: 3px"></span>SignIn</a></li>
                                         <li><a href="register.php"><span class="glyphicon glyphicon-user" style="font-size:20px; margin-right: 2px"></span>SignUp</a></li>
