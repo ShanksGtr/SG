@@ -187,7 +187,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 //$titles = $game->find('h3', 0);
 
                                 echo '<div class="row">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
-                                    '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
+                                    '<div class="col col-md-6">' . $desc . "<br>" . "<p>Coming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
 
                             }} else {
                                     header('location:/index.php');
