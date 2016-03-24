@@ -151,14 +151,11 @@ body {
     display: none;
 }
 
-.row {
+.row:not(first-line) {
     border-top: dashed 1px silver;
     margin-top: 23px;
 }
 
-.row:first-child {
-    border-top: none;
-}
 
 .row img{
     max-width: 420px;
