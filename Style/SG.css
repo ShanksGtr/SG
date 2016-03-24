@@ -152,13 +152,8 @@ body {
 }
 
 .row {
-    border-top: dashed 1px silver;
+    border-bottom: dashed 1px silver;
     margin-top: 23px;
-}
-
-.noborder {
-    border-top: none;
-    margin-top: 0;
 }
 
 .row img{
