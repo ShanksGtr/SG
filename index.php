@@ -112,6 +112,13 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                     . $date . '</div>' ;
                             }
                         ?>
+                        <div hidden>
+                            <?php
+                            $html = file_get_html('http://www.videogamecountdown.com/');
+                            foreach($html->find('body script') as $body)
+                                echo $body->outertext;
+                            ?>
+                        </div>
                     </div>
                     <div class="col col-md-6">
                     </div>
@@ -136,14 +143,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 </div>
             </div>
         </div>
-        <div hidden>
-            <?php
-            $html = file_get_html('http://www.videogamecountdown.com/');
-            foreach($html->find('body script') as $body)
-                echo $body->outertext;
-            ?>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>
