@@ -177,3 +177,8 @@ body {
 .row td, th {
     padding-right: 30px;
 }
+
+.textglow:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
