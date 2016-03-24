@@ -97,95 +97,99 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     if ($_GET['plat'] == "ps3") {
                     $html = file_get_html('http://www.videogamecountdown.com/coming-soon/PlayStation-3');
                     $games = $html->find('div[class=inner]');
-
                     $games = array($games[0], $games[1], $games[3], $games[4], $games[5]);
                     foreach ($games as $game) {
 
-
                         $titles = $game->find('h3 a', 0)->plaintext;
-                        $images = $game->find('div[class=gridimg] img', 0)->attr['src'];
-                        $info = $game->find('div[class=gridimg] a', 0)->attr['href'];
+                        $images = $game->find('div[class=gridimg] img',0)->attr['src'];
+                        $info = $game->find('div[class=gridimg] a',0)->attr['href'];
                         $date = $game->find('div[class=date] span', 0)->outertext;
+                        $html = file_get_html('http://www.videogamecountdown.com/'.$info);
+                        $desc = $html->find('div[class=two_third]', 0)->innertext;
+                        $details = $html->find('div[class="one_third last projectdetails"]', 0)->outertext;
+                        $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                         //$titles = $game->find('h3', 0);
 
-                        echo '<div class="games">' . "<h2>" . $titles . "</h2>" . "<br>" . '<img src="' . $images . '"/>' . "<br>" .
-                            '<a href="http://www.videogamecountdown.com/' . $info . '"> ->For more information</a>' . "<br>"
-                            . $date . '</div>';
+                        echo '<div class="col col-md-6">' .  "<h2>".$titles."</h2>" . '<img src="'.$images.'"/>' . '</div>' .
+                            '<div class="col col-md-6">' . $desc ."<br>" . "<p>Upcoming in: ".$date."</p>" . "<br>" . $details . "<br>" . $amazon . '</div>';
                     }
 
                         } elseif ($_GET['plat'] == "ps4") {
                             $html = file_get_html('http://www.videogamecountdown.com/coming-soon/PlayStation-4');
                             $games = $html->find('div[class=inner]');
-
                             $games = array($games[0], $games[1], $games[3], $games[4], $games[5]);
                             foreach ($games as $game) {
-
 
                                 $titles = $game->find('h3 a', 0)->plaintext;
                                 $images = $game->find('div[class=gridimg] img', 0)->attr['src'];
                                 $info = $game->find('div[class=gridimg] a', 0)->attr['href'];
                                 $date = $game->find('div[class=date] span', 0)->outertext;
+                                $html = file_get_html('http://www.videogamecountdown.com/' . $info);
+                                $desc = $html->find('div[class=two_third]', 0)->innertext;
+                                $details = $html->find('div[class="one_third last projectdetails"]', 0)->outertext;
+                                $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                                 //$titles = $game->find('h3', 0);
 
-                                echo '<div class="games">' . "<h2>" . $titles . "</h2>" . "<br>" . '<img src="' . $images . '"/>' . "<br>" .
-                                    '<a href="http://www.videogamecountdown.com/' . $info . '"> ->For more information</a>' . "<br>"
-                                    . $date . '</div>';
-                            }
+                                echo '<div class="col col-md-6 colum1">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
+                                    '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>';
 
-                        } elseif ($_GET['plat'] == "xbox") {
+                         }} elseif ($_GET['plat'] == "xbox") {
                         $html = file_get_html('http://www.videogamecountdown.com/coming-soon/Xbox-One');
                         $games = $html->find('div[class=inner]');
-
                         $games = array($games[0], $games[1], $games[3], $games[4], $games[5]);
                         foreach ($games as $game) {
-
 
                             $titles = $game->find('h3 a', 0)->plaintext;
                             $images = $game->find('div[class=gridimg] img', 0)->attr['src'];
                             $info = $game->find('div[class=gridimg] a', 0)->attr['href'];
                             $date = $game->find('div[class=date] span', 0)->outertext;
+                            $html = file_get_html('http://www.videogamecountdown.com/' . $info);
+                            $desc = $html->find('div[class=two_third]', 0)->innertext;
+                            $details = $html->find('div[class="one_third last projectdetails"]', 0)->outertext;
+                            $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                             //$titles = $game->find('h3', 0);
 
-                            echo '<div class="games">' . "<h2>" . $titles . "</h2>" . "<br>" . '<img src="' . $images . '"/>' . "<br>" .
-                                '<a href="http://www.videogamecountdown.com/' . $info . '"> ->For more information</a>' . "<br>"
-                                . $date . '</div>';
-                        }
+                            echo '<div class="col col-md-6 colum1">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
+                                '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>';
 
-                        } elseif ($_GET['plat'] == "wii") {
+                        }} elseif ($_GET['plat'] == "wii") {
                             $html = file_get_html('http://www.videogamecountdown.com/coming-soon/Nintendo-Wii-U');
                             $games = $html->find('div[class=inner]');
-
                             $games= array($games[0], $games[1], $games[3], $games[4], $games[5]);
                             foreach ($games as $game) {
-
 
                                 $titles = $game->find('h3 a', 0)->plaintext;
                                 $images = $game->find('div[class=gridimg] img', 0)->attr['src'];
                                 $info = $game->find('div[class=gridimg] a', 0)->attr['href'];
                                 $date = $game->find('div[class=date] span', 0)->outertext;
+                                $html = file_get_html('http://www.videogamecountdown.com/' . $info);
+                                $desc = $html->find('div[class=two_third]', 0)->innertext;
+                                $details = $html->find('div[class="one_third last projectdetails"]', 0)->outertext;
+                                $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                                 //$titles = $game->find('h3', 0);
 
-                                echo '<div class="games">' . "<h2>" . $titles . "</h2>" . "<br>" . '<img src="' . $images . '"/>' . "<br>" .
-                                    '<a href="http://www.videogamecountdown.com/' . $info . '"> ->For more information</a>' . "<br>"
-                                    . $date . '</div>' ;
-                            }
-                            } elseif ($_GET['plat'] == "pc") {
+                                echo '<div class="col col-md-6 colum1">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
+                                    '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>';
+
+                            }} elseif ($_GET['plat'] == "pc") {
                             $html = file_get_html('http://www.videogamecountdown.com/coming-soon/Windows');
                             $games = $html->find('div[class=inner]');
-
                             $games= array($games[0], $games[1], $games[3], $games[4], $games[5]);
                             foreach ($games as $game) {
 
-
                                 $titles = $game->find('h3 a', 0)->plaintext;
-                                $images = $game->find('div[class=gridimg] img', 0)->attr['src'];
-                                $info = $game->find('div[class=gridimg] a', 0)->attr['href'];
+                                $images = $game->find('div[class=gridimg] img',0)->attr['src'];
+                                $info = $game->find('div[class=gridimg] a',0)->attr['href'];
                                 $date = $game->find('div[class=date] span', 0)->outertext;
+                                $html = file_get_html('http://www.videogamecountdown.com/'.$info);
+                                $desc = $html->find('div[class=two_third]', 0)->innertext;
+                                $details = $html->find('div[class="one_third last projectdetails"]', 0)->outertext;
+                                $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
                                 //$titles = $game->find('h3', 0);
 
-                                echo '<div class="games">' . "<h2>" . $titles . "</h2>" . "<br>" . '<img src="' . $images . '"/>' . "<br>" .
-                                    '<a href="http://www.videogamecountdown.com/' . $info . '"> ->For more information</a>' . "<br>"
-                                    . $date . '</div>' ;
+                                echo '<div class="col col-md-6 colum1">' .  "<h2>".$titles."</h2>" . '<img src="'.$images.'"/>' . '</div>' .
+                                    '<div class="col col-md-6">' . $desc ."<br>" . "<p>Upcoming in: ".$date."</p>" . "<br>" . $details . "<br>" . $amazon . '</div>';
+
                             }} else {
                                     header('location:/index.php');
                                 }
