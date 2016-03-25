@@ -111,20 +111,20 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             include('simple_html_dom.php');
                             $html = file_get_html('http://www.videogamecountdown.com/');
                             $games = $html->find('div[class=inner]');
-
                             $games= array($games[0], $games[1], $games[3], $games[4], $games[5]);
                             foreach ($games as $game) {
 
-
                                 $titles = $game->find('h3 a', 0)->plaintext;
-                                $images = $game->find('div[class=gridimg] img', 0)->attr['src'];
-                                $info = $game->find('div[class=gridimg] a', 0)->attr['href'];
+                                $images = $game->find('div[class=gridimg] img',0)->attr['src'];
+                                $info = $game->find('div[class=gridimg] a',0)->attr['href'];
                                 $date = $game->find('div[class=date] span', 0)->outertext;
-                                //$titles = $game->find('h3', 0);
+                                $html = file_get_html('http://www.videogamecountdown.com/'.$info);
+                                $desc = $html->find('div[class=two_third]', 0)->innertext;
+                                $details = $html->find('div[class="one_third last projectdetails"]', 0)->outertext;
+                                $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
 
-                                echo '<div>' . "<h3>" . $titles . "</h3>" . "<br>" . '<img src="' . $images . '"/>' . "<br>" .
-                                    '<a href="http://www.videogamecountdown.com/' . $info . '"> <span class="">For more information</span></a>' . "<br>"
-                                    . $date . '</div>' ;
+                                echo '<div class="row textglow">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
+                                    '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
                             }
                         ?>
                     </div>
