@@ -44,6 +44,10 @@ if (isset($_POST['submit'])) {
     <!-- Bootstrap CSS,JQ&JS Libraries-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link id="pagesstyle" rel="stylesheet" type="text/css" href="Style/SG.css">;
+    <!-- Glyphicons from http://fortawesome.github.io/Font-Awesome/get-started/ && http://ionicons.com/ && http://zurb.com/playground/foundation-icon-fonts-3/-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="Style/foundation-icons/foundation-icons.css">
     <script type="text/javascript">
         function swapStyleSheet(sheet){
             document.getElementById('pagesstyle').setAttribute('href', sheet);
