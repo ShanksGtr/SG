@@ -63,24 +63,24 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UpcomingGames<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <?php if ($_GET['plat'] == "ps3") { ?>
-                            <li class="active"><span class="ionicons ion-playstation"></span><a href="upcoming.php?plat=ps3">Playstation 3</a></li>
+                            <li class="active"><a href="upcoming.php?plat=ps3">Playstation 3</a></li>
                         <?php } else { ?>
-                            <li><span class="ionicons ion-playstation"></span><a href="upcoming.php?plat=ps3">Playstation 3</a></li>
+                            <li><a href="upcoming.php?plat=ps3">Playstation 3</a></li>
                         <?php } ?>
                         <?php if ($_GET['plat'] == "ps4") { ?>
-                            <li class="active"><span class="ionicons ion-playstation"></span><a href="upcoming.php?plat=ps4">Playstation 4</a></li>
+                            <li class="active"><a href="upcoming.php?plat=ps4">Playstation 4</a></li>
                         <?php } else { ?>
-                            <li><span class="ionicons ion-playstation"></span><a href="upcoming.php?plat=ps4">Playstation 4</a></li>
+                            <li><a href="upcoming.php?plat=ps4">Playstation 4</a></li>
                         <?php } ?>
                         <li role="separator" class="divider"></li>
                         <?php if ($_GET['plat'] == "xbox") { ?>
-                            <li class="active"><span class="ion-xbox"></span><a href="upcoming.php?plat=xbox">Xbox One</a></li>
+                            <li class="active"><a href="upcoming.php?plat=xbox">Xbox One</a></li>
                         <?php } else { ?>
-                            <li><span class="ion-xbox"></span><a href="upcoming.php?plat=xbox">Xbox one</a></li>
+                            <li><a href="upcoming.php?plat=xbox">Xbox one</a></li>
                         <?php } ?>
                         <li role="separator" class="divider"></li>
                         <?php if ($_GET['plat'] == "wii") { ?>
-                            <img height="23px" width="23px" src="https://yt3.ggpht.com/-GEYx8USY1GQ/AAAAAAAAAAI/AAAAAAAAAAA/S_Vie9ME-Vc/s48-c-k-no/photo.jpg"><li class="active"><a href="upcoming.php?plat=wii">Wii U</a></li>
+                            <li class="active"><a href="upcoming.php?plat=wii">Wii U</a></li>
                         <?php } else { ?>
                             <li><a href="upcoming.php?plat=wii">Wii U</a></li>
                         <?php } ?>
