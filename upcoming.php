@@ -80,7 +80,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         <?php } ?>
                         <li role="separator" class="divider"></li>
                         <?php if ($_GET['plat'] == "wii") { ?>
-                            <li class="active"><img height="23px" width="23px" src="https://yt3.ggpht.com/-GEYx8USY1GQ/AAAAAAAAAAI/AAAAAAAAAAA/S_Vie9ME-Vc/s48-c-k-no/photo.jpg"><a href="upcoming.php?plat=wii">Wii U</a></li>
+                            <img height="23px" width="23px" src="https://yt3.ggpht.com/-GEYx8USY1GQ/AAAAAAAAAAI/AAAAAAAAAAA/S_Vie9ME-Vc/s48-c-k-no/photo.jpg"><li class="active"><a href="upcoming.php?plat=wii">Wii U</a></li>
                         <?php } else { ?>
                             <li><a href="upcoming.php?plat=wii">Wii U</a></li>
                         <?php } ?>
