@@ -176,8 +176,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 </div>
             </div>
         </div> <!-- http://stackoverflow.com/questions/1566595/can-i-use-multiple-versions-of-jquery-on-the-same-page -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script type="text/javascript">
             var jQueryTemp = jQuery.noConflict(true);
             var jQueryOriginal = jQuery || jQueryTemp;
