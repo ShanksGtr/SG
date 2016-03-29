@@ -294,7 +294,7 @@ body {
         z-index: 3;
         position: absolute;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        top: 50%;
+        top: 500px;
         right: -2%;
         opacity: 0.7;
         text-indent: -9999px;
@@ -310,7 +310,7 @@ body {
         z-index: 3;
         position: absolute;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        top: 50%;
+        top: 500px;
         left: -2%;
         opacity: 0.7;
         text-indent: -9999px;
