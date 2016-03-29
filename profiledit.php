@@ -73,10 +73,12 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <ul class="dropdown-menu">
                         <li><a href="upcoming.php?plat=ps3">Playstation 3</a></li>
                         <li><a href="upcoming.php?plat=ps4">Playstation 4</a></li>
+                        <li><a href="upcoming.php?plat=vita">Playstation Vita</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="upcoming.php?plat=xbox">Xbox One</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="upcoming.php?plat=wii">Wii U</a></li>
+                        <li><a href="upcoming.php?plat=3ds">3DS</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="upcoming.php?plat=pc">PC</a></li>
                     </ul>
