@@ -105,59 +105,66 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                      <?php } else { ?>
                      <h1>Welcome to SGamers</h1> <?php } ?>
                 </div>
-                <div class="rslides">
-                    <!--  https://www.youtube.com/watch?v=MwTm53hpzi8 && http://responsiveslides.com/themes/themes.html -->
-                    <?php
-                    include('simple_html_dom.php');
-                    $html = file_get_html('http://www.videogamecountdown.com/');
-                    $games = $html->find('div[class=inner]');
+                <div>
+                    <div class="rslides">
+                        <!--  https://www.youtube.com/watch?v=MwTm53hpzi8 && http://responsiveslides.com/themes/themes.html -->
+                        <?php
+                        include('simple_html_dom.php');
+                        $html = file_get_html('http://www.videogamecountdown.com/');
+                        $games = $html->find('div[class=inner]');
 
-                    $games= array($games[0], $games[1], $games[3], $games[4], $games[5]);
-                    foreach ($games as $game) {
+                        $games= array($games[0], $games[1], $games[3], $games[4], $games[5]);
+                        foreach ($games as $game) {
 
 
-                        $titles = $game->find('h3 a', 0)->plaintext;
-                        $images = $game->find('div[class=gridimg] img', 0)->attr['src'];
-                        $info = $game->find('div[class=gridimg] a', 0)->attr['href'];
-                        $date = $game->find('div[class=date] span', 0)->outertext;
-                        $html = file_get_html('http://www.videogamecountdown.com/' . $info);
-                        $desc = $html->find('div[class=two_third]', 0)->innertext;
-                        $details = $html->find('div[class="one_third last projectdetails"]', 0)->outertext;
-                        $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
-                        //$titles = $game->find('h3', 0);
+                            $titles = $game->find('h3 a', 0)->plaintext;
+                            $images = $game->find('div[class=gridimg] img', 0)->attr['src'];
+                            $info = $game->find('div[class=gridimg] a', 0)->attr['href'];
+                            $date = $game->find('div[class=date] span', 0)->outertext;
+                            $html = file_get_html('http://www.videogamecountdown.com/' . $info);
+                            $desc = $html->find('div[class=two_third]', 0)->innertext;
+                            $details = $html->find('div[class="one_third last projectdetails"]', 0)->outertext;
+                            $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
+                            //$titles = $game->find('h3', 0);
 
-                        echo '<li>';
-                        echo '<div class="row textglow">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
-                        '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
-                    }
-                        echo '</li>';
-                    ?>
-                </div>
-                    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-                    <script src="Style/responsiveslides/responsiveslides.min.js"></script>
-                <script>
-                    $(function() {
-                        $(".rslides").responsiveSlides({
-                            auto: false,             // Boolean: Animate automatically, true or false
-                            speed: 500,            // Integer: Speed of the transition, in milliseconds
-                            timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
-                            pager: true,           // Boolean: Show pager, true or false
-                            nav: true,             // Boolean: Show navigation, true or false
-                            random: false,          // Boolean: Randomize the order of the slides, true or false
-                            pause: true,           // Boolean: Pause on hover, true or false
-                            pauseControls: true,    // Boolean: Pause when hovering controls, true or false
-                            prevText: "<",   // String: Text for the "previous" button
-                            nextText: ">",       // String: Text for the "next" button
-                            maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
-                            navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
-                            manualControls: "",     // Selector: Declare custom pager navigation
-                            namespace: "rslides",   // String: Change the default namespace used
-                            before: function(){},   // Function: Before callback
-                            after: function(){}     // Function: After callback
+                            echo '<li>';
+                            echo '<div class="row textglow">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
+                            '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
+                        }
+                            echo '</li>';
+                        ?>
+                    </div>
+                        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+                        <script src="Style/responsiveslides/responsiveslides.min.js"></script>
+                    <script>
+                        $(function() {
+                            $(".rslides").responsiveSlides({
+                                auto: false,             // Boolean: Animate automatically, true or false
+                                speed: 500,            // Integer: Speed of the transition, in milliseconds
+                                timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+                                pager: true,           // Boolean: Show pager, true or false
+                                nav: true,             // Boolean: Show navigation, true or false
+                                random: false,          // Boolean: Randomize the order of the slides, true or false
+                                pause: true,           // Boolean: Pause on hover, true or false
+                                pauseControls: true,    // Boolean: Pause when hovering controls, true or false
+                                prevText: "<",   // String: Text for the "previous" button
+                                nextText: ">",       // String: Text for the "next" button
+                                maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
+                                navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
+                                manualControls: "",     // Selector: Declare custom pager navigation
+                                namespace: "rslides",   // String: Change the default namespace used
+                                before: function(){},   // Function: Before callback
+                                after: function(){}     // Function: After callback
+                            });
                         });
-                    });
-                </script>
+                    </script>
                 </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+
+                    </p>
+                </div>
+            </div>
         </div>
         <div class="footer">
             <div class="container-fluid" style="height: 2px"></div>
