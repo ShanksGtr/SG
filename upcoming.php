@@ -63,7 +63,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UpcomingGames<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <?php if ($_GET['plat'] == "ps3") { ?>
-                            <li class="active"><a href="upcoming.php?plat=ps3">Playstation 3</a></li>
+                            <li class="active"><a href="upcoming.php?plat=ps3"><img src="http://vignette3.wikia.nocookie.net/deusex/images/1/11/Icon_ps3.png/revision/latest?cb=20110905165751&path-prefix=en">Playstation 3</a></li>
                         <?php } else { ?>
                             <li><a href="upcoming.php?plat=ps3">Playstation 3</a></li>
                         <?php } ?>
@@ -71,6 +71,11 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             <li class="active"><a href="upcoming.php?plat=ps4">Playstation 4</a></li>
                         <?php } else { ?>
                             <li><a href="upcoming.php?plat=ps4">Playstation 4</a></li>
+                        <?php } ?>
+                        <?php if ($_GET['plat'] == "vita") { ?>
+                            <li class="active"><a href="upcoming.php?plat=vita">Playstation Vita</a></li>
+                        <?php } else { ?>
+                            <li><a href="upcoming.php?plat=vita">Playstation Vita</a></li>
                         <?php } ?>
                         <li role="separator" class="divider"></li>
                         <?php if ($_GET['plat'] == "xbox") { ?>
@@ -83,6 +88,11 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             <li class="active"><a href="upcoming.php?plat=wii">Wii U</a></li>
                         <?php } else { ?>
                             <li><a href="upcoming.php?plat=wii">Wii U</a></li>
+                        <?php } ?>
+                        <?php if ($_GET['plat'] == "3ds") { ?>
+                            <li class="active"><a href="upcoming.php?plat=3ds">3DS</a></li>
+                        <?php } else { ?>
+                            <li><a href="upcoming.php?plat=3ds">3DS</a></li>
                         <?php } ?>
                         <li role="separator" class="divider"></li>
                         <?php if ($_GET['plat'] == "pc") { ?>
@@ -167,6 +177,26 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 echo '<div class="row textglow">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
                                     '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
                             }
+                            } elseif ($_GET['plat'] == "vita") {
+                                $html = file_get_html('http://www.videogamecountdown.com/coming-soon/PlayStation-Vita');
+                                $games = $html->find('div[class=inner]');
+                                $games = array($games[0], $games[1], $games[3], $games[4], $games[5]);
+                                foreach ($games as $game) {
+
+                                    $titles = $game->find('h3 a', 0)->plaintext;
+                                    $images = $game->find('div[class=gridimg] img', 0)->attr['src'];
+                                    $info = $game->find('div[class=gridimg] a', 0)->attr['href'];
+                                    $date = $game->find('div[class=date] span', 0)->outertext;
+                                    $html = file_get_html('http://www.videogamecountdown.com/' . $info);
+                                    $desc = $html->find('div[class=two_third]', 0)->innertext;
+                                    $details = $html->find('div[class="one_third last projectdetails"]', 0)->outertext;
+                                    $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
+                                    //$titles = $game->find('h3', 0);
+
+                                    echo '<div class="row textglow">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
+                                        '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
+                                }
+
                          } elseif ($_GET['plat'] == "xbox") {
                         $html = file_get_html('http://www.videogamecountdown.com/coming-soon/Xbox-One');
                         $games = $html->find('div[class=inner]');
@@ -205,7 +235,28 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                 echo '<div class="row textglow">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
                                     '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
 
-                            }} elseif ($_GET['plat'] == "pc") {
+                            }
+                            } elseif ($_GET['plat'] == "3ds") {
+                                $html = file_get_html('http://www.videogamecountdown.com/coming-soon/Nintendo-3DS');
+                                $games = $html->find('div[class=inner]');
+                                $games = array($games[0], $games[1], $games[3], $games[4], $games[5]);
+                                foreach ($games as $game) {
+
+                                    $titles = $game->find('h3 a', 0)->plaintext;
+                                    $images = $game->find('div[class=gridimg] img', 0)->attr['src'];
+                                    $info = $game->find('div[class=gridimg] a', 0)->attr['href'];
+                                    $date = $game->find('div[class=date] span', 0)->outertext;
+                                    $html = file_get_html('http://www.videogamecountdown.com/' . $info);
+                                    $desc = $html->find('div[class=two_third]', 0)->innertext;
+                                    $details = $html->find('div[class="one_third last projectdetails"]', 0)->outertext;
+                                    $amazon = $html->find('div[class=pagerwrapper] a', -1)->outertext;
+                                    //$titles = $game->find('h3', 0);
+
+                                    echo '<div class="row textglow">' . '<div class="col col-md-6">' . "<h2>" . $titles . "</h2>" . '<img src="' . $images . '"/>' . '</div>' .
+                                        '<div class="col col-md-6">' . $desc . "<br>" . "<p>Upcoming in: " . $date . "</p>" . "<br>" . $details . "<br>" . $amazon . '</div>' . '</div>';
+                                }
+
+                    } elseif ($_GET['plat'] == "pc") {
                             $html = file_get_html('http://www.videogamecountdown.com/coming-soon/Windows');
                             $games = $html->find('div[class=inner]');
                             $games= array($games[0], $games[1], $games[3], $games[4], $games[5]);
