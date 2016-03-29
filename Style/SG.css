@@ -322,6 +322,9 @@ body {
         margin-top: -45px;
     }
 
+    .textglow2 {
+        width: 50%
+    }
 }
 
 .dropdown-menu .divider {
@@ -329,10 +332,9 @@ body {
 }
 
 .textglow2 {
-    width: 46%;
+    width: 371px;
     border-bottom: 1px solid silver;
     word-wrap: break-word;
-
 }
 
 .textglow2 h2 {
