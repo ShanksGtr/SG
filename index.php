@@ -101,13 +101,13 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             <div class="jumbotron">
                 <div class="page-header">
                     <?php if ($_SESSION['username'] == true) { ?>
-                        <h2>Welcome <?php echo $_SESSION['username'] ?> ...</h2>
+                        <h1>Welcome <?php echo $_SESSION['username'] ?> ...</h1>
                      <?php } else { ?>
                      <h1>Welcome to SGamers</h1> <?php } ?>
                 </div>
                 <div>
-                    <div>
-                        <h3 style="border-bottom: 1px solid silver">Upcoming random games:</h3>
+                    <div class="textglow">
+                        <h2>Upcoming random games:</h2>
                     </div>
                     <div class="rslides">
                         <!--  https://www.youtube.com/watch?v=MwTm53hpzi8 && http://responsiveslides.com/themes/themes.html -->
