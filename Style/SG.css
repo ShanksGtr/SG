@@ -137,12 +137,7 @@ body {
     box-shadow: 1px 0px 10px 5px #0073ff;
 }
 
-@media all and (max-width: 699px) and (min-width: 200px) {
-    img {
-        width: 250px;
-        overflow: hidden;
-    }
-}
+
 
 #subscribeForm {
     display: none;
