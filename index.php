@@ -134,7 +134,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 </div>
                 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
                     <script>
-                        var $i1 = JQuery.noConflict();
+                        var $i1 = JQuery.noConflict(true);
                         alert($i1.fn.jquery);
                     </script>
                 <script src="Style/responsiveslides/responsiveslides.min.js"></script>
@@ -181,7 +181,10 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-
+        <script>
+            var $i2 = JQuery.noConflict(true);
+            alert($i2.fn.jquery);
+        </script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>
