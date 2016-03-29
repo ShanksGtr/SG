@@ -346,6 +346,6 @@ body {
     }
 
     .imgsize img{
-        max-width: 350px;
+        max-width: 100%;
     }
 }
