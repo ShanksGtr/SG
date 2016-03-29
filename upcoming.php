@@ -63,7 +63,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UpcomingGames<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <?php if ($_GET['plat'] == "ps3") { ?>
-                            <li class="active"><a href="upcoming.php?plat=ps3"><img src="http://vignette3.wikia.nocookie.net/deusex/images/1/11/Icon_ps3.png/revision/latest?cb=20110905165751&path-prefix=en">Playstation 3</a></li>
+                            <li class="active"><a href="upcoming.php?plat=ps3"><img width="20" height="20" src="http://vignette3.wikia.nocookie.net/deusex/images/1/11/Icon_ps3.png/revision/latest?cb=20110905165751&path-prefix=en">Playstation 3</a></li>
                         <?php } else { ?>
                             <li><a href="upcoming.php?plat=ps3">Playstation 3</a></li>
                         <?php } ?>
