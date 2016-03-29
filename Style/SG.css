@@ -178,6 +178,7 @@ body {
 .textglow {
     border-bottom: dashed 1px silver;
     padding-bottom: 25px;
+    word-wrap: break-word;
 }
 
 .textglow:last-child {
