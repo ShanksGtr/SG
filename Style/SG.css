@@ -288,6 +288,25 @@ body {
 }
 
 
+.dropdown-menu .divider {
+    margin: 8px;
+}
+
+.textglow2 {
+    width: 371px;
+    border-bottom: 1px solid silver;
+    word-wrap: break-word;
+}
+
+.textglow2 h2 {
+    font-weight: bold;
+    text-shadow: -1px 1px #FEFFDC;
+}
+
+.page-header h1 {
+    font-weight: bold;
+    text-shadow: -1px 1px #FEFFDC;
+}
 
 @media all and (max-width: 699px) and (min-width: 200px) {
     .next {
@@ -323,26 +342,6 @@ body {
     }
 
     .textglow2 {
-        width: 50%
+        width: 100%
     }
-}
-
-.dropdown-menu .divider {
-    margin: 8px;
-}
-
-.textglow2 {
-    width: 371px;
-    border-bottom: 1px solid silver;
-    word-wrap: break-word;
-}
-
-.textglow2 h2 {
-    font-weight: bold;
-    text-shadow: -1px 1px #FEFFDC;
-}
-
-.page-header h1 {
-    font-weight: bold;
-    text-shadow: -1px 1px #FEFFDC;
 }
