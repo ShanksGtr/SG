@@ -132,6 +132,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     echo '</li>';
                     ?>
                 </div>
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
                 <script src="Style/responsiveslides/responsiveslides.min.js"></script>
                 <script>
                     $(function() {
