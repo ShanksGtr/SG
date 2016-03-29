@@ -345,7 +345,8 @@ body {
         width: 85%
     }
 
-    .imgsize img{
-        max-width: 100%;
-    }
+}
+
+.imgsize img{
+    max-width: 100%;
 }
