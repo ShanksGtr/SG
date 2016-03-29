@@ -176,7 +176,6 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 </div>
             </div>
         </div> <!-- http://stackoverflow.com/questions/1566595/can-i-use-multiple-versions-of-jquery-on-the-same-page -->
-
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script>
             var $i = jQuery.noConflict();
