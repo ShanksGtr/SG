@@ -63,7 +63,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UpcomingGames<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="upcoming.php?plat=ps3"><span class="ionicons ion-playstation" style="font-size:20px; margin-right: 2px"></span>Playstation 3</a></li>
+                                <li><a href="upcoming.php?plat=ps3">Playstation 3</a></li>
                                 <li><a href="upcoming.php?plat=ps4">Playstation 4</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="upcoming.php?plat=xbox">Xbox One</a></li>
