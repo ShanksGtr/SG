@@ -290,7 +290,7 @@ body {
 @media all and (max-width: 699px) and (min-width: 200px) {
     .next {
         z-index: 3;
-        position: fixed;
+        position: absolute;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         top: 50%;
         right: -2%;
@@ -306,7 +306,7 @@ body {
 
     .prev {
         z-index: 3;
-        position: fixed;
+        position: absolute;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         top: 50%;
         left: -2%;
