@@ -132,19 +132,19 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
     <div class="jumbotron">
         <div class="page-header">
             <?php if ($_GET['plat'] == 'ps3') {
-                echo "<h1>" . "Playstation 3 Upcoming Games:" . "<h1>";
+                echo "<h1>" . "Playstation 3:" . "<h1>";
             } elseif ($_GET['plat'] == 'ps4') {
-                echo "<h1>" . "Playstation 4 Upcoming Games:" . "<h1>";
+                echo "<h1>" . "Playstation 4:" . "<h1>";
             } elseif ($_GET['plat'] == 'vita') {
-                echo "<h1>" . "Playstation Vita Upcoming Games:" . "<h1>";
+                echo "<h1>" . "Playstation Vita:" . "<h1>";
             } elseif ($_GET['plat'] == 'xbox') {
-                echo "<h1>" . "Xbox One Upcoming Games:" . "<h1>";
+                echo "<h1>" . "Xbox One:" . "<h1>";
             } elseif ($_GET['plat'] == 'wii') {
-                echo "<h1>" . "Wii U Upcoming Games:" . "<h1>";
+                echo "<h1>" . "Wii U:" . "<h1>";
             } elseif ($_GET['plat'] == '3ds') {
-                echo "<h1>" . "Nintendo 3DS Upcoming Games:" . "<h1>";
+                echo "<h1>" . "Nintendo 3DS:" . "<h1>";
             } elseif ($_GET['plat'] == 'pc') {
-                echo "<h1>" . "PC Upcoming Games:" . "<h1>";
+                echo "<h1>" . "PC:" . "<h1>";
             }
             ?>
         </div>
