@@ -104,6 +104,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                      <?php } else { ?>
                      <h1>Welcome to SGamers</h1> <?php } ?>
                 </div>
+                <div class="row">
                 <div class="rslides">
                     <!--  https://www.youtube.com/watch?v=MwTm53hpzi8 && http://responsiveslides.com/themes/themes.html -->
                     <?php
@@ -156,6 +157,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         });
                     });
                 </script>
+                </div>
             </div>
         </div>
         <div class="footer">
@@ -175,7 +177,6 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 </div>
             </div>
         </div>
-
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>
