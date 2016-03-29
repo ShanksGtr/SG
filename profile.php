@@ -63,7 +63,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UpcomingGames<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><span class="glyphicon glyphicon-edit" style="font-size:20px; margin-right: 2px"></span><a href="upcoming.php?plat=ps3">Playstation3</a></li>
+                                <li><span class="glyphicon glyphicon-edit" style="font-size:20px; margin-right: 2px"></span><a href="upcoming.php?plat=ps3">Playstation 3</a></li>
                                 <li><a href="upcoming.php?plat=ps4">Playstation 4</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="upcoming.php?plat=xbox">Xbox One</a></li>
@@ -77,7 +77,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <ul class="nav navbar-nav navbar-right">
                         <?php if ($_SESSION['username'] == true) { ?>
                             <li class="active dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" style="font-size: 20px;"></span><?php echo substr($_SESSION['username'], 0 , 9);?></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" style="font-size: 20px;"></span><?php echo substr($_SESSION['username'], 0 , 9);?><span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li class="active"><a href="profile.php"><span class="glyphicon glyphicon-edit" style="font-size:20px; margin-right: 2px"></span>MyProfile</a></li>
                                     <li role="separator" class="divider"></li>
