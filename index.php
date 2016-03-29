@@ -132,11 +132,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         echo '</li>';
                     ?>
                 </div>
-                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-                    <script>
-                        var $i1 = JQuery.noConflict(true);
-                        alert($i1.fn.jquery);
-                    </script>
+
                 <script src="Style/responsiveslides/responsiveslides.min.js"></script>
                 <script>
                     $(function() {
@@ -179,11 +175,25 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <a href="terms.php">Terms</a>
                 </div>
             </div>
-        </div>
+        </div> <!-- http://stackoverflow.com/questions/1566595/can-i-use-multiple-versions-of-jquery-on-the-same-page -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <script>
-            var $i2 = JQuery.noConflict(true);
-            alert($i2.fn.jquery);
+        <script type="text/javascript">
+            var jQueryTemp = jQuery.noConflict(true);
+            var jQueryOriginal = jQuery || jQueryTemp;
+            if (window.jQuery){
+                console.log('Original jQuery: ', jQuery.fn.jquery);
+                console.log('Second jQuery: ', jQueryTemp.fn.jquery);
+            }
+            window.jQuery = window.$ = jQueryTemp;
+        </script>
+        <script type="text/javascript">
+            console.log('Script using second: ', jQuery.fn.jquery);
+        </script>
+        <script type="text/javascript">
+            // Restore original jQuery:
+            window.jQuery = window.$ = jQueryOriginal;
+            console.log('Script using original or the only version: ', jQuery.fn.jquery);
         </script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
