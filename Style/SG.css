@@ -143,12 +143,6 @@ body {
     display: none;
 }
 
-
-
-.row img{
-    max-width: 420px;
-}
-
 .row td a {
     pointer-events: none;
     cursor: default;
