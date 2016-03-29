@@ -106,7 +106,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                      <h1>Velcome to SGamers</h1> <?php } ?>
                 </div>
                 <div>
-                    <div class="textglow2>
+                    <div class="textglow2">
                         <h2>Upcoming random games:</h2>
                     </div>
                     <div class="rslides">
