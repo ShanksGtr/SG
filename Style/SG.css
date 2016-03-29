@@ -329,9 +329,10 @@ body {
 }
 
 .textglow2 {
-    width: 371px;
+    width: 46%;
     border-bottom: 1px solid silver;
     word-wrap: break-word;
+
 }
 
 .textglow2 h2 {
