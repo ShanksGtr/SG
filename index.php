@@ -156,8 +156,6 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         });
                     });
                 </script>
-                <div>
-            </div>
         </div>
         <div class="footer">
             <div class="container-fluid" style="height: 2px"></div>
