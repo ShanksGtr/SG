@@ -326,3 +326,12 @@ body {
     margin: 8px;
 }
 
+.textglow2 {
+    width: 371px;
+    border-bottom: 1px solid silver;
+}
+
+.textglow2 h2 {
+    font-weight: bold;
+    text-shadow: -1px 1px #FEFFDC;
+}
