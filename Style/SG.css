@@ -344,4 +344,8 @@ body {
     .textglow2 {
         width: 85%
     }
+
+    .imgsize img{
+        max-width: 350px;
+    }
 }
