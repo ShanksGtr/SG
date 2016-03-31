@@ -21,6 +21,9 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="Style/foundation-icons/foundation-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="/Style/responsiveslides/responsiveslides.min.js"></script>
        <!-- <script type="text/javascript">
             if (document.cookie == false) {
                 window.location.href ="choose.html";
@@ -137,8 +140,6 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             echo '</li>';
                         ?>
                     </div>
-                        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-                        <script src="Style/responsiveslides/responsiveslides.min.js"></script>
                     <script>
                         $(function() {
                             $(".rslides").responsiveSlides({
@@ -185,11 +186,6 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <a href="terms.php">Terms</a>
                 </div>
             </div>
-        </div> <!-- http://stackoverflow.com/questions/1566595/can-i-use-multiple-versions-of-jquery-on-the-same-page -->
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <script>
-            var $i = jQuery.noConflict();
-        </script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        </div>
 </body>
 </html>
