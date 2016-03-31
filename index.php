@@ -106,7 +106,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <?php if ($_SESSION['username'] == true) { ?>
                         <h1>Welcome <?php echo $_SESSION['username'] ?> ...</h1>
                      <?php } else { ?>
-                     <h1>Velcome to SGamers</h1> <?php } ?>
+                     <h1>VVelcome to SGamers</h1> <?php } ?>
                 </div>
                 <div>
                     <div class="textglow2">
