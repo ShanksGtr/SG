@@ -3,7 +3,7 @@ session_start();
 if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
     echo "<script>alert('Please Login'); location.href='/login.php';</script>";
 }
-
+require('PHP/config.php');
 https://www.youtube.com/watch?v=wEmxwNLjf_c  && http://www.w3schools.com/php/php_file_upload.asp
 if(isset($_FILES['fileToUpload'])){
 
@@ -30,7 +30,6 @@ if(isset($_FILES['fileToUpload'])){
 
     }else{
         move_uploaded_file($uploadtmp, "" . $uploadname);
-        require('PHP/config.php');
         $user_id = $_SESSION['userid'];
         $sqlinsert= "INSERT INTO profiles (avatar) VALUES ('$uploadname') WHERE user_id='$user_id'";
         $result = mysqli_query($db, $sqlinsert);
@@ -146,8 +145,6 @@ if(isset($_FILES['fileToUpload'])){
                         ini_set('display_errors', 1);
                         ini_set('display_startup_errors', 1);
                         error_reporting(E_ALL);
-
-                        require('PHP/config.php');
 
                         $query = "SELECT * FROM profiles WHERE user_id='{$_SESSION['userid']}'";
                         $result = mysqli_query($db, $query) or die;
