@@ -3,9 +3,13 @@ session_start();
 if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
     echo "<script>alert('Please Login'); location.href='/login.php';</script>";
 }
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 require('PHP/config.php');
-https://www.youtube.com/watch?v=wEmxwNLjf_c  && http://www.w3schools.com/php/php_file_upload.asp
-if(isset($_FILES['fileToUpload'])){
+// https://www.youtube.com/watch?v=wEmxwNLjf_c  && http://www.w3schools.com/php/php_file_upload.asp
+/*if(isset($_FILES['fileToUpload'])){
 
     $uploadname = $_FILES['fileToUpload']['name'];
     $uploadname = mt_rand(10000, 99999).$uploadname;
@@ -38,7 +42,7 @@ if(isset($_FILES['fileToUpload'])){
 
 
     }
-}
+}*/
 ?>
 <!DOCTYPE html>
     <html lang="en">
@@ -142,9 +146,7 @@ if(isset($_FILES['fileToUpload'])){
                 </div>
                     <div class="row" style="word-wrap: break-word ">
                         <?php
-                        ini_set('display_errors', 1);
-                        ini_set('display_startup_errors', 1);
-                        error_reporting(E_ALL);
+
 
                         $query = "SELECT * FROM profiles WHERE user_id='{$_SESSION['userid']}'";
                         $result = mysqli_query($db, $query) or die;
