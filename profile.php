@@ -132,7 +132,7 @@ if(isset($_FILES['fileToUpload'])){
             <div class="jumbotron">
                 <div class="page-header">
                     <?php if ($_SESSION['username'] == true) { ?>
-                        <h2><?php echo $_SESSION['username']; ?> Profile:</h2>
+                        <h2><?php echo $_SESSION['username']; ?> Profile :D</h2>
                     <?php } else { ?>
                         <h1>Welcome to SGamers</h1> <?php } ?>
                     <?php if ($_SESSION['username'] == true) { ?>
