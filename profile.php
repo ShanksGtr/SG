@@ -4,7 +4,41 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
     echo "<script>alert('Please Login'); location.href='/login.php';</script>";
 }
 
+// https://www.youtube.com/watch?v=wEmxwNLjf_c  && http://www.w3schools.com/php/php_file_upload.asp
+/*if(isset($_FILES['fileToUpload'])){
 
+    $uploadname = $_FILES['fileToUpload']['name'];
+    $uploadname = mt_rand(10000, 99999).$uploadname;
+    $uploadtmp = $_FILES['fileToUpload']['tmp_name'];
+    $uploadtype = $_FILES['fileToUpload']['type'];
+    $filesize = $_FILES['fileToUpload']['size'];
+    // incase there's a space in the name or so
+    $uploadname = preg_replace("#[^a-z0-9.]#i", "", $uploadname);
+
+    $imageFileType = pathinfo($uploadname,PATHINFO_EXTENSION);
+
+    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
+        echo "<script>alert('Sorry, only JPG, JPEG & PNG  files are allowed'); location.href='/profile.php';</script>";
+        }
+
+    if(($filesize > 1000000)) {
+        echo "<script>alert('File is more than 1mb'); location.href='/profile.php';</script>";
+    }
+
+    if(!$uploadtmp) {
+        echo "<script>alert('No file selected'); location.href='/profile.php';</script>";
+
+    }else{
+        move_uploaded_file($uploadtmp, "" . $uploadname);
+        $user_id = $_SESSION['userid'];
+        $sqlinsert= "INSERT INTO profiles (avatar) VALUES ('$uploadname') WHERE user_id='$user_id'";
+        $result = mysqli_query($db, $sqlinsert);
+        echo "<script>alert('Upload successfully'); location.href='profile.php';</script>";
+        //echo  '<img src="'.$uploadname.'"/>' . "<br>";
+
+
+    }
+}*/
 ?>
 <!DOCTYPE html>
     <html lang="en">
@@ -140,12 +174,12 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                     <?php if(!$avatar){ ?>
                                     <img class="img-circle" style="height: 200px; width: 240px; margin-left: -10px" src="Pictures/empty-user.jpg">
                                     <?php}else{ ?>
-                                    <img class="img-circle" style="height: 200px; width: 240px; margin-left: -10px" src="<?php echo $avatar ?>">
+                                    <img class="img-circle" style="height: 200px; width: 240px; margin-left: -10px" src="<?php echo $avatar; ?>">
                                     <?php } ?>
                                     <form id="uploadfile" action="" method="post">
                                         Select image to upload:
                                         <!-- http://stackoverflow.com/questions/198346/whats-the-best-way-to-create-a-single-file-upload-form-using-php -->
-                                        <input type="hidden" name="MAX_FILE_SIZE" value="1000000">
+                                       <!-- <input type="hidden" name="MAX_FILE_SIZE" value="1000000"> -->
                                         <input type="file" name="fileToUpload" id="fileToUpload" accept="image/*">
                                         <input type="submit" value="Upload Image" name="submit"> Image dimintions are: 200height 240width and only jpg, jpeg and png are accepted
                                     </form>
