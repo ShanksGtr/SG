@@ -32,18 +32,19 @@ if(isset($_FILES['fileToUpload'])){
         echo "<script>alert('No file selected'); location.href='/profile.php';</script>";
 
     }else{
+        move_uploaded_file($uploadtmp, "" . $uploadname);
+
         require('config.php');
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
         error_reporting(E_ALL);
 
-        move_uploaded_file($uploadtmp, "" . $uploadname);
         $userid = $_SESSION['userid'];
         $sqlinsert= "UPDATE profiles SET avatar='$uploadname' WHERE user_id='$userid'";
         $result = mysqli_query($db, $sqlinsert);
-        echo "<script>alert('Upload successfully'); location.href='profile.php';</script>";
-        //echo  '<img src="'.$uploadname.'"/>' . "<br>";
-
+       // echo "<script>alert('Upload successfully'); location.href='/profile.php';</script>";
+        echo  '<img src="'.$uploadname.'"/>' . "<br>";
+        echo $uploadtmp;
 
     }
 }
