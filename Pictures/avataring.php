@@ -44,9 +44,8 @@ if(isset($_FILES['fileToUpload'])){
         $userid = $_SESSION['userid'];
         $sqlinsert= "UPDATE profiles SET avatar='$uploadname' WHERE user_id='$userid'";
         $result = mysqli_query($db, $sqlinsert);
-       // echo "<script>alert('Upload successfully'); location.href='/profile.php';</script>";
-        echo  '<img src="'.$uploadname.'"/>' . "<br>";
-        echo $uploadtmp;
+        echo "<script>alert('Upload successfully'); location.href='/profile.php';</script>";
+
 
     }
 }
