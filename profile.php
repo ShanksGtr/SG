@@ -171,7 +171,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         <div class="col col-md-3">
                             <div>
                                 <div>
-                                    <?php if($avatar == "NULL"){ ?>
+                                    <?php if($avatar == NULL){ ?>
                                     <img class="img-circle" style="height: 200px; width: 240px; margin-left: -10px" src="Pictures/empty-user.jpg">
                                     <?php}else{ ?>
                                     <img class="img-circle" style="height: 200px; width: 240px; margin-left: -10px" src="<?php echo $avatar; ?>">
