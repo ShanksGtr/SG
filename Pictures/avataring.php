@@ -34,10 +34,12 @@ if(isset($_FILES['fileToUpload'])){
     }else{
         move_uploaded_file($uploadtmp, "" . $uploadname);
 
-        require('config.php');
-        ini_set('display_errors', 1);
-        ini_set('display_startup_errors', 1);
-        error_reporting(E_ALL);
+        $db = new mysqli("eu-cdbr-azure-north-d.cloudapp.net",
+            "be56106772d6a4", "33eeb80a", "SGamers" );
+
+        if ($db->connect_error){
+            die('Connectfailed'['.$db->connect_error.']);
+        }
 
         $userid = $_SESSION['userid'];
         $sqlinsert= "UPDATE profiles SET avatar='$uploadname' WHERE user_id='$userid'";
