@@ -21,15 +21,15 @@ if(isset($_FILES['fileToUpload'])){
     $imageFileType = pathinfo($uploadname,PATHINFO_EXTENSION);
 
     if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
-        echo "<script>alert('Sorry, only JPG, JPEG & PNG  files are allowed'); location.href='/profile.php';</script>";
+        die ("<script>alert('Sorry, only JPG, JPEG & PNG  files are allowed'); location.href='/profile.php';</script>");
     }
 
     if(($filesize > 1000000)) {
-        echo "<script>alert('File is more than 1mb'); location.href='/profile.php';</script>";
+        die ("<script>alert('File is more than 1mb'); location.href='/profile.php';</script>");
     }
 
     if(!$uploadtmp) {
-        echo "<script>alert('No file selected'); location.href='/profile.php';</script>";
+        die ("<script>alert('No file selected'); location.href='/profile.php';</script>");
 
     }else{
         move_uploaded_file($uploadtmp, "" . $uploadname);
