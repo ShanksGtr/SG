@@ -7,6 +7,8 @@ require('PHP/config.php');
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
+
 // https://www.youtube.com/watch?v=wEmxwNLjf_c  && http://www.w3schools.com/php/php_file_upload.asp
 if(isset($_FILES['fileToUpload'])){
 
@@ -33,8 +35,8 @@ if(isset($_FILES['fileToUpload'])){
 
     }else{
         move_uploaded_file($uploadtmp, "" . $uploadname);
-        $user_id = $_SESSION['userid'];
-        $sqlinsert= "INSERT INTO profiles (avatar) VALUES ('$uploadname') WHERE user_id='$user_id'";
+        $userid = $_SESSION['userid'];
+        $sqlinsert= "UPDATE profiles SET avatar='$uploadname' WHERE user_id='$userid'";
         $result = mysqli_query($db, $sqlinsert);
         echo "<script>alert('Upload successfully'); location.href='profile.php';</script>";
         //echo  '<img src="'.$uploadname.'"/>' . "<br>";
