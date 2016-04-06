@@ -8,7 +8,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 // https://www.youtube.com/watch?v=wEmxwNLjf_c  && http://www.w3schools.com/php/php_file_upload.asp
-/*if(isset($_FILES['fileToUpload'])){
+if(isset($_FILES['fileToUpload'])){
 
     $uploadname = $_FILES['fileToUpload']['name'];
     $uploadname = mt_rand(10000, 99999).$uploadname;
@@ -41,7 +41,7 @@ error_reporting(E_ALL);
 
 
     }
-}*/
+}
 ?>
 <!DOCTYPE html>
     <html lang="en">
