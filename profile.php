@@ -153,7 +153,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         $status = $row['status'];
                         $about_me = $row['about_me'];
                         $age = $row['age'];
-                        $avatar = $_FILES['avatar'];
+                        $avatar = $row['avatar'];
                         $gender = $row['gender'];
 
                         $fav_games = $row['fav_games'];
