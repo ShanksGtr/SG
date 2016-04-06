@@ -3,11 +3,12 @@ session_start();
 if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
     echo "<script>alert('Please Login'); location.href='/login.php';</script>";
 }
+require('PHP/config.php');
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-require('PHP/config.php');
+
 // https://www.youtube.com/watch?v=wEmxwNLjf_c  && http://www.w3schools.com/php/php_file_upload.asp
 /*if(isset($_FILES['fileToUpload'])){
 
