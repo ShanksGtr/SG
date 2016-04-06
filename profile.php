@@ -3,11 +3,6 @@ session_start();
 if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
     echo "<script>alert('Please Login'); location.href='/login.php';</script>";
 }
-require('PHP/config.php');
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 
 // https://www.youtube.com/watch?v=wEmxwNLjf_c  && http://www.w3schools.com/php/php_file_upload.asp
 /*if(isset($_FILES['fileToUpload'])){
@@ -147,7 +142,10 @@ error_reporting(E_ALL);
                 </div>
                     <div class="row" style="word-wrap: break-word ">
                         <?php
-
+                        require('PHP/config.php');
+                        ini_set('display_errors', 1);
+                        ini_set('display_startup_errors', 1);
+                        error_reporting(E_ALL);
 
                         $query = "SELECT * FROM profiles WHERE user_id='{$_SESSION['userid']}'";
                         $result = mysqli_query($db, $query) or die;
