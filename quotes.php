@@ -115,7 +115,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         </div>
         <div>
             <div class="textglow2">
-                <h2>Video games quotes:</h2>
+                <h2>Video games quotes shelo:</h2>
             </div>
         </div>
         <div>
