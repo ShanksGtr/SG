@@ -361,7 +361,7 @@ blockquote {
     position: relative;
     color: #ffffff;
     border-left: none;
-    margin-left: 20px
+    margin-left: 50px;
 }
 
 blockquote:before {
