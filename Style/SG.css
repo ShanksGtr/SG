@@ -354,13 +354,14 @@ body {
 
 blockquote {
     font-family: Georgia, serif;
-    font-size: 18px;
+    font-size: 24px;
     font-style: italic;
-
     padding: 0.25em 40px;
     line-height: 1.45;
     position: relative;
     color: #ffffff;
+    border-left: none;
+    margin-left: 20px
 }
 
 blockquote:before {
@@ -375,7 +376,7 @@ blockquote:before {
 
 blockquote cite {
     color: #999999;
-    font-size: 14px;
+    font-size: 17px;
     display: block;
     margin-top: 5px;
 }
