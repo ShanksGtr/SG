@@ -385,7 +385,3 @@ blockquote cite {
 blockquote cite:before {
     content: "\2014 \2009";
 }
-
-.ion-plus-round {
-    font-size: 30px;
-}
