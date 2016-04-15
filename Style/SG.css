@@ -352,6 +352,7 @@ body {
     max-width: 100%;
 }
 
+ /* http://www.webmaster-source.com/2012/04/24/pure-css-blockquote-styling/ */
 blockquote {
     font-family: Georgia, serif;
     font-size: 24px;
