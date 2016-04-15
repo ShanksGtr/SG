@@ -386,6 +386,6 @@ blockquote cite:before {
     content: "\2014 \2009";
 }
 
-a, span, .ion-plus-round {
-    font-size: 20px;
+.ion-plus-round {
+    font-size: 30px;
 }
