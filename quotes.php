@@ -119,13 +119,10 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             </div>
         </div>
         <div>
-            <fieldset>
-                <legend>Metal Gear</legend>
             <blockquote>
-                7o6 al7sh-h fel shrb6h tlga alan6rah fee alsustah agataga ahooondagaaa zellolol shereureur bahhuhuhuhu beloololoolol lalaallalala shahahahahaha fosofosfosfosfs
+                Your quote :D
                 <cite>One Piece</cite>
             </blockquote>
-                </fieldset>
         </div>
     </div>
 </div>
