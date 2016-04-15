@@ -120,11 +120,6 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         </div>
         <div>
 
-            <blockquote>
-                7o6 al7sh-h fel shrb6h tlga alan6rah fee alsustah agataga ahooondagaaa zellolol shereureur bahhuhuhuhu beloololoolol lalaallalala shahahahahaha fosofosfosfosfs
-                <cite>One Piece</cite>
-            </blockquote>
-
         </div>
     </div>
 </div>
