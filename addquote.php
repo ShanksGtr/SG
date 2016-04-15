@@ -111,22 +111,16 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         <div>
             <div class="textglow2">
                 <h2><u>Adding a quote:</u></h2>
-                <h3><span class="ion-ios-game-controller-b"></span> Video Game name:</h3>
-                <p><input type="text" class="form-control" maxlength="2000" placeholder="Video game name" name="gamename"></p>
-                <h3><span class="ion-outlet"></span> Character's name:</h3>
-                <p><input type="text" class="form-control" maxlength="2000" placeholder="Character's name" name="charname"></p>
-                <h3><span class="ion-quote"></span> Quote:</h3>
-                <textarea class="form-control" rows="5" id="fg" placeholder="" maxlength="2000" name="quote"></textarea><br>
+                <form action="addquote.php" method="post">
+                    <h3><span class="ion-ios-game-controller-b"></span> Video Game name:</h3>
+                    <p><input type="text" class="form-control" maxlength="2000" placeholder="Video game name" name="gamename"></p>
+                    <h3><span class="ion-outlet"></span> Character's name:</h3>
+                    <p><input type="text" class="form-control" maxlength="2000" placeholder="Character's name" name="charname"></p>
+                    <h3><span class="ion-quote"></span> Quote:</h3>
+                    <textarea class="form-control" rows="5" id="fg" placeholder="" maxlength="2000" name="quote"></textarea><br>
+                    <button class="btn btn-default btn-lg" type="submit" value="submit" name="submit">Submit</button>
+                </form>
             </div>
-        </div>
-        <div>
-            <fieldset>
-                <legend>Metal Gear</legend>
-                <blockquote>
-                    7o6 al7sh-h fel shrb6h tlga alan6rah fee alsustah agataga ahooondagaaa zellolol shereureur bahhuhuhuhu beloololoolol lalaallalala shahahahahaha fosofosfosfosfs
-                    <cite>One Piece</cite>
-                </blockquote>
-            </fieldset>
         </div>
     </div>
 </div>
