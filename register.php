@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $reg_date = gmdate('Y-m-d H:i:s');
+    $reg_date = gmdate('Y-m-d G:i:s', (strtotime("+1 hours")));
     $password = md5($password);
 
     $sqlinsert = "INSERT INTO users (user_name, email, password, reg_date) VALUES
