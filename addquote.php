@@ -3,6 +3,26 @@ session_start();
 if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 }
 
+
+    if(isset($_POST['submit'])){
+        require('PHP/config.php');
+
+        $q_name = $_POST['charname'];
+        $q_game = $_POST['gamename'];
+        $quote = $_POST['quote'];
+        $user_id = $_SESSION['userid'];
+
+        $sqlinsert = "INSERT INTO quotes (q_name, q_game, q_quote, user_id) VALUES
+                    ('$q_name', '$q_game', '$quote', '$user_id')";
+        if (!mysqli_query($db, $sqlinsert)) {
+            echo ("<script>alert('Quote is already registered'); location.href='addquote.php';</script>");
+
+        } else {
+            $sqlinsert= "INSERT INTO profiles (user_id)"
+                ."SELECT user_id FROM users WHERE user_name='$username'";
+            $result = mysqli_query($db, $sqlinsert);
+    echo "<script>alert('You are successfully uploaded the quote'); location.href='quotes.php';</script>";
+} }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -113,9 +133,9 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 <h2><u>Adding a quote:</u></h2>
                 <form action="addquote.php" method="post">
                     <h3><span class="ion-ios-game-controller-b"></span> Video Game name:</h3>
-                    <p><input type="text" class="form-control" maxlength="2000" placeholder="Video game name" name="gamename"></p>
+                    <p><input type="text" class="form-control" maxlength="50" placeholder="Video game name" name="gamename"></p>
                     <h3><span class="ion-outlet"></span> Character's name:</h3>
-                    <p><input type="text" class="form-control" maxlength="2000" placeholder="Character's name" name="charname"></p>
+                    <p><input type="text" class="form-control" maxlength="50" placeholder="Character's name" name="charname"></p>
                     <h3><span class="ion-quote"></span> Quote:</h3>
                     <textarea class="form-control" rows="5" id="fg" placeholder="" maxlength="2000" name="quote"></textarea><br>
                     <button class="btn btn-default btn-lg" type="submit" value="submit" name="submit">Submit</button>
