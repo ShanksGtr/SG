@@ -6,7 +6,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 
     if(isset($_POST['submit'])){
         require('PHP/config.php');
-
+        include('$db');
         $q_name = $_POST['charname'];
         $q_game = $_POST['gamename'];
         $quote = $_POST['quote'];
