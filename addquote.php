@@ -18,9 +18,6 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             echo ("<script>alert('Quote is already registered'); location.href='addquote.php';</script>");
 
         } else {
-            $sqlinsert= "INSERT INTO profiles (user_id)"
-                ."SELECT user_id FROM users WHERE user_name='$username'";
-            $result = mysqli_query($db, $sqlinsert);
     echo "<script>alert('You are successfully uploaded the quote'); location.href='quotes.php';</script>";
 } }
 ?>
