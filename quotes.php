@@ -119,10 +119,89 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             </div>
         </div>
         <div>
+            <?php
+                require('PHP/config.php');
+                ini_set('display_errors', 1);
+                ini_set('display_startup_errors', 1);
+                error_reporting(E_ALL);
+
+                $query = "SELECT COUNT(q_id) FROM quotes";
+                $result = mysqli_query($db, $query) or die;
+                $row = mysqli_fetch_row($result);
+
+                // Total of row count
+                $rows = $row[0];
+                // results each page
+                $page_rows = 7;
+                // page number of last page
+                $last = ceil($rows/$page_rows);
+                // $last cannot be less than 1
+                if($last <1){
+                    $last = 1;
+                }
+                // page number var
+                $pagenum = 1;
+                // Get URL
+                if(isset($_GET['pn'])){
+                    $pagenum = preg_replace('#[^0-9]#', '', $_GET['pn'] );
+                }
+                // ensure page number not less than 1 or more than last page
+                if ($pagenum <1 ) {
+                    $pagenum = 1;
+                } elseif ($pagenum > $last) {
+                    $pagenum = $last;
+                }
+                // range of the rows for the chosen page number
+                $limit = 'LIMIT ' . ($pagenum - 1) * $page_rows. ',' .$page_rows;
+                // Query again, using the limit
+                 $query = "SELECT * FROM quotes";
+                 $result = mysqli_query($db, $query) or die;
+                // Pages users on
+                $textline1 = "There are (<b>$rows</b>";
+                $textline2 = "Page <b>$pagenum</b> of <b>$last</b>";
+                // Pagination control var
+                $paginationcontrol = '';
+                // if there is only one page
+                if($last != 1) {
+                    if($pagenum > 1){
+                        $previous = $pagenum -1;
+                        $paginationcontrol .= '<a href="'.$_SERVER['PHP_SELF'].'?pn='.$previous.'">Previous</a> &nbsp; &nbsp; ';
+                        // clickable number links
+                        for($i = $pagenum-4; $i < $pagenum; $i++){
+                            if($i > 0){
+                                $paginationcontrol .= '<a href="'.$_SERVER['PHP_SELF'].'?pn='.$i.'">'.$i.'</a> &nbsp; ';
+                            }
+                        }
+                    }
+                    // Render the target page number, without it being a link
+                    $paginationcontrol .= ''.$pagenum.' &nbsp; ';
+                    // Render clickable number links that should appear on the right
+                    for($i = $pagenum+1; $i <= $last; $i++){
+                        $paginationcontrol .= '<a href="'.$_SERVER['PHP_SELF'].'?pn='.$i.'">'.$i.'</a> &nbsp; ';
+                        if($i >= $pagenum+4){
+                            break;
+                        }
+                    }
+                    // This does Next button
+                    if ($pagenum != $last){
+                        $next = $pagenum +1;
+                        $paginationcontrol .= '<a href="'.$_SERVER['PHP_SELF'].'?pn='.$next.'">Next</a> &nbsp; ';
+
+                    }
+                }
+
+                $list = '';
+                while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+                    $q_game = $row['q_game'];
+                    $q_name = $row['q_name'];
+                    $q_quote = $row['quote'];
+
+            ?>
             <blockquote>
-                Your quote :D
-                <cite>One Piece</cite>
+                <?php echo $q_quote;?>
+                <cite><?php echo $q_name . "From " . $q_game?></cite>
             </blockquote>
+            <?php } ?>
         </div>
     </div>
 </div>

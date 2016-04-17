@@ -3,12 +3,16 @@ session_start();
 if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 }
 
-
+    //http://stackoverflow.com/questions/15194051/mysqli-real-escape-string-returns-empty-string
     if(isset($_POST['submit'])){
         require('PHP/config.php');
 
-        $q_name = $_POST['charname'];
-        $q_game = $_POST['gamename'];
+        $q_name = mysqli_real_escape_string($db, $_POST['charname']);
+        $q_name = htmlspecialchars($q_name);
+
+        $q_game = mysqli_real_escape_string($db, $_POST['gamename']);
+        $q_game = htmlspecialchars($q_game);
+
         $quote = mysqli_real_escape_string($db, $_POST['quote']);
         $quote = htmlspecialchars($quote);
         $user_id = $_SESSION['userid'];
