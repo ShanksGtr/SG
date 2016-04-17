@@ -309,7 +309,7 @@ body {
     text-shadow: -1px 1px #FEFFDC;
 }
 
-@media all and (max-width: 699px) and (min-width: 200px) {
+@media all and (max-width: 699px) and (min-width: 100px) {
     .next {
         z-index: 3;
         position: absolute;
@@ -349,6 +349,8 @@ body {
     .jumbotron {
         margin-bottom: 200px;
     }
+
+
 
 }
 
