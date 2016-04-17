@@ -385,3 +385,8 @@ blockquote cite {
 blockquote cite:before {
     content: "\2014 \2009";
 }
+#pagecontrol {
+text-align: center;
+box-shadow: 0px 8px 21px #337ab7;
+border-radius: 20px;
+}
