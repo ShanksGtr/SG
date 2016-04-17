@@ -132,7 +132,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 // Total of row count
                 $rows = $row[0];
                 // results each page
-                $page_rows = 1;
+                $page_rows = 5;
                 // page number of last page
                 $last = ceil($rows/$page_rows);
                 // $last cannot be less than 1
@@ -154,7 +154,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 // range of the rows for the chosen page number
                 $limit = 'LIMIT ' . ($pagenum - 1) * $page_rows. ',' .$page_rows;
                 // Query again, using the limit
-                 $query = "SELECT * FROM quotes";
+                 $query = "SELECT * FROM quotes ORDER BY q_id DESC $limit";
                  $result = mysqli_query($db, $query) or die;
                 // Pages users on
                 $textline1 = "There are (<b>$rows</b>";
