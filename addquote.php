@@ -6,12 +6,11 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 
     if(isset($_POST['submit'])){
         require('PHP/config.php');
-        include('$db');
+
         $q_name = $_POST['charname'];
         $q_game = $_POST['gamename'];
         $quote = mysqli_real_escape_string($db, $_POST['quote']);
         $quote = htmlspecialchars($quote);
-
         $user_id = $_SESSION['userid'];
 
         $sqlinsert = "INSERT INTO quotes (q_name, q_game, q_quote, user_id) VALUES
