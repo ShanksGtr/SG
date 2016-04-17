@@ -132,7 +132,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 // Total of row count
                 $rows = $row[0];
                 // results each page
-                $page_rows = 7;
+                $page_rows = 3;
                 // page number of last page
                 $last = ceil($rows/$page_rows);
                 // $last cannot be less than 1
