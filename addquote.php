@@ -9,7 +9,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         include('$db');
         $q_name = $_POST['charname'];
         $q_game = $_POST['gamename'];
-        $quote = $_POST['quote'];
+        $quote = mysqli_real_escape_string($_POST['quote']);
         $quote = htmlspecialchars($quote);
         $user_id = $_SESSION['userid'];
 
