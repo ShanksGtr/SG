@@ -350,7 +350,9 @@ body {
         margin-bottom: 200px;
     }
 
-
+    .footer {
+        position: absolute;
+    }
 
 }
 

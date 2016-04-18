@@ -205,7 +205,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         </div>
     </div>
 </div>
-<div class="footer" style="position: fixed; @media all and (max-width: 699px) and (min-width: 100px) { .footer{position: absolute;}}">
+<div class="footer" style="position: fixed">
     <div class="container-fluid" style="height: 2px"></div>
     <div class=container>
         <div class="col-md-4">
