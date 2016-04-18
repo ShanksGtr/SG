@@ -132,7 +132,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 // Total of row count
                 $rows = $row[0];
                 // results each page
-                $page_rows = 3;
+                $page_rows = 1;
                 // page number of last page
                 $last = ceil($rows/$page_rows);
                 // $last cannot be less than 1
@@ -142,8 +142,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 // page number var
                 $pagenum = 1;
                 // Get URL
-                if(isset($_GET['pn'])){
-                    $pagenum = preg_replace('#[^0-9]#', '', $_GET['pn'] );
+                if(isset($_GET['page'])){
+                    $pagenum = preg_replace('#[^0-9]#', '', $_GET['page'] );
                 }
                 // ensure page number not less than 1 or more than last page
                 if ($pagenum <1 ) {
@@ -156,20 +156,18 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 // Query again, using the limit
                  $query = "SELECT * FROM quotes ORDER BY q_id DESC $limit";
                  $result = mysqli_query($db, $query) or die;
-                // Pages users on
-                $textline1 = "There are (<b>$rows</b>";
-                $textline2 = "Page <b>$pagenum</b> of <b>$last</b>";
+
                 // Pagination control var
                 $paginationcontrol = '';
                 // if there is only one page
                 if($last != 1) {
                     if($pagenum > 1){
                         $previous = $pagenum -1;
-                        $paginationcontrol .= '<a class="btn btn-default" href="'.$_SERVER['PHP_SELF'].'?pn='.$previous.'"><span class="glyphicon glyphicon-chevron-left"></span></a> &nbsp; &nbsp; ';
+                        $paginationcontrol .= '<a class="btn btn-default" href="'.$_SERVER['PHP_SELF'].'?page='.$previous.'"><span class="glyphicon glyphicon-chevron-left"></span></a> &nbsp; &nbsp; ';
                         // clickable number links
                         for($i = $pagenum-4; $i < $pagenum; $i++){
                             if($i > 0){
-                                $paginationcontrol .= '<a class="btn btn-default" href="'.$_SERVER['PHP_SELF'].'?pn='.$i.'">'.$i.'</a> &nbsp; ';
+                                $paginationcontrol .= '<a class="btn btn-default" href="'.$_SERVER['PHP_SELF'].'?page='.$i.'">'.$i.'</a> &nbsp; ';
                             }
                         }
                     }
@@ -177,7 +175,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     $paginationcontrol .= ''.$pagenum.' &nbsp; ';
                     // Render clickable number links that should appear on the right
                     for($i = $pagenum+1; $i <= $last; $i++){
-                        $paginationcontrol .= '<a class="btn btn-default active" href="'.$_SERVER['PHP_SELF'].'?pn='.$i.'">'.$i.'</a> &nbsp; ';
+                        $paginationcontrol .= '<a class="btn btn-default" href="'.$_SERVER['PHP_SELF'].'?page='.$i.'">'.$i.'</a> &nbsp; ';
                         if($i >= $pagenum+4){
                             break;
                         }
@@ -185,7 +183,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     // This does Next button
                     if ($pagenum != $last){
                         $next = $pagenum +1;
-                        $paginationcontrol .= '<a class="btn btn-default" href="'.$_SERVER['PHP_SELF'].'?pn='.$next.'"><span class="glyphicon glyphicon-chevron-right"></span></a> &nbsp; ';
+                        $paginationcontrol .= '<a class="btn btn-default" href="'.$_SERVER['PHP_SELF'].'?page='.$next.'"><span class="glyphicon glyphicon-chevron-right"></span></a> &nbsp; ';
 
                     }
                 }
