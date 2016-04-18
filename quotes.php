@@ -169,7 +169,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         // clickable number links
                         for($i = $pagenum-4; $i < $pagenum; $i++){
                             if($i > 0){
-                                $paginationcontrol .= '<a class="btn btn-default" href="'.$_SERVER['PHP_SELF'].'?pn='.$i.'">'.$i.'</a> &nbsp; ';
+                                $paginationcontrol .= '<a class="btn btn-default active" href="'.$_SERVER['PHP_SELF'].'?pn='.$i.'">'.$i.'</a> &nbsp; ';
                             }
                         }
                     }
