@@ -165,11 +165,11 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 if($last != 1) {
                     if($pagenum > 1){
                         $previous = $pagenum -1;
-                        $paginationcontrol .= '<a href="'.$_SERVER['PHP_SELF'].'?pn='.$previous.'">Previous</a> &nbsp; &nbsp; ';
+                        $paginationcontrol .= '<a class="btn btn-default" href="'.$_SERVER['PHP_SELF'].'?pn='.$previous.'"><span class="glyphicon glyphicon-chevron-left"></span></a> &nbsp; &nbsp; ';
                         // clickable number links
                         for($i = $pagenum-4; $i < $pagenum; $i++){
                             if($i > 0){
-                                $paginationcontrol .= '<a href="'.$_SERVER['PHP_SELF'].'?pn='.$i.'">'.$i.'</a> &nbsp; ';
+                                $paginationcontrol .= '<a class="btn btn-default" href="'.$_SERVER['PHP_SELF'].'?pn='.$i.'">'.$i.'</a> &nbsp; ';
                             }
                         }
                     }
@@ -177,7 +177,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     $paginationcontrol .= ''.$pagenum.' &nbsp; ';
                     // Render clickable number links that should appear on the right
                     for($i = $pagenum+1; $i <= $last; $i++){
-                        $paginationcontrol .= '<a href="'.$_SERVER['PHP_SELF'].'?pn='.$i.'">'.$i.'</a> &nbsp; ';
+                        $paginationcontrol .= '<a class="btn btn-default" href="'.$_SERVER['PHP_SELF'].'?pn='.$i.'">'.$i.'</a> &nbsp; ';
                         if($i >= $pagenum+4){
                             break;
                         }
@@ -185,7 +185,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     // This does Next button
                     if ($pagenum != $last){
                         $next = $pagenum +1;
-                        $paginationcontrol .= '<a href="'.$_SERVER['PHP_SELF'].'?pn='.$next.'">Next</a> &nbsp; ';
+                        $paginationcontrol .= '<a class="btn btn-default" href="'.$_SERVER['PHP_SELF'].'?pn='.$next.'"><span class="glyphicon glyphicon-chevron-right"></span></a> &nbsp; ';
 
                     }
                 }
