@@ -1,31 +1,8 @@
 <?php
 session_start();
 if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
-    echo "<script>alert('Please Login'); location.href='login.php';</script>";
 }
 
-    //http://stackoverflow.com/questions/15194051/mysqli-real-escape-string-returns-empty-string
-    if(isset($_POST['submit'])){
-        require('PHP/config.php');
-
-        $q_name = mysqli_real_escape_string($db, $_POST['charname']);
-        $q_name = htmlspecialchars($q_name);
-
-        $q_game = mysqli_real_escape_string($db, $_POST['gamename']);
-        $q_game = htmlspecialchars($q_game);
-
-        $quote = mysqli_real_escape_string($db, $_POST['quote']);
-        $quote = htmlspecialchars($quote);
-        $user_id = $_SESSION['userid'];
-
-        $sqlinsert = "INSERT INTO quotes (q_name, q_game, q_quote, user_id) VALUES
-                    ('$q_name', '$q_game', '$quote', '$user_id')";
-        if (!mysqli_query($db, $sqlinsert)) {
-            echo ("<script>alert('Quote is already registered'); location.href='addquote.php';</script>");
-
-        } else {
-    echo "<script>alert('You are successfully uploaded the quote'); location.href='quotes.php';</script>";
-} }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -80,8 +57,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                <li class="active"><a href="quotes.php">Quotes</a></li>
+                <li class="active"><a href="articles.php">Articles<span class="sr-only">(current)</span></a></li>
+                <li><a href="quotes.php">Quotes</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UpcomingGames<span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -130,24 +107,105 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 <h1>Welcome <?php echo $_SESSION['username'] ?> ...</h1>
             <?php } else { ?>
                 <h1>VVelcome to SGamers</h1> <?php } ?>
+            <?php if ($_SESSION['username'] == true) { ?>
+                <a class="btn btn-default btn-lg hidden-xs" style="float: right; margin-top: -48px; font-family: 'Press Start 2P', cursive;" href="addarticle.php.php"  type="submit"><span class="glyphicon glyphicon-plus"></span> Add</a>
+                <a class="btn btn-default btn-sm visible-xs-block" style="float: right; margin-top: -80px; font-family: 'Press Start 2P', cursive;" href="addarticle.php" type="submit"><span class="glyphicon glyphicon-plus"></span> Add</a>
+            <?php } else {
+            }?>
         </div>
         <div>
             <div class="textglow2">
-                <h2><u>Adding a quote:</u></h2>
-                <form action="addquote.php" method="post">
-                    <h3><span class="ion-ios-game-controller-b"></span> Video Game name:</h3>
-                    <p><input type="text" class="form-control" maxlength="50" placeholder="Video game name" name="gamename"></p>
-                    <h3><span class="ion-outlet"></span> Character's name:</h3>
-                    <p><input type="text" class="form-control" maxlength="50" placeholder="Character's name" name="charname"></p>
-                    <h3><span class="ion-quote"></span> Quote:</h3>
-                    <textarea class="form-control" rows="5" id="fg" placeholder="" maxlength="2000" name="quote"></textarea><br>
-                    <button class="btn btn-default btn-lg" type="submit" value="submit" name="submit">Submit</button>
-                </form>
+                <h2>Video games quotes:</h2>
             </div>
+        </div>
+        <div>
+            <?php
+            // Got pagination from:  https://www.youtube.com/watch?v=T2QFNu_mivw
+            require('PHP/config.php');
+            ini_set('display_errors', 1);
+            ini_set('display_startup_errors', 1);
+            error_reporting(E_ALL);
+
+            $query = "SELECT COUNT(q_id) FROM quotes";
+            $result = mysqli_query($db, $query) or die;
+            $row = mysqli_fetch_row($result);
+
+            // Total of row count
+            $rows = $row[0];
+            // results each page
+            $page_rows = 10;
+            // page number of last page
+            $last = ceil($rows/$page_rows);
+            // $last cannot be less than 1
+            if($last <1){
+                $last = 1;
+            }
+            // page number var
+            $pagenum = 1;
+            // Get URL
+            if(isset($_GET['page'])){
+                $pagenum = preg_replace('#[^0-9]#', '', $_GET['page'] );
+            }
+            // ensure page number not less than 1 or more than last page
+            if ($pagenum <1 ) {
+                $pagenum = 1;
+            } elseif ($pagenum > $last) {
+                $pagenum = $last;
+            }
+            // range of the rows for the chosen page number
+            $limit = 'LIMIT ' . ($pagenum - 1) * $page_rows. ',' .$page_rows;
+            // Query again, using the limit
+            $query = "SELECT * FROM quotes ORDER BY q_id DESC $limit";
+            $result = mysqli_query($db, $query) or die;
+
+            // Pagination control var
+            $paginationcontrol = '';
+            // if there is only one page
+            if($last != 1) {
+                if($pagenum > 1){
+                    $previous = $pagenum -1;
+                    $paginationcontrol .= '<a class="btn btn-default" href="'.$_SERVER['PHP_SELF'].'?page='.$previous.'"><span class="glyphicon glyphicon-chevron-left"></span></a> &nbsp; &nbsp; ';
+                    // clickable number links
+                    for($i = $pagenum-4; $i < $pagenum; $i++){
+                        if($i > 0){
+                            $paginationcontrol .= '<a class="btn btn-default" href="'.$_SERVER['PHP_SELF'].'?page='.$i.'">'.$i.'</a> &nbsp; ';
+                        }
+                    }
+                }
+                // Render the target page number, without it being a link
+                $paginationcontrol .= ''.$pagenum.' &nbsp; ';
+                // Render clickable number links that should appear on the right
+                for($i = $pagenum+1; $i <= $last; $i++){
+                    $paginationcontrol .= '<a class="btn btn-default" href="'.$_SERVER['PHP_SELF'].'?page='.$i.'">'.$i.'</a> &nbsp; ';
+                    if($i >= $pagenum+4){
+                        break;
+                    }
+                }
+                // This does Next button
+                if ($pagenum != $last){
+                    $next = $pagenum +1;
+                    $paginationcontrol .= '<a class="btn btn-default" href="'.$_SERVER['PHP_SELF'].'?page='.$next.'"><span class="glyphicon glyphicon-chevron-right"></span></a> &nbsp; ';
+
+                }
+            }
+
+            $list = '';
+            while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+                $q_game = $row['q_game'];
+                $q_name = $row['q_name'];
+                $q_quote = $row['q_quote'];
+
+                ?>
+                <blockquote>
+                    <?php echo $q_quote;?>
+                    <cite><?php echo $q_name . " From " . $q_game?></cite>
+                </blockquote>
+            <?php } ?>
+            <div id="pagecontrol"><?php echo $paginationcontrol?></div>
         </div>
     </div>
 </div>
-<div class="footer" style="position: fixed">
+<div class="footer">
     <div class="container-fluid" style="height: 2px"></div>
     <div class=container>
         <div class="col-md-4">

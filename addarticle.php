@@ -4,28 +4,28 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
     echo "<script>alert('Please Login'); location.href='login.php';</script>";
 }
 
-    //http://stackoverflow.com/questions/15194051/mysqli-real-escape-string-returns-empty-string
-    if(isset($_POST['submit'])){
-        require('PHP/config.php');
+//http://stackoverflow.com/questions/15194051/mysqli-real-escape-string-returns-empty-string
+if(isset($_POST['submit'])){
+    require('PHP/config.php');
 
-        $q_name = mysqli_real_escape_string($db, $_POST['charname']);
-        $q_name = htmlspecialchars($q_name);
+    $q_name = mysqli_real_escape_string($db, $_POST['charname']);
+    $q_name = htmlspecialchars($q_name);
 
-        $q_game = mysqli_real_escape_string($db, $_POST['gamename']);
-        $q_game = htmlspecialchars($q_game);
+    $q_game = mysqli_real_escape_string($db, $_POST['gamename']);
+    $q_game = htmlspecialchars($q_game);
 
-        $quote = mysqli_real_escape_string($db, $_POST['quote']);
-        $quote = htmlspecialchars($quote);
-        $user_id = $_SESSION['userid'];
+    $quote = mysqli_real_escape_string($db, $_POST['quote']);
+    $quote = htmlspecialchars($quote);
+    $user_id = $_SESSION['userid'];
 
-        $sqlinsert = "INSERT INTO quotes (q_name, q_game, q_quote, user_id) VALUES
+    $sqlinsert = "INSERT INTO quotes (q_name, q_game, q_quote, user_id) VALUES
                     ('$q_name', '$q_game', '$quote', '$user_id')";
-        if (!mysqli_query($db, $sqlinsert)) {
-            echo ("<script>alert('Quote is already registered'); location.href='addquote.php';</script>");
+    if (!mysqli_query($db, $sqlinsert)) {
+        echo ("<script>alert('Quote is already registered'); location.href='addquote.php';</script>");
 
-        } else {
-    echo "<script>alert('You are successfully uploaded the quote'); location.href='quotes.php';</script>";
-} }
+    } else {
+        echo "<script>alert('You are successfully uploaded the quote'); location.href='quotes.php';</script>";
+    } }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -80,8 +80,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                <li class="active"><a href="quotes.php">Quotes</a></li>
+                <li class="active"><a href="articles.php">Articles<span class="sr-only">(current)</span></a></li>
+                <li><a href="quotes.php">Quotes</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UpcomingGames<span class="caret"></span></a>
                     <ul class="dropdown-menu">
