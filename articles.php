@@ -126,7 +126,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             ini_set('display_startup_errors', 1);
             error_reporting(E_ALL);
 
-            $query = "SELECT COUNT(q_id) FROM quotes";
+            $query = "SELECT COUNT(a_id) FROM articles";
             $result = mysqli_query($db, $query) or die;
             $row = mysqli_fetch_row($result);
 
@@ -155,7 +155,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             // range of the rows for the chosen page number
             $limit = 'LIMIT ' . ($pagenum - 1) * $page_rows. ',' .$page_rows;
             // Query again, using the limit
-            $query = "SELECT * FROM quotes ORDER BY q_id DESC $limit";
+            $query = "SELECT * FROM articles ORDER BY a_id DESC $limit";
             $result = mysqli_query($db, $query) or die;
 
             // Pagination control var

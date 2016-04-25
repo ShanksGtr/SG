@@ -136,11 +136,11 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 <h2><u>Adding a quote:</u></h2>
                 <form action="addquote.php" method="post">
                     <h3><span class="ion-ios-game-controller-b"></span> Video Game name:</h3>
-                    <p><input type="text" class="form-control" maxlength="50" placeholder="Video game name" name="gamename"></p>
+                    <p><input type="text" class="form-control" required="required" maxlength="50" placeholder="Video game name" name="gamename"></p>
                     <h3><span class="ion-outlet"></span> Character's name:</h3>
-                    <p><input type="text" class="form-control" maxlength="50" placeholder="Character's name" name="charname"></p>
+                    <p><input type="text" class="form-control" required="required" maxlength="50" placeholder="Character's name" name="charname"></p>
                     <h3><span class="ion-quote"></span> Quote:</h3>
-                    <textarea class="form-control" rows="5" id="fg" placeholder="" maxlength="2000" name="quote"></textarea><br>
+                    <textarea class="form-control" rows="5" id="fg" required="required" placeholder="" maxlength="2000" name="quote"></textarea><br>
                     <button class="btn btn-default btn-lg" type="submit" value="submit" name="submit">Submit</button>
                 </form>
             </div>

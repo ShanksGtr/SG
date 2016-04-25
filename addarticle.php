@@ -8,18 +8,21 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 if(isset($_POST['submit'])){
     require('PHP/config.php');
 
-    $q_name = mysqli_real_escape_string($db, $_POST['charname']);
-    $q_name = htmlspecialchars($q_name);
+    $a_title = mysqli_real_escape_string($db, $_POST['title']);
+    $a_title = htmlspecialchars($a_title);
 
-    $q_game = mysqli_real_escape_string($db, $_POST['gamename']);
-    $q_game = htmlspecialchars($q_game);
+    $a_game = mysqli_real_escape_string($db, $_POST['game']);
+    $a_game = htmlspecialchars($a_game);
 
-    $quote = mysqli_real_escape_string($db, $_POST['quote']);
-    $quote = htmlspecialchars($quote);
+    $time = gmdate('Y-m-d G:i:s', (strtotime("+1 hour")));
+
+    $article = mysqli_real_escape_string($db, $_POST['article']);
+    $article = htmlspecialchars($article);
+
     $user_id = $_SESSION['userid'];
 
-    $sqlinsert = "INSERT INTO quotes (q_name, q_game, q_quote, user_id) VALUES
-                    ('$q_name', '$q_game', '$quote', '$user_id')";
+    $sqlinsert = "INSERT INTO quotes (a_title, a_game, a_time, a_text, user_id) VALUES
+                    ('$a_title', '$a_game', '$time', '$article',  '$user_id')";
     if (!mysqli_query($db, $sqlinsert)) {
         echo ("<script>alert('Quote is already registered'); location.href='addquote.php';</script>");
 
@@ -134,13 +137,13 @@ if(isset($_POST['submit'])){
         <div>
             <div class="textglow2">
                 <h2><u>Adding a quote:</u></h2>
-                <form action="addquote.php" method="post">
-                    <h3><span class="ion-ios-game-controller-b"></span> Video Game name:</h3>
-                    <p><input type="text" class="form-control" maxlength="50" placeholder="Video game name" name="gamename"></p>
+                <form action="addarticle.php.php" method="post">
+                    <h3><span class="ion-ios-game-controller-b"></span> Title:</h3>
+                    <p><input type="text" class="form-control" required="required" maxlength="45" placeholder="Title" name="title"></p>
                     <h3><span class="ion-outlet"></span> Character's name:</h3>
-                    <p><input type="text" class="form-control" maxlength="50" placeholder="Character's name" name="charname"></p>
+                    <p><input type="text" class="form-control" required="required" maxlength="50" placeholder="The game you want to talk about" name="game"></p>
                     <h3><span class="ion-quote"></span> Quote:</h3>
-                    <textarea class="form-control" rows="5" id="fg" placeholder="" maxlength="2000" name="quote"></textarea><br>
+                    <textarea class="form-control" rows="5" id="fg" placeholder="Your article" maxlength="2000" name="article"></textarea><br>
                     <button class="btn btn-default btn-lg" type="submit" value="submit" name="submit">Submit</button>
                 </form>
             </div>
