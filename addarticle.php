@@ -21,7 +21,7 @@ if(isset($_POST['submit'])){
 
     $user_id = $_SESSION['userid'];
 
-    $sqlinsert = "INSERT INTO quotes (a_title, a_game, a_time, a_text, user_id) VALUES
+    $sqlinsert = "INSERT INTO articles (a_title, a_game, a_time, a_text, user_id) VALUES
                     ('$a_title', '$a_game', '$time', '$article',  '$user_id')";
     if (!mysqli_query($db, $sqlinsert)) {
         echo ("<script>alert('Quote is already registered'); location.href='addquote.php';</script>");
