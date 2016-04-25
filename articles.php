@@ -191,14 +191,16 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 
             $list = '';
             while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-                $q_game = $row['q_game'];
-                $q_name = $row['q_name'];
-                $q_quote = $row['q_quote'];
+                $a_title = $row['a_title'];
+                $a_game = $row['a_game'];
+                $q_time = $row['a_time'];
+                $a_article = $row['a_text'];
+                $user_id = $row['user_id'];
 
                 ?>
                 <blockquote>
-                    <?php echo $q_quote;?>
-                    <cite><?php echo $q_name . " From " . $q_game?></cite>
+                    <?php echo $a_article;?>
+                    <cite><?php echo $a_title  . " From " . $a_game . " Uploaded in " . $q_time . "by " . $user_id?></cite>
                 </blockquote>
             <?php } ?>
             <div id="pagecontrol"><?php echo $paginationcontrol?></div>

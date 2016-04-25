@@ -27,7 +27,7 @@ if(isset($_POST['submit'])){
         echo ("<script>alert('Quote is already registered'); location.href='addquote.php';</script>");
 
     } else {
-        echo "<script>alert('You are successfully uploaded the quote'); location.href='quotes.php';</script>";
+        echo "<script>alert('You are successfully uploaded an article'); location.href='articles.php';</script>";
     } }
 ?>
 <!DOCTYPE html>
