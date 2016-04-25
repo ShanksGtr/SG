@@ -137,12 +137,12 @@ if(isset($_POST['submit'])){
         <div>
             <div class="textglow2">
                 <h2><u>Adding a quote:</u></h2>
-                <form action="addarticle.php.php" method="post">
-                    <h3><span class="ion-ios-game-controller-b"></span> Title:</h3>
+                <form action="addarticle.php" method="post">
+                    <h3><span class=""></span> Title:</h3>
                     <p><input type="text" class="form-control" required="required" maxlength="45" placeholder="Title" name="title"></p>
-                    <h3><span class="ion-outlet"></span> Character's name:</h3>
+                    <h3><span class="ion-ios-game-controller-b"></span> Game's name:</h3>
                     <p><input type="text" class="form-control" required="required" maxlength="50" placeholder="The game you want to talk about" name="game"></p>
-                    <h3><span class="ion-quote"></span> Quote:</h3>
+                    <h3><span class="ion-quote"></span> Article:</h3>
                     <textarea class="form-control" rows="5" id="fg" placeholder="Your article" maxlength="2000" name="article"></textarea><br>
                     <button class="btn btn-default btn-lg" type="submit" value="submit" name="submit">Submit</button>
                 </form>
