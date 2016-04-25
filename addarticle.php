@@ -136,7 +136,7 @@ if(isset($_POST['submit'])){
         </div>
         <div>
             <div class="textglow2">
-                <h2><u>Adding a quote:</u></h2>
+                <h2><u>Adding an article:</u></h2>
                 <form action="addarticle.php" method="post">
                     <h3><span class=""></span> Title:</h3>
                     <p><input type="text" class="form-control" required="required" maxlength="45" placeholder="Title" name="title"></p>
