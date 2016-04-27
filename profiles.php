@@ -108,10 +108,12 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             ini_set('display_startup_errors', 1);
             error_reporting(E_ALL);
             $user = $_GET['user'];
-            $getuser_id= "SELECT user_id FROM users WHERE user_name='$user'";
-            $user_id= mysqli_query($db, $getuser_id) or die;
+            $get_id= "SELECT user_id FROM users WHERE user_name='$user' limit 1";
+            $get_user_id= mysqli_query($db, $get_id) or die;
+            $id_row = mysqli_fetch_object($get_user_id);
+            $id = $id_row->user_id;
 
-            $query = "SELECT * FROM profiles WHERE user_id='$user_id'";
+            $query = "SELECT * FROM profiles WHERE user_id='$id'";
             $result = mysqli_query($db, $query) or die;
             while($row = mysqli_fetch_array($result)) {
             $status = $row['status'];
@@ -135,7 +137,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             <div class="col col-md-3">
                 <div>
                     <div>
-                        <?php echo $user;?>
+
                         <img class="img-circle" style="height: 200px; width: 240px; margin-left: -10px" src="<?php if($avatar == NULL){ echo "Pictures/empty-user.jpg"; }else{ echo "Pictures/".$avatar;} ?>">
                         <form id="uploadfile" action="Pictures/avataring.php" method="post" enctype="multipart/form-data">
                             Select image to upload:
