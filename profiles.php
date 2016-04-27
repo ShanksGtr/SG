@@ -113,8 +113,10 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             ini_set('display_startup_errors', 1);
             error_reporting(E_ALL);
             $user = $_GET['user'];
+            $getuser_id= "SELECT user_id FROM users WHERE user_name='$user'";
+            $user_id= mysqli_query($db, $getuser_id);
 
-            $query = "SELECT * FROM p profiles, u users WHERE p.user_id=u.user_id AND u.user_name='$user'";
+            $query = "SELECT * FROM profiles WHERE user_id='$user_id'";
             $result = mysqli_query($db, $query) or die;
             while($row = mysqli_fetch_array($result)) {
             $status = $row['status'];
