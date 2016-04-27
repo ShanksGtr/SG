@@ -137,15 +137,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             <div class="col col-md-3">
                 <div>
                     <div>
-
                         <img class="img-circle" style="height: 200px; width: 240px; margin-left: -10px" src="<?php if($avatar == NULL){ echo "Pictures/empty-user.jpg"; }else{ echo "Pictures/".$avatar;} ?>">
-                        <form id="uploadfile" action="Pictures/avataring.php" method="post" enctype="multipart/form-data">
-                            Select image to upload:
-                            <!-- http://stackoverflow.com/questions/198346/whats-the-best-way-to-create-a-single-file-upload-form-using-php -->
-                            <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
-                            <input type="file" name="fileToUpload" id="fileToUpload" accept="image/*">
-                            <input type="submit" value="Upload Image" name="submit"> Image dimintions are: 200height 240width and only jpg, jpeg and png are accepted
-                        </form>
                     </div>
                     <div style="border-right: 1px groove silver; margin-left: -5px;">
                         <h3><span class="glyphicon glyphicon-road"></span> Age:</h3>
