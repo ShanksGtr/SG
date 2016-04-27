@@ -3,7 +3,9 @@ session_start();
 if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
     echo "<script>alert('Please Login'); location.href='/login.php';</script>";
 }
-
+if($_GET['user'] == NULL){
+    echo "<script>location.href='/index.php';</script>";
+}
 
 ?>
 <!DOCTYPE html>
@@ -111,6 +113,9 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             $get_id= "SELECT user_id FROM users WHERE user_name='$user' limit 1";
             $get_user_id= mysqli_query($db, $get_id) or die;
             $id_row = mysqli_fetch_object($get_user_id);
+            if ($id_row == false) {
+                echo "<script>alert('User does not exist'); location.href='/index.php';</script>";
+            }
             $id = $id_row->user_id;
 
             $query = "SELECT * FROM profiles WHERE user_id='$id'";
