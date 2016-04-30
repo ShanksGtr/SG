@@ -191,16 +191,17 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 
             $list = '';
             while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+                $art_id= $row['a_id'];
                 $a_title = $row['a_title'];
                 $a_game = $row['a_game'];
                 $q_time = $row['a_time'];
                 $a_article = $row['a_text'];
                 $user_id = $row['user_id'];
-                $a_id= $row['a_id'];
+
 
                 ?>
                 <div class="row">
-                    <h3><a href="article.php?art=<?php echo $a_id ?>"><?php echo $a_title ?></a></h3>
+                    <h3><a href="article.php?art=<?php echo $art_id ?>"><?php echo $a_title ?></a></h3>
                 </div>
             <?php } ?>
             <div id="pagecontrol"><?php echo $paginationcontrol?></div>
