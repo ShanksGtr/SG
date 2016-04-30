@@ -194,7 +194,7 @@ if($_GET['art'] == NULL){
         ?>
         <div class="comments">
             <h4><a href="profiles.php?user=<?=$user_name?>"><?=$user_name?></a></h4>
-            <a href="profiles.php?user=<?=$user_name?>"><img alt="user avatar" src="<?php if($avatar == NULL){ echo "Pictures/empty-user.jpg"; }else{ echo "Pictures/".$avatar;}?>" width="100" height="100"></a>
+            <a style="color: white;" href="profiles.php?user=<?=$user_name?>"><img alt="user avatar" src="<?php if($avatar == NULL){ echo "Pictures/empty-user.jpg"; }else{ echo "Pictures/".$avatar;}?>" width="100" height="100"></a>
             <p><?=$comment?></p>
         </div>
         <?php } ?>
