@@ -139,7 +139,7 @@ if($_GET['art'] == NULL){
         <div class="page-header textglow3">
             <h1>Article: <?= $a_title; ?></h1> Posted date: <?=substr($a_time, 0,10);?>
         </div>
-        <div class="row">
+        <div class="">
             <h2>About: <?=$a_game;?></h2>
             <h2>By: <a href="profiles.php?user=<?=$user_name;?>"><?=$user_name;?></a></h2>
         </div>
