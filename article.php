@@ -145,7 +145,12 @@ if($_GET['art'] == NULL){
                 $q_time = $row['a_time'];
                 $a_article = $row['a_text'];
                 $user_id = $row['user_id'];
-                    echo $a_title; }
+                    $get_user= "SELECT user_name FROM users WHERE user_id='$user_id' limit 1";
+                    $get_user_name= mysqli_query($db, $get_id) or die;
+                    $user_row = mysqli_fetch_object($get_art_id);
+                    $user_name = $user_row->user_name;
+
+                    echo $user_name; }
                 ?>
         </div>
     </div>
