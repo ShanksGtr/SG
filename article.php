@@ -150,7 +150,7 @@ if($_GET['art'] == NULL){
                     $user_row = mysqli_fetch_object($get_user_name);
                     $user_name = $user_row->user_name;
 
-                    echo $user_name; }
+                    echo $user_id . $user_name; }
                 ?>
         </div>
     </div>
