@@ -134,7 +134,7 @@ if($_GET['art'] == NULL){
             $result = mysqli_query($db, $query) or die;
 
             while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-                if ($row['user_id'] == NULL) {
+                if ($row['user_id'] == FALSE) {
                     echo "<script>alert('Article does not exist'); location.href='/index.php';</script>";
                 }
                 $a_title = $row['a_title'];
