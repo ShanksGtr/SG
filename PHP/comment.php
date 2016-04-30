@@ -24,5 +24,5 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 
         } else {
             echo "<script>alert('You are successfully uploaded an article'); location.href='articles.php';</script>";
-        } */
+        } s*/
     }
