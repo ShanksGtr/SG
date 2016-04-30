@@ -184,8 +184,9 @@ if($_GET['art'] == NULL){
                 $avatar = $avatar_row->avatar;
 
         ?>
+                <div class="row">
         <div class="col col-md-3">
-            <a href="profiles.php?user=<?=$user_name?>"><img alt="user avatar" src="Pirctures/<?=$avatar?>" width="50" height="50"></a>
+            <a href="profiles.php?user=<?=$user_name?>"><img alt="user avatar" src="Pictures/<?=$avatar?>" width="50" height="50"></a>
         </div>
         <div class="col col-md-9">
             <a href="profiles.php?user=<?=$user_name?>"></a>
