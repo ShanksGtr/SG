@@ -128,13 +128,14 @@ if($_GET['art'] == NULL){
             ini_set('display_startup_errors', 1);
             error_reporting(E_ALL);
             $art_id = $_GET['art'];
-            $get_id= "SELECT a_id FROM articles WHERE a_id='$art_id' limit 1";
+            $get_id= "SELECT a_id, user_id FROM articles WHERE a_id='$art_id' limit 1";
             $get_art_id= mysqli_query($db, $get_id) or die;
             $id_row = mysqli_fetch_object($get_art_id);
             if ($id_row == false) {
                  die("<script>alert('Article does not exist'); location.href='/articles.php';</script>");
             }
             $id = $id_row->a_id;
+            $user_id = $id_row->a_id;
 
             $query = "SELECT * FROM articles WHERE a_id='$id'";
             $result = mysqli_query($db, $query) or die;
@@ -145,12 +146,9 @@ if($_GET['art'] == NULL){
                 $q_time = $row['a_time'];
                 $a_article = $row['a_text'];
                 $user_id = $row['user_id'];
-                    $get_user= "SELECT user_name FROM users WHERE user_id='$user_id' limit 1";
-                    $get_user_name= mysqli_query($db, $user_id) or die;
-                    $user_row = mysqli_fetch_object($get_user_name);
-                    $user_name = $user_row->user_name;
 
-                    echo $user_id . $user_name; }
+
+                    echo $user_id; }
                 ?>
         </div>
     </div>
