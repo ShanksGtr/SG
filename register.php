@@ -40,7 +40,9 @@ if (isset($_POST['submit'])) {
     <!-- For Mobiles -->
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no">
     <meta charset="UTF-8">
-    <title>SGamers</title>
+    <title>Sign Up</title>
+    <!-- Free icon from http://findicons.com/icon/115500/input_gaming -->
+    <link rel="icon" type="image/png" href="Pictures/input_gaming.ico" sizes="32x32"/>
     <!-- Bootstrap CSS,JQ&JS Libraries-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link id="pagesstyle" rel="stylesheet" type="text/css" href="Style/SG.css">;
