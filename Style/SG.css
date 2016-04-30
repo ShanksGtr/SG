@@ -304,6 +304,11 @@ body {
     text-shadow: -1px 1px #FEFFDC;
 }
 
+.textglow3 {
+    font-weight: bold;
+    text-shadow: -1px 1px #FEFFDC;
+}
+
 .page-header h1 {
     font-weight: bold;
     text-shadow: -1px 1px #FEFFDC;

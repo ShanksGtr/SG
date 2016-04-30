@@ -136,7 +136,7 @@ if($_GET['art'] == NULL){
         $q_time = $row['a_time'];
         $a_article = $row['a_text'];
         ?>
-        <div class="textglow2 page-header">
+        <div class="textglow3 page-header">
             <h2>Article: <?= $a_title ?></h2>
         </div>
         <div>
