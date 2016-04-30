@@ -132,7 +132,7 @@ if($_GET['art'] == NULL){
             $query = "SELECT * FROM articles WHERE a_id='$art_id'";
 
             $result = mysqli_query($db, $query) or die;
-            if ($result == false) {
+            if ($result == NULL) {
                 echo "<script>alert('Article does not exist'); location.href='/index.php';</script>";
             }
             while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
