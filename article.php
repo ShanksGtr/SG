@@ -145,7 +145,7 @@ if($_GET['art'] == NULL){
                 $a_game = $row['a_game'];
                 $q_time = $row['a_time'];
                 $a_article = $row['a_text'];
-                $user_id = $row['user_id'];
+                //$user_id = $row['user_id'];
 
 
                     echo $user_id; }
