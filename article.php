@@ -133,17 +133,17 @@ if($_GET['art'] == NULL){
         while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
         $a_title = $row['a_title'];
         $a_game = $row['a_game'];
-        $q_time = $row['a_time'];
+        $a_time = $row['a_time'];
         $a_article = $row['a_text'];
         ?>
         <div class="page-header textglow3">
-            <h1>Article: <?= $a_title ?></h1> hey
+            <h1>Article: <?= $a_title; ?></h1> Posted date: <?=$a_time;?>
         </div>
         <div>
 
         </div>
         <div>
-            <a href="profiles.php?user=<?=$user_name?>"><?=$user_name?></a>
+            <a href="profiles.php?user=<?=$user_name;?>"><?=$user_name;?></a>
             <?php }?>
         </div>
     </div>
