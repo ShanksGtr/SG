@@ -186,5 +186,12 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 </div>
             </div>
         </div>
+   <style>
+        @media all and (max-width: 699px) and (min-width: 100px) {
+           .footer {
+                 position: absolute;
+            }
+        }
+   </style>
 </body>
 </html>
