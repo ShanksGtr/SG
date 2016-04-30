@@ -147,6 +147,14 @@ if($_GET['art'] == NULL){
             <h3><?=$a_article;?></h3>
             <?php }?>
         </div>
+            <?php
+                $a_id = $_GET['art'];
+
+
+            ?>
+        <div class="comment">
+            <h2>Comments: ()</h2>
+        </div>
     </div>
 </div>
 <div class="footer">
