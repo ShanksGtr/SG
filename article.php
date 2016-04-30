@@ -135,7 +135,7 @@ if($_GET['art'] == NULL){
                  die("<script>alert('Article does not exist'); location.href='/articles.php';</script>");
             }
             $id = $id_row->a_id;
-            $user_id = $id_row->a_id;
+            $user_id = $id_row->user_id;
 
             $query = "SELECT * FROM articles WHERE a_id='$id'";
             $result = mysqli_query($db, $query) or die;
