@@ -151,9 +151,9 @@ if($_GET['art'] == NULL){
                 <textarea class="form-control" rows="5" required="required" placeholder="Write your comment" maxlength="300" name="comment"></textarea><br>
                 <button class="btn btn-default btn-lg" type="submit" value="submit" name="submit">Comment</button>
             </form>
-            <?php } else {
-                echo "Please login to write your comment :) ";
-            } ?>
+            <?php } else { ?>
+                <h3 style="color: red">Please login to add your comment :D</h3>
+            <?php } ?>
         </div>
         <div class="comment">
             <h2>Comments: ()</h2>
