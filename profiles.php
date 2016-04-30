@@ -17,7 +17,7 @@ if($_GET['user'] == NULL){
     <!-- For Mobiles -->
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no"> -->
     <meta charset="UTF-8">
-    <title>SGamers</title>
+    <title><?=$_GET['user'];?> Profile</title>
     <!-- Bootstrap CSS,JQ&JS Libraries-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link id="pagesstyle" rel="stylesheet" type="text/css" href="Style/SG.css">;
