@@ -200,8 +200,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 
 
                 ?>
-                <div class="row">
-                    <h3><a href="article.php?art=<?php echo $art_id ?>"><?php echo $a_title ?></a></h3>
+                <div class="">
+                    <h3><li><a href="article.php?art=<?php echo $art_id ?>"><?php echo $a_title ?></a></li></h3>
                 </div>
             <?php } ?>
             <div id="pagecontrol"><?php echo $paginationcontrol?></div>
