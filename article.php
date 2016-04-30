@@ -186,10 +186,10 @@ if($_GET['art'] == NULL){
 
         ?>
         <div class="col col-md-3">
+            <a href="profiles.php?user=<?=$user_name?>"><?=$user_name?></a>
             <a href="profiles.php?user=<?=$user_name?>"><img alt="user avatar" src="Pictures/<?=$avatar?>" width="100" height="100"></a>
         </div>
         <div class="col col-md-9">
-            <a href="profiles.php?user=<?=$user_name?>"><?=$user_name?></a>
             <p><?=$comment?></p>
         </div>
         <?php } ?>
