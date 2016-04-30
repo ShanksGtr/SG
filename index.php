@@ -169,7 +169,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         <div class="col col-md-4 indexo">
                             <h3><span class="ion-quote"></span> Latest 3 Quotes:</h3>
                             <?php
-                            $query = "SELECT * FROM quotes ORDER BY q_id DESC";
+                            $query = "SELECT * FROM quotes ORDER BY q_id DESC limit 3";
                             $result = mysqli_query($db, $query) or die;
                             while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
                             $q_game = $row['q_game'];
