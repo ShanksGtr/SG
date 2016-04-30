@@ -158,7 +158,6 @@ if($_GET['art'] == NULL){
                 echo "Please login to write your comment :) ";
             } ?>
         </div>
-
         <div class="comment">
             <h2>Comments: ()</h2>
         </div>
