@@ -163,27 +163,35 @@ if($_GET['art'] == NULL){
                 $result = mysqli_query($db, $query) or die;
                 $num_rows = mysqli_num_rows($result);
 
-                while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-
-                    $comment = $row['comment'];
-                    $user_id = $row['user_id'];
-                        $get_user= "SELECT user_name FROM users WHERE user_id='$user_id' limit 1";
-                        $get_user_name= mysqli_query($db, $get_user) or die;
-                        $user_row = mysqli_fetch_object($get_user_name);
-                        $user_name = $user_row->user_name;
-
-                        $get_avatar= "SELECT avatar FROM profiles WHERE user_id='$user_id' limit 1";
-                        $get_image= mysqli_query($db, $get_avatar) or die;
-                        $avatar_row = mysqli_fetch_object($get_image);
-                        $avatar = $avatar_row->avatar;
-
-                    echo $user_name . " " . $comment . " " . $avatar . " ";
-                }
 
             ?>
         <div class="comment">
             <h2>Comments: (<?=$num_rows;?>)</h2>
         </div>
+        <?php
+            while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+
+                $comment = $row['comment'];
+                $user_id = $row['user_id'];
+                $get_user= "SELECT user_name FROM users WHERE user_id='$user_id' limit 1";
+                $get_user_name= mysqli_query($db, $get_user) or die;
+                $user_row = mysqli_fetch_object($get_user_name);
+                $user_name = $user_row->user_name;
+
+                $get_avatar= "SELECT avatar FROM profiles WHERE user_id='$user_id' limit 1";
+                $get_image= mysqli_query($db, $get_avatar) or die;
+                $avatar_row = mysqli_fetch_object($get_image);
+                $avatar = $avatar_row->avatar;
+
+        ?>
+        <div class="col col-md-3">
+            <a href="profiles.php?user=<?=$user_name?>"><img alt="user avatar" src="Pirctures/<?=$avatar?>" width="50" height="50"></a>
+        </div>
+        <div class="col col-md-9">
+            <a href="profiles.php?user=<?=$user_name?>">
+            <p><?=$comment?></p>
+        </div>
+        <?php } ?>
     </div>
 </div>
 <div class="footer">
