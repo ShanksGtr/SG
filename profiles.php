@@ -98,7 +98,7 @@ if($_GET['user'] == NULL){
 <div class="container">
     <div class="jumbotron">
         <div class="page-header">
-                <h1><?=$_GET['user'];?></h1>
+                <h1><?=$_GET['user'];?> Profile:</h1>
         </div>
         <div class="row" style="word-wrap: break-word ">
             <?php
