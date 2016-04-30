@@ -201,7 +201,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 
                 ?>
                 <div class="">
-                    <h3><li><a href="article.php?art=<?php echo $art_id ?>"><?php echo $a_title ?></a></li></h3>
+                    <h3><a style="color: white;" href="article.php?art=<?php echo $art_id ?>"><?php echo $a_title ?></a></h3>
                 </div>
             <?php } ?>
             <div id="pagecontrol"><?php echo $paginationcontrol?></div>
