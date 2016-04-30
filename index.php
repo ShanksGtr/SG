@@ -186,6 +186,5 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 </div>
             </div>
         </div>
-
 </body>
 </html>

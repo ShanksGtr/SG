@@ -220,5 +220,12 @@ if (isset($_POST['submit'])) {
             <a href="terms.php">Terms</a>
         </div>
     </div>
+    <style>
+        @media all and (max-width: 970px) and (min-width: 100px) {
+            .footer {
+                position: absolute;
+            }
+        }
+    </style>
 </div>
 </body>

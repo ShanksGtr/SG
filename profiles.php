@@ -201,5 +201,12 @@ if($_GET['user'] == NULL){
         </div>
     </div>
 </div>
+<style>
+    @media all and (max-width: 699px) and (min-width: 100px) {
+        .footer {
+            position: absolute;
+        }
+    }
+</style>
 </body>
 </html>

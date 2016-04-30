@@ -167,5 +167,12 @@ if(isset($_POST['submit'])){
         </div>
     </div>
 </div>
+<style>
+    @media all and (max-width: 970px) and (min-width: 100px) {
+        .footer {
+            position: absolute;
+        }
+    }
+</style>
 </body>
 </html>
