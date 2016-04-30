@@ -168,6 +168,21 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <div class="row">
                         <div class="col col-md-4 indexo">
                             <h3><span class="ion-quote"></span> Latest 3 Quotes:</h3>
+                            <?php
+                            $query = "SELECT * FROM quotes ORDER BY q_id DESC";
+                            $result = mysqli_query($db, $query) or die;
+                            while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+                            $q_game = $row['q_game'];
+                            $q_name = $row['q_name'];
+                            $q_quote = $row['q_quote'];
+                            ?>
+                            <p>
+                            <blockquote>
+                                <?=$q_quote?>
+                                <cite><?=$q_name?></cite>
+                            </blockquote>
+                            </p>
+                            <?php }?>
                         </div>
                         <div class="col col-md-4 indexo">
                             <h3><span class="ion-wand"></span> Latest 3 Articles:</h3>
