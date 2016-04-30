@@ -107,9 +107,6 @@ if($_GET['art'] == NULL){
         <?php
 
         require('PHP/config.php');
-        ini_set('display_errors', 1);
-        ini_set('display_startup_errors', 1);
-        error_reporting(E_ALL);
 
         $art_id = $_GET['art'];
         $get_id= "SELECT a_id, user_id FROM articles WHERE a_id='$art_id' limit 1";
