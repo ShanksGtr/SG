@@ -411,3 +411,17 @@ border-radius: 20px;
 .pushp h3 {
     margin-left: 15px;
 }
+
+.comments {
+    border-bottom: 2px dashed silver;
+    padding-bottom: 21px;
+}
+
+.comments img {
+    vertical-align: top;
+}
+
+.comments p {
+    display: inline-table;
+    padding-left: 32px;
+}

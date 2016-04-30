@@ -168,7 +168,7 @@ if($_GET['art'] == NULL){
         <div class="comment">
             <h2>Comments: (<?=$num_rows;?>)</h2>
         </div>
-        <div class="">
+        <div class="comments">
         <?php
             while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 
