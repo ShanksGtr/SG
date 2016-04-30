@@ -14,15 +14,11 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         $a_id = $_POST['a_id'];
         $user_id = $_SESSION['userid'];
 
-        echo $a_id . "<br>";
-        echo $comment . "<br>";
-        echo $user_id;
-
         $sqlinsert = "INSERT INTO comments (comment, a_id, user_id) VALUES
                     ('$comment', '$a_id', '$user_id')";
         if (!mysqli_query($db, $sqlinsert)) {
-            echo ("<script>alert('Something went wrong'); location.href='/articles.php?art=$a_id';</script>");
+            echo ("<script>alert('Something went wrong'); location.href='/article.php?art=$a_id';</script>");
         } else {
-            echo "<script>alert('You have commented successfully'); location.href='/articles.php?art=$a_id';</script>";
+            echo "<script>alert('You have commented successfully'); location.href='/article.php?art=$a_id';</script>";
         }
     }
