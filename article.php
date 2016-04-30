@@ -147,11 +147,18 @@ if($_GET['art'] == NULL){
             <h3><?=$a_article;?></h3>
             <?php }?>
         </div>
-            <?php
-                $a_id = $_GET['art'];
 
+        <div class="addcomment">
+            <?php if ($_SESSION['username'] == true) { ?>
+            <form action="PHP/comment.php" method="post">
+                <textarea class="form-control" rows="5" required="required" placeholder="Write your comment" maxlength="300" name="comment"></textarea><br>
+                <button class="btn btn-default btn-lg" type="submit" value="submit" name="submit">Comment</button>
+            </form>
+            <?php } else {
+                echo "Please login to write your comment :) ";
+            } ?>
+        </div>
 
-            ?>
         <div class="comment">
             <h2>Comments: ()</h2>
         </div>
