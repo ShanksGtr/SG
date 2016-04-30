@@ -196,10 +196,11 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 $q_time = $row['a_time'];
                 $a_article = $row['a_text'];
                 $user_id = $row['user_id'];
+                $a_id= $row['a_id'];
 
                 ?>
                 <div class="row">
-                    <h3><a href="article.php?art=<?php echo $a_title ?>"><?php echo $a_title ?></a></h3>
+                    <h3><a href="article.php?art=<?php echo $a_id ?>"><?php echo $a_title ?></a></h3>
                 </div>
             <?php } ?>
             <div id="pagecontrol"><?php echo $paginationcontrol?></div>
