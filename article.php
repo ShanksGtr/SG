@@ -139,7 +139,7 @@ if($_GET['art'] == NULL){
             $user_id = $id_row->user_id;
 
             $get_user= "SELECT user_name FROM users WHERE user_id='$user_id' limit 1";
-            $get_user_name= mysqli_query($db, $user_id) or die;
+            $get_user_name= mysqli_query($db, $get_user) or die;
             $user_row = mysqli_fetch_object($get_user_name);
             $user_name = $user_row->user_name;
 
