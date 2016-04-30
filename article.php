@@ -149,12 +149,31 @@ if($_GET['art'] == NULL){
             <?php if ($_SESSION['username'] == true) { ?>
             <form action="PHP/comment.php" method="post">
                 <textarea class="form-control" rows="5" required="required" placeholder="Write your comment" maxlength="300" name="comment"></textarea><br>
+                <input name="a_id" value="<?=$_GET['art'];?>" hidden>
                 <button class="btn btn-default btn-lg" type="submit" value="submit" name="submit">Comment</button>
             </form>
             <?php } else { ?>
                 <h3> --> Please login to comment :D</h3>
             <?php } ?>
         </div>
+            <?php
+                $a_id = $_GET['art'];
+
+                $query = "SELECT * FROM comments WHERE a_id='$a_id'";
+                $result = mysqli_query($db, $query) or die;
+                $num_rows = mysqli_num_rows($result);
+
+                while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+
+                    $comment = $row['comment'];
+                    $user_id = $row['user_id'];
+                    $get_user= "SELECT user_name FROM users WHERE user_id='$user_id' limit 1";
+                    $get_user_name= mysqli_query($db, $get_user) or die;
+                    $user_row = mysqli_fetch_object($get_user_name);
+                    $user_name = $user_row->user_name;
+                }
+
+            ?>
         <div class="comment">
             <h2>Comments: ()</h2>
         </div>
