@@ -167,15 +167,17 @@ if($_GET['art'] == NULL){
 
                     $comment = $row['comment'];
                     $user_id = $row['user_id'];
-                    $get_user= "SELECT user_name FROM users WHERE user_id='$user_id' limit 1";
-                    $get_user_name= mysqli_query($db, $get_user) or die;
-                    $user_row = mysqli_fetch_object($get_user_name);
-                    $user_name = $user_row->user_name;
+                        $get_user= "SELECT user_name FROM users WHERE user_id='$user_id' limit 1";
+                        $get_user_name= mysqli_query($db, $get_user) or die;
+                        $user_row = mysqli_fetch_object($get_user_name);
+                        $user_name = $user_row->user_name;
+
+                    echo $user_name . " " . $comment;
                 }
 
             ?>
         <div class="comment">
-            <h2>Comments: ()</h2>
+            <h2>Comments: (<?=$num_rows;?>)</h2>
         </div>
     </div>
 </div>

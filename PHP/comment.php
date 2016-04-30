@@ -17,12 +17,12 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         echo $a_id . "<br>";
         echo $comment . "<br>";
         echo $user_id;
-        /*$sqlinsert = "INSERT INTO comments (a_title, a_game, a_time, a_text, user_id) VALUES
-                    ('$a_title', '$a_game', '$time', '$article',  '$user_id')";
-        if (!mysqli_query($db, $sqlinsert)) {
-            echo ("<script>alert('Quote is already registered'); location.href='addquote.php';</script>");
 
+        $sqlinsert = "INSERT INTO comments (comment, a_id, user_id) VALUES
+                    ('$comment', '$a_id', '$user_id')";
+        if (!mysqli_query($db, $sqlinsert)) {
+            echo ("<script>alert('Something went wrong'); location.href='/articles.php?art=$a_id';</script>");
         } else {
-            echo "<script>alert('You are successfully uploaded an article'); location.href='articles.php';</script>";
-        } s*/
+            echo "<script>alert('You have commented successfully'); location.href='/articles.php?art=$a_id';</script>";
+        }
     }
