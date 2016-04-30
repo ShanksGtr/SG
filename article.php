@@ -137,13 +137,12 @@ if($_GET['art'] == NULL){
         $a_article = $row['a_text'];
         ?>
         <div class="page-header textglow2">
-            <h2>Article Title: <?= $a_title ?></h2>
+            <h2>Article: <?= $a_title ?></h2>
         </div>
         <div>
 
         </div>
         <div>
-
             <a href="profiles.php?user=<?=$user_name?>"><?=$user_name?></a>
             <?php }?>
         </div>
