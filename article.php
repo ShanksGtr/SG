@@ -152,8 +152,9 @@ if($_GET['art'] == NULL){
                 $a_game = $row['a_game'];
                 $q_time = $row['a_time'];
                 $a_article = $row['a_text'];
-                     echo $user_name . " " . $a_title;}
                 ?>
+            <a href="profiles.php?user=<?=$user_name?>">By: <?=$user_name?></a>
+            <?php }?>
         </div>
     </div>
 </div>
