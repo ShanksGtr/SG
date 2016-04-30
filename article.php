@@ -172,7 +172,12 @@ if($_GET['art'] == NULL){
                         $user_row = mysqli_fetch_object($get_user_name);
                         $user_name = $user_row->user_name;
 
-                    echo $user_name . " " . $comment;
+                        $get_avatar= "SELECT avatar FROM profiles WHERE user_id='$user_id' limit 1";
+                        $get_image= mysqli_query($db, $get_avatar) or die;
+                        $avatar_row = mysqli_fetch_object($get_image);
+                        $avatar = $avatar_row->avatar;
+
+                    echo $user_name . " " . $comment . " " . $avatar . " ";
                 }
 
             ?>
