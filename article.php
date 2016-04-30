@@ -132,7 +132,7 @@ if($_GET['art'] == NULL){
             $get_art_id= mysqli_query($db, $get_id) or die;
             $id_row = mysqli_fetch_object($get_art_id);
             if ($id_row == false) {
-                echo "<script>alert('User does not exist'); location.href='/index.php';</script>";
+                 die("<script>alert('Article does not exist'); location.href='/index.php';</script>");
             }
             $id = $id_row->a_id;
 
