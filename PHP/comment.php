@@ -4,7 +4,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
     echo "<script>alert('Please Login'); location.href='login.php';</script>";
 }
 
-    if(isset($_POST['comment'])){
+    if(isset($_POST['submit'])){
         require('config.php');
 
         $comment = mysqli_real_escape_string($db, $_POST['comment']);
