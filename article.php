@@ -128,12 +128,17 @@ if($_GET['art'] == NULL){
             ini_set('display_startup_errors', 1);
             error_reporting(E_ALL);
             $art_id = $_GET['art'];
-
-            $query = "SELECT * FROM articles WHERE a_id='$art_id'";
-            $result = mysqli_query($db, $query) or die;
-            if ($result == false) {
-                echo "<script>alert('Article does not exist'); location.href='/index.php';</script>";
+            $get_id= "SELECT a_id FROM articles WHERE a_id='$art_id' limit 1";
+            $get_art_id= mysqli_query($db, $get_id) or die;
+            $id_row = mysqli_fetch_object($get_art_id);
+            if ($id_row == false) {
+                echo "<script>alert('User does not exist'); location.href='/index.php';</script>";
             }
+            $id = $id_row->a_id;
+
+            $query = "SELECT * FROM articles WHERE a_id='$id'";
+            $result = mysqli_query($db, $query) or die;
+
             while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
                 $a_title = $row['a_title'];
                 $a_game = $row['a_game'];
