@@ -144,7 +144,7 @@ if($_GET['art'] == NULL){
             <h2>By: <a href="profiles.php?user=<?=$user_name;?>"><?=$user_name;?></a></h2>
         </div>
         <div>
-            <?=$a_article;?>
+            <h3><?=$a_article;?></h3>
             <?php }?>
         </div>
     </div>
