@@ -3,7 +3,7 @@ session_start();
 if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 }
 if($_GET['art'] == NULL){
-    echo "<script>location.href='/index.php';</script>";
+    echo "<script>location.href='/articles.php';</script>";
 }
 ?>
 <!DOCTYPE html>
@@ -104,16 +104,40 @@ if($_GET['art'] == NULL){
 </nav>
 <div class="container">
     <div class="jumbotron">
+        <?php
+
+        require('PHP/config.php');
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
+
+        $art_id = $_GET['art'];
+        $get_id= "SELECT a_id, user_id FROM articles WHERE a_id='$art_id' limit 1";
+        $get_art_id= mysqli_query($db, $get_id) or die;
+        $id_row = mysqli_fetch_object($get_art_id);
+        if ($id_row == false) {
+            die("<script>alert('Article does not exist'); location.href='/articles.php';</script>");
+        }
+        $id = $id_row->a_id;
+        $user_id = $id_row->user_id;
+
+        $get_user= "SELECT user_name FROM users WHERE user_id='$user_id' limit 1";
+        $get_user_name= mysqli_query($db, $get_user) or die;
+        $user_row = mysqli_fetch_object($get_user_name);
+        $user_name = $user_row->user_name;
+
+        ////////////////////////////////////////////////////////
+        $query = "SELECT * FROM articles WHERE a_id='$id'";
+        $result = mysqli_query($db, $query) or die;
+
+        while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+        $a_title = $row['a_title'];
+        $a_game = $row['a_game'];
+        $q_time = $row['a_time'];
+        $a_article = $row['a_text'];
+        ?>
         <div class="page-header">
-            <?php if ($_SESSION['username'] == true) { ?>
-                <h1>Welcome <?php echo $_SESSION['username'] ?> ...</h1>
-            <?php } else { ?>
-                <h1>VVelcome to SGamers</h1> <?php } ?>
-            <?php if ($_SESSION['username'] == true) { ?>
-                <a class="btn btn-default btn-lg hidden-xs" style="float: right; margin-top: -48px; font-family: 'Press Start 2P', cursive;" href="addarticle.php"  type="submit"><span class="glyphicon glyphicon-plus"></span> Add</a>
-                <a class="btn btn-default btn-sm visible-xs-block" style="float: right; margin-top: -80px; font-family: 'Press Start 2P', cursive;" href="addarticle.php" type="submit"><span class="glyphicon glyphicon-plus"></span> Add</a>
-            <?php } else {
-            }?>
+            <h2><?= $a_title ?></h2>
         </div>
         <div>
             <div class="textglow2">
@@ -121,39 +145,8 @@ if($_GET['art'] == NULL){
             </div>
         </div>
         <div>
-            <?php
 
-            require('PHP/config.php');
-            ini_set('display_errors', 1);
-            ini_set('display_startup_errors', 1);
-            error_reporting(E_ALL);
-
-            $art_id = $_GET['art'];
-            $get_id= "SELECT a_id, user_id FROM articles WHERE a_id='$art_id' limit 1";
-            $get_art_id= mysqli_query($db, $get_id) or die;
-            $id_row = mysqli_fetch_object($get_art_id);
-            if ($id_row == false) {
-                 die("<script>alert('Article does not exist'); location.href='/articles.php';</script>");
-            }
-            $id = $id_row->a_id;
-            $user_id = $id_row->user_id;
-
-            $get_user= "SELECT user_name FROM users WHERE user_id='$user_id' limit 1";
-            $get_user_name= mysqli_query($db, $get_user) or die;
-            $user_row = mysqli_fetch_object($get_user_name);
-            $user_name = $user_row->user_name;
-
-            ////////////////////////////////////////////////////////
-            $query = "SELECT * FROM articles WHERE a_id='$id'";
-            $result = mysqli_query($db, $query) or die;
-
-            while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-                $a_title = $row['a_title'];
-                $a_game = $row['a_game'];
-                $q_time = $row['a_time'];
-                $a_article = $row['a_text'];
-                ?>
-            <a href="profiles.php?user=<?=$user_name?>">By: <?=$user_name?></a>
+            <a href="profiles.php?user=<?=$user_name?>"><?=$user_name?></a>
             <?php }?>
         </div>
     </div>
