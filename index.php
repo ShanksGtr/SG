@@ -166,13 +166,13 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 </div>
                 <div>
                     <div class="row">
-                        <div class="col col-md-4">
+                        <div class="col col-md-4 indexo">
                             <h3><span class="ion-quote"></span> Latest 3 Quotes:</h3>
                         </div>
-                        <div class="col col-md-4">
-                            <h3><span class="glyphicon glyphicon-penci"></span> Latest 3 Articles:</h3>
+                        <div class="col col-md-4 indexo">
+                            <h3><span class="ion-wand"></span> Latest 3 Articles:</h3>
                         </div>
-                        <div class="col col-md-4">
+                        <div class="col col-md-4 indexo">
                             <h3><span class="glyphicon glyphicon-user"></span> New users:</h3>
                         </div>
                     </div>

@@ -430,3 +430,12 @@ border-radius: 20px;
     border-bottom: none;
     padding-bottom: 0;
 }
+
+.indexo {
+    text-align: left;
+    border-right: 1px solid silver;
+}
+
+.indexo:last-child {
+    border-right: none;
+}
