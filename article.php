@@ -166,7 +166,7 @@ if($_GET['art'] == NULL){
 
             ?>
         <div class="comment">
-            <h2>Comments: (<?=$num_rows;?>)</h2>
+            <h2><span class="glyphicon glyphicon-comment"></span> Comments: (<?=$num_rows;?>)</h2>
             <?php
                 if($num_rows == 0) {
                     echo "<h3>" . "Be the first to comment :D" . "</h3>";
