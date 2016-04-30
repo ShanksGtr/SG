@@ -168,6 +168,7 @@ if($_GET['art'] == NULL){
         <div class="comment">
             <h2>Comments: (<?=$num_rows;?>)</h2>
         </div>
+        <div class="row">
         <?php
             while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 
@@ -184,7 +185,6 @@ if($_GET['art'] == NULL){
                 $avatar = $avatar_row->avatar;
 
         ?>
-        <div class="row textglow">
         <div class="col col-md-3">
             <a href="profiles.php?user=<?=$user_name?>"><img alt="user avatar" src="Pictures/<?=$avatar?>" width="100" height="100"></a>
         </div>
