@@ -169,7 +169,7 @@ if($_GET['art'] == NULL){
             <h2>Comments: (<?=$num_rows;?>)</h2>
             <?php
                 if($num_rows == 0) {
-                    echo "Be the first to comment :D";
+                    echo "<h2>" . "Be the first to comment :D" . "</h2>";
                 } else {
 
                 }
