@@ -152,7 +152,7 @@ if($_GET['art'] == NULL){
                 <button class="btn btn-default btn-lg" type="submit" value="submit" name="submit">Comment</button>
             </form>
             <?php } else { ?>
-                <h3 style="color: red">Please login to add your comment :D</h3>
+                <h3> --> Please login to add your comment :D</h3>
             <?php } ?>
         </div>
         <div class="comment">
