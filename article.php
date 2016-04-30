@@ -2,7 +2,9 @@
 session_start();
 if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 }
-
+if($_GET['art'] == NULL){
+    echo "<script>location.href='/index.php';</script>";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -119,7 +121,28 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             </div>
         </div>
         <div>
+            <?php
 
+            require('PHP/config.php');
+            ini_set('display_errors', 1);
+            ini_set('display_startup_errors', 1);
+            error_reporting(E_ALL);
+            $art_id = $_GET['art'];
+
+            $query = "SELECT * FROM articles WHERE a_id='$art_id'";
+
+            $result = mysqli_query($db, $query) or die;
+            if ($result == false) {
+                echo "<script>alert('Article does not exist'); location.href='/index.php';</script>";
+            }
+            while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+                $a_title = $row['a_title'];
+                $a_game = $row['a_game'];
+                $q_time = $row['a_time'];
+                $a_article = $row['a_text'];
+                $user_id = $row['user_id'];
+                    echo $a_title; }
+                ?>
         </div>
     </div>
 </div>
