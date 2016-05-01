@@ -127,19 +127,45 @@ $username = $_SESSION['username'];
                     </div>
                 </div>
             </form>
-            <?php
-                if(isset($_POST['user'])) {
-                    echo "User here";
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <tr>
+                        <th>User ID:</th>
+                        <th>User Name:</th>
+                        <th>Email:</th>
+                        <th>Registered Date:</th>
+                        <th>Role:</th>
+                    </tr>
+                    <?php
+                    if(isset($_POST['user'])) {
+                    $query = "SELECT * FROM users";
+                    $result = mysqli_query($db, $query) or die;
+                    while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+                        $user_id = $row['user_id'];
+                        $username = $row['user_name'];
+                        $email = $row['email'];
+                        $reg_date = $row['reg_date'];
+                        $role = $row['role'];
+
+                    ?>
+                    <tr>
+                        <td><?=$user_id?></td>
+                        <td><?=$username?></td>
+                        <td><?=$email?></td>
+                        <td><?=$reg_date?></td>
+                        <td><?=$role?></td>
+                    </tr>
+                    <?php } } ?>
+                </table>
+                <!-- if(isset($_POST['articles'])) {
+                    echo "art here";
                 }
 
-            if(isset($_POST['articles'])) {
-                echo "art here";
-            }
-
-            if(isset($_POST['quotes'])) {
-                echo "q here";
-            }
-            ?>
+                if(isset($_POST['quotes'])) {
+                    echo "q here";
+                }
+            ?> -->
+            </div>
         </div>
     </div>
 </div>
