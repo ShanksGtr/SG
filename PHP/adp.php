@@ -159,9 +159,9 @@ $username = $_SESSION['username'];
                         <td><form action="conf.php" method="post">
                             <button type="submit" class="btn btn-primary" value="<?=$user_id?>" name="user" onclick="return confirm('Are you sure you want to delete?');">Delete</button><br>
                                 <select class="form-control" name="select">
-                                    <option>Admin</option>
-                                    <option>Super</option>
-                                    <option>User</option>
+                                    <option>admin</option>
+                                    <option>super</option>
+                                    <option>user</option>
                                 </select>
                             <button type="submit" class="btn btn-primary" value="<?=$user_id?>" name="update" onclick="return confirm('Are you sure you want to update?');">Update</button>
                         </form></td>

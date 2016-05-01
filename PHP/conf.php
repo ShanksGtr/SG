@@ -39,7 +39,7 @@ if(isset($_POST['user'])){
     }
 
 } elseif($_POST['update']) {
-    $user_id = $_POST['user'];
+    $user_id = $_POST['update'];
     $role = $_POST['select'];
     echo $user_id . " " . $role;
 } else {
