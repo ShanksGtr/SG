@@ -136,8 +136,8 @@ $username = $_SESSION['username'];
                             <th><b>User Name:</b></th>
                             <th><b>Email:</b></th>
                             <th><b>Registered Date:</b></th>
-                            <th><b>Role:</b></th>
-                            <th><b>Action:</b></th>
+                            <th><b><u>Role:</u></b></th>
+                            <th><b><u>Action:</u></b></th>
                         </tr> <?php
                     $query = "SELECT * FROM users";
                     $result = mysqli_query($db, $query) or die;
