@@ -167,7 +167,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 <div>
                     <div class="row">
                         <div class="col col-md-4 indexo">
-                            <h3><span class="ion-quote"></span> Latest Quote:</h3>
+                            <h2><span class="ion-quote"></span> Latest Quote:</h2>
                             <?php
                             require('PHP/config.php');
                             $query = "SELECT * FROM quotes ORDER BY q_id DESC limit 1";
@@ -184,7 +184,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             <?php }?>
                         </div>
                         <div class="col col-md-4 indexo">
-                            <h3><span class="ion-wand"></span> Latest 3 Articles:</h3><br>
+                            <h2><span class="ion-wand"></span> Latest 3 Articles:</h2><br>
                             <?php
                                 $query = "SELECT * FROM articles ORDER BY a_id DESC limit 3";
                                 $result = mysqli_query($db, $query) or die;
@@ -196,11 +196,11 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                     $a_article = $row['a_text'];
                                     $user_id = $row['user_id'];
                             ?>
-                                <h4><a href="article.php?art=<?=$art_id?>"><?=$a_title?></a></h4>
+                                <h3><a href="article.php?art=<?=$art_id?>"><?=$a_title?></a></h3>
                                     <?php }?>
                         </div>
                         <div class="col col-md-4 indexo">
-                            <h3><span class="ion-person-stalker"></span> New users:</h3>
+                            <h2><span class="ion-person-stalker"></span> New users:</h2>
                         </div>
                     </div>
                 </div>
