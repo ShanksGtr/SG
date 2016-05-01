@@ -92,7 +92,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
     <div class="container-fluid"></div>
 </nav>
 <div class="container">
-    <div class="jumbotron">
+    <div class="jumbotron" style="margin-top: 40px">
         <div class="page-header">
             <h1>Chatting: </h1>
         </div>
