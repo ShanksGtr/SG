@@ -104,7 +104,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             <?php } else { ?>
                 <h1>VVelcome to SGamers</h1> <?php } ?>
         </div>
-        <h2>Unfortunately, Themes are on maintenance at this moment. Sorry for any inconvenience</h2>
+        <h2>Unfortunately, Themes are on maintenance at this moment.</h2>
+        <h2>Sorry for any inconvenience</h2>
 
         <!--<div class="container">
               <div class="col-md-3">
