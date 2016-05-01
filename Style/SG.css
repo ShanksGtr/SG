@@ -433,7 +433,7 @@ border-radius: 20px;
 
 .indexo {
     text-align: left;
-    border-right: 1px solid silver;
+    border-right: 1px dashed silver;
 }
 
 .indexo:last-child {
