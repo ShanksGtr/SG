@@ -128,7 +128,7 @@ $username = $_SESSION['username'];
                 </div>
             </form>
             <div class="table-responsive">
-                <table class="table table-hover">
+                <table class="table table-condensed">
                     <?php
                     if(isset($_POST['user'])) {
                         ?> <tr>
