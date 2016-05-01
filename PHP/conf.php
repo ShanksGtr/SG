@@ -41,8 +41,15 @@ if(isset($_POST['user'])){
 } elseif($_POST['update']) {
     $user_id = $_POST['update'];
     $role = $_POST['select'];
-    echo $user_id . " " . $role;
+    $update = "UPDATE users SET role='$role' WHERE user_id='$user_id'";
+    $run = $db->query($update);
+    if ($run) {
+        echo "<script>alert('User Updated'); location.href='adp.php';</script>";
+    } else {
+        echo "<script>alert('Something went wrong'); location.href='adp.php';</script>";
+    }
+
 } else {
-    header('Location:/index.php');
+        header('Location:/index.php');
     }
 
