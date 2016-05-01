@@ -118,7 +118,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 <div class="col col-md-3" >
                     <div>
                         <div>
-                            <img class="img-circle" style="height: 200px; width: 240px; margin-left: -10px" src="<?php if($row['avatar'] == NULL){ echo "Pictures/empty-user.jpg"; }else{ echo "Pictures/".$avatar;} ?>">
+                            <img class="img-circle" style="height: 200px; width: 240px; margin-left: -10px" src="<?php if($row['avatar'] == NULL){ echo "Pictures/empty-user.jpg"; }else{ echo "Pictures/".$row['avatar'];} ?>">
                         </div>
                         <div style="border-right: 1px groove silver; padding-right: 11px;">
                                 <h3><span class="glyphicon glyphicon-road"></span> Age:</h3>
