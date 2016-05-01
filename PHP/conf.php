@@ -42,3 +42,9 @@ if(isset($_POST['user'])){
     header('Location:/index.php');
 }
 
+    if(isset($_POST['update'])){
+        $user_id = $_POST['user'];
+        $role = $_POST['select'];
+        echo $user_id . " " . $role;
+    }
+

@@ -129,6 +129,7 @@ $username = $_SESSION['username'];
             </form><br>
             <div class="table-responsive">
                 <table class="table table-condensed">
+                    <!-- How to confirm before proceed with the delete: http://stackoverflow.com/questions/20899490/javascript-confirm-box-inside-php-echo-function -->
                     <?php
                     if(isset($_POST['user'])) {
                         ?> <tr>
@@ -157,6 +158,12 @@ $username = $_SESSION['username'];
                         <td><?=$role?></td>
                         <td><form action="conf.php" method="post">
                             <button type="submit" class="btn btn-primary" value="<?=$user_id?>" name="user" onclick="return confirm('Are you sure you want to delete?');">Delete</button>
+                                <select class="form-control" name="select">
+                                    <option>Admin</option>
+                                    <option>Super</option>
+                                    <option>User</option>
+                                </select>
+                            <button type="submit" class="btn btn-primary" value="<?=$user_id?>" name="update" onclick="return confirm('Are you sure you want to update?');">Update</button>
                         </form></td>
                     </tr>
                     <?php } } ?>
