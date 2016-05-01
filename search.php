@@ -129,10 +129,11 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 } elseif ($select == 'Articles'){
                     $query = "SELECT a_title, a_id FROM articles WHERE a_title LIKE'%$search%'";
                     $result = mysqli_query($db, $query) or die;
-                    while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-                        echo $row['a_title'] . " " . $row['a_id'];
-
-                    }
+                    while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){ ?>
+                        <div>
+                            <h3><a style="color: silver;" href="article.php?art=<?=$row['a_id']?>"><?=$row['a_title']?></a></h3>
+                        </div>
+                   <?php  }
                 } elseif ($select == 'Quotes'){
                     $query = "SELECT * FROM quotes WHERE q_quote LIKE '%$search%'";
                     $result = mysqli_query($db, $query) or die;
