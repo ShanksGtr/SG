@@ -204,7 +204,7 @@ $username = $_SESSION['username'];
                                 <th>Quote:</th>
                                 <th>User ID:</th>
                             </tr> <?php
-                            $query = "SELECT * FROM articles";
+                            $query = "SELECT * FROM quotes";
                             $result = mysqli_query($db, $query) or die;
                             while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
                                 $q_id = $row['q_id'];
