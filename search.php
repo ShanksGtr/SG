@@ -120,13 +120,13 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         echo $row['user_name'];
                     }
                 } elseif ($select == 'Articles'){
-                    $query = "SELECT a_title, a_id FROM articles WHERE a_title LIKE'$search'";
+                    $query = "SELECT a_title, a_id FROM articles WHERE a_title LIKE'%$search%'";
                     $result = mysqli_query($db, $query) or die;
                     while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
                         echo $row['a_title'] . " " . $row['a_id'];
                     }
                 } elseif ($select == 'Quotes'){
-                    $query = "SELECT * FROM quotes WHERE q_quote LIKE '$search'";
+                    $query = "SELECT * FROM quotes WHERE q_quote LIKE '%$search%'";
                     $result = mysqli_query($db, $query) or die;
                     while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
                         echo $row['q_quote'];
