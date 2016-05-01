@@ -116,7 +116,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 $select = $_POST['select'];
 
                 if($select == 'Users'){
-                    $query = "SELECT user_name FROM users WHERE user_name LIKE '%$search%'";
+                    $query = "SELECT user_name FROM users WHERE user_name LIKE '%$search%' ORDER BY user_name";
                     $result = mysqli_query($db, $query) or die;
                     while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){ ?>
                         <div>
