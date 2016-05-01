@@ -68,7 +68,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             </ul>
             <ul class="nav navbar-nav navbar-right">
                     <li class="active dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-log-in" style="margin-right: 7px; font-size: 20px;"></span>SignIn/Up</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-log-in" style="margin-right: 7px; font-size: 20px;"></span>SignIn/Up<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li class="active"><a href="login.php"><span class="glyphicon glyphicon-log-in" style="font-size:20px; margin-right: 3px"></span>SignIn</a></li>
                             <li role="separator" class="divider"></li>
