@@ -118,8 +118,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 <div class="col col-md-3" >
                     <div>
                         <div>
-                            <h3>Avatar Upload:(not working yet)</h3>
-                                <input id="fileup" name="avatar" type="file" style="margin-bottom: 120px; font-size: 17px;  ">
+                            <img class="img-circle" style="height: 200px; width: 240px; margin-left: -10px" src="<?php if($avatar == NULL){ echo "Pictures/empty-user.jpg"; }else{ echo "Pictures/".$avatar;} ?>">
                         </div>
                         <div style="border-right: 1px groove silver; padding-right: 11px;">
                                 <h3><span class="glyphicon glyphicon-road"></span> Age:</h3>
