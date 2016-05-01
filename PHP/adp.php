@@ -132,10 +132,10 @@ $username = $_SESSION['username'];
                     <?php
                     if(isset($_POST['user'])) {
                         ?> <tr>
-                            <th><b>User ID:</b></th>
-                            <th><b>User Name:</b></th>
-                            <th><b>Email:</b></th>
-                            <th><b>Registered Date:</b></th>
+                            <th><b><u>User ID:</u></b></th>
+                            <th><b><u>User Name:</u></b></th>
+                            <th><b><u>Email:</u></b></th>
+                            <th><b><u>Registered Date:</u></b></th>
                             <th><b><u>Role:</u></b></th>
                             <th><b><u>Action:</u></b></th>
                         </tr> <?php
@@ -164,13 +164,13 @@ $username = $_SESSION['username'];
                     <?php
                     if(isset($_POST['articles'])) {
                         ?> <tr>
-                            <th>Article ID:</th>
-                            <th>Article Title:</th>
-                            <th>Article Game:</th>
-                            <th>Article Date:</th>
-                            <th>Article:</th>
-                            <th>User ID:</th>
-                            <th>Action:</th>
+                            <th><b><u>Article ID:</u></b></th>
+                            <th><b><u>Article Title:</u></b></th>
+                            <th><b><u>Article Game:</u></b></th>
+                            <th><b><u>Article Date:</u></b></th>
+                            <th><b><u>Article:</u></b></th>
+                            <th><b><u>User ID:</u></b></th>
+                            <th><b><u>Action:</u></b></th>
                         </tr> <?php
                         $query = "SELECT * FROM articles";
                         $result = mysqli_query($db, $query) or die;
@@ -199,12 +199,12 @@ $username = $_SESSION['username'];
                         <?php
                         if(isset($_POST['quotes'])) {
                             ?> <tr>
-                                <th>Quote ID:</th>
-                                <th>Character Name:</th>
-                                <th>Quote Game:</th>
-                                <th>Quote:</th>
-                                <th>User ID:</th>
-                                <th>Action:</th>
+                                <th><b><u>Quote ID:</u></b></th>
+                                <th><b><u>Character Name:</u></b></th>
+                                <th><b><u>Quote Game:</u></b></th>
+                                <th><b><u>Quote:</u></b></th>
+                                <th><b><u>User ID:</u></b></th>
+                                <th><b><u>Action:</u></b></th>
                             </tr> <?php
                             $query = "SELECT * FROM quotes";
                             $result = mysqli_query($db, $query) or die;
