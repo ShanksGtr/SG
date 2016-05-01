@@ -20,7 +20,7 @@ if(isset($_POST['user'])){
 
 } elseif ($_POST['art']) {
     $art_id = $_POST['art'];
-    $del = "DELETE FROM articles WHERE user_id='$art_id'";
+    $del = "DELETE FROM articles WHERE a_id='$art_id'";
     $run = $db->query($del);
     if ($run){
         echo "<script>alert('Article Deleted'); location.href='adp.php';</script>";
@@ -30,7 +30,7 @@ if(isset($_POST['user'])){
 
 } elseif ($_POST['quote']) {
     $q_id = $_POST['quote'];
-    $del = "DELETE FROM quotes WHERE user_id='$q_id'";
+    $del = "DELETE FROM quotes WHERE q_id='$q_id'";
     $run = $db->query($del);
     if ($run){
         echo "<script>alert('Quote Deleted'); location.href='adp.php';</script>";
