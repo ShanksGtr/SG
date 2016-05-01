@@ -156,7 +156,7 @@ $username = $_SESSION['username'];
                         <td><?=$reg_date?></td>
                         <td><?=$role?></td>
                         <td><form action="conf.php" method="post">
-                            <button type="submit" class="btn btn-primary" value="<?=$user_id?>" name="user">Delete</button>
+                            <button type="submit" class="btn btn-primary" value="<?=$user_id?>" name="user" onclick="return confirm('Are you sure you want to delete <?=$username?>?');">Delete</button>
                         </form></td>
                     </tr>
                     <?php } } ?>
