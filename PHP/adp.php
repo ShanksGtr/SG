@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
-     die("<script>alert('Please Login'); location.href='login.php';</script>");
+     die("<script>alert('Please Login'); location.href='/login.php';</script>");
 }
 
 require('config.php');
@@ -11,7 +11,13 @@ $username = $_SESSION['username'];
     $row = mysqli_fetch_object($result);
     $role = $row->role;
 
-    echo "<script>alert('$role');</script>)";
+    if($role == 'user'){
+        die("<script>location.href='/index.php';</script>");
+    } elseif ($role == 'admin'){
+
+    } else {
+        die("<script>location.href='/index.php';</script>");
+    }
 
 
 
