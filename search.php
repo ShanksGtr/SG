@@ -94,7 +94,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 <div class="container">
     <div class="jumbotron" style="margin-top: 40px">
         <div class="page-header">
-            <h1>About: </h1>
+            <h1>Search: </h1>
         </div>
         <div>
 
