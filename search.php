@@ -106,7 +106,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 </select><br>
                 <button class="btn btn-primary btn-lg" type="submit" value="submit" name="submit">Search</button>
             </form>
-        </div>
+        </div><br>
+        <div>
         <?php
         require('PHP/config.php');
             if(isset($_POST['submit'])){
@@ -116,14 +117,18 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 if($select == 'Users'){
                     $query = "SELECT user_name FROM users WHERE user_name LIKE '%$search%'";
                     $result = mysqli_query($db, $query) or die;
-                    while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-                        echo $row['user_name'];
-                    }
+                    while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){ ?>
+                        <div>
+                            <h2>Results:</h2>
+                            <h3><a href="profiles.php?user=<?=$row['user_name']?>"><?=$row['user_name']?></a></h3>
+                        </div>
+                   <?php  }
                 } elseif ($select == 'Articles'){
                     $query = "SELECT a_title, a_id FROM articles WHERE a_title LIKE'%$search%'";
                     $result = mysqli_query($db, $query) or die;
                     while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
                         echo $row['a_title'] . " " . $row['a_id'];
+
                     }
                 } elseif ($select == 'Quotes'){
                     $query = "SELECT * FROM quotes WHERE q_quote LIKE '%$search%'";
@@ -135,6 +140,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             }
 
         ?>
+        </div>
     </div>
 </div>
 <div class="footer">
