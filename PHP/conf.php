@@ -26,6 +26,6 @@ if(isset($_POST['user'])){
 }
 ?>
         } else {
-                location.href='adp.php';
+                document.write("no");
             }
 </script>
