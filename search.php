@@ -148,9 +148,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                    <?php } $result->close();
                 }
             }
-
         $db->close();
-
         ?>
         </div>
     </div>
