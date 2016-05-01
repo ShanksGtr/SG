@@ -125,7 +125,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         <div>
                             <h3><a style="color: silver;" href="profiles.php?user=<?=$row['user_name']?>"><?=$row['user_name']?></a></h3>
                         </div>
-                   <?php  }
+                   <?php  } $result->close();
                 } elseif ($select == 'Articles'){
                     $query = "SELECT a_title, a_id FROM articles WHERE a_title LIKE'%$search%'";
                     $result = mysqli_query($db, $query) or die;
