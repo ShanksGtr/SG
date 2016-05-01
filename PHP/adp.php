@@ -129,15 +129,15 @@ $username = $_SESSION['username'];
             </form>
             <div class="table-responsive">
                 <table class="table table-hover">
-                    <tr>
-                        <th>User ID:</th>
-                        <th>User Name:</th>
-                        <th>Email:</th>
-                        <th>Registered Date:</th>
-                        <th>Role:</th>
-                    </tr>
                     <?php
                     if(isset($_POST['user'])) {
+                        ?> <tr>
+                            <th>User ID:</th>
+                            <th>User Name:</th>
+                            <th>Email:</th>
+                            <th>Registered Date:</th>
+                            <th>Role:</th>
+                        </tr> <?php
                     $query = "SELECT * FROM users";
                     $result = mysqli_query($db, $query) or die;
                     while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
