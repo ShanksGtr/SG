@@ -126,7 +126,7 @@ $username = $_SESSION['username'];
                         <button type="submit" class="btn btn-default" name="quotes">Quotes</button>
                     </div>
                 </div>
-            </form><br>
+            </form>
             <div class="table-responsive">
                 <table class="table table-condensed">
                     <!-- How to confirm before proceed with the delete: http://stackoverflow.com/questions/20899490/javascript-confirm-box-inside-php-echo-function -->
