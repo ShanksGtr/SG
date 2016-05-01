@@ -38,13 +38,11 @@ if(isset($_POST['user'])){
         echo "<script>alert('Something went wrong'); location.href='adp.php';</script>";
     }
 
+} elseif($_POST['update']) {
+    $user_id = $_POST['user'];
+    $role = $_POST['select'];
+    echo $user_id . " " . $role;
 } else {
     header('Location:/index.php');
-}
-
-    if(isset($_POST['update'])){
-        $user_id = $_POST['user'];
-        $role = $_POST['select'];
-        echo $user_id . " " . $role;
     }
 
