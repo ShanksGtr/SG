@@ -221,7 +221,7 @@ $username = $_SESSION['username'];
                                     <td><?=$quote?></td>
                                     <td><?=$user_id?></td>
                                     <td><form action="conf.php" method="post">
-                                            <button type="submit" class="btn btn-primary" value="<?=$q_id?>" name="art">Delete</button>
+                                            <button type="submit" class="btn btn-primary" value="<?=$q_id?>" name="quote">Delete</button>
                                         </form></td>
                                 </tr>
                             <?php } } ?>
