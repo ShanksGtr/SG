@@ -113,10 +113,13 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         require('PHP/config.php');
             if(isset($_POST['submit'])){
                 $search = $_POST['search'];
+                $search = mysqli_real_escape_string($db, $search);
+                $search = htmlspecialchars($search);
+
                 $select = $_POST['select'];
 
                 if($select == 'Users'){
-                    $query = "SELECT user_name FROM users WHERE user_name LIKE '%$search%' ORDER BY user_name";
+                    $query = "SELECT user_name FROM users WHERE user_name LIKE '%$search%' ORDER BY user_name ASC";
                     $result = mysqli_query($db, $query) or die;
                     while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){ ?>
                         <div>
