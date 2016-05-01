@@ -143,8 +143,9 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                     <img class="img-circle" style="height: 200px; width: 240px; margin-left: -10px" src="<?php if($avatar == NULL){ echo "Pictures/empty-user.jpg"; }else{ echo "Pictures/".$avatar;} ?>">
                                     <form id="uploadfile" action="Pictures/avataring.php" method="post" enctype="multipart/form-data">
                                         <!-- http://stackoverflow.com/questions/198346/whats-the-best-way-to-create-a-single-file-upload-form-using-php -->
-                                        <span class="btn btn-default btn-file"> Browse <input type="file" name="fileToUpload" id="fileToUpload" accept="image/*"></span>
-                                        <button class="btn btn-default btn-lg" type="submit" value="submit" name="submit">Upload</button>
+                                        <!-- http://www.abeautifulsite.net/whipping-file-inputs-into-shape-with-bootstrap-3/ -->
+                                        <span class="ion-ios-camera-outline btn-file"><input type="file" name="fileToUpload" id="fileToUpload" accept="image/*"></span>
+                                        <button class="btn btn-default" type="submit" value="submit" name="submit">Upload</button>
                                     </form>
                                 </div>
                                 <div style="border-right: 1px groove silver; margin-left: -5px;">
