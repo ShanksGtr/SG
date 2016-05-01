@@ -113,6 +113,23 @@ $username = $_SESSION['username'];
         <div class="page-header">
             <h1>Admin Panel: </h1>
         </div>
+        <div>
+            <form action="adp.php?conf="
+            <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default" name="user">Users</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default" name="articles">Articles</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default" name="quotes">Quotes</button>
+                </div>
+            </div>
+            <?php
+                echo $_GET['conf'];
+            ?>
+        </div>
     </div>
 </div>
 <div class="footer">
