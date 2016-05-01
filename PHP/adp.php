@@ -132,6 +132,10 @@ $username = $_SESSION['username'];
                     <!-- How to confirm before proceed with the delete: http://stackoverflow.com/questions/20899490/javascript-confirm-box-inside-php-echo-function -->
                     <?php
                     if(isset($_POST['user'])) {
+                        $query = "SELECT * FROM users";
+                        $result = mysqli_query($db, $query) or die;
+                        $num_rows = mysqli_num_rows($result);
+                        echo "<h2>" . "Results (.$num_rows.)" . "</h2>";
                         ?> <tr>
                             <th><b><u>User ID:</u></b></th>
                             <th><b><u>User Name:</u></b></th>
@@ -140,8 +144,8 @@ $username = $_SESSION['username'];
                             <th><b><u>Role:</u></b></th>
                             <th><b><u>Action:</u></b></th>
                         </tr> <?php
-                    $query = "SELECT * FROM users";
-                    $result = mysqli_query($db, $query) or die;
+
+
                     while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
                         $user_id = $row['user_id'];
                         $username = $row['user_name'];
