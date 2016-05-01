@@ -191,7 +191,7 @@ $username = $_SESSION['username'];
                                 <td><?=$art?></td>
                                 <td><?=$user_id?></td>
                                 <td><form action="conf.php" method="post">
-                                        <button type="submit" class="btn btn-primary" value="<?=$art_id?>" name="art">Delete</button>
+                                        <button type="submit" class="btn btn-primary" value="<?=$art_id?>" name="art" onclick="return confirm('Are you sure you want to delete?');">Delete</button>
                                     </form></td>
                             </tr>
                         <?php } } ?>
@@ -223,7 +223,7 @@ $username = $_SESSION['username'];
                                     <td><?=$quote?></td>
                                     <td><?=$user_id?></td>
                                     <td><form action="conf.php" method="post">
-                                            <button type="submit" class="btn btn-primary" value="<?=$q_id?>" name="quote">Delete</button>
+                                            <button type="submit" class="btn btn-primary" value="<?=$q_id?>" name="quote" onclick="return confirm('Are you sure you want to delete?');">Delete</button>
                                         </form></td>
                                 </tr>
                             <?php } } ?>
