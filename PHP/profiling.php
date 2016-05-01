@@ -11,21 +11,45 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 
     if (isset($_POST['submit'])) {
         $status = $_POST['status'];
+        $status = mysqli_real_escape_string($db, $status);
+        $status = htmlspecialchars($status);
+
         $about_me = $_POST['about_me'];
+        $about_me = mysqli_real_escape_string($db, $about_me);
+        $about_me = htmlspecialchars($about_me);
+
         $age = $_POST['age'];
         //$avatar = $_FILES['avatar'];
         $gender = $_POST['gender'];
 
         $fav_games = $_POST['fav_games'];
+        $fav_games = mysqli_real_escape_string($db, $fav_games);
+        $fav_games = htmlspecialchars($fav_games);
+
         $skype = $_POST['skype'];
+        $skype = htmlspecialchars($skype);
+
         $msn = $_POST['msn'];
+        $msn = htmlspecialchars($msn);
+
         $instagram = $_POST['instagram'];
+        $instagram = htmlspecialchars($instagram);
+
         $youtube = $_POST['youtube'];
+        $youtube = htmlspecialchars($youtube);
 
         $steam = $_POST['steam'];
+        $steam = htmlspecialchars($steam);
+
         $twitch = $_POST['twitch'];
+        $twitch = htmlspecialchars($twitch);
+
         $psn = $_POST['psn'];
+        $psn = htmlspecialchars($psn);
+
         $xbox = $_POST['xbox'];
+        $xbox = htmlspecialchars($xbox);
+
         $user_id = $_SESSION['userid'];
         /*echo $status, $about_me, $birthday, $gender, $fav_games, $skype, $msn, $instagram, $youtube, $steam, $twitch, $psn, $xbox, $user_id;*/
 

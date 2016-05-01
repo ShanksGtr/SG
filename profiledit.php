@@ -116,9 +116,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             <form action="PHP/profiling.php" method="post" >
                 <?php
                 while($row = mysqli_fetch_array($result)) {
-                    $status = $row['status'];
-                    $status = mysqli_real_escape_string($db, $status);
-                    $status = htmlspecialchars($status);
+
                 ?>
                 <div class="col col-md-3" >
                     <div>
@@ -156,7 +154,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 <div class="col col-md-9" style="word-wrap: break-word">
                     <div>
                             <h2>Status:</h2>
-                            <textarea class="form-control" rows="3" id="status" placeholder="Status" maxlength="255" name="status" ><?=$status?></textarea>
+                            <textarea class="form-control" rows="3" id="status" placeholder="Status" maxlength="255" name="status" ><?php $row['status']; ?></textarea>
                             <h2>About Me:</h2>
                             <textarea class="form-control" rows="10"  id="aboutme" placeholder="About You" maxlength="2000" name="about_me"><?php $row['about_me']; ?></textarea>
                             <h2>Favorite Games:</h2>
