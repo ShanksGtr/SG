@@ -155,7 +155,7 @@ $username = $_SESSION['username'];
                         <td><?=$email?></td>
                         <td><?=$reg_date?></td>
                         <td><?=$role?></td>
-                        <td><form action="delete.php" method="post">
+                        <td><form action="conf.php" method="post">
                             <button type="submit" class="btn btn-primary" value="<?=$user_id?>" name="user">Delete</button>
                         </form></td>
                     </tr>
