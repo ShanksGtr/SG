@@ -114,7 +114,7 @@ $username = $_SESSION['username'];
             <h1>Admin Panel: </h1>
         </div>
         <div>
-            <form action="adp.php?conf=" method="get">
+            <form action="adp.php" method="post">
                 <div class="btn-group btn-group-justified" role="group" aria-label="...">
                     <div class="btn-group" role="group">
                         <button type="button" class="btn btn-default" name="user">Users</button>
@@ -128,7 +128,9 @@ $username = $_SESSION['username'];
                 </div>
             </form>
             <?php
-                echo $_GET['conf'];
+                if(isset($_POST['user'])) {
+                    echo "User here";
+                }
             ?>
         </div>
     </div>
