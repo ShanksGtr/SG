@@ -108,6 +108,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             </form>
         </div><br>
         <div>
+            <h2>Results: </h2>
         <?php
         require('PHP/config.php');
             if(isset($_POST['submit'])){
@@ -119,7 +120,6 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     $result = mysqli_query($db, $query) or die;
                     while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){ ?>
                         <div>
-                            <h2>Results:</h2>
                             <h3><a href="profiles.php?user=<?=$row['user_name']?>"><?=$row['user_name']?></a></h3>
                         </div>
                    <?php  }
