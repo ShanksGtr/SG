@@ -135,7 +135,7 @@ $username = $_SESSION['username'];
                         $query = "SELECT * FROM users";
                         $result = mysqli_query($db, $query) or die;
                         $num_rows = mysqli_num_rows($result);
-                        echo "<h2>" . "Results (.$num_rows.)" . "</h2>";
+                        echo "<h2>" . "Results ($num_rows)" . "</h2>";
                         ?> <tr>
                             <th><b><u>User ID:</u></b></th>
                             <th><b><u>User Name:</u></b></th>
@@ -174,6 +174,10 @@ $username = $_SESSION['username'];
 
                     <?php
                     if(isset($_POST['articles'])) {
+                        $query = "SELECT * FROM articles";
+                        $result = mysqli_query($db, $query) or die;
+                        $num_rows = mysqli_num_rows($result);
+                        echo "<h2>" . "Results ($num_rows)" . "</h2>";
                         ?> <tr>
                             <th><b><u>Article ID:</u></b></th>
                             <th><b><u>Article Title:</u></b></th>
@@ -183,8 +187,7 @@ $username = $_SESSION['username'];
                             <th><b><u>User ID:</u></b></th>
                             <th><b><u>Action:</u></b></th>
                         </tr> <?php
-                        $query = "SELECT * FROM articles";
-                        $result = mysqli_query($db, $query) or die;
+
                         while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
                             $art_id = $row['a_id'];
                             $art_title = $row['a_title'];
@@ -209,6 +212,10 @@ $username = $_SESSION['username'];
 
                         <?php
                         if(isset($_POST['quotes'])) {
+                            $query = "SELECT * FROM quotes";
+                            $result = mysqli_query($db, $query) or die;
+                            $num_rows = mysqli_num_rows($result);
+                            echo "<h2>" . "Results ($num_rows)" . "</h2>";
                             ?> <tr>
                                 <th><b><u>Quote ID:</u></b></th>
                                 <th><b><u>Character Name:</u></b></th>
@@ -217,8 +224,7 @@ $username = $_SESSION['username'];
                                 <th><b><u>User ID:</u></b></th>
                                 <th><b><u>Action:</u></b></th>
                             </tr> <?php
-                            $query = "SELECT * FROM quotes";
-                            $result = mysqli_query($db, $query) or die;
+
                             while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
                                 $q_id = $row['q_id'];
                                 $q_name = $row['q_name'];
