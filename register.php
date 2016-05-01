@@ -125,6 +125,19 @@ if (isset($_POST['submit'])) {
                     <label for="inputUsername" class="col-sm-2 control-label">Username:</label>
                     <div class="col-sm-5">
                         <input type="text" pattern=".{4,30}" required="required" maxlength="30" name="username" class="form-control" id="inputUsername" placeholder="Username" oninvalid="setCustomValidity('Must be between 4 to 30 characters ')" onchange="try{setCustomValidity('')}catch(e){}" autofocus>
+                        <!-- http://www.devnetwork.net/viewtopic.php?f=13&t=121483 -->
+                        <script>
+                            document.getElementById('inputUsername').onkeydown = function (event) {
+                                var event = event || window.event;  // get event object
+                                var key = event.keyCode || event.which; // get key cross-browser
+
+                                if (key == 32) { //Space bar key code
+                                    //Prevent default action, which is inserting space
+                                    if (event.preventDefault) event.preventDefault(); //normal browsers
+                                    event.returnValue = false; //IE
+                                }
+                            };
+                        </script>
                     </div>
                 </div>
                 <div class="form-group">

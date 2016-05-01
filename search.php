@@ -97,7 +97,9 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             <h1>Search: </h1>
         </div>
         <div>
-
+            <form action="" method="post">
+                <input type="text">
+            </form>
         </div>
     </div>
 </div>
