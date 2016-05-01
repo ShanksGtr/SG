@@ -186,29 +186,30 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         <div class="col col-md-4 indexo">
                             <h2><span class="ion-wand"></span> Latest 3 Articles:</h2>
                             <?php
-                                $query = "SELECT * FROM articles ORDER BY a_id DESC limit 3";
-                                $result = mysqli_query($db, $query) or die;
-                                    while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-                                    $art_id= $row['a_id'];
-                                    $a_title = $row['a_title'];
-                                    $a_game = $row['a_game'];
-                                    $q_time = $row['a_time'];
-                                    $a_article = $row['a_text'];
-                                    $user_id = $row['user_id'];
-                            ?>
-                                <h3><a href="article.php?art=<?=$art_id?>"><?=$a_title?></a></h3>
-                                    <?php }?>
+                            $query= "SELECT * FROM users ORDER BY user_id DESC limit 5";
+                            $result = mysqli_query($db, $query) or die;
+                            while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+                                $username = $row['user_name'];
+                                ?>
+                                <h3><a href="profiles.php?user=<?=$username?>"><?=$username?></a></h3>
+                            <?php }?>
+
                         </div>
                         <div class="col col-md-4 indexo">
                             <h2><span class="ion-person-stalker"></span> New users:</h2>
                             <?php
-                                $query= "SELECT * FROM users ORDER BY user_id DESC limit 5";
-                                $result = mysqli_query($db, $query) or die;
-                                    while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-                                     $username = $row['user_name'];
-                            ?>
-                                <h3><a href="profiles.php?user=<?=$username?>"><?=$username?></a></h3>
-                                    <?php }?>
+                            $query = "SELECT * FROM articles ORDER BY a_id DESC limit 3";
+                            $result = mysqli_query($db, $query) or die;
+                            while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+                                $art_id= $row['a_id'];
+                                $a_title = $row['a_title'];
+                                $a_game = $row['a_game'];
+                                $q_time = $row['a_time'];
+                                $a_article = $row['a_text'];
+                                $user_id = $row['user_id'];
+                                ?>
+                                <h3><a href="article.php?art=<?=$art_id?>"><?=$a_title?></a></h3>
+                            <?php }?>
                         </div>
                     </div>
                 </div>
