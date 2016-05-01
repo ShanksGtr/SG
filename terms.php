@@ -59,8 +59,9 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Link</a></li>
+                <li><a href="chat.php"><span class="ion-chatbubble-working"></span>Chat</a></li>
+                <li><a href="articles.php">Articles<span class="sr-only">(current)</span></a></li>
+                <li><a href="quotes.php">Quotes</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UpcomingGames<span class="caret"></span></a>
                     <ul class="dropdown-menu">
