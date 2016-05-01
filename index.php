@@ -87,7 +87,6 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                      <li role="separator" class="divider"></li>
                                      <li><a href="PHP/logout.php"><span class="glyphicon glyphicon-log-out" style="font-size:20px; margin-right: 3px"></span>Logoff</a></li>
                                     <li role="separator" class="divider"></li>
-                                    <li><a href="PHP/adp.php">Admin Panel</a></li>
                                 </ul>
                             </li>
                             <?php } else { ?>
