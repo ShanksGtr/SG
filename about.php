@@ -102,6 +102,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             </div>
             <h2>1400003@rgu.ac.uk</h2>
         </div>
+        <div id="tlkio" data-channel="SgamersChat" data-theme="theme--night" style="width:100%;height:400px;"></div><script async src="http://tlk.io/embed.js" type="text/javascript"></script>
     </div>
     <div class="footer">
         <div class="container-fluid" style="height: 2px"></div>
