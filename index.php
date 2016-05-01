@@ -185,6 +185,19 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         </div>
                         <div class="col col-md-4 indexo">
                             <h3><span class="ion-wand"></span> Latest 3 Articles:</h3>
+                            <?php
+                                $query = "SELECT * FROM articles ORDER BY a_id DESC limit 3";
+                                $result = mysqli_query($db, $query) or die;
+                                    while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+                                    $art_id= $row['a_id'];
+                                    $a_title = $row['a_title'];
+                                    $a_game = $row['a_game'];
+                                    $q_time = $row['a_time'];
+                                    $a_article = $row['a_text'];
+                                    $user_id = $row['user_id'];
+                            ?>
+                                <h4><a href="article.php?art=<?=$art_id?>"><?=$a_title?></a></h4>
+                                    <?php }?>
                         </div>
                         <div class="col col-md-4 indexo">
                             <h3><span class="ion-person-stalker"></span> New users:</h3>
