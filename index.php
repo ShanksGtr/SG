@@ -187,7 +187,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             <h3><span class="ion-wand"></span> Latest 3 Articles:</h3>
                         </div>
                         <div class="col col-md-4 indexo">
-                            <h3><span class="glyphicon glyphicon-user"></span> New users:</h3>
+                            <h3><span class="ion-person-stalker"></span> New users:</h3>
                         </div>
                     </div>
                 </div>
