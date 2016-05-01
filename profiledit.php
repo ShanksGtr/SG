@@ -12,6 +12,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 
     $list_query = "SELECT * FROM profiles WHERE user_id='{$_SESSION['userid']}'";
     $result = mysqli_query($db, $list_query) or die;
+    $result = mysqli_real_escape_string($db, $result);
+    $result = htmlspecialchars($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -116,8 +118,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             <form action="PHP/profiling.php" method="post" >
                 <?php
                 while($row = mysqli_fetch_array($result)) {
-                    $row = mysqli_real_escape_string($db, $row);
-                    $row = htmlspecialchars($row);
+
                 ?>
                 <div class="col col-md-3" >
                     <div>
