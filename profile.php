@@ -140,7 +140,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             <div>
                                 <div>
 
-                                    <img class="img-circle" style="height: 200px; width: 240px; margin-left: -10px" src="<?php if($avatar == NULL){ echo "Pictures/empty-user.jpg"; }else{ echo "Pictures/".$avatar;} ?>"><br> Dimensions: 200x200 <br>- maxsize: 1mb - jpg, jpeg and png
+                                    <img class="img-circle" style="height: 200px; width: 240px; margin-left: -10px" src="<?php if($avatar == NULL){ echo "Pictures/empty-user.jpg"; }else{ echo "Pictures/".$avatar;} ?>"><br> Dimensions: 200x200 <br> maxsize: 1mb <br> Files: jpg, jpeg and png
                                     <form id="uploadfile" action="Pictures/avataring.php" method="post" enctype="multipart/form-data">
                                         <!-- http://stackoverflow.com/questions/198346/whats-the-best-way-to-create-a-single-file-upload-form-using-php -->
                                         <!-- http://www.abeautifulsite.net/whipping-file-inputs-into-shape-with-bootstrap-3/ -->
