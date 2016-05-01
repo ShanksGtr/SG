@@ -123,7 +123,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     $result = mysqli_query($db, $query) or die;
                     while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){ ?>
                         <div>
-                            <h3><a style="color: silver;" href="profiles.php?user=<?=$row['user_name']?>"><?=$row['user_name']?></a></h3>
+                            <h3><a style="color: silver;" href="profiles.php?user=<?=$row['user_name'];?>"><?=$row['user_name'];?></a></h3>
                         </div>
                    <?php  } $result->close();
                 } elseif ($select == 'Articles'){
@@ -131,17 +131,24 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     $result = mysqli_query($db, $query) or die;
                     while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){ ?>
                         <div>
-                            <h3><a style="color: silver;" href="article.php?art=<?=$row['a_id']?>"><?=$row['a_title']?></a></h3>
+                            <h3><a style="color: silver;" href="article.php?art=<?=$row['a_id'];?>"><?=$row['a_title'];?></a></h3>
                         </div>
-                   <?php  }
+                   <?php  } $result->close();
                 } elseif ($select == 'Quotes'){
                     $query = "SELECT * FROM quotes WHERE q_quote LIKE '%$search%'";
                     $result = mysqli_query($db, $query) or die;
-                    while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-                        echo $row['q_quote'];
-                    }
+                    while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){ ?>
+                    <div>
+                        <blockquote>
+                            <?php echo $row['q_quote'];?>
+                            <cite><?php echo $row['q_name'] . " From " . $row['q_game'];?></cite>
+                        </blockquote>
+                    </div>
+
+                   <?php } $result->close();
                 }
             }
+
         $db->close();
 
         ?>

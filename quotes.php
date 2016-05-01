@@ -202,10 +202,10 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             ?>
             <blockquote>
                 <?php echo $q_quote;?>
-                <cite><?php echo $q_name . " From " . $q_game?></cite>
+                <cite><?php echo $q_name . " From " . $q_game;?></cite>
             </blockquote>
             <?php } ?>
-            <div id="pagecontrol"><?php echo $paginationcontrol?></div>
+            <div id="pagecontrol"><?php echo $paginationcontrol;?></div>
         </div>
     </div>
 </div>
