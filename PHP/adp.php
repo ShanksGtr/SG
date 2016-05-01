@@ -28,7 +28,7 @@ $username = $_SESSION['username'];
     <!-- For Mobiles -->
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no">
     <meta charset="UTF-8">
-    <title>About</title>
+    <title>Admin Panel</title>
     <!-- Free icon from http://findicons.com/icon/115500/input_gaming -->
     <link rel="icon" type="image/png" href="/Pictures/input_gaming.ico" sizes="32x32"/>
     <!-- Bootstrap CSS,JQ&JS Libraries-->
