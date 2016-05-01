@@ -137,7 +137,7 @@ $username = $_SESSION['username'];
                             <th>Email:</th>
                             <th>Registered Date:</th>
                             <th>Role:</th>
-                            <th>Delete?</th>
+                            <th>Action:</th>
                         </tr> <?php
                     $query = "SELECT * FROM users";
                     $result = mysqli_query($db, $query) or die;
@@ -160,15 +160,72 @@ $username = $_SESSION['username'];
                         </form></td>
                     </tr>
                     <?php } } ?>
-                </table>
-                <!-- if(isset($_POST['articles'])) {
-                    echo "art here";
-                }
 
-                if(isset($_POST['quotes'])) {
-                    echo "q here";
-                }
-            ?> -->
+                    <?php
+                    if(isset($_POST['articles'])) {
+                        ?> <tr>
+                            <th>Article ID:</th>
+                            <th>Article Title:</th>
+                            <th>Article Game:</th>
+                            <th>Article Date:</th>
+                            <th>Article:</th>
+                            <th>User ID:</th>
+                        </tr> <?php
+                        $query = "SELECT * FROM articles";
+                        $result = mysqli_query($db, $query) or die;
+                        while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+                            $art_id = $row['a_id'];
+                            $art_title = $row['a_title'];
+                            $art_game = $row['a_game'];
+                            $art_date = $row['a_time'];
+                            $art = $row['a_text'];
+                            $user_id = $row['user_id'];
+
+                            ?>
+                            <tr>
+                                <td><?=$art_id?></td>
+                                <td><?=$art_title?></td>
+                                <td><?=$art_game?></td>
+                                <td><?=$art_date?></td>
+                                <td><?=$art?></td>
+                                <td><?=$user_id?></td>
+                                <td><form action="conf.php" method="post">
+                                        <button type="submit" class="btn btn-primary" value="<?=$art_id?>" name="art">Delete</button>
+                                    </form></td>
+                            </tr>
+                        <?php } } ?>
+
+                        <?php
+                        if(isset($_POST['quotes'])) {
+                            ?> <tr>
+                                <th>Quote ID:</th>
+                                <th>Character Name:</th>
+                                <th>Quote Game:</th>
+                                <th>Quote:</th>
+                                <th>User ID:</th>
+                            </tr> <?php
+                            $query = "SELECT * FROM articles";
+                            $result = mysqli_query($db, $query) or die;
+                            while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+                                $q_id = $row['q_id'];
+                                $q_name = $row['q_name'];
+                                $q_game = $row['q_game'];
+                                $quote = $row['q_quote'];
+                                $user_id = $row['user_id'];
+
+                                ?>
+                                <tr>
+                                    <td><?=$q_id?></td>
+                                    <td><?=$q_name?></td>
+                                    <td><?=$q_game?></td>
+                                    <td><?=$quote?></td>
+                                    <td><?=$user_id?></td>
+                                    <td><form action="conf.php" method="post">
+                                            <button type="submit" class="btn btn-primary" value="<?=$q_id?>" name="art">Delete</button>
+                                        </form></td>
+                                </tr>
+                            <?php } } ?>
+                </table>
             </div>
         </div>
     </div>
