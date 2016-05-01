@@ -103,8 +103,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                     <option>Users</option>
                     <option>Articles</option>
                     <option>Quotes</option>
-                </select>
-                <button class="btn btn-default btn-lg" type="submit" value="submit" name="submit">Search</button>
+                </select><br>
+                <button class="btn btn-primary btn-lg" type="submit" value="submit" name="submit">Search</button>
             </form>
         </div>
         <?php
