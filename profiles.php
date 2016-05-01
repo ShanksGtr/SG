@@ -15,7 +15,7 @@ if($_GET['user'] == NULL){
 
     </script>
     <!-- For Mobiles -->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no">
     <meta charset="UTF-8">
     <title><?=$_GET['user'];?> Profile</title>
     <!-- Free icon from http://findicons.com/icon/115500/input_gaming -->

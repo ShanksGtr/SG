@@ -13,7 +13,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 
             </script>
             <!-- For Mobiles -->
-            <!-- <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no"> -->
+            <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no">
             <meta charset="UTF-8">
             <title>My Profile</title>
             <!-- Free icon from http://findicons.com/icon/115500/input_gaming -->
