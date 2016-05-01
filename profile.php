@@ -144,7 +144,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                                     <form id="uploadfile" action="Pictures/avataring.php" method="post" enctype="multipart/form-data">
                                         <!-- http://stackoverflow.com/questions/198346/whats-the-best-way-to-create-a-single-file-upload-form-using-php -->
                                         <input type="file" name="fileToUpload" id="fileToUpload" accept="image/*">
-                                        <button class="btn btn-default" type="submit" value="submit" name="submit">Upload</button>
+                                        <button class="btn btn-default btn-lg" type="submit" value="submit" name="submit">Upload</button>
                                     </form>
                                 </div>
                                 <div style="border-right: 1px groove silver; margin-left: -5px;">
