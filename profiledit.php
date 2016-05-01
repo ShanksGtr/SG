@@ -12,8 +12,6 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 
     $list_query = "SELECT * FROM profiles WHERE user_id='{$_SESSION['userid']}'";
     $result = mysqli_query($db, $list_query) or die;
-    $result = mysqli_real_escape_string($db, $result);
-    $result = htmlspecialchars($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
