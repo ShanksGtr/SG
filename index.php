@@ -184,7 +184,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             <?php }?>
                         </div>
                         <div class="col col-md-4 indexo">
-                            <h3><span class="ion-wand"></span> Latest 3 Articles:</h3>
+                            <h3><span class="ion-wand"></span> Latest 3 Articles:</h3><br>
                             <?php
                                 $query = "SELECT * FROM articles ORDER BY a_id DESC limit 3";
                                 $result = mysqli_query($db, $query) or die;
