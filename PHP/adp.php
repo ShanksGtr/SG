@@ -7,7 +7,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 $username = $_SESSION['username'];
     $list_query = "SELECT role FROM users WHERE user_name='$username' limit 1";
     $result = mysqli_query($db, $list_query) or die;
-    echo $result;
+    echo "<script>alert('$result');</script>" ;
 
 
 ?>
