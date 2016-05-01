@@ -131,6 +131,14 @@ $username = $_SESSION['username'];
                 if(isset($_POST['user'])) {
                     echo "User here";
                 }
+
+            if(isset($_POST['articles'])) {
+                echo "art here";
+            }
+
+            if(isset($_POST['quotes'])) {
+                echo "q here";
+            }
             ?>
         </div>
     </div>
