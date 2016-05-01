@@ -98,19 +98,23 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         </div>
         <div>
             <form action="search.php" method="post">
-                <div class="input-group">
-                    <input type="text" class="form-control" aria-label="...">
-                    <div class="input-group-btn">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
-                        <ul class="dropdown-menu dropdown-menu-right">
-                            <li><a href="#" data-value="users">Users</a></li>
-                            <li><a href="#" data-value="articles">Articles</a></li>
-                            <li><a href="#" data-value="quotes">Quotes</a></li>
-                        </ul>
-                    </div><!-- /btn-group -->
-                </div><!-- /input-group -->
+                <p><input type="text" class="form-control" required="required" maxlength="50" placeholder="Search using Articles, Quotes and Users" name="search"></p>
+                <select class="form-control" name="select">
+                    <option>Users</option>
+                    <option>Articles</option>
+                    <option>Quotes</option>
+                </select>
             </form>
         </div>
+        <?php
+            if(isset($_POST['submit'])){
+                $search = $_POST['search'];
+                $select = $_POST['select'];
+
+                echo $search . " " . $select;
+            }
+
+        ?>
     </div>
 </div>
 <div class="footer">
