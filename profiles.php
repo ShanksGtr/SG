@@ -187,16 +187,13 @@ if($_GET['user'] == NULL){
     <div class=container>
         <div class="row" style="word-wrap: break-word">
             <div class="col-md-4">
-                <p>Choose your Theme!</p>
-                <button onclick="swapStyleSheet('Style/SG.css')">Dark Blue</button>
-                <button onclick="swapStyleSheet('Style/BR.css')">Dark Red</button>
-                <button onclick="swapStyleSheet('Style/BG.css')">Dark Green</button>
-                <button onclick="swapStyleSheet('Style/WB.css')">White Blue</button>
+
             </div>
             <div class="col-md-4"></div>
             <div class="col-md-4">
                 <a href="about.php">About</a><br>
-                <a href="terms.php">Terms</a>
+                <a href="terms.php">Terms</a><br>
+                <a href="choose.php">Themes</a>
             </div>
         </div>
     </div>

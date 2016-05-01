@@ -1,43 +1,27 @@
 <?php
 session_start();
 if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
+
 }
-if($_GET['art'] == NULL){
-    echo "<script>location.href='/articles.php';</script>";
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>
-
-    </script>
     <!-- For Mobiles -->
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no">
     <meta charset="UTF-8">
-    <title>Article</title>
-    <!-- Free icon from http://findicons.com/icon/115500/input_gaming -->
-    <link rel="icon" type="image/png" href="Pictures/input_gaming.ico" sizes="32x32"/>
+    <title>SGamers</title>
     <!-- Bootstrap CSS,JQ&JS Libraries-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link id="pagesstyle" rel="stylesheet" type="text/css" href="Style/SG.css">;
-    <!-- Glyphicons from http://fortawesome.github.io/Font-Awesome/get-started/ && http://ionicons.com/ && http://zurb.com/playground/foundation-icon-fonts-3/-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="Style/foundation-icons/foundation-icons.css">
+    <script type="text/javascript">
+        function swapStyleSheet(sheet){
+            document.getElementById('pagesstyle').setAttribute('href', sheet);
+        }
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="/Style/responsiveslides/responsiveslides.min.js"></script>
-    <!-- <script type="text/javascript">
-         if (document.cookie == false) {
-             window.location.href ="choose.html";
-         } else if (document.cookie == true) {
-             function swapStyleSheet(sheet){
-                 document.getElementById('pagesstyle').setAttribute('href', sheet);
-             }
-
-         }  a
-     </script> -->
     <!-- Google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
@@ -62,7 +46,7 @@ if($_GET['art'] == NULL){
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="chat.php"><span class="ion-chatbubble-working"></span>Chat</a></li>
-                <li class="active"><a href="articles.php">Articles<span class="sr-only">(current)</span></a></li>
+                <li><a href="articles.php">Articles<span class="sr-only">(current)</span></a></li>
                 <li><a href="quotes.php">Quotes</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UpcomingGames<span class="caret"></span></a>
@@ -105,112 +89,54 @@ if($_GET['art'] == NULL){
     </div>
     <div class="container-fluid"></div>
 </nav>
+
 <div class="container">
     <div class="jumbotron">
-        <?php
-
-        require('PHP/config.php');
-
-        $art_id = $_GET['art'];
-        $get_id= "SELECT a_id, user_id FROM articles WHERE a_id='$art_id' limit 1";
-        $get_art_id= mysqli_query($db, $get_id) or die;
-        $id_row = mysqli_fetch_object($get_art_id);
-        if ($id_row == false) {
-            die("<script>alert('Article does not exist'); location.href='/articles.php';</script>");
-        }
-        $id = $id_row->a_id;
-        $user_id = $id_row->user_id;
-
-        $get_user= "SELECT user_name FROM users WHERE user_id='$user_id' limit 1";
-        $get_user_name= mysqli_query($db, $get_user) or die;
-        $user_row = mysqli_fetch_object($get_user_name);
-        $user_name = $user_row->user_name;
-
-        ////////////////////////////////////////////////////////
-        $query = "SELECT * FROM articles WHERE a_id='$id'";
-        $result = mysqli_query($db, $query) or die;
-
-        while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-        $a_title = $row['a_title'];
-        $a_game = $row['a_game'];
-        $a_time = $row['a_time'];
-        $a_article = $row['a_text'];
-        ?>
-        <div class="page-header textglow3">
-            <h1>Article: <?= $a_title; ?></h1> Posted date: <?=substr($a_time, 0,10);?>
-        </div>
-        <div>
-            <h2>About: <?=$a_game;?></h2>
-            <h2>By: <a href="profiles.php?user=<?=$user_name;?>"><?=$user_name;?></a></h2>
-        </div>
-        <div class="pushp">
-            <h3><?=$a_article;?></h3>
-            <?php }?>
-        </div>
-
-        <div class="addcomment">
+        <div class="page-header">
             <?php if ($_SESSION['username'] == true) { ?>
-            <form action="PHP/comment.php" method="post">
-                <textarea class="form-control" rows="5" required="required" placeholder="Write your comment" maxlength="300" name="comment"></textarea><br>
-                <input name="a_id" value="<?=$_GET['art'];?>" hidden>
-                <button class="btn btn-default btn-lg" type="submit" value="submit" name="submit">Comment</button>
-            </form>
+                <h1>Welcome <?php echo $_SESSION['username'] ?> ...</h1>
             <?php } else { ?>
-                <h3> --> Please login to comment :D</h3>
-            <?php } ?>
+                <h1>VVelcome to SGamers</h1> <?php } ?>
         </div>
-            <?php
-                $a_id = $_GET['art'];
+        <h2>Unfortunately, Themes are on maintenance at this moment. Sorry for any inconvenience</h2>
 
-                $query = "SELECT * FROM comments WHERE a_id='$a_id'";
-                $result = mysqli_query($db, $query) or die;
-                $num_rows = mysqli_num_rows($result);
+        <!--<div class="container">
+              <div class="col-md-3">
+                  <h2>Dark Blue</h2><br>
+                  <button type="button" class="btn btn-primary">Submit</button>
+              </div>
+              <div class="col-md-3">
+                  <h2>Dark Red</h2><br>
+                  <button type="button" class="btn btn-danger">Submit</button>
+              </div>
+              <div class="col-md-3">
+                  <h2>Dark Green</h2><br>
+                  <button type="button" class="btn btn-success">Submit</button>
+              </div>
+              <div class="col-md-3">
+                  <h2>Light Blue</h2><br>
+                  <form action="index.php">
+                      <button type="button" class="btn btn-info" onclick="colcookies('Style/WB.css');">Submit</button>
+                  </form>
+              </div>
+           </div>-->
+       </div>
+   </div>
 
-
-            ?>
-        <div class="comment">
-            <h2><span class="glyphicon glyphicon-comment"></span> Comments: (<?=$num_rows;?>)</h2>
-            <?php
-                if($num_rows == 0) {
-                    echo "<h3>" . "Be the first to comment :D" . "</h3>";
-                } else {
-
-                }
-            ?>
+   <div class="footer">
+       <div class="container-fluid" style="height: 2px"></div>
+       <div class=container style="word-wrap: break-word">
+           <div class="col-md-4">
+               <!--<p>Choose your Theme!</p>
+               <button onclick="swapStyleSheet('Style/SG.css')">Dark Blue</button>
+               <button onclick="swapStyleSheet('Style/BR.css')">Dark Red</button>
+               <button onclick="swapStyleSheet('Style/BG.css')">Dark Green</button>
+               <button onclick="swapStyleSheet('Style/WB.css')">White Blue</button>
+               -->
         </div>
-        <div class="">
-        <?php
-            while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-
-                $comment = $row['comment'];
-                $user_id = $row['user_id'];
-                $get_user= "SELECT user_name FROM users WHERE user_id='$user_id' limit 1";
-                $get_user_name= mysqli_query($db, $get_user) or die;
-                $user_row = mysqli_fetch_object($get_user_name);
-                $user_name = $user_row->user_name;
-
-                $get_avatar= "SELECT avatar FROM profiles WHERE user_id='$user_id' limit 1";
-                $get_image= mysqli_query($db, $get_avatar) or die;
-                $avatar_row = mysqli_fetch_object($get_image);
-                $avatar = $avatar_row->avatar;
-
-        ?>
-        <div class="comments">
-            <h4><a style="color: white;" href="profiles.php?user=<?=$user_name?>"><?=$user_name?></a></h4>
-            <a href="profiles.php?user=<?=$user_name?>"><img alt="user avatar" src="<?php if($avatar == NULL){ echo "Pictures/empty-user.jpg"; }else{ echo "Pictures/".$avatar;}?>" width="100" height="100"></a>
-            <p><?=$comment?></p>
-        </div>
-        <?php } ?>
-    </div>
-    </div>
-</div>
-<div class="footer">
-    <div class="container-fluid" style="height: 2px"></div>
-    <div class=container>
         <div class="col-md-4">
 
         </div>
-        <div class="col-md-4"></div>
         <div class="col-md-4">
             <a href="about.php">About</a><br>
             <a href="terms.php">Terms</a><br>
@@ -218,12 +144,12 @@ if($_GET['art'] == NULL){
         </div>
     </div>
 </div>
-<style>
-    @media all and (max-width: 970px) and (min-width: 100px) {
-        .footer {
-            position: absolute;
-        }
+<script type="text/javascript">
+    function colcookies() {
+        var now = new Date();
+        var expires = new Date(now.setTime(now.getTime() + 60 * 60 * 1000)); //Expire in one hour
+        document.cookie = 'n=1;path=/;expires='+expires.toGMTString()+';';
     }
-</style>
+</script>
 </body>
 </html>
