@@ -3,8 +3,6 @@ session_start();
 if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
     echo "<script>alert('Please Login'); location.href='login.php';</script>";
 }
-if($_POST['submit'] == false){
-    echo "<script>location.href='/index.php';</script>";}
 
     //http://stackoverflow.com/questions/15194051/mysqli-real-escape-string-returns-empty-string
     if(isset($_POST['submit'])){
