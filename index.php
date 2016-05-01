@@ -201,6 +201,14 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         </div>
                         <div class="col col-md-4 indexo">
                             <h2><span class="ion-person-stalker"></span> New users:</h2>
+                            <?php
+                                $query= "SELECT * FROM users ORDER BY user_id DESC limit 5";
+                                $result = mysqli_query($db, $query) or die;
+                                    while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+                                     $username = $row['user_name'];
+                            ?>
+                                <h3><a href="profiles.php?user=<?=$username?>"><?=$username?></a></h3>
+                                    <?php }?>
                         </div>
                     </div>
                 </div>
