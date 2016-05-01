@@ -108,11 +108,30 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             </form>
         </div>
         <?php
+        require('PHP/config.php');
             if(isset($_POST['submit'])){
                 $search = $_POST['search'];
                 $select = $_POST['select'];
 
-                echo $search . " " . $select;
+                if($select == 'Users'){
+                    $query = "SELECT user_name FROM users WHERE user_name LIKE '$search'";
+                    $result = mysqli_query($db, $query) or die;
+                    while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+                        echo $row['user_name'];
+                    }
+                } elseif ($select == 'Articles'){
+                    $query = "SELECT a_title, a_id FROM articles WHERE a_title LIKE'$search'";
+                    $result = mysqli_query($db, $query) or die;
+                    while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+                        echo $row['a_title'] . " " . $row['a_id'];
+                    }
+                } elseif ($select == 'Quotes'){
+                    $query = "SELECT * FROM quotes WHERE q_quote LIKE '$search'";
+                    $result = mysqli_query($db, $query) or die;
+                    while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+                        echo $row['q_quote'];
+                    }
+                }
             }
 
         ?>
