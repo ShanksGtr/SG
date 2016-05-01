@@ -2,4 +2,6 @@
 
 if(isset($_POST['user'])){
     echo $_POST['user'];
+} else {
+    header('Location:/index');
 }
