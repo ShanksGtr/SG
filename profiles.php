@@ -142,7 +142,7 @@ if($_GET['user'] == NULL){
             <div class="col col-md-3">
                 <div>
                     <div>
-                        <img class="img-circle" style="height: 200px; width: 240px; margin-left: -10px" src="<?php if($avatar == NULL){ echo "Pictures/empty-user.jpg"; }else{ echo "Pictures/".$avatar;} ?>">
+                        <img class="img-circle" alt="user avatar" style="height: 200px; width: 240px; margin-left: -10px" src="<?php if($avatar == NULL){ echo "Pictures/empty-user.jpg"; }else{ echo "Pictures/".$avatar;} ?>">
                     </div>
                     <div style="border-right: 1px groove silver; margin-left: -5px;">
                         <h3><span class="glyphicon glyphicon-road"></span> Age:</h3>
