@@ -1,64 +1,28 @@
 <?php
 session_start();
 if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
-    echo "<script>alert('Please Login'); location.href='login.php';</script>";
+
 }
 
-    //http://stackoverflow.com/questions/15194051/mysqli-real-escape-string-returns-empty-string
-    if(isset($_POST['submit'])){
-        require('PHP/config.php');
-
-        $q_name = mysqli_real_escape_string($db, $_POST['charname']);
-        $q_name = htmlspecialchars($q_name);
-
-        $q_game = mysqli_real_escape_string($db, $_POST['gamename']);
-        $q_game = htmlspecialchars($q_game);
-
-        $quote = mysqli_real_escape_string($db, $_POST['quote']);
-        $quote = htmlspecialchars($quote);
-        $user_id = $_SESSION['userid'];
-
-        $sqlinsert = "INSERT INTO quotes (q_name, q_game, q_quote, user_id) VALUES
-                    ('$q_name', '$q_game', '$quote', '$user_id')";
-        if (!mysqli_query($db, $sqlinsert)) {
-            echo ("<script>alert('Quote is already registered'); location.href='addquote.php';</script>");
-
-        } else {
-    echo "<script>alert('You are successfully uploaded a quote'); location.href='quotes.php';</script>";
-} }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>
-
-    </script>
     <!-- For Mobiles -->
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no">
     <meta charset="UTF-8">
-    <title>Add Quote</title>
+    <title>About</title>
     <!-- Free icon from http://findicons.com/icon/115500/input_gaming -->
     <link rel="icon" type="image/png" href="Pictures/input_gaming.ico" sizes="32x32"/>
     <!-- Bootstrap CSS,JQ&JS Libraries-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link id="pagesstyle" rel="stylesheet" type="text/css" href="Style/SG.css">;
+    <link rel="stylesheet" type="text/css" href="Style/SG.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <!-- Glyphicons from http://fortawesome.github.io/Font-Awesome/get-started/ && http://ionicons.com/ && http://zurb.com/playground/foundation-icon-fonts-3/-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="Style/foundation-icons/foundation-icons.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="/Style/responsiveslides/responsiveslides.min.js"></script>
-    <!-- <script type="text/javascript">
-         if (document.cookie == false) {
-             window.location.href ="choose.html";
-         } else if (document.cookie == true) {
-             function swapStyleSheet(sheet){
-                 document.getElementById('pagesstyle').setAttribute('href', sheet);
-             }
-
-         }  a
-     </script> -->
     <!-- Google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
@@ -84,7 +48,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             <ul class="nav navbar-nav">
                 <li><a href="chat.php"><span class="ion-chatbubble-working"></span>Chat</a></li>
                 <li><a href="articles.php">Articles<span class="sr-only">(current)</span></a></li>
-                <li class="active"><a href="quotes.php">Quotes</a></li>
+                <li><a href="quotes.php">Quotes</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UpcomingGames<span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -130,33 +94,17 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 <div class="container">
     <div class="jumbotron">
         <div class="page-header">
-            <?php if ($_SESSION['username'] == true) { ?>
-                <h1>Welcome <?php echo $_SESSION['username'] ?> ...</h1>
-            <?php } else { ?>
-                <h1>VVelcome to SGamers</h1> <?php } ?>
+            <h1>About: </h1>
         </div>
         <div>
-            <div class="textglow2">
-                <h2><u>Adding a quote:</u></h2>
-                <form action="addquote.php" method="post">
-                    <h3><span class="ion-ios-game-controller-b"></span> Video Game name:</h3>
-                    <p><input type="text" class="form-control" required="required" maxlength="50" placeholder="Video game name" name="gamename"></p>
-                    <h3><span class="ion-outlet"></span> Character's name:</h3>
-                    <p><input type="text" class="form-control" required="required" maxlength="50" placeholder="Character's name" name="charname"></p>
-                    <h3><span class="ion-quote"></span> Quote:</h3>
-                    <textarea class="form-control" rows="5" id="fg" required="required" placeholder="" maxlength="2000" name="quote"></textarea><br>
-                    <button class="btn btn-default btn-lg" type="submit" value="submit" name="submit">Submit</button>
-                </form>
-            </div>
+
         </div>
     </div>
 </div>
-<div class="footer" style="position: fixed">
+<div class="footer">
     <div class="container-fluid" style="height: 2px"></div>
     <div class=container>
-        <div class="col-md-4">
-
-        </div>
+        <div class="col-md-4"></div>
         <div class="col-md-4"></div>
         <div class="col-md-4">
             <a href="about.php">About</a><br>

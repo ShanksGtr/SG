@@ -105,6 +105,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                         <?php } ?>
                     </ul>
                 </li>
+                <li><a href="search.php"><span class="glyphicon glyphicon-search" style="font-size:20px; margin-right: 2px"></span></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <?php if ($_SESSION['username'] == true) { ?>
