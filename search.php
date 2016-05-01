@@ -98,7 +98,17 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         </div>
         <div>
             <form action="" method="post">
-                <input type="text">
+                <div class="input-group">
+                    <input type="text" class="form-control" aria-label="...">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="search.php" data-value="users">Users</a></li>
+                            <li><a href="search.php" data-value="articles">Articles</a></li>
+                            <li><a href="search.php" data-value="quotes">Quotes</a></li>
+                        </ul>
+                    </div><!-- /btn-group -->
+                </div><!-- /input-group -->
             </form>
         </div>
     </div>
