@@ -3,11 +3,16 @@ session_start();
 if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
      die("<script>alert('Please Login'); location.href='login.php';</script>");
 }
+
 require('config.php');
 $username = $_SESSION['username'];
-    $list_query = "SELECT role FROM users WHERE user_name='$username' limit 1";
-    $result = mysqli_query($db, $list_query) or die;
-    echo "<script>alert('$result');</script>" ;
+    $getid = "SELECT role FROM users WHERE user_name = '$username' limit 1";
+    $result = mysqli_query($db, $getid) or die;
+    $row = mysqli_fetch_object($result);
+    $role = $row->role;
+
+    echo "<script>alert('$role');</script>)";
+
 
 
 ?>
