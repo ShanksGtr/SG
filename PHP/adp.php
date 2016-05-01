@@ -132,12 +132,12 @@ $username = $_SESSION['username'];
                     <?php
                     if(isset($_POST['user'])) {
                         ?> <tr>
-                            <th>User ID:</th>
-                            <th>User Name:</th>
-                            <th>Email:</th>
-                            <th>Registered Date:</th>
-                            <th>Role:</th>
-                            <th>Action:</th>
+                            <th><b>User ID:</b></th>
+                            <th><b>User Name:</b></th>
+                            <th><b>Email:</b></th>
+                            <th><b>Registered Date:</b></th>
+                            <th><b>Role:</b></th>
+                            <th><b>Action:</b></th>
                         </tr> <?php
                     $query = "SELECT * FROM users";
                     $result = mysqli_query($db, $query) or die;
