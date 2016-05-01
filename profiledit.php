@@ -116,6 +116,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             <form action="PHP/profiling.php" method="post" >
                 <?php
                 while($row = mysqli_fetch_array($result)) {
+                    $row = mysqli_real_escape_string($db, $row);
+                    $row = htmlspecialchars($row);
                 ?>
                 <div class="col col-md-3" >
                     <div>
