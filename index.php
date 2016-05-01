@@ -182,7 +182,7 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                             ?>
                                     <blockquote>
                                         <?=$q_quote?>
-                                        <cite><?=$q_name?></cite>
+                                        <cite><?php echo $q_name . " From " . $q_game;?></cite>
                                     </blockquote>
                             <?php }?>
                         </div>
