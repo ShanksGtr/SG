@@ -126,7 +126,7 @@ $username = $_SESSION['username'];
                         <button type="submit" class="btn btn-default" name="quotes">Quotes</button>
                     </div>
                 </div>
-            </form>
+            </form><br>
             <div class="table-responsive">
                 <table class="table table-condensed">
                     <?php
@@ -170,6 +170,7 @@ $username = $_SESSION['username'];
                             <th>Article Date:</th>
                             <th>Article:</th>
                             <th>User ID:</th>
+                            <th>Action:</th>
                         </tr> <?php
                         $query = "SELECT * FROM articles";
                         $result = mysqli_query($db, $query) or die;
@@ -203,6 +204,7 @@ $username = $_SESSION['username'];
                                 <th>Quote Game:</th>
                                 <th>Quote:</th>
                                 <th>User ID:</th>
+                                <th>Action:</th>
                             </tr> <?php
                             $query = "SELECT * FROM quotes";
                             $result = mysqli_query($db, $query) or die;
