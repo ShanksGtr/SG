@@ -139,6 +139,8 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
                 <p>You agree that your use of this Site,
                     this Agreement and any disputes relating thereto shall be governed in all respects by the laws of the UNITED KINGDOM.
                     Any dispute relating to this Agreement shall be resolved solely in the state or federal courts.</p>
+            <h3><span class="ion-happy"></span>Cookies:</h3>
+                <p>SGamers does not use any sort of cookies so far, a notification will be made if any used</p>
     </div>
 </div>
 
