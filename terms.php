@@ -148,7 +148,9 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         <div class="col-md-4">
 
         </div>
-        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <p>Copyright <span class="fa fa-copyright"></span> 2016 by <a href="http://www.rgu.ac.uk/" target="_blank">Robert Gordon University</a></p>
+        </div>
         <div class="col-md-4">
             <a href="about.php">About</a><br>
             <a href="terms.php">Terms</a><br>

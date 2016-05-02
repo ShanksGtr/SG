@@ -225,6 +225,7 @@ if (isset($_POST['submit'])) {
     <div class="container-fluid" style="height: 2px"></div>
     <div class=container>
         <div class="col-md-4">
+            <p>Copyright <span class="fa fa-copyright"></span> 2016 by <a href="http://www.rgu.ac.uk/" target="_blank">Robert Gordon University</a></p>
           <!--  <p>Choose your Theme!</p>
             <button onclick="swapStyleSheet('Style/SG.css')">Dark Blue</button>
             <button onclick="swapStyleSheet('Style/BR.css')">Dark Red</button>

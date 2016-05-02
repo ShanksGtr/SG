@@ -188,7 +188,7 @@ if($_GET['user'] == NULL){
     <div class=container>
         <div class="row" style="word-wrap: break-word">
             <div class="col-md-4">
-
+                <p>Copyright <span class="fa fa-copyright"></span> 2016 by <a href="http://www.rgu.ac.uk/" target="_blank">Robert Gordon University</a></p>
             </div>
             <div class="col-md-4"></div>
             <div class="col-md-4">
